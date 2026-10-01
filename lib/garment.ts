@@ -245,7 +245,7 @@ export async function extractDna(garmentId: string): Promise<GarmentDna> {
 }
 
 /** Rewrites material-related DNA fields using a brand LoRA tag vocabulary. */
-export async function enrichDnaFromBrand(garmentId: string, brandId: string): Promise<GarmentDna> {
+export async function enrichDnaFromBrand(garmentId: string, brandId: string, note?: string): Promise<GarmentDna> {
   const brand = brandProfile(brandId)
   const { garment } = await getGarment(garmentId)
   if (!garment.dna) throw new Error("DNA mancante: estrai prima i vincoli dal bozzetto")
@@ -256,7 +256,7 @@ export async function enrichDnaFromBrand(garmentId: string, brandId: string): Pr
     appliedTags?: string[]
   }>({
     system: BRAND_DNA_SYSTEM,
-    prompt: brandDnaPrompt(garment, dna, brand),
+    prompt: brandDnaPrompt(garment, dna, brand, note),
     temperature: 0.25,
   })
   const byKey = new Map(data.fields.map((f) => [f.key, f]))

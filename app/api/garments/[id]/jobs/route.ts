@@ -43,6 +43,9 @@ export async function POST(req: Request, { params }: Ctx) {
   if (action.type === "brand-dna" && !BRAND_LORA_IDS.includes(action.brandId)) {
     return NextResponse.json({ error: "Brand LoRA sconosciuto" }, { status: 400 })
   }
+  if (action.type === "brand-dna" && action.note !== undefined && (typeof action.note !== "string" || action.note.length > 2000)) {
+    return NextResponse.json({ error: "Nota non valida" }, { status: 400 })
+  }
   try {
     return NextResponse.json(await startAction(id, action))
   } catch (err) {

@@ -39,7 +39,7 @@ import type { JobView } from "./workspace-types"
 export type Action =
   | { type: "prepare" }
   | { type: "dna" }
-  | { type: "brand-dna"; brandId: string }
+  | { type: "brand-dna"; brandId: string; note?: string }
   | { type: "shoot" }
   | { type: "canon"; kind: AssetKind; models: string[] }
   /** front first, then every other product view that is still empty, together */
@@ -198,7 +198,7 @@ export async function startAction(garmentId: string, action: Action): Promise<Jo
         { type: "brand-dna", target: "dna", label: `Vincoli ${brand.label}`, phase: "Leggo i tag LoRA del brand" },
         async (ctx) => {
           ctx.phase("Scrivo tessuti e texture con l'AI")
-          await enrichDnaFromBrand(id, action.brandId)
+          await enrichDnaFromBrand(id, action.brandId, action.note)
           const { garment: g2 } = await getGarment(id)
           if (g2.shoot) {
             ctx.phase("Aggiorno il piano di scatti")

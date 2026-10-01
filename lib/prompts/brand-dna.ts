@@ -24,6 +24,7 @@ export function brandDnaPrompt(
   input: { name: string; brief: string; maison: string },
   dna: GarmentDna,
   brand: BrandLoraProfile,
+  note?: string,
 ): string {
   const tagBlock = brand.tags
     .map(
@@ -42,7 +43,10 @@ Weights: ${brand.lora.file} @ ${brand.lora.strength} on ${brand.lora.base}
 TRIGGER TAGS (use in field values where relevant):
 ${tagBlock}
 
-CURRENT DNA summary: ${dna.summary}
+${note ? `OPERATOR NOTE (follow it; @token names a trigger tag the operator chose, use it without the @):
+"${note}"
+
+` : ""}CURRENT DNA summary: ${dna.summary}
 
 CURRENT fields:
 ${dna.fields.map((f) => `- ${f.key}: ${f.value} [${f.source}]`).join("\n")}
