@@ -1,0 +1,45 @@
+{
+  "name": "demo-fashion",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Pre-sample content agent: sketch + archive → site pack + UGC pack, same garment identity, provider-agnostic",
+  "scripts": {
+    "dev": "next dev --port 8788",
+    "build": "next build",
+    "start": "next start --port 8788",
+    "focus": "tsx --env-file=.env scripts/focus.ts",
+    "seed": "tsx --env-file=.env scripts/seed.ts",
+    "dna": "tsx --env-file=.env scripts/dna.ts",
+    "canon": "tsx --env-file=.env scripts/canon.ts",
+    "qa": "tsx --env-file=.env scripts/qa.ts",
+    "models": "tsx scripts/models.ts",
+    "typecheck": "tsc --noEmit",
+    "refine": "tsx --env-file=.env scripts/refine.ts",
+    "approve": "tsx --env-file=.env scripts/approve.ts",
+    "cast": "tsx --env-file=.env scripts/cast.ts",
+    "onmodel": "tsx --env-file=.env scripts/onmodel.ts",
+    "studio": "tsx --env-file=.env scripts/studio.ts",
+    "mesh": "tsx --env-file=.env scripts/mesh.ts",
+    "mesh:operator": "tsx --env-file=.env scripts/mesh-operator.ts",
+    "sheet": "tsx --env-file=.env scripts/sheet.ts",
+    "ugc": "tsx --env-file=.env scripts/ugc.ts",
+    "pdp": "tsx --env-file=.env scripts/pdp.ts",
+    "export": "tsx --env-file=.env scripts/export.ts",
+    "import-handoff": "tsx scripts/import-handoff.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "tsx": "^4.20.0",
+    "typescript": "~6.0.2"
+  },
+  "dependencies": {
+    "@fal-ai/client": "^1.10.1",
+    "next": "^15.5.26",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "sharp": "^0.35.4"
+  }
+}

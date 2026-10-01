@@ -1,0 +1,32 @@
+{
+  "minutes": 9.0,
+  "tool": "Blender · tools/refine_cabas.py",
+  "changes": [
+    "Dal 3D generato: profondità 77,2 cm invece di 10, corpo alto 77,9 cm invece di 22, manico posteriore spezzato, frammenti all'interno",
+    "Allineato e messo in scala: corpo 28 × 22 × 10 cm, fondo a quota zero",
+    "Corpo ricostruito strutturato: pareti dritte, pelle 2,5 mm, fondo piano, angoli arrotondati 1,2 cm",
+    "Manici rifatti: due nastri piatti da 2,2 cm, luce aperta sotto l'arco, attacchi a linguetta sul fronte e sul retro",
+    "Cucitura centrale come pezzo separato, con le due file di impunture",
+    "Linguetta interna con il magnete di chiusura",
+    "Componenti separati: corpo, interno, manici, cucitura, chiusura",
+    "Materiali: pelle liscia cognac con grana, interno scamosciato, bordi tinti"
+  ],
+  "body": {
+    "w": 28.0,
+    "h": 22.0,
+    "d": 10.0
+  },
+  "with_handles": {
+    "w": 28.0,
+    "h": 35.1,
+    "d": 10.8
+  },
+  "generated": {
+    "width_cm": 28.0,
+    "depth_cm": 77.2,
+    "height_with_handles_cm": 95.7,
+    "body_height_cm": 77.9,
+    "vertices": 55288,
+    "objects": 1
+  }
+}

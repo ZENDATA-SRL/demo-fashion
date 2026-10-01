@@ -1,0 +1,47 @@
+{
+  "ootd": {
+    "media": {
+      "file": "m_muk0qef1iwsl.wav",
+      "mime": "audio/wav"
+    },
+    "prompt": "Upbeat feel-good pop dance instrumental at 120 BPM, starts on the first beat with the full groove, four-on-the-floor kick, crisp claps on two and four, funky bassline, bright synth chords and a catchy plucked hook, confident and stylish, clean modern mix, fashion Instagram reel background music",
+    "gen": {
+      "modelId": "lyria2",
+      "provider": "fal",
+      "hosting": "managed",
+      "weights": "closed",
+      "ms": 40423,
+      "usd": 0.1
+    }
+  },
+  "street-check": {
+    "media": {
+      "file": "m_muk0ukhmwtci.wav",
+      "mime": "audio/wav"
+    },
+    "prompt": "Energetic bouncy summer pop instrumental at 120 BPM, full energy from the very first second, punchy four-on-the-floor kick, loud handclaps on two and four, bouncy synth bass, bright funky guitar stabs and a catchy whistle-like hook, playful and cheeky, loud modern mix, viral TikTok outfit check background music",
+    "gen": {
+      "modelId": "lyria2",
+      "provider": "fal",
+      "hosting": "managed",
+      "weights": "closed",
+      "ms": 29460,
+      "usd": 0.1
+    }
+  },
+  "get-dressed": {
+    "media": {
+      "file": "m_muk448t2rt5h.wav",
+      "mime": "audio/wav"
+    },
+    "prompt": "Bright bouncy fashion-reel instrumental at 120 BPM, full groove from the very first beat, punchy four-on-the-floor kick, snappy claps on two and four, a bouncy synth bass and a light plucked melody, stylish and playful, clean modern mix, TikTok get-dressed background music",
+    "gen": {
+      "modelId": "lyria2",
+      "provider": "fal",
+      "hosting": "managed",
+      "weights": "closed",
+      "ms": 33655,
+      "usd": 0.1
+    }
+  }
+}

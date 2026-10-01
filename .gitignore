@@ -1,0 +1,10 @@
+node_modules/
+.env
+data/db.json.tmp
+data/fal-urls.json
+data/export/
+data/sheets/
+.next/
+next-env.d.ts
+*.tsbuildinfo
+.DS_Store
