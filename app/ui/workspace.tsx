@@ -116,7 +116,8 @@ export function WorkspaceApp({ initial, initialStep }: { initial: Workspace; ini
   const act = useCallback(
     async (action: Action) => {
       try {
-        const job = await api<JobView>(`/api/garments/${initial.garment.id}/jobs`, { method: "POST", json: action })
+        const job = await api<JobView | { offline: true }>(`/api/garments/${initial.garment.id}/jobs`, { method: "POST", json: action })
+        if ("offline" in job) return
         prevJobs.current.set(job.id, "running")
         await refresh()
         return job

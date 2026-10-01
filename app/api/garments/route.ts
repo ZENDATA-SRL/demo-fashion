@@ -55,7 +55,7 @@ export async function POST(req: Request) {
     })
     if (archive) await addInput(garment.id, "archive", archive)
     if (sketch) await addInput(garment.id, "sketch", sketch)
-    await startAction(garment.id, { type: "prepare" })
+    if (process.env.DEMO_LIVE === "1") await startAction(garment.id, { type: "prepare" })
     return NextResponse.json({ id: garment.id })
   } catch (err) {
     return NextResponse.json({ error: err instanceof Error ? err.message : String(err) }, { status: 400 })

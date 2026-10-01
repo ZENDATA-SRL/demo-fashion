@@ -133,15 +133,8 @@ export function PublishStep() {
   const [ticked, setTicked] = useState<Set<string>>(() => new Set(signed?.items ?? []))
   const exporting = running(ws, "export").length > 0
   const focusing = running(ws, "focus").length > 0
-  const requested = useRef(false)
 
   const next = useCallback((by = 1) => setZoom((z) => zooms[(zooms.findIndex((x) => x.key === z) + by + zooms.length) % zooms.length].key), [zooms])
-
-  useEffect(() => {
-    if (requested.current || focusing || hero.length < 2 || hero.every((h) => h.asset.focus)) return
-    requested.current = true
-    act({ type: "focus" })
-  }, [hero, focusing, act])
 
   const toggle = (id: string) =>
     setTicked((cur) => {

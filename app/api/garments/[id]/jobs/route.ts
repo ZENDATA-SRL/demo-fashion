@@ -9,7 +9,9 @@ type Ctx = { params: Promise<{ id: string }> }
 
 const TYPES: Action["type"][] = ["prepare", "dna", "brand-dna", "shoot", "canon", "canon-all", "refine", "onmodel", "onmodel-all", "studio", "ugc-frame", "ugc-clip", "ugc-reel", "ugc-auto", "pdp", "focus", "export", "qa", "mesh"]
 
+/** The demo ships with every asset already generated: provider calls only run with DEMO_LIVE=1 and keys in .env. */
 export async function POST(req: Request, { params }: Ctx) {
+  if (process.env.DEMO_LIVE !== "1") return NextResponse.json({ offline: true })
   const { id } = await params
   const action = (await req.json().catch(() => ({}))) as Action
   if (!TYPES.includes(action.type)) return NextResponse.json({ error: "azione sconosciuta" }, { status: 400 })
