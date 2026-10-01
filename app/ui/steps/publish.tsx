@@ -30,7 +30,7 @@ function heroes(ws: Workspace): Hero[] {
   return [
     sketch && { role: "sketch" as const, asset: sketch, caption: "Flat tecnico" },
     front && { role: "front" as const, asset: front, caption: "Packshot del sito" },
-    worn && { role: "worn" as const, asset: worn, caption: worn.kind === "ugc-frame" ? "Fotogramma UGC" : "Indossato" },
+    worn && { role: "worn" as const, asset: worn, caption: worn.kind === "ugc-frame" ? "UGC Frame" : "On-Model" },
   ].filter((h): h is Hero => !!h)
 }
 

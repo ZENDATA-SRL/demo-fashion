@@ -12,12 +12,12 @@ type Section = "viste" | "3d" | "indossato" | "studio" | "fotogrammi" | "video"
 type Row = { key: string; section: Section; title: string; sub?: string; assets: AssetView[] }
 
 const SECTIONS: Array<{ id: Section; label: string }> = [
-  { id: "viste", label: "Concept e render" },
-  { id: "3d", label: "3D" },
-  { id: "indossato", label: "Indossato" },
-  { id: "studio", label: "Studio" },
-  { id: "fotogrammi", label: "Fotogrammi UGC" },
-  { id: "video", label: "Clip UGC" },
+  { id: "viste", label: "Concept & Packshot" },
+  { id: "3d", label: "Digital Prototype" },
+  { id: "indossato", label: "On-Model" },
+  { id: "studio", label: "Editorial" },
+  { id: "fotogrammi", label: "UGC Frames" },
+  { id: "video", label: "UGC Clips" },
 ]
 
 const SIZES = [
@@ -41,13 +41,13 @@ export function CompareView() {
 
   const rows = useMemo(() => {
     const out: Row[] = []
-    out.push({ key: "ghost-front", section: "viste", title: "Concept", assets: generated.filter((a) => a.kind === "ghost-front") })
-    out.push({ key: "mesh", section: "3d", title: "Modello 3D", sub: "Trascina per ruotare", assets: generated.filter((a) => a.kind === "mesh") })
+    out.push({ key: "ghost-front", section: "viste", title: "Concept Visualization", assets: generated.filter((a) => a.kind === "ghost-front") })
+    out.push({ key: "mesh", section: "3d", title: "Image-to-3D", sub: "Trascina per ruotare", assets: generated.filter((a) => a.kind === "mesh") })
     for (const s of renderSlots(ws.garment.shoot).filter((v) => v.kind !== "ghost-front"))
       out.push({ key: s.kind, section: "viste", title: slotLabel(ws.garment.shoot, s.kind), assets: generated.filter((a) => a.kind === s.kind) })
-    out.push({ key: "on-model", section: "indossato", title: "Indossato", assets: generated.filter((a) => a.kind === "on-model") })
+    out.push({ key: "on-model", section: "indossato", title: "On-Model", assets: generated.filter((a) => a.kind === "on-model") })
     for (const l of ws.looks) {
-      out.push({ key: `lookbook:${l.id}`, section: "studio", title: l.label, sub: "Studio", assets: generated.filter((a) => a.kind === "lookbook" && a.label === l.id) })
+      out.push({ key: `lookbook:${l.id}`, section: "studio", title: l.label, sub: "Editorial", assets: generated.filter((a) => a.kind === "lookbook" && a.label === l.id) })
     }
     for (const kind of ["ugc-frame", "ugc-clip"] as const) {
       for (const p of ws.plan) {

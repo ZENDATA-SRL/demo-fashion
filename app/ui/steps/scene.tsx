@@ -59,10 +59,10 @@ function Thread({ scene }: { scene: AssetView }) {
   const model = (label: string, a: AssetView | undefined, note?: string): Cell | undefined => a && { label, note, step: "3d", node: <MeshView src={a.src} /> }
   const cells = [
     image("Riferimento", ws.assets.find((a) => a.kind === "archive"), "input"),
-    image("Bozzetto", currentOf(ws.assets, "sketch"), "input"),
-    image("Concept", approvedOf(ws, "ghost-front"), "concept"),
-    model("3D generato", generated),
-    model("3D affinato", refined, refined?.operator ? `${refined.operator.minutes} min di operatore` : undefined),
+    image("Concept Sketch", currentOf(ws.assets, "sketch"), "input"),
+    image("Concept Visualization", approvedOf(ws, "ghost-front"), "concept"),
+    model("Image-to-3D", generated),
+    model("Mesh Cleanup", refined, refined?.operator ? `${refined.operator.minutes} min di operatore` : undefined),
     image("Scena", scene, "scena"),
   ].filter((c): c is Cell => !!c)
 

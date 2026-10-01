@@ -1,6 +1,6 @@
 import { PHASES, STEPS } from "@/lib/steps"
 
-/** The steps in their three phases, numbered as in the workspace rail. */
+/** The steps in their phases, numbered as in the workspace rail. */
 export function FlowMap() {
   return (
     <div className="flow-map">

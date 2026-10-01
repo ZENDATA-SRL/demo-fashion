@@ -3,23 +3,24 @@ import type { AssetKind, AssetView, JobType, ShootPlan, StepStatus, Workspace } 
 /** The pipeline as the UI sees it: pure functions over a Workspace, shared by server (library) and client. */
 
 export const STEPS = [
-  { id: "input", phase: "prodotto", label: "Bozzetto", title: "Il bozzetto", lede: "Il punto di partenza e i vincoli da rispettare." },
-  { id: "concept", phase: "prodotto", label: "Concept", title: "Concept realistico", lede: "Il bozzetto diventa un prodotto reale." },
-  { id: "3d", phase: "prodotto", label: "3D", title: "Modello 3D", lede: "Le misure, verificate sul modello." },
-  { id: "viste", phase: "contenuti", label: "View", title: "View prodotto", lede: "Fronte, lato e retro del prodotto approvato." },
-  { id: "scena", phase: "contenuti", label: "Ambientazione", title: "Ambientazione", lede: "Il modello approvato in una scena vera, con le scelte del bozzetto." },
-  { id: "indossato", phase: "contenuti", label: "Indossato", title: "Indossato", lede: "Il prodotto addosso a una modella." },
-  { id: "studio", phase: "contenuti", label: "Studio", title: "Editoriale in studio", lede: "Scatti editoriali." },
-  { id: "ugc", phase: "contenuti", label: "UGC", title: "Video UGC", lede: "Video con creator." },
-  { id: "testi", phase: "lancio", label: "Scheda", title: "Scheda prodotto", lede: "La pagina prodotto." },
-  { id: "pubblica", phase: "lancio", label: "Firma", title: "Firma ed esporta", lede: "Controlla, firma, esporta." },
-  { id: "prova", phase: "lancio", label: "Prova", title: "Prova dal vivo", lede: "Il prodotto addosso a te, dal vivo." },
+  { id: "input", phase: "creativo", label: "Design Brief", title: "Design Brief · Concept Sketch", lede: "Il punto di partenza e i vincoli da rispettare." },
+  { id: "concept", phase: "creativo", label: "Concept Visualization", title: "Concept Visualization", lede: "Il bozzetto diventa un prodotto reale." },
+  { id: "3d", phase: "tecnico", label: "Digital Prototype", title: "Image-to-3D · Digital Prototype", lede: "Le misure, verificate sul modello." },
+  { id: "viste", phase: "contenuti", label: "Packshot", title: "Product Rendering · Packshot", lede: "Fronte, lato e retro del prodotto approvato." },
+  { id: "scena", phase: "contenuti", label: "Lifestyle", title: "Lifestyle Rendering · Scene Integration", lede: "Il modello approvato in una scena vera, con le scelte del bozzetto." },
+  { id: "indossato", phase: "contenuti", label: "On-Model", title: "On-Model Rendering", lede: "Il prodotto addosso a una modella." },
+  { id: "studio", phase: "contenuti", label: "Editorial", title: "Campaign Editorial", lede: "Scatti editoriali." },
+  { id: "ugc", phase: "contenuti", label: "UGC", title: "UGC · Campaign Video", lede: "Video con creator." },
+  { id: "testi", phase: "delivery", label: "PDP", title: "Product Detail Page", lede: "La pagina prodotto." },
+  { id: "pubblica", phase: "delivery", label: "Sign-off", title: "Sign-off · Asset Delivery", lede: "Controlla, firma, esporta." },
+  { id: "prova", phase: "delivery", label: "Virtual Try-On", title: "Virtual Try-On", lede: "Il prodotto addosso a te, dal vivo." },
 ] as const
 
 export const PHASES = [
-  { id: "prodotto", label: "Sviluppo prodotto" },
-  { id: "contenuti", label: "Contenuti" },
-  { id: "lancio", label: "Lancio" },
+  { id: "creativo", label: "Sviluppo creativo" },
+  { id: "tecnico", label: "Sviluppo tecnico" },
+  { id: "contenuti", label: "Contenuti commerciali" },
+  { id: "delivery", label: "Delivery" },
 ] as const
 
 export type StepId = (typeof STEPS)[number]["id"]

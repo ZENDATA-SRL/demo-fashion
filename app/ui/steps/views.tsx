@@ -31,7 +31,7 @@ export function ViewsStep({ concept = false }: { concept?: boolean }) {
 
       {!concept && (
         <>
-          <div className="slots" aria-label="View prodotto">
+          <div className="slots" aria-label="Packshot">
             {slots.map((s) => {
               const ok = approvedOf(ws, s.kind)
               const best = ok ?? ws.assets.filter((a) => a.kind === s.kind && a.status !== "rejected").at(-1)

@@ -121,7 +121,7 @@ function OperatorCompare({ before, after, sku }: { before: AssetView; after: Ass
           return (
             <figure key={side} className="op-side">
               <figcaption>
-                <b>{side === "before" ? "3D generato" : "3D affinato"}</b>
+                <b>{side === "before" ? "Image-to-3D" : "Mesh Cleanup"}</b>
                 <span className="muted">{a.model}</span>
                 <a className="icon-btn bordered" href={a.src} download={`${sku}-${side === "before" ? "3d" : "3d-affinato"}.glb`} aria-label="Scarica GLB">
                   <Icon name="download" size={13} />
