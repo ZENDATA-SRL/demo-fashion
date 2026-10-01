@@ -4337,7 +4337,7 @@ kbd {
   display: flex;
   align-items: center;
   gap: 10px;
-  width: min(520px, calc(100vw - 24px));
+  width: min(600px, calc(100vw - 24px));
   padding: 5px 5px 5px 6px;
   border-radius: 999px;
   background: var(--card);
@@ -4397,16 +4397,14 @@ kbd {
 }
 
 .pill-next {
-  width: 7.25rem;
+  min-width: 7.25rem;
   flex-shrink: 0;
   display: flex;
   justify-content: flex-end;
 }
 
 .pill-next .btn {
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .pill-next-spacer {
