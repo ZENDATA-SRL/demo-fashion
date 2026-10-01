@@ -242,13 +242,6 @@ export function WorkspaceApp({ initial, initialStep }: { initial: Workspace; ini
               )
             })}
           </ol>
-          <button className="rail-compare" aria-current={comparing ? "page" : undefined} onClick={() => go("confronto")} disabled={!generated.length}>
-            <Icon name="image" />
-            <span>
-              <b>Confronto modelli</b>
-              <span>{generated.length} generazioni affiancate</span>
-            </span>
-          </button>
           <div className="rail-foot">
             <div>
               <span>Generazioni</span>
