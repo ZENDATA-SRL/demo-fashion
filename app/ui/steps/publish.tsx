@@ -9,7 +9,7 @@ import { JobBanner } from "../bench"
 import { StepHead, useWs } from "../workspace"
 
 /** "intero" first, then the zones of the garment's shoot plan. */
-const zoomsOf = (ws: Workspace) => [{ key: "intero", label: "Intero" }, ...ws.zones]
+const zoomsOf = (ws: Workspace) => [{ key: "intero", label: "Full" }, ...ws.zones]
 type ZoomKey = string
 
 /** Context kept around each region, relative to the region's size; tuned for the demo coat, the rest gets the default. */
@@ -28,8 +28,8 @@ function heroes(ws: Workspace): Hero[] {
   const sketch = currentOf(ws.assets, "sketch")
   const front = approvedOf(ws, "ghost-front")
   return [
-    sketch && { role: "sketch" as const, asset: sketch, caption: "Flat tecnico" },
-    front && { role: "front" as const, asset: front, caption: "Packshot del sito" },
+    sketch && { role: "sketch" as const, asset: sketch, caption: "Technical flat" },
+    front && { role: "front" as const, asset: front, caption: "Site packshot" },
     worn && { role: "worn" as const, asset: worn, caption: worn.kind === "ugc-frame" ? "UGC Frame" : "On-Model" },
   ].filter((h): h is Hero => !!h)
 }
@@ -79,7 +79,7 @@ function ZoomPanel({ hero, zoom, onNext }: { hero: Hero; zoom: ZoomKey; onNext: 
   const t = img && frame ? transformFor(hero.asset.focus?.[zoom], zoom, img, frame) : null
   return (
     <figure>
-      <button ref={frameRef} className="zoom" data-role={hero.role} data-ready={!!t} onClick={onNext} aria-label={`${hero.caption}: dettaglio successivo`}>
+      <button ref={frameRef} className="zoom" data-role={hero.role} data-ready={!!t} onClick={onNext} aria-label={`${hero.caption}: next detail`}>
         <img
           ref={imgRef}
           src={hero.asset.src}
@@ -102,20 +102,20 @@ function checklist(ws: Workspace): Array<{ title: string; items: Item[] }> {
   const videos = ws.assets.filter((a) => a.kind === "ugc-video" && a.status === "approved").length
   return [
     {
-      title: "Dettagli dedotti dal sistema",
-      items: dna.map((f) => ({ id: `dna:${f.key}`, label: `${f.label}: ${f.value}`, note: "Non viene da disegno, archivio o nota" })),
+      title: "Details inferred by the system",
+      items: dna.map((f) => ({ id: `dna:${f.key}`, label: `${f.label}: ${f.value}`, note: "Not from the sketch, archive or note" })),
     },
     {
-      title: "Affermazioni sulla pagina",
+      title: "Claims on the page",
       items: claims.map((c, i) => ({ id: `claim:${i}`, label: c.text })),
     },
     {
-      title: "Pubblicazione",
+      title: "Publishing",
       items: [
-        { id: "pub:watermark", label: "Watermark interno su tutte le immagini", note: "Si rimuove solo dopo l'approvazione del campione fisico" },
-        { id: "pub:disclosure", label: `Etichetta «creator virtuale» su ${videos || "tutti i"} video`, note: "Obbligatoria su ogni annuncio" },
-        { id: "pub:faces", label: "Nessun volto reale, nessun marchio di terzi" },
-        { id: "pub:placeholders", label: "Segnaposto [ ] da compilare nel CMS", note: "Data di spedizione, giorni di reso" },
+        { id: "pub:watermark", label: "Internal watermark on every image", note: "Removed only after the physical sample is approved" },
+        { id: "pub:disclosure", label: `“Virtual creator” label on ${videos === 1 ? "1 video" : `${videos || "all"} videos`}`, note: "Required on every ad" },
+        { id: "pub:faces", label: "No real faces, no third-party brands" },
+        { id: "pub:placeholders", label: "[ ] placeholders to fill in the CMS", note: "Shipping date, return days" },
       ],
     },
   ].filter((g) => g.items.length)
@@ -154,14 +154,14 @@ export function PublishStep() {
         {hero.length >= 2 && (
           <section className="card pub-card pub-hero">
             <header>
-              <h3>Stesso capo, tre contesti</h3>
+              <h3>Same product, three contexts</h3>
               {focusing && (
                 <span className="badge">
-                  <span className="spinner" style={{ width: 10, height: 10 }} /> Localizzo i dettagli
+                  <span className="spinner" style={{ width: 10, height: 10 }} /> Locating the details
                 </span>
               )}
             </header>
-            <div className="seg" role="group" aria-label="Dettaglio" style={{ alignSelf: "flex-start", flexWrap: "wrap" }}>
+            <div className="seg" role="group" aria-label="Detail" style={{ alignSelf: "flex-start", flexWrap: "wrap" }}>
               {zooms.map((z) => (
                 <button key={z.key} aria-pressed={zoom === z.key} onClick={() => setZoom(z.key)}>
                   {z.label}
@@ -179,7 +179,7 @@ export function PublishStep() {
         <div className="pub-side">
           <section className="card pub-card pub-sign">
             <header>
-              <h3>Da controllare</h3>
+              <h3>To check</h3>
             </header>
             <div className="sign-list scroll">
               {groups.map((g) => (
@@ -207,14 +207,14 @@ export function PublishStep() {
             <footer className="pub-foot">
               {signed ? (
                 <>
-                  <span className="muted">Firmato · {new Date(signed.at).toLocaleString("it-IT", { dateStyle: "medium", timeStyle: "short" })}</span>
+                  <span className="muted">Signed · {new Date(signed.at).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" })}</span>
                   <button className="link-btn" onClick={() => patch({ signoff: null })}>
-                    Ritira
+                    Withdraw
                   </button>
                 </>
               ) : (
-                <button className="btn primary" style={{ marginInline: "auto" }} onClick={() => patch({ signoff: { by: "direzione creativa", items: all } })}>
-                  <Icon name="pen" size={12} /> Ho controllato, firmo
+                <button className="btn primary" style={{ marginInline: "auto" }} onClick={() => patch({ signoff: { by: "creative director", items: all } })}>
+                  <Icon name="pen" size={12} /> Checked, I sign off
                 </button>
               )}
             </footer>
@@ -223,15 +223,15 @@ export function PublishStep() {
           {signed && (
           <section className="card pub-card pub-export">
             <header>
-              <h3>Pacchetto per il CMS</h3>
+              <h3>CMS package</h3>
               <button className={`btn sm ${ws.garment.exportedAt ? "secondary" : "primary"}`} disabled={!signed || exporting} onClick={() => act({ type: "export" })}>
                 {exporting ? <span className="spinner" style={{ width: 12, height: 12 }} /> : <Icon name="folder" size={12} />}
-                {ws.garment.exportedAt ? "Riesporta" : "Esporta"}
+                {ws.garment.exportedAt ? "Export again" : "Export"}
               </button>
             </header>
             <JobBanner target="export" />
             {files.length > 0 && (
-              <Section title="File del pacchetto" meta={files.length}>
+              <Section title="Package files" meta={files.length}>
                 <ul className="files scroll">
                   {dirs.map((d) => (
                     <FileGroup key={d || "root"} dir={d} files={files.filter((f) => (d ? f.startsWith(`${d}/`) : !f.includes("/")))} sku={ws.garment.sku} onOpen={light} />
@@ -253,7 +253,7 @@ function FileGroup({ dir, files, sku, onOpen }: { dir: string; files: string[]; 
       <li className="file dir">
         <Icon name="folder" />
         <span className="mono">{sku}/{dir}</span>
-        <span>{files.length} file</span>
+        <span>{files.length} {files.length === 1 ? "file" : "files"}</span>
       </li>
       {files.map((f) => {
         const url = `/api/export/${sku}/${f}`
@@ -271,7 +271,7 @@ function FileGroup({ dir, files, sku, onOpen }: { dir: string; files: string[]; 
                 {name}
               </a>
             )}
-            <a className="icon-btn" href={`${url}?download`} aria-label={`Scarica ${name}`}>
+            <a className="icon-btn" href={`${url}?download`} aria-label={`Download ${name}`}>
               <Icon name="download" size={12} />
             </a>
           </li>

@@ -6,7 +6,7 @@ import type { Output } from "./types"
 /** The ComfyUI pod on RunPod: Qwen Image 2.1 for every image, Pixal3D / TRELLIS.2 for the 3D. */
 function base(): string {
   const url = process.env.COMFY_BASE
-  if (!url) throw new Error("COMFY_BASE mancante in .env (es. https://<pod>-8188.proxy.runpod.net)")
+  if (!url) throw new Error("COMFY_BASE missing in .env (e.g. https://<pod>-8188.proxy.runpod.net)")
   return url.replace(/\/$/, "")
 }
 
@@ -25,7 +25,7 @@ async function api<T>(path: string, body?: unknown): Promise<T> {
     body: body === undefined ? undefined : JSON.stringify(body),
   })
   const raw = await res.text()
-  if (!res.ok) throw new Error(`ComfyUI ${res.status} su ${path}: ${raw.slice(0, 400)}`)
+  if (!res.ok) throw new Error(`ComfyUI ${res.status} on ${path}: ${raw.slice(0, 400)}`)
   return JSON.parse(raw) as T
 }
 
@@ -59,7 +59,7 @@ export async function comfyInput(media: Media): Promise<string> {
 export async function comfyRun(graph: Graph, timeoutMs: number): Promise<HistoryEntry> {
   const started = Date.now()
   const { prompt_id: id } = await api<{ prompt_id: string }>("/prompt", { prompt: graph, client_id: "demo-fashion" })
-  console.log(`[comfy] ${id} · in coda`)
+  console.log(`[comfy] ${id} · queued`)
   while (Date.now() - started < timeoutMs) {
     await new Promise((r) => setTimeout(r, 2000))
     const history = await api<Record<string, HistoryEntry>>(`/history/${id}`).catch(() => ({}) as Record<string, HistoryEntry>)
@@ -67,14 +67,14 @@ export async function comfyRun(graph: Graph, timeoutMs: number): Promise<History
     if (!entry) continue
     if (entry.status?.status_str === "error") {
       const error = entry.status.messages?.find((m) => Array.isArray(m) && m[0] === "execution_error") as [string, { exception_message?: string; node_type?: string }] | undefined
-      throw new Error(`ComfyUI: ${error?.[1].node_type ?? "nodo"} · ${error?.[1].exception_message?.trim() ?? "errore"}`)
+      throw new Error(`ComfyUI: ${error?.[1].node_type ?? "node"} · ${error?.[1].exception_message?.trim() ?? "error"}`)
     }
     if (entry.status?.completed) {
-      console.log(`[comfy] ${id} · fatto in ${Math.round((Date.now() - started) / 1000)}s`)
+      console.log(`[comfy] ${id} · done in ${Math.round((Date.now() - started) / 1000)}s`)
       return entry
     }
   }
-  throw new Error(`ComfyUI: timeout dopo ${Math.round(timeoutMs / 60000)} minuti`)
+  throw new Error(`ComfyUI: timeout after ${Math.round(timeoutMs / 60000)} minutes`)
 }
 
 function* files(node: unknown): Generator<FileRef> {
@@ -96,5 +96,5 @@ export async function comfyOutput(entry: HistoryEntry, exts: string[]): Promise<
     if (!res.ok) throw new Error(`ComfyUI: download ${res.status}`)
     return { data: Buffer.from(await res.arrayBuffer()), ext }
   }
-  throw new Error(`ComfyUI: nessun file ${exts.join("/")} in uscita`)
+  throw new Error(`ComfyUI: no ${exts.join("/")} file in the output`)
 }

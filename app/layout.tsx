@@ -15,13 +15,13 @@ const mono = localFont({ src: "./fonts/geist-mono.woff2", weight: "100 900", var
 
 export const metadata: Metadata = {
   title: "Sartoria",
-  description: "Dal bozzetto al video: render 3D, immagini prodotto, indossato e UGC con la stessa identità del capo.",
+  description: "From sketch to video: 3D renders, product images, on-model shots and UGC that keep the garment's identity.",
   robots: { index: false, follow: false },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="it" className={`${serif.variable} ${sans.variable} ${mono.variable}`}>
+    <html lang="en" className={`${serif.variable} ${sans.variable} ${mono.variable}`}>
       <body>
         <Providers>{children}</Providers>
       </body>

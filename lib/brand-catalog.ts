@@ -9,8 +9,11 @@ import type { ArchiveLaunch } from "./campaign-types"
  * and the sell-through says how much it pays. All simulated.
  */
 
+export type ProductFamily = "leather" | "knit"
+
 export type CatalogProduct = {
   sku: string
+  family: ProductFamily
   name: string
   season: string
   silhouette: string
@@ -29,8 +32,12 @@ export type CatalogProduct = {
 
 export type DnaCode = {
   tag: LoraTag
+  /** the product family the code belongs to: a knit code is judged among the knitwear only */
+  family: ProductFamily
   /** SKUs carrying the code */
   skus: string[]
+  /** products of that family, the base of `share` */
+  of: number
   share: number
   /** average sell-through of the products with the code, and its distance from those without */
   sellThrough: number
@@ -41,6 +48,7 @@ export type BrandCatalog = {
   brand: string
   manifesto: string
   lora: { file: string; strength: number; base: string }
+  extraLoras: Array<{ family: string; file: string; strength: number }>
   products: CatalogProduct[]
   codes: DnaCode[]
   materials: Array<{ label: string; n: number }>
@@ -55,24 +63,29 @@ export function brandCatalog(): BrandCatalog {
   const profile = brandProfile(catalog.loraProfile)
   const products: CatalogProduct[] = catalog.products.map((p) => {
     const launch = ARCHIVE.find((a) => a.sku === p.sku)
-    if (!launch) throw new Error(`SKU di catalogo senza lancio in archivio: ${p.sku}`)
-    return { ...p, name: launch.name, price: launch.price, sellThrough: launch.outcome.sellThrough, produced: launch.outcome.produced }
+    if (!launch) throw new Error(`catalogue SKU without a launch in the archive: ${p.sku}`)
+    return { ...p, family: p.family as ProductFamily, name: launch.name, price: launch.price, sellThrough: launch.outcome.sellThrough, produced: launch.outcome.produced }
   })
 
   const codes = profile.tags
-    .map((tag) => {
-      const withIt = products.filter((p) => p.codes.includes(tag.token))
-      const without = products.filter((p) => !p.codes.includes(tag.token))
+    .map((tag): DnaCode => {
+      // the family of the products that carry the code; a code nobody carries yet stays with the bags
+      const family = products.find((p) => p.codes.includes(tag.token))?.family ?? "leather"
+      const pool = products.filter((p) => p.family === family)
+      const withIt = pool.filter((p) => p.codes.includes(tag.token))
+      const without = pool.filter((p) => !p.codes.includes(tag.token))
       const sellThrough = avg(withIt.map((p) => p.sellThrough))
       return {
         tag,
+        family,
         skus: withIt.map((p) => p.sku),
-        share: withIt.length / products.length,
+        of: pool.length,
+        share: withIt.length / pool.length,
         sellThrough,
         lift: withIt.length && without.length ? sellThrough - avg(without.map((p) => p.sellThrough)) : 0,
       }
     })
-    .sort((a, b) => b.share - a.share || b.lift - a.lift)
+    .sort((a, b) => (a.family === "leather" ? 0 : 1) - (b.family === "leather" ? 0 : 1) || b.share - a.share || b.lift - a.lift)
 
   const counts = new Map<string, number>()
   for (const p of products) counts.set(p.material, (counts.get(p.material) ?? 0) + 1)
@@ -82,6 +95,7 @@ export function brandCatalog(): BrandCatalog {
     brand: catalog.brand,
     manifesto: catalog.manifesto,
     lora: profile.lora,
+    extraLoras: profile.extraLoras ?? [],
     products,
     codes,
     materials,

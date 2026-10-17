@@ -10,13 +10,13 @@ export default async function Library() {
   const garments = await listGarments()
   return (
     <>
-      <Topbar crumbs={[{ label: "Capi" }]} />
+      <Topbar crumbs={[{ label: "Products" }]} />
       <main className="page">
         <div className="page-head home-head">
           <div>
-            <h1 className="page-title">Capi</h1>
+            <h1 className="page-title">Products</h1>
             <Link href="/brand" className="home-brand-link">
-              Brand DNA · il catalogo che lo definisce
+              Brand DNA · the catalogue that defines it
               <Icon name="right" size={12} />
             </Link>
           </div>
@@ -26,7 +26,7 @@ export default async function Library() {
             <span className="plus">
               <Icon name="plus" size={16} />
             </span>
-            <span style={{ fontWeight: 500 }}>Nuovo prodotto</span>
+            <span style={{ fontWeight: 500 }}>New product</span>
           </Link>
           {garments.map((g, i) => {
             const done = g.steps.filter((s) => s.status === "done").length
@@ -38,10 +38,10 @@ export default async function Library() {
                   <div className="g-name">{g.name}</div>
                   <div className="g-meta">
                     <span className="mono">{g.sku}</span>
-                    <span>{g.line === "uomo" ? "Uomo" : "Donna"}</span>
-                    <span>{g.running ? `${g.running} in corso` : next ? `Prossimo: ${next.label}` : "Completo"}</span>
+                    <span>{g.line === "uomo" ? "Men" : "Women"}</span>
+                    <span>{g.running ? `${g.running} running` : next ? `Next: ${next.label}` : "Complete"}</span>
                   </div>
-                  <div className="pips" aria-label={`${done} di ${g.steps.length} passi completati`}>
+                  <div className="pips" aria-label={`${done} of ${g.steps.length} steps done`}>
                     {g.steps.map((s) => (
                       <i key={s.id} data-s={s.status} />
                     ))}

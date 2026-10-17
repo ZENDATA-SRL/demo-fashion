@@ -68,7 +68,7 @@ export function Icon({ name, size = 14 }: { name: IconName; size?: number }) {
 }
 
 /** Secondary explanation, shown on hover or focus instead of taking room on the page. */
-export function Hint({ children, label = "Informazioni", align = "left" }: { children: ReactNode; label?: string; align?: "left" | "right" }) {
+export function Hint({ children, label = "Info", align = "left" }: { children: ReactNode; label?: string; align?: "left" | "right" }) {
   return (
     <span className="tip" tabIndex={0} role="button" aria-label={label} data-align={align}>
       <Icon name="info" size={13} />
@@ -154,7 +154,7 @@ export async function api<T>(url: string, init?: RequestInit & { json?: unknown 
     body: init?.json !== undefined ? JSON.stringify(init.json) : init?.body,
   })
   const data = (await res.json().catch(() => ({}))) as T & { error?: string }
-  if (!res.ok) throw new Error(data.error ?? `Errore ${res.status}`)
+  if (!res.ok) throw new Error(data.error ?? `Error ${res.status}`)
   return data
 }
 
@@ -239,7 +239,7 @@ export function TapVideo({
       autoPlay={autoPlay}
       preload={preload}
       onClick={toggle}
-      aria-label="Play o pausa"
+      aria-label="Play or pause"
     />
   )
 }
@@ -267,12 +267,12 @@ export function LightboxProvider({ children }: { children: ReactNode }) {
       {children}
       {item && (
         <div className="lightbox" role="dialog" aria-modal="true" aria-label={item.alt} onClick={(e) => e.target === e.currentTarget && setItem(null)}>
-          <button className="icon-btn lightbox-close" onClick={() => setItem(null)} aria-label="Chiudi" autoFocus>
+          <button className="icon-btn lightbox-close" onClick={() => setItem(null)} aria-label="Close" autoFocus>
             <Icon name="x" size={16} />
           </button>
           <div className="lightbox-media">
             {item.video ? <TapVideo src={item.src} autoPlay preload="auto" /> : <img src={item.src} alt={item.alt} />}
-            {item.disclosure && <span className="disclosure">Pubblicità · Generato con IA · Creator virtuale</span>}
+            {item.disclosure && <span className="disclosure">Ad · AI-generated · Virtual creator</span>}
           </div>
         </div>
       )}
@@ -304,12 +304,12 @@ export function usePopover() {
 export function Topbar({ crumbs, right }: { crumbs?: Array<{ label: string; href?: string }>; right?: ReactNode }) {
   return (
     <header className="topbar">
-      <Link href="/" className="brand" aria-label="Sartoria, tutti i capi">
+      <Link href="/" className="brand" aria-label="Sartoria, all products">
         <span className="brand-mark">S</span>
         <span className="brand-name">Sartoria</span>
       </Link>
       {crumbs && crumbs.length > 0 && (
-        <nav className="crumbs" aria-label="Percorso">
+        <nav className="crumbs" aria-label="Breadcrumb">
           {crumbs.map((c, i) => (
             <span key={c.label} style={{ display: "contents" }}>
               <span className="sep">/</span>
@@ -333,15 +333,15 @@ export function Activity({ jobs, models, onOpenJob }: { jobs: JobView[]; models:
     <div className="activity" ref={ref}>
       <button className="activity-btn" onClick={() => setOpen((o) => !o)} aria-expanded={open}>
         {active.length ? <span className="spinner" style={{ width: 11, height: 11 }} /> : <span className="dot" />}
-        {active.length ? `${active.length} in corso` : "Tutto pronto"}
+        {active.length ? `${active.length} running` : "All set"}
       </button>
       {open && (
-        <div className="popover" role="dialog" aria-label="Attività">
+        <div className="popover" role="dialog" aria-label="Activity">
           <div className="popover-head">
-            <span>Attività</span>
-            <span className="muted mono">{jobs.length} lavori</span>
+            <span>Activity</span>
+            <span className="muted mono">{jobs.length} jobs</span>
           </div>
-          {recent.length === 0 && <p style={{ padding: 16, color: "var(--muted)", fontSize: 12.5 }}>Nessuna generazione in questa sessione.</p>}
+          {recent.length === 0 && <p style={{ padding: 16, color: "var(--muted)", fontSize: 12.5 }}>No generations in this session.</p>}
           {recent.map((j) => (
             <button
               key={j.id}

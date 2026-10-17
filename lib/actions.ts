@@ -70,12 +70,12 @@ export type Action =
 
 const SEED_MODEL = "qwen-image-2.1-runpod"
 
-/** " · voce entusiasta" for a talking reel, nothing for one cut to music. */
-const voiceNote = (format: ReturnType<typeof ugcFormat>, voice?: string) => (speaks(format) ? ` · voce ${ugcVoice(voice).label.toLowerCase()}` : "")
+/** " · enthusiastic voice" for a talking reel, nothing for one cut to music. */
+const voiceNote = (format: ReturnType<typeof ugcFormat>, voice?: string) => (speaks(format) ? ` · ${ugcVoice(voice).label.toLowerCase()} voice` : "")
 
 function shotNames(format: ReturnType<typeof ugcFormat>, shots?: string[]): string {
   const picked = shots?.length ? format.shots.filter((s) => shots.includes(s.id)) : format.shots
-  return picked.length === format.shots.length ? "tutti gli scatti" : picked.map((s) => s.label.toLowerCase()).join(", ")
+  return picked.length === format.shots.length ? "all shots" : picked.map((s) => s.label.toLowerCase()).join(", ")
 }
 
 /** The cast model this garment is being shot on: the one asked for, the one already worn here, else the first of the cast. */
@@ -93,7 +93,7 @@ async function basePerson(garmentId: string, ctx: { phase: (text: string) => voi
   const { assets } = await getGarment(garmentId)
   const existing = castAsset(assets, modelId, "front")
   if (existing) return existing
-  ctx.phase(`Preparo ${castModel(modelId).label}`)
+  ctx.phase(`Preparing ${castModel(modelId).label}`)
   return ensureCastView(modelId, "front", SEED_MODEL)
 }
 
@@ -108,7 +108,7 @@ async function studioModel(garmentId: string, look: string, ctx: { phase: (text:
     const { assets } = await getGarment(garmentId)
     const cast = castOf(person, assets)
     if (cast && !castAsset(assets, cast.modelId, "back")) {
-      ctx.phase(`Preparo il retro di ${castModel(cast.modelId).label}`)
+      ctx.phase(`Preparing the back view of ${castModel(cast.modelId).label}`)
       await ensureCastView(cast.modelId, "back", SEED_MODEL)
     }
   }
@@ -144,7 +144,7 @@ function targetOf(action: Action, assets: Asset[]): string {
       return ugcKey(action.creator, action.format)
     case "refine": {
       const source = assets.find((a) => a.id === action.assetId)
-      if (!source) throw new Error(`asset non trovato: ${action.assetId}`)
+      if (!source) throw new Error(`asset not found: ${action.assetId}`)
       if (source.kind === "sketch") return "input"
       if (source.kind === "ugc-frame") return ugcKey(creatorOf(source, assets) ?? "", (source.label ?? "").split(":")[0])
       if (source.kind === "lookbook") return studioKey(source.label ?? "")
@@ -170,41 +170,41 @@ export async function startAction(garmentId: string, action: Action): Promise<Jo
 
   switch (action.type) {
     case "prepare":
-      return startJob(id, { type: "prepare", target, label: "Preparo gli input" }, async (ctx) => {
+      return startJob(id, { type: "prepare", target, label: "Preparing the inputs" }, async (ctx) => {
         if (!pick(assets, "sketch")) {
           if (pick(assets, "archive")) {
-            ctx.phase("Disegno il prodotto dall'archivio")
+            ctx.phase("Drawing the product from the archive")
             await flatFromArchive(id, SEED_MODEL)
           } else {
-            ctx.phase("Disegno il prodotto dalla nota")
+            ctx.phase("Drawing the product from the note")
             await sketchFromNote(id, SEED_MODEL)
           }
         }
-        ctx.phase("Leggo il capo ed estraggo il DNA")
+        ctx.phase("Reading the garment and extracting the DNA")
         await extractDna(id)
-        ctx.phase("Scrivo il piano di scatti")
+        ctx.phase("Writing the shoot plan")
         await writeShootPlan(id)
       })
 
     case "dna":
-      return startJob(id, { type: "dna", target, label: "Estraggo il DNA", phase: "Leggo archivio, flat e nota" }, async (ctx) => {
+      return startJob(id, { type: "dna", target, label: "Extracting the DNA", phase: "Reading archive, flat and note" }, async (ctx) => {
         await extractDna(id)
-        ctx.phase("Scrivo il piano di scatti")
+        ctx.phase("Writing the shoot plan")
         await writeShootPlan(id)
       })
 
     case "brand-dna": {
-      if (!BRAND_LORA_IDS.includes(action.brandId)) throw new Error("brand LoRA sconosciuto")
+      if (!BRAND_LORA_IDS.includes(action.brandId)) throw new Error("unknown brand LoRA")
       const brand = brandProfile(action.brandId)
       return startJob(
         id,
-        { type: "brand-dna", target: "dna", label: `Vincoli ${brand.label}`, phase: "Leggo i tag LoRA del brand" },
+        { type: "brand-dna", target: "dna", label: `${brand.label} constraints`, phase: "Reading the brand's LoRA tags" },
         async (ctx) => {
-          ctx.phase("Scrivo tessuti e texture con l'AI")
+          ctx.phase("Writing fabrics and textures with AI")
           await enrichDnaFromBrand(id, action.brandId, action.note)
           const { garment: g2 } = await getGarment(id)
           if (g2.shoot) {
-            ctx.phase("Aggiorno il piano di scatti")
+            ctx.phase("Updating the shoot plan")
             await writeShootPlan(id)
           }
         },
@@ -212,25 +212,25 @@ export async function startAction(garmentId: string, action: Action): Promise<Jo
     }
 
     case "shoot":
-      return startJob(id, { type: "shoot", target, label: "Piano di scatti", phase: "Riscrivo dal DNA attuale" }, () => writeShootPlan(id))
+      return startJob(id, { type: "shoot", target, label: "Shoot plan", phase: "Rewriting from the current DNA" }, () => writeShootPlan(id))
 
     case "canon":
-      if (runningFor(id, "viste")) throw new Error("Le viste si stanno già generando tutte insieme")
+      if (runningFor(id, "viste")) throw new Error("All the views are already being generated together")
       return startJob(
         id,
-        { type: "canon", target, label: viewLabel(action.kind), models: action.models, phase: `Genero con ${action.models.length} modelli` },
+        { type: "canon", target, label: viewLabel(action.kind), models: action.models, phase: `Generating with ${action.models.length} models` },
         () => generateCanon(id, action.kind, action.models),
       )
 
     case "canon-all": {
       const busy = VIEW_SLOTS.find((s) => runningFor(id, s.kind))
-      if (busy) throw new Error("C'è già una vista in generazione")
+      if (busy) throw new Error("A view is already being generated")
       const live = (kind: AssetKind) => assets.some((a) => a.kind === kind && a.status !== "rejected")
       const slots = live("ghost-front") ? VIEW_SLOTS.map((s) => s.kind).filter((kind) => kind !== "ghost-front" && !live(kind)) : ["ghost-front"]
-      if (!slots.length) throw new Error("Le viste ci sono già")
+      if (!slots.length) throw new Error("The views already exist")
       return startJob(
         id,
-        { type: "canon-all", target, label: "Tutte le viste", models: action.models, slots, phase: slots[0] === "ghost-front" ? "Genero il fronte" : "Genero le altre viste" },
+        { type: "canon-all", target, label: "All views", models: action.models, slots, phase: slots[0] === "ghost-front" ? "Generating the front" : "Generating the other views" },
         (ctx) => generateAllCanon(id, action.models, ctx),
       )
     }
@@ -243,16 +243,16 @@ export async function startAction(garmentId: string, action: Action): Promise<Jo
         {
           type: "refine",
           target,
-          label: flat ? "Correzione · Flat" : `Correzione · ${viewLabel(source.kind)}`,
+          label: flat ? "Correction · Flat" : `Correction · ${viewLabel(source.kind)}`,
           models: action.models,
           phase: `“${action.instruction}”`,
         },
         async (ctx) => {
           const results = await refineAsset(action.assetId, action.instruction, action.models)
           if (flat && garment.dna && results.some((r) => r.asset)) {
-            ctx.phase("Rileggo il DNA dal flat corretto")
+            ctx.phase("Re-reading the DNA from the corrected flat")
             await extractDna(id)
-            ctx.phase("Riscrivo il piano di scatti")
+            ctx.phase("Rewriting the shoot plan")
             await writeShootPlan(id)
           }
           return results
@@ -261,21 +261,21 @@ export async function startAction(garmentId: string, action: Action): Promise<Jo
     }
 
     case "onmodel":
-      return startJob(id, { type: "onmodel", target, label: "Indossato", models: action.models, ...(action.model ? { slots: [action.model] } : {}) }, async (ctx) => {
+      return startJob(id, { type: "onmodel", target, label: "On-model", models: action.models, ...(action.model ? { slots: [action.model] } : {}) }, async (ctx) => {
         const person = await basePerson(id, ctx, action.model)
-        ctx.phase("Le faccio indossare il capo")
+        ctx.phase("Putting the garment on the model")
         return generateOnModel(id, person.id, action.models)
       })
 
     case "onmodel-all":
       return startJob(
         id,
-        { type: "onmodel-all", target, label: "Indossato · tutte", models: action.models, slots: castFor(lineOf(garment)).map((m) => m.id), phase: lineOf(garment) === "uomo" ? "Preparo i modelli" : "Preparo le modelle" },
+        { type: "onmodel-all", target, label: "On-model · all", models: action.models, slots: castFor(lineOf(garment)).map((m) => m.id), phase: "Preparing the models" },
         async (ctx) => {
           const people = await Promise.all(castFor(lineOf(garment)).map(async (m) => ({ model: m, person: await basePerson(id, { phase: () => {} }, m.id) })))
           const pending = new Set(people.map((p) => p.model.id))
           ctx.slots([...pending])
-          ctx.phase(`Faccio indossare il capo a ${people.map((p) => p.model.label).join(", ")}`)
+          ctx.phase(`Putting the garment on ${people.map((p) => p.model.label).join(", ")}`)
           const batches = await Promise.all(
             people.map(async ({ model, person }) => {
               try {
@@ -297,7 +297,7 @@ export async function startAction(garmentId: string, action: Action): Promise<Jo
       const look = STUDIO_LOOKS.find((l) => l.id === action.look)
       return startJob(id, { type: "studio", target, label: `Studio · ${look?.label ?? action.look}`, models: action.models }, async (ctx) => {
         const person = await studioModel(id, action.look, ctx)
-        ctx.phase(`Scatto in studio con ${action.models.length} modelli`)
+        ctx.phase(`Shooting in studio with ${action.models.length} models`)
         return generateStudio(id, person.id, action.look, action.models)
       })
     }
@@ -305,10 +305,10 @@ export async function startAction(garmentId: string, action: Action): Promise<Jo
     case "ugc-frame": {
       const format = ugcFormat(action.format)
       const shots = shotNames(format, action.shots)
-      return startJob(id, { type: "ugc-frame", target, label: `Fotogrammi · ${format.label} · ${shots}`, models: action.models }, async (ctx) => {
-        ctx.phase("Preparo la creator")
+      return startJob(id, { type: "ugc-frame", target, label: `Frames · ${format.label} · ${shots}`, models: action.models }, async (ctx) => {
+        ctx.phase("Preparing the creator")
         const person = await ensureCreator(action.creator, SEED_MODEL)
-        ctx.phase(`Genero i fotogrammi (${shots}); il primo scatto fa da riferimento agli altri`)
+        ctx.phase(`Generating the frames (${shots}); the first shot is the reference for the others`)
         return generateUgcFrames(id, person.id, action.format, action.models, action.shots)
       })
     }
@@ -322,7 +322,7 @@ export async function startAction(garmentId: string, action: Action): Promise<Jo
           target,
           label: `Clip · ${format.label} · ${shotNames(format, action.shots)}${voiceNote(format, action.voice)}`,
           models: action.models,
-          phase: speaks(format) ? "Scrivo il copione del reel, poi animo i fotogrammi (qualche minuto)" : "Animo i fotogrammi (qualche minuto)",
+          phase: speaks(format) ? "Writing the reel script, then animating the frames (a few minutes)" : "Animating the frames (a few minutes)",
         },
         () => generateUgcClips(id, action.creator, action.format, action.models, { shots: action.shots, voice: action.voice }),
       )
@@ -332,7 +332,7 @@ export async function startAction(garmentId: string, action: Action): Promise<Jo
       const format = ugcFormat(action.format)
       return startJob(
         id,
-        { type: "ugc-reel", target, label: `Reel · ${format.label}`, phase: speaks(format) ? "Monto le clip approvate" : "Monto le clip a tempo di musica" },
+        { type: "ugc-reel", target, label: `Reel · ${format.label}`, phase: speaks(format) ? "Editing the approved clips" : "Cutting the clips to the music" },
         () => assembleReel(id, action.creator, action.format, action.music),
       )
     }
@@ -341,9 +341,9 @@ export async function startAction(garmentId: string, action: Action): Promise<Jo
       const format = ugcFormat(action.format)
       return startJob(
         id,
-        { type: "ugc-auto", target, label: `Reel automatico · ${format.label}${voiceNote(format, action.voice)}` },
+        { type: "ugc-auto", target, label: `Automatic reel · ${format.label}${voiceNote(format, action.voice)}` },
         async (ctx) => {
-          ctx.phase("Preparo la creator")
+          ctx.phase("Preparing the creator")
           const person = await ensureCreator(action.creator, SEED_MODEL)
           return autoReel(id, person.id, action.format, { frame: DEFAULT_MODELS["ugc-frame"]!, clip: DEFAULT_MODELS["ugc-clip"]! }, action.voice, ctx.phase, action.music)
         },
@@ -351,20 +351,20 @@ export async function startAction(garmentId: string, action: Action): Promise<Jo
     }
 
     case "pdp":
-      return startJob(id, { type: "pdp", target, label: "Pagina prodotto", phase: "Scrivo dai campi del DNA e dalle immagini approvate" }, () => writePdp(id))
+      return startJob(id, { type: "pdp", target, label: "Product page", phase: "Writing from the DNA fields and the approved images" }, () => writePdp(id))
 
     case "focus":
-      return startJob(id, { type: "focus", target, label: "Confronto", phase: "Trovo i dettagli da confrontare" }, () => computeFocus(id))
+      return startJob(id, { type: "focus", target, label: "Comparison", phase: "Finding the details to compare" }, () => computeFocus(id))
 
     case "qa": {
       const source = assets.find((a) => a.id === action.assetId)
-      if (!source) throw new Error(`asset non trovato: ${action.assetId}`)
-      if (!QA_KINDS.includes(source.kind)) throw new Error("Il controllo qualità si lancia sul fronte, sull'indossato, sullo studio o su un fotogramma")
+      if (!source) throw new Error(`asset not found: ${action.assetId}`)
+      if (!QA_KINDS.includes(source.kind)) throw new Error("Quality control runs on the front, the on-model shot, the studio shot or a frame")
       const qaLabel =
-        source.kind === "on-model" ? "Indossato" : source.kind === "lookbook" ? "Studio" : source.kind === "ugc-frame" ? "Fotogramma" : "Fronte"
+        source.kind === "on-model" ? "On-model" : source.kind === "lookbook" ? "Studio" : source.kind === "ugc-frame" ? "Frame" : "Front"
       return startJob(
         id,
-        { type: "qa", target, label: `Controllo qualità · ${qaLabel}`, phase: "Confronto col DNA e con le misure" },
+        { type: "qa", target, label: `Quality control · ${qaLabel}`, phase: "Checking against the DNA and the measurements" },
         () => qaAsset(action.assetId),
       )
     }
@@ -372,15 +372,15 @@ export async function startAction(garmentId: string, action: Action): Promise<Jo
     case "mesh":
       return startJob(
         id,
-        { type: "mesh", target, label: "Mesh 3D", models: action.models, phase: `Genero con ${action.models.length} modelli` },
+        { type: "mesh", target, label: "3D mesh", models: action.models, phase: `Generating with ${action.models.length} models` },
         () => generateMeshes(id, action.models),
       )
 
     case "campaign-analysis":
-      return startJob(id, { type: "campaign-analysis", target, label: "Analisi del test", phase: "Leggo numeri, previsione e commenti" }, () => analyzeCampaign(id))
+      return startJob(id, { type: "campaign-analysis", target, label: "Test analysis", phase: "Reading numbers, forecast and comments" }, () => analyzeCampaign(id))
 
     case "export":
-      return startJob(id, { type: "export", target, label: "Esportazione", phase: "Imprimo le etichette e scrivo il manifest" }, async () => {
+      return startJob(id, { type: "export", target, label: "Export", phase: "Stamping the labels and writing the manifest" }, async () => {
         await exportPack(id)
         await updateDb((db) => {
           const g = db.garments.find((x) => x.id === id)

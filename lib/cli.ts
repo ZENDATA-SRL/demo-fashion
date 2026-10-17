@@ -42,7 +42,7 @@ export function printRanking(rows: Array<{ modelId: string; asset?: Asset; qa?: 
   const ranked = [...rows].sort((a, b) => (b.qa?.score ?? -1) - (a.qa?.score ?? -1))
   for (const { modelId, asset, qa, error } of ranked) {
     if (!asset || !qa) {
-      console.log(`✗ ${modelId.padEnd(24)} ${error ?? "nessun QA"}`)
+      console.log(`✗ ${modelId.padEnd(24)} ${error ?? "no QA"}`)
       continue
     }
     const gen = asset.gen

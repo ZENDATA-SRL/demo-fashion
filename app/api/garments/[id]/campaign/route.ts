@@ -7,14 +7,14 @@ type Ctx = { params: Promise<{ id: string }> }
 
 function planOf(body: Partial<CampaignPlan>): CampaignPlan {
   const num = (v: unknown, min: number, max: number, name: string) => {
-    if (typeof v !== "number" || !Number.isFinite(v) || v < min || v > max) throw new Error(`${name} fuori intervallo (${min}–${max})`)
+    if (typeof v !== "number" || !Number.isFinite(v) || v < min || v > max) throw new Error(`${name} out of range (${min}–${max})`)
     return Math.round(v)
   }
   const channels = (body.channels ?? []).filter((c) => CHANNEL_IDS.includes(c))
   const markets = (body.markets ?? []).filter((m) => MARKET_IDS.includes(m))
-  if (!channels.length) throw new Error("Scegli almeno un canale")
-  if (!markets.length) throw new Error("Scegli almeno un mercato")
-  return { budget: num(body.budget, 500, 20000, "Budget"), days: num(body.days, 3, 30, "Durata"), channels, markets, price: num(body.price, 50, 5000, "Prezzo") }
+  if (!channels.length) throw new Error("Pick at least one channel")
+  if (!markets.length) throw new Error("Pick at least one market")
+  return { budget: num(body.budget, 500, 20000, "Budget"), days: num(body.days, 3, 30, "Duration"), channels, markets, price: num(body.price, 50, 5000, "Price") }
 }
 
 /** The simulation is deterministic and costs nothing, so it runs in the offline demo too. */

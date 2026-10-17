@@ -52,11 +52,11 @@ export function ViewsStep({ concept = false }: { concept?: boolean }) {
                           <Icon name="check" size={10} />
                         </span>
                       ) : n ? (
-                        `${n} da scegliere`
+                        `${n} to choose from`
                       ) : locked ? (
-                        "Dopo il concept"
+                        "After the concept"
                       ) : (
-                        "Da generare"
+                        "Not generated"
                       )}
                     </span>
                   </div>
@@ -70,17 +70,17 @@ export function ViewsStep({ concept = false }: { concept?: boolean }) {
       <Bench
         target={kind}
         assets={assets}
-        toolbar={assets.length > 0 && <GenerateButton label="Nuova versione" models={ws.models} modelIds={models} onRun={generate} busy={busy} disabled={locked || !!auto} quiet />}
+        toolbar={assets.length > 0 && <GenerateButton label="New version" models={ws.models} modelIds={models} onRun={generate} busy={busy} disabled={locked || !!auto} quiet />}
         empty={
           <div className="empty">
             {locked ? (
-              <h3>Prima approva il concept</h3>
+              <h3>Approve the concept first</h3>
             ) : concept ? (
-              <GenerateButton label="Genera il concept" models={ws.models} modelIds={models} onRun={generate} busy={busy} />
+              <GenerateButton label="Generate the concept" models={ws.models} modelIds={models} onRun={generate} busy={busy} />
             ) : missing.length > 1 ? (
-              <GenerateButton label="Genera i render" models={ws.models} modelIds={models} onRun={generateAll} busy={!!auto || busy} />
+              <GenerateButton label="Generate the renders" models={ws.models} modelIds={models} onRun={generateAll} busy={!!auto || busy} />
             ) : (
-              <GenerateButton label={`Genera ${label.toLowerCase()}`} models={ws.models} modelIds={models} onRun={generate} busy={busy} />
+              <GenerateButton label={`Generate ${label.toLowerCase()}`} models={ws.models} modelIds={models} onRun={generate} busy={busy} />
             )}
           </div>
         }

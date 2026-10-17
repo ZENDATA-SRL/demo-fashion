@@ -6421,3 +6421,16 @@ kbd {
   margin: 0;
   padding: 0;
 }
+
+.dna-family {
+  margin-top: 18px;
+}
+
+.dna-family h3 {
+  margin: 0;
+  font-weight: 400;
+}
+
+.dna-family .dna-codes {
+  margin-top: 10px;
+}

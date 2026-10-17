@@ -22,7 +22,7 @@ function Drop({ title, hint, value, onChange }: { title: string; hint: string; v
         className="drop"
         role="button"
         tabIndex={0}
-        aria-label={value ? `${title}: sostituisci` : `${title}: carica`}
+        aria-label={value ? `${title}: replace` : `${title}: upload`}
         data-over={over}
         data-filled={!!value}
         onClick={() => input.current?.click()}
@@ -45,7 +45,7 @@ function Drop({ title, hint, value, onChange }: { title: string; hint: string; v
             <button
               type="button"
               className="icon-btn drop-remove"
-              aria-label={`Rimuovi ${title}`}
+              aria-label={`Remove ${title}`}
               onClick={(e) => {
                 e.stopPropagation()
                 onChange(null)
@@ -62,7 +62,7 @@ function Drop({ title, hint, value, onChange }: { title: string; hint: string; v
             <b>{title}</b>
             <span>{hint}</span>
             <span className="mono" style={{ marginTop: 4 }}>
-              Trascina qui o clicca · JPG, PNG, WebP
+              Drag here or click · JPG, PNG, WebP
             </span>
           </div>
         )}
@@ -117,7 +117,7 @@ export function NewGarment({ example }: { example?: Example }) {
     try {
       const res = await fetch("/api/garments", { method: "POST", body: form })
       const data = (await res.json()) as { id?: string; error?: string }
-      if (!res.ok || !data.id) throw new Error(data.error ?? "Creazione non riuscita")
+      if (!res.ok || !data.id) throw new Error(data.error ?? "Could not create the product")
       router.push(`/g/${data.id}?step=input`)
     } catch (err) {
       setError(err instanceof Error ? err.message : String(err))
@@ -128,20 +128,20 @@ export function NewGarment({ example }: { example?: Example }) {
   return (
     <main className="new">
       <div className="page-head enter">
-        <h1 className="page-title">Nuovo prodotto</h1>
+        <h1 className="page-title">New product</h1>
       </div>
 
       <form onSubmit={submit} className="enter" style={{ "--d": "60ms" } as React.CSSProperties}>
         <div className="drops one">
-          <Drop title={!sketch ? "Foto o bozzetto" : kind === "archive" ? "Foto d'archivio" : "Bozzetto"} hint="Facoltativo. Senza immagine lo disegna l'AI." value={sketch} onChange={setSketch} />
+          <Drop title={!sketch ? "Photo or sketch" : kind === "archive" ? "Archive photo" : "Sketch"} hint="Optional. Without an image the AI draws it." value={sketch} onChange={setSketch} />
         </div>
 
         <textarea
           id="brief"
-          aria-label="Descrizione del prodotto"
+          aria-label="Product description"
           className="textarea"
           style={{ marginTop: 16 }}
-          placeholder="Descrivi il prodotto. es. borsa mini, tela GG beige e marrone, catena 18 cm, 19 × 10 × 3 cm"
+          placeholder="Describe the product. e.g. mini bag, beige and brown GG canvas, 18 cm chain, 19 × 10 × 3 cm"
           value={brief}
           onChange={(e) => setBrief(e.target.value)}
         />
@@ -156,53 +156,53 @@ export function NewGarment({ example }: { example?: Example }) {
           )}
           <button className="btn primary lg" type="submit" disabled={!ready || busy}>
             {busy ? <span className="spinner" /> : <Icon name="arrow" />}
-            {busy ? "Creo il prodotto…" : ai ? "Fallo creare" : "Crea il prodotto"}
+            {busy ? "Creating the product…" : ai ? "Have it created" : "Create the product"}
           </button>
         </div>
 
         <details className="advanced">
-          <summary>Avanzate</summary>
+          <summary>Advanced</summary>
           {example?.sketch && (
             <button type="button" className="btn ghost sm" onClick={useExample}>
-              <Icon name="image" /> Usa il bozzetto di esempio
+              <Icon name="image" /> Use the example sketch
             </button>
           )}
           {sketch && (
             <div>
-              <span className="label">L&apos;immagine è</span>
-              <div className="seg" role="group" aria-label="Che immagine è">
+              <span className="label">The image is</span>
+              <div className="seg" role="group" aria-label="Image type">
                 <button type="button" aria-pressed={kind === "sketch"} onClick={() => setKind("sketch")}>
-                  Un bozzetto
+                  A sketch
                 </button>
                 <button type="button" aria-pressed={kind === "archive"} onClick={() => setKind("archive")}>
-                  Una foto d&apos;archivio
+                  An archive photo
                 </button>
               </div>
             </div>
           )}
           <div>
-            <span className="label">Linea</span>
-            <div className="seg" role="group" aria-label="Linea">
+            <span className="label">Line</span>
+            <div className="seg" role="group" aria-label="Line">
               <button type="button" aria-pressed={line === "donna"} onClick={() => setLine("donna")}>
-                Donna
+                Women
               </button>
               <button type="button" aria-pressed={line === "uomo"} onClick={() => setLine("uomo")}>
-                Uomo
+                Men
               </button>
             </div>
           </div>
           <div className="form-grid">
             <div>
               <label className="label" htmlFor="name">
-                Nome
+                Name
               </label>
-              <input id="name" className="field-input" placeholder="Nuovo capo" value={name} onChange={(e) => setName(e.target.value)} />
+              <input id="name" className="field-input" placeholder="New product" value={name} onChange={(e) => setName(e.target.value)} />
             </div>
             <div>
               <label className="label" htmlFor="sku">
                 SKU
               </label>
-              <input id="sku" className="field-input mono" style={{ fontSize: 13 }} placeholder="Automatico" value={sku} onChange={(e) => setSku(e.target.value.toUpperCase())} />
+              <input id="sku" className="field-input mono" style={{ fontSize: 13 }} placeholder="Automatic" value={sku} onChange={(e) => setSku(e.target.value.toUpperCase())} />
             </div>
             <div>
               <label className="label" htmlFor="maison">

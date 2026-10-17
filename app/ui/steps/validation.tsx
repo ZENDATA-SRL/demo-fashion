@@ -9,21 +9,22 @@ import { StepHead, useWs } from "../workspace"
 import { eur, int } from "./campaign"
 
 const VERDICT = {
-  go: { label: "GO", tone: "ok", text: "Si produce" },
-  iterate: { label: "ITERARE", tone: "warn", text: "Si corregge e si ritesta" },
-  stop: { label: "STOP", tone: "bad", text: "Non si produce" },
+  go: { label: "GO", tone: "ok", text: "Produce it" },
+  iterate: { label: "ITERATE", tone: "warn", text: "Fix it and retest" },
+  stop: { label: "STOP", tone: "bad", text: "Don't produce it" },
 } as const
 const AREA: Record<CampaignAnalysis["actions"][number]["area"], string> = {
   design: "Design",
-  creative: "Contenuti",
-  audience: "Pubblico",
-  production: "Produzione",
-  pricing: "Prezzo",
+  creative: "Content",
+  audience: "Audience",
+  production: "Production",
+  pricing: "Pricing",
 }
-const SENT = { positive: ["ok", "positivo"], neutral: ["outline", "neutro"], negative: ["bad", "critico"] } as const
+const SENT = { positive: ["ok", "positive"], neutral: ["outline", "neutral"], negative: ["bad", "critical"] } as const
 const p0 = (v: number) => `${Math.round(v * 100)}%`
-const p1 = (v: number) => `${(v * 100).toFixed(1).replace(".", ",")}%`
-const n2 = (v: number) => v.toFixed(2).replace(".", ",")
+const p1 = (v: number) => `${(v * 100).toFixed(1)}%`
+const n2 = (v: number) => v.toFixed(2)
+const ord = (n: number) => `${n}${n % 100 >= 11 && n % 100 <= 13 ? "th" : (["th", "st", "nd", "rd"][n % 10] ?? "th")}`
 
 export function ValidationStep() {
   const { ws, act } = useWs()
@@ -41,7 +42,7 @@ export function ValidationStep() {
         actions={
           <button className={`btn sm ${a ? "secondary" : "primary"}`} disabled={busy} onClick={() => act({ type: "campaign-analysis" })}>
             {busy ? <span className="spinner" style={{ width: 12, height: 12 }} /> : <Icon name="spark" size={12} />}
-            {a ? "Rianalizza" : "Analizza con AI"}
+            {a ? "Re-analyse" : "Analyse with AI"}
           </button>
         }
       />
@@ -49,7 +50,7 @@ export function ValidationStep() {
       <div className="mk-scroll fill scroll">
         <section className="card mk-verdict" data-t={v.tone}>
           <div className="mk-verdict-badge">
-            <span className="caps">Decisione</span>
+            <span className="caps">Decision</span>
             <b>{v.label}</b>
             <span>{v.text}</span>
           </div>
@@ -59,13 +60,13 @@ export function ValidationStep() {
               {f.reasons.map((r) => (
                 <li key={r}>{r}</li>
               ))}
-              {aiDiffers && <li>L&apos;analisi AI suggerisce invece «{VERDICT[a.verdict].label}»: vedi la sintesi.</li>}
+              {aiDiffers && <li>The AI analysis suggests “{VERDICT[a.verdict].label}” instead: see the summary.</li>}
             </ul>
           </div>
           <div className="mk-verdict-qty">
-            <span className="caps">Da ordinare</span>
+            <span className="caps">To order</span>
             <b className="num">{int(f.order.quantity)}</b>
-            <span className="muted">pezzi · MOQ {f.order.moq}</span>
+            <span className="muted">pieces · MOQ {f.order.moq}</span>
           </div>
         </section>
 
@@ -80,8 +81,8 @@ export function ValidationStep() {
           <AnalysisCard a={a} />
         ) : (
           <div className="empty">
-            <h3>{busy ? "Leggo numeri, previsione e commenti…" : "La lettura del test"}</h3>
-            <p>Un LLM su Amazon Bedrock legge i numeri, la previsione e i commenti in quattro lingue, e propone cosa cambiare nel design, nei contenuti e nell&apos;ordine.</p>
+            <h3>{busy ? "Reading numbers, forecast and comments…" : "Reading the test"}</h3>
+            <p>An LLM on Amazon Bedrock reads the numbers, the forecast and the comments in four languages, and proposes what to change in the design, the content and the order.</p>
           </div>
         )}
       </div>
@@ -96,32 +97,32 @@ function ForecastCard({ f }: { f: Forecast }) {
     <section className="card mk-card">
       <header>
         <h3>
-          Previsione
-          <span className="badge outline">statistica, non LLM</span>
+          Forecast
+          <span className="badge outline">statistics, not LLM</span>
         </h3>
         <Hint align="right">
-          Sell-through: regressione lineare (minimi quadrati) sui {st.n} lanci passati del brand. Domanda: pre-ordini per €1.000 di media × moltiplicatore storico,
-          log-normale. Quantità: newsvendor, il quantile della domanda dove un pezzo mancante costa quanto uno invenduto. Lo storico è simulato.
+          Sell-through: linear regression (least squares) on the brand&apos;s {st.n} past launches. Demand: pre-orders per €1,000 of media × historical multiplier,
+          log-normal. Quantity: newsvendor, the demand quantile where a missing piece costs as much as an unsold one. The history is simulated.
         </Hint>
       </header>
 
       <div className="mk-metric">
-        <span className="caps">Sell-through a prezzo pieno, 8 settimane</span>
+        <span className="caps">Full-price sell-through, 8 weeks</span>
         <b className="num">{p1(st.predicted)}</b>
-        <div className="mk-range" aria-label={`Intervallo 80% da ${p1(st.low)} a ${p1(st.high)}, obiettivo ${p0(st.target)}`}>
+        <div className="mk-range" aria-label={`80% interval from ${p1(st.low)} to ${p1(st.high)}, target ${p0(st.target)}`}>
           <span className="mk-range-band" style={{ left: at(st.low), width: `calc(${at(st.high)} - ${at(st.low)})` }} />
           <span className="mk-range-dot" style={{ left: at(st.predicted) }} />
           <span className="mk-range-target" style={{ left: at(st.target) }}>
-            <i>obiettivo {p0(st.target)}</i>
+            <i>target {p0(st.target)}</i>
           </span>
         </div>
         <span className="muted num">
-          intervallo 80%: {p1(st.low)} – {p1(st.high)}
+          80% interval: {p1(st.low)} – {p1(st.high)}
         </span>
       </div>
 
       <code className="mk-formula">
-        ST = {n2(st.coef.intercept)} + {st.coef.saveRate.toFixed(3).replace(".", ",")} × save% + {st.coef.conversion.toFixed(3).replace(".", ",")} × conv% · R² {n2(st.r2)}
+        ST = {n2(st.coef.intercept)} + {st.coef.saveRate.toFixed(3)} × save% + {st.coef.conversion.toFixed(3)} × conv% · R² {n2(st.r2)}
       </code>
 
       <table className="mk-table compact">
@@ -129,21 +130,21 @@ function ForecastCard({ f }: { f: Forecast }) {
           <tr>
             <td>Save rate</td>
             <td className="r num">{n2(f.signals.saveRate)}%</td>
-            <td className="r muted num">{f.percentile.saveRate}° percentile</td>
+            <td className="r muted num">{ord(f.percentile.saveRate)} percentile</td>
           </tr>
           <tr>
-            <td>Conversione al pre-ordine</td>
+            <td>Pre-order conversion</td>
             <td className="r num">{n2(f.signals.conversion)}%</td>
-            <td className="r muted num">{f.percentile.conversion}° percentile</td>
+            <td className="r muted num">{ord(f.percentile.conversion)} percentile</td>
           </tr>
           <tr>
-            <td>Pre-ordini per €1.000</td>
-            <td className="r num">{f.signals.preordersPer1k.toFixed(1).replace(".", ",")}</td>
-            <td className="r muted num">{f.percentile.preordersPer1k}° percentile</td>
+            <td>Pre-orders per €1,000</td>
+            <td className="r num">{f.signals.preordersPer1k.toFixed(1)}</td>
+            <td className="r muted num">{ord(f.percentile.preordersPer1k)} percentile</td>
           </tr>
           <tr>
-            <td>Domanda di stagione</td>
-            <td className="r num">{int(f.demand.median)} pz</td>
+            <td>Season demand</td>
+            <td className="r num">{int(f.demand.median)} pcs</td>
             <td className="r muted num">
               80%: {int(f.demand.low)}–{int(f.demand.high)}
             </td>
@@ -153,17 +154,17 @@ function ForecastCard({ f }: { f: Forecast }) {
 
       <div className="mk-order">
         <div>
-          <span className="caps">Ordine consigliato</span>
-          <b className="num">{int(f.order.quantity)} pz</b>
+          <span className="caps">Recommended order</span>
+          <b className="num">{int(f.order.quantity)} pcs</b>
           <span className="muted num">
-            margine atteso {eur(f.order.expected.margin)} · invenduto {int(f.order.expected.markdownUnits)} pz
+            expected margin {eur(f.order.expected.margin)} · unsold {int(f.order.expected.markdownUnits)} pcs
           </span>
         </div>
         <div>
-          <span className="caps">Ordine abituale del buyer</span>
-          <b className="num">{int(f.order.baseline)} pz</b>
+          <span className="caps">Buyer&apos;s usual order</span>
+          <b className="num">{int(f.order.baseline)} pcs</b>
           <span className="muted num">
-            margine atteso {eur(f.order.baselineExpected.margin)} · invenduto {int(f.order.baselineExpected.markdownUnits)} pz
+            expected margin {eur(f.order.baselineExpected.margin)} · unsold {int(f.order.baselineExpected.markdownUnits)} pcs
           </span>
         </div>
       </div>
@@ -190,11 +191,11 @@ function ScatterCard({ f, archive }: { f: Forecast; archive: ArchiveLaunch[] }) 
   return (
     <section className="card mk-card">
       <header>
-        <h3>Lanci passati</h3>
-        <span className="muted">conversione nel test → sell-through reale</span>
+        <h3>Past launches</h3>
+        <span className="muted">test conversion → actual sell-through</span>
       </header>
       <div className="mk-chart-box">
-        <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Conversione nel test e sell-through dei lanci passati">
+        <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Test conversion and sell-through of past launches">
           {[0.4, 0.5, 0.6, 0.7, 0.8, 0.9].map((v) => (
             <g key={v}>
               <line x1={pad.l} x2={W - pad.r} y1={y(v)} y2={y(v)} className="mk-grid" />
@@ -205,11 +206,11 @@ function ScatterCard({ f, archive }: { f: Forecast; archive: ArchiveLaunch[] }) 
           ))}
           {xticks.map((v) => (
             <text key={v} x={x(v)} y={H - pad.b + 14} textAnchor="middle" className="mk-axis">
-              {v.toFixed(1).replace(".", ",")}%
+              {v.toFixed(1)}%
             </text>
           ))}
           <text x={(pad.l + W - pad.r) / 2} y={H - 4} textAnchor="middle" className="mk-axis">
-            conversione al pre-ordine nel test
+            pre-order conversion in the test
           </text>
           <line x1={pad.l} x2={W - pad.r} y1={y(st.target)} y2={y(st.target)} className="mk-target" />
           {archive.map((a) => (
@@ -231,22 +232,22 @@ function ScatterCard({ f, archive }: { f: Forecast; archive: ArchiveLaunch[] }) 
             textAnchor={x(f.signals.conversion) > W * 0.7 ? "end" : "start"}
             className="mk-label"
           >
-            questo prodotto
+            this product
           </text>
         </svg>
         {h && (
           <div className="mk-tip" style={{ left: `${(x(h.test.conversion) / W) * 100}%`, top: `${(y(h.outcome.sellThrough) / H) * 100}%` }}>
             <b>{h.name}</b>
             <span>
-              {h.test.conversion.toString().replace(".", ",")}% conv. · save {h.test.saveRate.toString().replace(".", ",")}%
+              {h.test.conversion}% conv. · save {h.test.saveRate}%
             </span>
             <span>
-              {int(h.outcome.produced)} prodotti · ST {p0(h.outcome.sellThrough)}
+              {int(h.outcome.produced)} produced · ST {p0(h.outcome.sellThrough)}
             </span>
           </div>
         )}
       </div>
-      <p className="muted mk-note">La linea tratteggiata è l&apos;obiettivo di sell-through. Il segmento verticale è l&apos;intervallo all&apos;80% della previsione.</p>
+      <p className="muted mk-note">The dashed line is the sell-through target. The vertical segment is the forecast&apos;s 80% interval.</p>
     </section>
   )
 }
@@ -260,25 +261,25 @@ function ImpactCard() {
   const margin = o.expected.margin - o.baselineExpected.margin
   const atRisk = i.traditional.cost + o.baseline * ws.market.economics.unitCost
   const rows = [
-    { label: "Capitale impegnato prima del segnale", old: eur(atRisk), now: eur(i.ours.mediaEur + i.ours.generationUsd) },
-    { label: "Primo segnale dal mercato", old: `${i.traditional.signalWeeks} settimane`, now: `${i.ours.signalDays} giorni` },
-    { label: "Dal concept ai contenuti", old: `${i.traditional.weeks} settimane`, now: `${i.ours.machineHours.toFixed(1).replace(".", ",")} ore macchina` },
-    { label: "Campioni e shooting", old: eur(i.traditional.cost), now: `$${i.ours.generationUsd.toFixed(2)} di generazioni` },
-    { label: "Media per il test", old: "—", now: eur(i.ours.mediaEur) },
+    { label: "Capital committed before the signal", old: eur(atRisk), now: eur(i.ours.mediaEur + i.ours.generationUsd) },
+    { label: "First market signal", old: `${i.traditional.signalWeeks} weeks`, now: `${i.ours.signalDays} days` },
+    { label: "From concept to content", old: `${i.traditional.weeks} weeks`, now: `${i.ours.machineHours.toFixed(1)} machine hours` },
+    { label: "Samples and shoots", old: eur(i.traditional.cost), now: `$${i.ours.generationUsd.toFixed(2)} of generations` },
+    { label: "Test media", old: "—", now: eur(i.ours.mediaEur) },
   ]
   return (
     <section className="card mk-card">
       <header>
-        <h3>Impatto</h3>
-        <span className="muted">flusso tradizionale contro questo prototipo</span>
+        <h3>Impact</h3>
+        <span className="muted">traditional flow versus this prototype</span>
       </header>
       <div className="mk-impact">
         <table className="mk-table">
           <thead>
             <tr>
               <th />
-              <th className="r">Tradizionale</th>
-              <th className="r">Con il prototipo</th>
+              <th className="r">Traditional</th>
+              <th className="r">With the prototype</th>
             </tr>
           </thead>
           <tbody>
@@ -295,19 +296,19 @@ function ImpactCard() {
         </table>
         <div className="mk-impact-kpis">
           <div className="mk-kpi">
-            <span className="caps">Margine atteso</span>
+            <span className="caps">Expected margin</span>
             <b className="num">{margin >= 0 ? "+" : ""}{eur(margin)}</b>
-            <span className="muted">ordinando {int(o.quantity)} pz invece dei {int(o.baseline)} abituali</span>
+            <span className="muted">ordering {int(o.quantity)} pcs instead of the usual {int(o.baseline)}</span>
           </div>
           <div className="mk-kpi">
-            <span className="caps">Capitale a rischio</span>
+            <span className="caps">Capital at risk</span>
             <b className="num">−{Math.round((1 - (i.ours.mediaEur + i.ours.generationUsd) / atRisk) * 100)}%</b>
-            <span className="muted">campioni, shooting e primo ordine impegnati solo dopo il test</span>
+            <span className="muted">samples, shoots and first order committed only after the test</span>
           </div>
           <div className="mk-kpi">
-            <span className="caps">Vendite perse evitate</span>
-            <b className="num">{lost >= 0 ? "" : "−"}{int(Math.abs(lost))} pz</b>
-            <span className="muted">rispetto all&apos;ordine abituale</span>
+            <span className="caps">Lost sales avoided</span>
+            <b className="num">{lost >= 0 ? "" : "−"}{int(Math.abs(lost))} pcs</b>
+            <span className="muted">compared with the usual order</span>
           </div>
         </div>
       </div>
@@ -324,10 +325,10 @@ function AnalysisCard({ a }: { a: CampaignAnalysis }) {
     <section className="card mk-card mk-ai">
       <header>
         <h3>
-          Analisi AI
+          AI analysis
           <span className="badge outline">{model}</span>
         </h3>
-        <span className="muted num">{new Date(a.at).toLocaleString("it-IT", { dateStyle: "medium", timeStyle: "short" })}</span>
+        <span className="muted num">{new Date(a.at).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" })}</span>
       </header>
       <p className="mk-summary">{a.summary}</p>
 
@@ -340,7 +341,7 @@ function AnalysisCard({ a }: { a: CampaignAnalysis }) {
         ))}
       </div>
 
-      <h4 className="caps">Azioni</h4>
+      <h4 className="caps">Actions</h4>
       <ul className="mk-actions">
         {a.actions.map((x) => (
           <li key={x.action}>
@@ -358,7 +359,7 @@ function AnalysisCard({ a }: { a: CampaignAnalysis }) {
 
       {a.dnaChanges.length > 0 && (
         <>
-          <h4 className="caps">Modifiche al DNA del prodotto</h4>
+          <h4 className="caps">Product DNA changes</h4>
           <ul className="mk-dna">
             {a.dnaChanges.map((d) => {
               const field = fields.find((f) => f.key === d.field)
@@ -382,10 +383,10 @@ function AnalysisCard({ a }: { a: CampaignAnalysis }) {
                     >
                       {done ? (
                         <>
-                          <Icon name="check" size={11} /> Nel DNA
+                          <Icon name="check" size={11} /> In the DNA
                         </>
                       ) : (
-                        "Applica"
+                        "Apply"
                       )}
                     </button>
                   )}
@@ -396,16 +397,16 @@ function AnalysisCard({ a }: { a: CampaignAnalysis }) {
           {applied.size > 0 && (
             <div className="banner">
               <Icon name="info" />
-              <div className="grow">DNA aggiornato: la prossima iterazione rigenera il concept e i contenuti con le modifiche, poi si ritesta.</div>
+              <div className="grow">DNA updated: the next iteration regenerates the concept and the content with the changes, then retests.</div>
               <button className="btn sm secondary" onClick={() => go("concept")}>
-                Al concept <Icon name="right" size={12} />
+                To the concept <Icon name="right" size={12} />
               </button>
             </div>
           )}
         </>
       )}
 
-      <h4 className="caps">Cosa dicono i commenti</h4>
+      <h4 className="caps">What the comments say</h4>
       <ul className="mk-themes">
         {a.themes.map((t) => (
           <li key={t.theme}>
@@ -420,7 +421,7 @@ function AnalysisCard({ a }: { a: CampaignAnalysis }) {
 
       {a.risks.length > 0 && (
         <>
-          <h4 className="caps">Rischi</h4>
+          <h4 className="caps">Risks</h4>
           <ul className="mk-risks">
             {a.risks.map((r) => (
               <li key={r}>

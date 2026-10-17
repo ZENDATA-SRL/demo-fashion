@@ -35,22 +35,22 @@ export const CAST: CastModel[] = [
   {
     id: "model-10",
     line: "donna",
-    label: "Modella A",
-    note: "23 anni, taglia IT 36, castana.",
+    label: "Model A",
+    note: "23, size IT 36, chestnut hair.",
     look: "early 20s Italian woman, long straight chestnut hair worn down, brown eyes, softly groomed brows, very slender sample-size fashion model, narrow frame, fine narrow lower legs and narrow ankles, wears Italian size 36 clothes, about 176 cm",
   },
   {
     id: "model-11",
     line: "donna",
-    label: "Modella B",
-    note: "24 anni, taglia IT 36, bob nero.",
+    label: "Model B",
+    note: "24, size IT 36, black bob.",
     look: "mid 20s Southern Italian woman, short black bob, dark brown eyes, high cheekbones, very slender sample-size fashion model, narrow frame, fine narrow lower legs and narrow ankles, wears Italian size 36 clothes, about 174 cm",
   },
   {
     id: "model-12",
     line: "donna",
-    label: "Modella C",
-    note: "22 anni, taglia IT 36, treccine.",
+    label: "Model C",
+    note: "22, size IT 36, braids.",
     look: "early 20s Black Italian woman, long braids worn down past the shoulders, warm brown eyes, very slender sample-size fashion model, narrow frame, fine narrow lower legs and narrow ankles, tall, wears Italian size 36 clothes, about 180 cm",
   },
 ]
@@ -60,22 +60,22 @@ export const CAST_MEN: CastModel[] = [
   {
     id: "model-m1",
     line: "uomo",
-    label: "Modello A",
-    note: "26 anni, taglia IT 48, castano.",
+    label: "Model A",
+    note: "26, size IT 48, chestnut hair.",
     look: "mid 20s Italian man, short chestnut hair, brown eyes, light stubble, lean fashion-model build, wears Italian size 48 clothes, about 186 cm",
   },
   {
     id: "model-m2",
     line: "uomo",
-    label: "Modello B",
-    note: "24 anni, taglia IT 48, ricci neri.",
+    label: "Model B",
+    note: "24, size IT 48, black curls.",
     look: "mid 20s Southern Italian man, short dark curly hair, dark brown eyes, clean-shaven, lean fashion-model build, wears Italian size 48 clothes, about 182 cm",
   },
   {
     id: "model-m3",
     line: "uomo",
-    label: "Modello C",
-    note: "27 anni, taglia IT 50, barba corta.",
+    label: "Model C",
+    note: "27, size IT 50, short beard.",
     look: "late 20s Black Italian man, very short cropped hair, warm brown eyes, short beard, lean fashion-model build, tall, wears Italian size 50 clothes, about 188 cm",
   },
 ]
@@ -110,7 +110,7 @@ export function castParts(label: string | undefined): { modelId: string; view: C
 
 export function castModel(id: string): CastModel {
   const found = allCast().find((m) => m.id === id)
-  if (!found) throw new Error(`cast sconosciuto: ${id} (disponibili: ${allCast().map((m) => m.id).join(", ")})`)
+  if (!found) throw new Error(`unknown cast: ${id} (available: ${allCast().map((m) => m.id).join(", ")})`)
   return found
 }
 

@@ -14,25 +14,25 @@ export default function BrandPage() {
 
   return (
     <>
-      <Topbar crumbs={[{ label: "Capi", href: "/" }, { label: "Brand DNA" }]} />
+      <Topbar crumbs={[{ label: "Products", href: "/" }, { label: "Brand DNA" }]} />
       <main className="page brand-page">
         <div className="page-head">
           <div>
-            <span className="caps">Brand DNA · catalogo storico</span>
+            <span className="caps">Brand DNA · archive catalogue</span>
             <h1 className="page-title">{b.brand}</h1>
             <p className="brand-lede">{b.manifesto}</p>
           </div>
           <dl className="brand-stats">
             <div>
-              <dt className="caps">Prodotti</dt>
+              <dt className="caps">Products</dt>
               <dd className="num">{b.products.length}</dd>
             </div>
             <div>
-              <dt className="caps">Stagioni</dt>
+              <dt className="caps">Seasons</dt>
               <dd className="num">{seasons.size}</dd>
             </div>
             <div>
-              <dt className="caps">Sell-through medio</dt>
+              <dt className="caps">Average sell-through</dt>
               <dd className="num">{pct(b.sellThrough)}</dd>
             </div>
           </dl>
@@ -42,7 +42,7 @@ export default function BrandPage() {
 
         <section className="brand-block">
           <header className="brand-block-head">
-            <h2>Palette e materiali</h2>
+            <h2>Palette and materials</h2>
           </header>
           <ul className="brand-palette">
             {palette.map((c) => (

@@ -8,8 +8,8 @@ const SETTING =
 main(async () => {
   const { garment } = await getGarment(arg("garment"))
   const results = await generateScene(garment.id, list(arg("models", "qwen-image-2.1")), arg("setting", SETTING))
-  console.log(`\n${garment.sku} · scena\n`)
+  console.log(`\n${garment.sku} · scene\n`)
   printRanking(results)
   const ok = results.filter((r) => r.asset)
-  if (ok.length) console.log(`\nfoglio → ${await contactSheet(ok.map((r) => r.asset!.media), `${garment.sku}-scene`)}`)
+  if (ok.length) console.log(`\nsheet → ${await contactSheet(ok.map((r) => r.asset!.media), `${garment.sku}-scene`)}`)
 })

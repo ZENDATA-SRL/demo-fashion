@@ -4,8 +4,9 @@ import { updateDb } from "./store"
 import type { Asset, AssetKind, Box, Zone } from "./types"
 import { locate } from "./vision"
 
-/** Stable key of a zone, shared with the UI: "Revers" → "revers". */
-export const zoneKey = (zone: Pick<Zone, "label">) =>
+/** Stable key of a zone, shared with the UI: the stored key, else the label slugged ("Lapel" → "lapel"). */
+export const zoneKey = (zone: Pick<Zone, "key" | "label">) =>
+  zone.key ??
   zone.label
     .toLowerCase()
     .normalize("NFD")

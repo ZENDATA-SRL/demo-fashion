@@ -13,7 +13,7 @@ main(async () => {
     const best = results.find((r) => r.asset)?.asset
     if (best) {
       await setStatus(best.id, "approved", "pipeline")
-      console.log(`\napprovato → ${best.id}`)
+      console.log(`\napproved → ${best.id}`)
     }
   }
 })

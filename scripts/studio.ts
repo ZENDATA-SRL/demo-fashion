@@ -11,7 +11,7 @@ main(async () => {
     (arg("person") ? assets.find((a) => a.id === arg("person")) : undefined) ??
     assets.filter((a) => a.kind === "on-model" && a.status === "approved").at(-1) ??
     castAsset(assets, castId, "front")
-  if (!person) throw new Error("nessuna modella: lancia prima `npm run cast`")
+  if (!person) throw new Error("no model: run `npm run cast` first")
   const models = list(arg("models", "qwen-image-2.1"))
   const looks = list(arg("looks", looksForStudio(garment.shoot).map((l) => l.id).join(",")))
 
@@ -28,5 +28,5 @@ main(async () => {
 
   const ok = results.filter((r) => r.asset)
   const sheet = await contactSheet(ok.map((r) => r.asset!.media), `${garment.sku}-studio`)
-  console.log(`\nfoglio → ${sheet}`)
+  console.log(`\nsheet → ${sheet}`)
 })

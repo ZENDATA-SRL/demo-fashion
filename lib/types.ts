@@ -43,7 +43,9 @@ export type ShotDetail = {
 }
 
 export type Zone = {
-  /** Italian UI label, e.g. "Revers" */
+  /** stable key of the zone; when missing it is derived from the label (see zoneKey) */
+  key?: string
+  /** UI label, e.g. "Lapel" */
   label: string
   /** what to locate on an image of the garment, English */
   target: string

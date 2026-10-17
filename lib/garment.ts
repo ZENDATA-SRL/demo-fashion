@@ -44,7 +44,7 @@ import { beatGrid, crop, extractFrames, locate, montage, soundEnd } from "./visi
 export async function getGarment(id?: string): Promise<{ garment: Garment; assets: Asset[] }> {
   const db = await readDb()
   const garment = id ? db.garments.find((g) => g.id === id || g.sku === id) : db.garments.at(-1)
-  if (!garment) throw new Error(id ? `capo non trovato: ${id}` : "nessun capo: lancia prima `npm run seed`")
+  if (!garment) throw new Error(id ? `garment not found: ${id}` : "no garment: run `npm run seed` first")
   return { garment, assets: db.assets.filter((a) => a.garmentId === garment.id || a.garmentId === CAST_ID) }
 }
 
@@ -60,12 +60,12 @@ function approved(assets: Asset[], kind: AssetKind): Asset | undefined {
 
 function must(assets: Asset[], kind: AssetKind): Asset {
   const asset = pick(assets, kind)
-  if (!asset) throw new Error(`manca l'asset "${kind}"`)
+  if (!asset) throw new Error(`missing asset "${kind}"`)
   return asset
 }
 
 function needDna(garment: Garment): GarmentDna {
-  if (!garment.dna) throw new Error("DNA mancante: lancia prima `npm run dna`")
+  if (!garment.dna) throw new Error("DNA missing: run `npm run dna` first")
   return garment.dna
 }
 
@@ -79,7 +79,7 @@ export async function createGarment(input: Omit<Garment, "id" | "createdAt">): P
 export async function putDna(garmentId: string, dna: GarmentDna): Promise<void> {
   await updateDb((db) => {
     const g = db.garments.find((x) => x.id === garmentId)
-    if (!g) throw new Error(`capo non trovato: ${garmentId}`)
+    if (!g) throw new Error(`garment not found: ${garmentId}`)
     g.dna = dna
     g.dnaConfirmedAt = dna.at
     delete g.shoot
@@ -98,7 +98,7 @@ export async function importMade(
 ): Promise<Asset> {
   const { assets } = await getGarment(garmentId)
   const mesh = approved(assets, "mesh") ?? [...assets].reverse().find((a) => a.kind === "mesh" && a.status !== "rejected")
-  if (!mesh) throw new Error("serve il 3D approvato")
+  if (!mesh) throw new Error("needs the approved 3D")
   const media = await importFile(path)
   const asset = await addAsset(garmentId, kind, media, [mesh.id], { label: extra.label, ...(extra.prompt ? { prompt: extra.prompt } : {}) })
   if (extra.measure || extra.checks) {
@@ -111,7 +111,7 @@ export async function importMade(
       }
     })
   }
-  return extra.approve ? setStatus(asset.id, "approved", "direzione creativa") : asset
+  return extra.approve ? setStatus(asset.id, "approved", "creative director") : asset
 }
 
 /** A view locked upstream, stored approved so on-model and the rest can start from it. */
@@ -166,7 +166,7 @@ function slot(asset: Asset, all: Asset[]): string {
 export async function setStatus(assetId: string, status: Asset["status"], by?: string): Promise<Asset> {
   return updateDb((db) => {
     const asset = db.assets.find((a) => a.id === assetId)
-    if (!asset) throw new Error(`asset non trovato: ${assetId}`)
+    if (!asset) throw new Error(`asset not found: ${assetId}`)
     if (status === "approved") {
       const key = slot(asset, db.assets)
       for (const other of db.assets) {
@@ -225,7 +225,7 @@ export async function extractDna(garmentId: string): Promise<GarmentDna> {
   const inputs = (["archive", "sketch"] as const)
     .map((kind) => ({ kind, asset: pick(assets, kind) }))
     .filter((x): x is { kind: "archive" | "sketch"; asset: Asset } => !!x.asset)
-  if (!inputs.length) throw new Error("serve almeno una foto d'archivio o un flat")
+  if (!inputs.length) throw new Error("needs at least one archive photo or a flat")
   const { data, model } = await askJson<Omit<GarmentDna, "model" | "at">>({
     system: DNA_SYSTEM,
     prompt: dnaPrompt(garment, inputs.map((i) => i.kind)),
@@ -248,7 +248,7 @@ export async function extractDna(garmentId: string): Promise<GarmentDna> {
 export async function enrichDnaFromBrand(garmentId: string, brandId: string, note?: string): Promise<GarmentDna> {
   const brand = brandProfile(brandId)
   const { garment } = await getGarment(garmentId)
-  if (!garment.dna) throw new Error("DNA mancante: estrai prima i vincoli dal bozzetto")
+  if (!garment.dna) throw new Error("DNA missing: extract the constraints from the sketch first")
   const dna = garment.dna
   const { data, model } = await askJson<{
     summary: string
@@ -318,7 +318,7 @@ export async function writeShootPlan(garmentId: string): Promise<ShootPlan> {
     temperature: 0.3,
   })
   const missing = missingInPlan(data)
-  if (missing.length) throw new Error(`piano di scatti incompleto: ${missing.join(", ")}`)
+  if (missing.length) throw new Error(`incomplete shoot plan: ${missing.join(", ")}`)
   const plan: ShootPlan = {
     ...data,
     ugc: { ...data.ugc, copy: data.ugc.copy ?? {} },
@@ -376,7 +376,7 @@ export async function buttonRef(garmentId: string): Promise<Asset | undefined> {
   const existing = assets.find((a) => a.kind === "crop" && a.label === "button" && a.refs[0] === source.id && (a.prompt ?? hardware.target) === hardware.target)
   if (existing) return existing
   const boxes = await locate(source.media, [hardware.target])
-  if (!boxes[hardware.target]) throw new Error(`${hardware.label} non trovato nell'immagine sorgente`)
+  if (!boxes[hardware.target]) throw new Error(`${hardware.label} not found in the source image`)
   const media = await crop(source.media, boxes[hardware.target], 0.8)
   return addAsset(garmentId, "crop", media, [source.id], { label: "button", prompt: hardware.target })
 }
@@ -394,7 +394,7 @@ async function regionRef(garmentId: string, kind: AssetKind): Promise<Asset | un
   const existing = assets.find((a) => a.kind === "crop" && a.label === label && a.refs[0] === front.id && (a.prompt ?? target) === target)
   if (existing) return existing
   const boxes = await locate(front.media, [target])
-  if (!boxes[target]) throw new Error(`zona del dettaglio non trovata nel fronte: ${target}`)
+  if (!boxes[target]) throw new Error(`detail area not found on the front: ${target}`)
   const media = await crop(front.media, boxes[target], 0.1)
   return addAsset(garmentId, "crop", media, [front.id], { label, prompt: target })
 }
@@ -422,7 +422,7 @@ async function refsFor(garmentId: string, kind: AssetKind): Promise<Array<{ asse
   const refs: Array<{ asset: Asset; role: RefRole }> = []
   if (sketch) refs.push({ asset: sketch, role: "sketch" })
   else if (front) refs.push({ asset: front, role: "front" })
-  else throw new Error('manca il flat o una vista bloccata')
+  else throw new Error('missing the flat or a locked view')
   if (sketch && front && kind !== "ghost-front") refs.push({ asset: front, role: "front" })
   if (!sketch && side && kind !== "ghost-side") refs.push({ asset: side, role: "side" })
   if (button) refs.push({ asset: button, role: "button" })
@@ -436,7 +436,7 @@ async function refsFor(garmentId: string, kind: AssetKind): Promise<Array<{ asse
 async function wornRefs(garmentId: string, assets: Asset[]): Promise<Array<{ asset: Asset; role: RefRole }>> {
   const model = approved(assets, "mesh-front")
   const front = model ?? approved(assets, "ghost-front")
-  if (!front) throw new Error("serve un ghost-front approvato")
+  if (!front) throw new Error("needs an approved ghost-front")
   const side = approved(assets, "ghost-side")
   const button = await buttonRef(garmentId).catch(() => undefined)
   return [
@@ -517,7 +517,7 @@ async function qaMedia(garmentId: string, media: Media, kind: AssetKind): Promis
 export async function qaAsset(assetId: string): Promise<Qa | undefined> {
   const db = await readDb()
   const asset = db.assets.find((a) => a.id === assetId)
-  if (!asset) throw new Error(`asset non trovato: ${assetId}`)
+  if (!asset) throw new Error(`asset not found: ${assetId}`)
   if (!VISUAL_QA.includes(asset.kind)) return undefined
   const qa = await qaMedia(asset.garmentId, asset.media, asset.kind)
   await updateDb((d) => {
@@ -573,16 +573,16 @@ export async function generateAllCanon(
   if (!approved(assets, "ghost-front")) {
     if (!hasLive(assets, "ghost-front")) {
       mark.slots(["ghost-front"])
-      mark.phase("Genero il fronte")
+      mark.phase("Generating the front")
       const front = await generateCanon(garmentId, "ghost-front", modelIds)
       out.push(...front)
       const chosen = best(front)
-      if (!chosen) throw new Error(`Fronte non riuscito: ${front.find((r) => r.error)?.error ?? "nessun candidato"}`)
+      if (!chosen) throw new Error(`Front failed: ${front.find((r) => r.error)?.error ?? "no candidate"}`)
       await setStatus(chosen.id, "approved", "auto")
     } else {
       const existing = pick(assets, "ghost-front")
-      if (!existing) throw new Error("manca il fronte")
-      mark.phase("Approvo il fronte già generato")
+      if (!existing) throw new Error("the front is missing")
+      mark.phase("Approving the front already generated")
       await setStatus(existing.id, "approved", "auto")
     }
     ;({ assets, garment } = await getGarment(garmentId))
@@ -593,7 +593,7 @@ export async function generateAllCanon(
     .filter((kind) => kind !== "ghost-front" && !hasLive(assets, kind))
   if (!pending.length) return out
   mark.slots(pending)
-  mark.phase(`Genero ${pending.map((kind) => slotLabel(garment.shoot, kind).toLowerCase()).join(", ")}`)
+  mark.phase(`Generating ${pending.map((kind) => slotLabel(garment.shoot, kind).toLowerCase()).join(", ")}`)
   const batches = await Promise.all(
     pending.map(async (kind) => {
       try {
@@ -616,7 +616,7 @@ function meshSource(assets: Asset[]): Asset | undefined {
 export async function addOperatorMesh(garmentId: string, media: Media, label: "operatore" | "pixal3d" = "operatore", operator?: Operator): Promise<Asset> {
   const { assets } = await getGarment(garmentId)
   const source = meshSource(assets)
-  if (!source) throw new Error("serve il concept approvato")
+  if (!source) throw new Error("needs the approved concept")
   const base = approved(assets, "mesh") ?? (operator ? assets.filter((a) => a.kind === "mesh" && a.status !== "rejected" && a.label !== "operatore").at(-1) : undefined)
   return addAsset(garmentId, "mesh", media, [source.id, ...(base ? [base.id] : [])], { label, ...(operator ? { operator } : {}) })
 }
@@ -633,7 +633,7 @@ export async function generateScene(garmentId: string, modelIds: string[], setti
   const { garment, assets } = await getGarment(garmentId)
   const plan = await ensureShootPlan(garmentId)
   const front = approved(assets, "ghost-front")
-  if (!front) throw new Error("serve il fronte approvato")
+  if (!front) throw new Error("needs the approved front")
   const refs = [front, approved(assets, "detail-fabric")].filter((a): a is Asset => !!a)
   const prompt = `Editorial lifestyle still life for a fashion e-commerce product page. ${setting} No person, no mannequin, no text, no logos.
 Image 1 is the approved packshot of the ${plan.noun}${refs.length > 1 ? "; Image 2 is a close-up of its fabric" : ""}. The ${plan.noun} is identical to the packshot: ${plan.description}, with ${plan.identity}. Keep ${plan.lock} identical; do not redesign the ${plan.noun}.
@@ -665,7 +665,7 @@ export async function simulateOperator(garmentId: string, glb: string): Promise<
 export async function generateMeshes(garmentId: string, modelIds: string[]): Promise<Candidate[]> {
   const { garment, assets } = await getGarment(garmentId)
   const source = meshSource(assets)
-  if (!source) throw new Error("serve il concept approvato")
+  if (!source) throw new Error("needs the approved concept")
   const prompt = garment.shoot?.noun ?? "garment"
   return candidates(modelIds, async (modelId) => {
     const generated = await generateMesh(modelId, { image: source.media, prompt })
@@ -743,7 +743,7 @@ export async function generateOnModel(garmentId: string, personId: string, model
   needDna(garment)
   const plan = await ensureShootPlan(garment.id)
   const person = assets.find((a) => a.id === personId && a.kind === "person")
-  if (!person) throw new Error(`persona non trovata: ${personId}`)
+  if (!person) throw new Error(`person not found: ${personId}`)
   const refs = await wornRefs(garmentId, assets)
   const prompt = gendered(onModelPrompt(plan, refs.map((r) => r.role)), lineOf(garment))
   return candidates(modelIds, async (modelId) => {
@@ -762,7 +762,7 @@ export async function generateStudio(garmentId: string, modelRefId: string, look
   needDna(garment)
   const plan = await ensureShootPlan(garment.id)
   const person = assets.find((a) => a.id === modelRefId && (a.kind === "person" || a.kind === "on-model"))
-  if (!person) throw new Error(`modella non trovata: ${modelRefId}`)
+  if (!person) throw new Error(`model not found: ${modelRefId}`)
   const look = studioLook(lookId)
   const cast = castOf(person, assets)
   const backView = look.view === "back" && cast ? castAsset(assets, cast.modelId, "back") : undefined
@@ -803,7 +803,7 @@ function approvedUgc(assets: Asset[], kind: AssetKind, creatorId: string, format
 
 function pickShots(format: UgcFormat, shotIds?: string[]) {
   const shots = shotIds?.length ? format.shots.filter((s) => shotIds.includes(s.id)) : format.shots
-  if (!shots.length) throw new Error(`scatto sconosciuto per ${format.id}: ${shotIds?.join(", ")}`)
+  if (!shots.length) throw new Error(`unknown shot for ${format.id}: ${shotIds?.join(", ")}`)
   return shots
 }
 
@@ -836,7 +836,7 @@ export async function generateUgcFrames(
   needDna(garment)
   const plan = await ensureShootPlan(garment.id)
   const person = assets.find((a) => a.id === personId && a.kind === "person")
-  if (!person) throw new Error(`creator non trovata: ${personId}`)
+  if (!person) throw new Error(`creator not found: ${personId}`)
   const c = creator(person.label ?? CREATORS[0].id)
   const format = ugcFormat(formatId)
   const shots = pickShots(format, shotIds)
@@ -921,9 +921,9 @@ export async function generateUgcClips(
   const shots = pickShots(format, opts.shots)
   const frames = shots.map((shot) => ({ shot, frame: approvedUgc(assets, "ugc-frame", creatorId, format.id, shot.id) }))
   const missing = frames.filter((f) => !f.frame).map((f) => f.shot.label)
-  if (missing.length) throw new Error(`serve il fotogramma approvato di: ${missing.join(", ")}`)
+  if (missing.length) throw new Error(`needs the approved frame of: ${missing.join(", ")}`)
   const person = pick(assets, "person", creatorId)
-  if (!person) throw new Error(`creator non trovata: ${creatorId}`)
+  if (!person) throw new Error(`creator not found: ${creatorId}`)
 
   const voice = ugcVoice(opts.voice)
   const speaking = format.shots.filter((s) => s.voice !== "none")
@@ -985,7 +985,7 @@ export async function autoReel(
   const approveEach = async (shots: UgcFormat["shots"], results: Candidate[], what: string) => {
     for (const shot of shots) {
       const pick = best(results.filter((r) => r.asset?.label === shotLabel(format.id, shot.id)))
-      if (!pick) throw new Error(`${what} di «${shot.label}» non riuscito: ${results.find((r) => r.error)?.error ?? "nessun candidato"}`)
+      if (!pick) throw new Error(`${what} of “${shot.label}” failed: ${results.find((r) => r.error)?.error ?? "no candidate"}`)
       await setStatus(pick.id, "approved", "auto")
     }
   }
@@ -1000,15 +1000,15 @@ export async function autoReel(
   // one shot at a time: the next frame has to see the end of the clip just made, not a written description of it
   for (const shot of format.shots) {
     if (!(await approvedOf("ugc-frame", shot.id))) {
-      phase(`Fotogramma: ${shot.label.toLowerCase()}`)
-      await approveEach([shot], await generateUgcFrames(garmentId, personId, format.id, models.frame, [shot.id]), "Fotogramma")
+      phase(`Frame: ${shot.label.toLowerCase()}`)
+      await approveEach([shot], await generateUgcFrames(garmentId, personId, format.id, models.frame, [shot.id]), "Frame")
     }
     if (!(await approvedOf("ugc-clip", shot.id))) {
-      phase(`Clip: ${shot.label.toLowerCase()} (qualche minuto)`)
+      phase(`Clip: ${shot.label.toLowerCase()} (a few minutes)`)
       await approveEach([shot], await generateUgcClips(garmentId, creatorId, format.id, models.clip, { voice, script: await script, shots: [shot.id] }), "Clip")
     }
   }
-  phase("Monto il reel")
+  phase("Editing the reel")
   return assembleReel(garmentId, creatorId, format.id, musicId)
 }
 
@@ -1042,7 +1042,7 @@ export async function reelCaption(garmentId: string, format: UgcFormat): Promise
   if (existing) return existing
   const { data } = await askJson<{ hook?: string; line?: string }>({ ...captionPrompt(plan, format, lineOf(garment)), temperature: 0.9 })
   const line = data.line?.trim()
-  if (!line) throw new Error(`testo a schermo di «${format.label}» non scritto`)
+  if (!line) throw new Error(`on-screen text of “${format.label}” not written`)
   await updateDb((db) => {
     const shoot = db.garments.find((g) => g.id === garmentId)?.shoot
     if (shoot) shoot.ugc.copy[format.id] = { hook: shoot.ugc.copy[format.id]?.hook || data.hook?.trim() || "", line }
@@ -1084,10 +1084,10 @@ export async function assembleReel(garmentId: string, creatorId: string, formatI
   const format = ugcFormat(formatId)
   const found = format.shots.map((shot) => ({ shot, clip: approvedUgc(assets, "ugc-clip", creatorId, format.id, shot.id) }))
   const missing = found.filter((c) => !c.clip).map((c) => c.shot.label)
-  if (missing.length) throw new Error(`serve la clip approvata di: ${missing.join(", ")}`)
+  if (missing.length) throw new Error(`needs the approved clip of: ${missing.join(", ")}`)
   const clips = found as Array<{ shot: UgcShot; clip: Asset }>
   const person = pick(assets, "person", creatorId)
-  if (!person) throw new Error(`creator non trovata: ${creatorId}`)
+  if (!person) throw new Error(`creator not found: ${creatorId}`)
   const bed = format.music ? (musicId ? ugcTrack(musicId) : { id: format.id, prompt: format.music.prompt }) : undefined
   const music = bed ? await ensureMusic(bed) : undefined
   const grid = music ? await beatGrid(music) : undefined
@@ -1111,7 +1111,7 @@ export async function assembleReel(garmentId: string, creatorId: string, formatI
 export async function refineAsset(assetId: string, instruction: string, modelIds: string[]): Promise<Candidate[]> {
   const db = await readDb()
   const source = db.assets.find((a) => a.id === assetId)
-  if (!source) throw new Error(`asset non trovato: ${assetId}`)
+  if (!source) throw new Error(`asset not found: ${assetId}`)
   if (source.garmentId === CAST_ID) return refineCastView(source, instruction, modelIds)
   if (source.kind === "sketch") {
     const prompt = refineFlatPrompt(instruction)

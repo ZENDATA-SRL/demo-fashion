@@ -8,7 +8,7 @@ const DEMO = {
   name: "Cappotto Staffa",
   maison: "Aurenzi Milano",
   brief: "nuova interpretazione FW26 del cappotto d'archivio 1989, lana double, bottoni staffa, rosso lacca",
-  goal: "pre-order sul sito + 6 UGC ads per testare 3 hook prima di produrre",
+  goal: "pre-order on the site + 6 UGC ads to test 3 hooks before producing",
 }
 
 main(async () => {
@@ -16,13 +16,13 @@ main(async () => {
   const sketchModel = arg("sketch-model", "qwen-image-2.1")
 
   const garment = await createGarment(DEMO)
-  console.log(`capo ${garment.sku} · ${garment.id}`)
+  console.log(`garment ${garment.sku} · ${garment.id}`)
 
   const archive = await seedArchive(garment, archiveModel)
-  console.log(`archivio 1989 → ${mediaPath(archive.media)}`)
+  console.log(`archive 1989 → ${mediaPath(archive.media)}`)
 
   const sketch = await seedSketch(garment, archive, sketchModel)
-  console.log(`disegno tecnico FW26 → ${mediaPath(sketch.media)}`)
+  console.log(`FW26 technical drawing → ${mediaPath(sketch.media)}`)
 
-  console.log(`foglio → ${await contactSheet([archive.media, sketch.media], `${garment.sku}-input`)}`)
+  console.log(`sheet → ${await contactSheet([archive.media, sketch.media], `${garment.sku}-input`)}`)
 })

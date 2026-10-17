@@ -42,7 +42,7 @@ export function JobBanner({ target, slot }: { target: string; slot?: string }) {
       <div className="banner error banners">
         <Icon name="alert" />
         <div className="grow">
-          <b>{last.label}: non riuscito</b>
+          <b>{last.label}: failed</b>
           {last.error ? ` · ${last.error}` : ""}
         </div>
       </div>
@@ -136,7 +136,7 @@ export function Bench({
           {current && noApprove && (
             <div className="mesh-stage-tools">
               {toolbar}
-              <button type="button" className="icon-btn bordered" onClick={() => setDetails(true)} aria-label="Dettagli">
+              <button type="button" className="icon-btn bordered" onClick={() => setDetails(true)} aria-label="Details">
                 <Icon name="info" size={13} />
               </button>
             </div>
@@ -146,19 +146,19 @@ export function Bench({
             {pending.length > 0 && (
               <span className={`stage-chip ${current ? "" : "center"}`}>
                 <span className="spinner" style={{ width: 11, height: 11 }} />
-                {current ? "Nuova versione in arrivo" : "Sto generando"}
+                {current ? "New version on its way" : "Generating"}
                 {wait && <span className="mono">{wait}</span>}
               </span>
             )}
             {sorted.length > 1 && (
-              <div className="stage-pager" aria-label="Versioni">
-                <button className="icon-btn" onClick={() => setSelected(sorted[i - 1]?.id)} disabled={i === 0} aria-label="Versione precedente">
+              <div className="stage-pager" aria-label="Versions">
+                <button className="icon-btn" onClick={() => setSelected(sorted[i - 1]?.id)} disabled={i === 0} aria-label="Previous version">
                   <Icon name="left" size={13} />
                 </button>
                 <span className="mono">
                   {i + 1}/{sorted.length}
                 </span>
-                <button className="icon-btn" onClick={() => setSelected(sorted[i + 1]?.id)} disabled={i === sorted.length - 1} aria-label="Versione successiva">
+                <button className="icon-btn" onClick={() => setSelected(sorted[i + 1]?.id)} disabled={i === sorted.length - 1} aria-label="Next version">
                   <Icon name="right" size={13} />
                 </button>
               </div>
@@ -179,12 +179,12 @@ function StageMedia({ asset: a, onMeshSize }: { asset: AssetView; onMeshSize?: (
     return (
       <>
         <TapVideo src={a.src} poster={a.poster} />
-        <span className="disclosure">Creator virtuale</span>
+        <span className="disclosure">Virtual creator</span>
       </>
     )
   return (
-    <button className="stage-img" onClick={() => light({ src: a.src, alt: "Risultato" })} aria-label="Ingrandisci">
-      <img src={a.src} alt="Risultato" />
+    <button className="stage-img" onClick={() => light({ src: a.src, alt: "Result" })} aria-label="Enlarge">
+      <img src={a.src} alt="Result" />
     </button>
   )
 }
@@ -219,17 +219,17 @@ function StageBar({ asset: a, toolbar, onDetails }: { asset: AssetView; toolbar:
         <input
           autoFocus
           className="field-input"
-          placeholder="Cosa cambiare? es. catena più corta"
+          placeholder="What should change? e.g. shorter chain"
           value={fix}
           onChange={(e) => setFix(e.target.value)}
           onKeyDown={(e) => e.key === "Escape" && setFixing(false)}
-          aria-label="Cosa correggere"
+          aria-label="What to fix"
         />
         <button className="btn primary sm" disabled={!fix.trim() || busy} type="submit">
           {busy ? <span className="spinner" style={{ width: 11, height: 11 }} /> : <Icon name="pen" size={12} />}
-          Correggi
+          Fix
         </button>
-        <button type="button" className="icon-btn" onClick={() => setFixing(false)} aria-label="Annulla">
+        <button type="button" className="icon-btn" onClick={() => setFixing(false)} aria-label="Cancel">
           <Icon name="x" size={13} />
         </button>
       </form>
@@ -239,15 +239,15 @@ function StageBar({ asset: a, toolbar, onDetails }: { asset: AssetView; toolbar:
     <div className="stage-bar">
       {a.status === "approved" ? (
         <span className="stage-ok">
-          <Icon name="check" size={12} /> Approvato
+          <Icon name="check" size={12} /> Approved
         </span>
       ) : (
         <button className="btn primary sm" onClick={() => setStatus(a.id, "approved")}>
-          <Icon name="check" size={12} /> Approva
+          <Icon name="check" size={12} /> Approve
         </button>
       )}
       <span className="more">
-        <button className="icon-btn" aria-label="Altre azioni" aria-expanded={more} onClick={() => setMore((m) => !m)}>
+        <button className="icon-btn" aria-label="More actions" aria-expanded={more} onClick={() => setMore((m) => !m)}>
           <Icon name="more" size={14} />
         </button>
         {more && (
@@ -256,14 +256,14 @@ function StageBar({ asset: a, toolbar, onDetails }: { asset: AssetView; toolbar:
             <div className="more-menu card" onClick={(e) => (e.target as HTMLElement).closest("button, a") && setMore(false)}>
               {canRefine && (
                 <button onClick={() => setFixing(true)}>
-                  <Icon name="pen" size={12} /> Correggi un dettaglio
+                  <Icon name="pen" size={12} /> Fix a detail
                 </button>
               )}
               {toolbar}
               <button onClick={onDetails}>
-                <Icon name="info" size={12} /> Dettagli e controlli
+                <Icon name="info" size={12} /> Details and checks
               </button>
-              {a.status === "approved" && <button onClick={() => setStatus(a.id, "draft")}>Rimetti in bozza</button>}
+              {a.status === "approved" && <button onClick={() => setStatus(a.id, "draft")}>Back to draft</button>}
             </div>
           </>
         )}
@@ -285,7 +285,7 @@ function Details({ asset: a, onClose }: { asset: AssetView; onClose: () => void 
   return (
     <>
       <div className="drawer-scrim" onClick={onClose} />
-      <aside className="drawer card" aria-label="Dettagli del risultato">
+      <aside className="drawer card" aria-label="Result details">
         <div className="drawer-head">
           <div style={{ minWidth: 0 }}>
             <h3>{a.model}</h3>
@@ -299,14 +299,14 @@ function Details({ asset: a, onClose }: { asset: AssetView; onClose: () => void 
               <span className="caps">QA / 100</span>
             </div>
           )}
-          <button className="icon-btn" onClick={onClose} aria-label="Chiudi">
+          <button className="icon-btn" onClick={onClose} aria-label="Close">
             <Icon name="x" />
           </button>
         </div>
 
         <div className="secs">
           {checks.length > 0 && (
-            <Section title="Controlli sul DNA" meta={<span data-t={failed ? "bad" : "ok"}>{`${checks.length - failed}/${checks.length}`}</span>} open>
+            <Section title="DNA checks" meta={<span data-t={failed ? "bad" : "ok"}>{`${checks.length - failed}/${checks.length}`}</span>} open>
               <ul className="checks">
                 {checks.map((c) => (
                   <li className="check" data-pass={c.pass} key={c.key}>
@@ -324,7 +324,7 @@ function Details({ asset: a, onClose }: { asset: AssetView; onClose: () => void 
           )}
 
           {a.qa && a.qa.artifacts.length > 0 && (
-            <Section title="Difetti" meta={a.qa.artifacts.length} open>
+            <Section title="Defects" meta={a.qa.artifacts.length} open>
               <ul className="sec-list">
                 {a.qa.artifacts.map((x) => (
                   <li key={x}>{x}</li>
@@ -334,11 +334,11 @@ function Details({ asset: a, onClose }: { asset: AssetView; onClose: () => void 
           )}
 
           {a.video && (
-            <Section title="Fotogrammi" meta={DRIFT.length}>
+            <Section title="Frames" meta={DRIFT.length}>
               <div className="drift">
                 {DRIFT.map((t) => (
                   <figure key={t}>
-                    <img src={`/api/frame/${a.src.split("/").pop()}?t=${t}`} alt={`Fotogramma a ${t} secondi`} loading="lazy" />
+                    <img src={`/api/frame/${a.src.split("/").pop()}?t=${t}`} alt={`Frame at ${t} seconds`} loading="lazy" />
                     <figcaption>{t}s</figcaption>
                   </figure>
                 ))}
@@ -347,7 +347,7 @@ function Details({ asset: a, onClose }: { asset: AssetView; onClose: () => void 
           )}
 
           {a.refs.length > 0 && (
-            <Section title="Riferimenti usati" meta={a.refs.length}>
+            <Section title="References used" meta={a.refs.length}>
               <div className="refs">
                 {a.refs.map((r) => (
                   <figure key={r.id}>
@@ -362,15 +362,15 @@ function Details({ asset: a, onClose }: { asset: AssetView; onClose: () => void 
           {a.mesh && (
             <Section title="File" open>
               <a className="mono link" href={a.src} download>
-                Scarica il GLB
+                Download the GLB
               </a>
             </Section>
           )}
 
-          <Section title="Modello">
+          <Section title="Model">
             <div className="tags">
-              <span className={`badge ${a.weights === "open" ? "ok" : ""}`}>{a.weights === "open" ? "Pesi aperti" : "Pesi chiusi"}</span>
-              <span className="badge outline">{a.hosting === "self-hosted" ? "Self-hosted" : "API gestita"}</span>
+              <span className={`badge ${a.weights === "open" ? "ok" : ""}`}>{a.weights === "open" ? "Open weights" : "Closed weights"}</span>
+              <span className="badge outline">{a.hosting === "self-hosted" ? "Self-hosted" : "Managed API"}</span>
             </div>
             {a.prompt && <pre className="prompt">{a.prompt}</pre>}
           </Section>
@@ -388,7 +388,7 @@ function Details({ asset: a, onClose }: { asset: AssetView; onClose: () => void 
               }}
             >
               {(qaRunning || checking) && <span className="spinner" style={{ width: 11, height: 11 }} />}
-              Controlla qualità
+              Run QA check
             </button>
           )}
           {a.status !== "approved" && (
@@ -399,7 +399,7 @@ function Details({ asset: a, onClose }: { asset: AssetView; onClose: () => void 
                 onClose()
               }}
             >
-              Scarta questa versione
+              Discard this version
             </button>
           )}
         </div>

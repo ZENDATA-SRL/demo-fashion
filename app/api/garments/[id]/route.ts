@@ -28,11 +28,11 @@ const SHOOT_PATH =
   /^(noun|description|identity|lock|scale|outfit|wear|views\.(front|back|side)|details\.detail-(button|fabric)\.(label|region|shot)|hardware\.(label|target)|ugc\.(wear|show|touch)|ugc\.copy\.[a-z-]+\.(hook|line)|zones\.\d+\.(label|target)|backZones\.\d+)$/
 
 function setShootText(plan: ShootPlan, path: string, value: string) {
-  if (!SHOOT_PATH.test(path)) throw new Error(`campo del piano non modificabile: ${path}`)
+  if (!SHOOT_PATH.test(path)) throw new Error(`shoot plan field not editable: ${path}`)
   const keys = path.split(".")
   const last = keys.pop()!
   const parent = keys.reduce<unknown>((o, k) => (o as Record<string, unknown> | null | undefined)?.[k], plan) as Record<string, unknown> | null | undefined
-  if (!parent || typeof parent[last] !== "string") throw new Error(`campo del piano non trovato: ${path}`)
+  if (!parent || typeof parent[last] !== "string") throw new Error(`shoot plan field not found: ${path}`)
   parent[last] = value
 }
 
@@ -43,17 +43,17 @@ export async function PATCH(req: Request, { params }: Ctx) {
   try {
     await updateDb((db) => {
       const g = db.garments.find((x) => x.id === id)
-      if (!g) throw new Error("capo non trovato")
+      if (!g) throw new Error("product not found")
       if (body.field) {
         const f: DnaField | undefined = g.dna?.fields.find((x) => x.key === body.field!.key)
-        if (!f) throw new Error("campo non trovato")
+        if (!f) throw new Error("field not found")
         if (typeof body.field.value === "string" && body.field.value.trim()) f.value = body.field.value.trim()
         if (body.field.source && SOURCES.includes(body.field.source)) f.source = body.field.source
         if (typeof body.field.critical === "boolean") f.critical = body.field.critical
       }
       if (body.shoot) {
-        if (!g.shoot) throw new Error("piano di scatti mancante")
-        if (typeof body.shoot.value !== "string" || !body.shoot.value.trim()) throw new Error("testo vuoto")
+        if (!g.shoot) throw new Error("shoot plan missing")
+        if (typeof body.shoot.value !== "string" || !body.shoot.value.trim()) throw new Error("empty text")
         setShootText(g.shoot, body.shoot.path, body.shoot.value.trim())
       }
       if (body.confirmDna === true) g.dnaConfirmedAt = new Date().toISOString()

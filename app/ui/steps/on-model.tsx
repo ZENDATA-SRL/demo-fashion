@@ -34,7 +34,7 @@ export function OnModelStep() {
     <>
       <StepHead />
 
-      <div className="slots" aria-label="Modelle">
+      <div className="slots" aria-label="Models">
         {ws.cast.map((m) => {
           const front = ws.assets.find((a) => a.id === m.views.front)
           const hers = ofModel(ws.assets, m)
@@ -59,7 +59,7 @@ export function OnModelStep() {
                       <Icon name="check" size={10} />
                     </span>
                   ) : hers.length ? (
-                    `${hers.length} da scegliere`
+                    `${hers.length} to choose from`
                   ) : (
                     m.note
                   )}
@@ -75,10 +75,10 @@ export function OnModelStep() {
         target="on-model"
         slot={model.id}
         assets={mine}
-        toolbar={mine.length > 0 && <GenerateButton label="Nuova versione" models={ws.models} modelIds={models} onRun={generate} busy={busy} disabled={!!job && !busy} quiet />}
+        toolbar={mine.length > 0 && <GenerateButton label="New version" models={ws.models} modelIds={models} onRun={generate} busy={busy} disabled={!!job && !busy} quiet />}
         empty={
           <div className="empty">
-            <GenerateButton label="Genera l'indossato" models={ws.models} modelIds={models} onRun={generate} busy={busy} disabled={!!job && !busy} />
+            <GenerateButton label="Generate the on-model shot" models={ws.models} modelIds={models} onRun={generate} busy={busy} disabled={!!job && !busy} />
           </div>
         }
       />

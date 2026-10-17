@@ -6,7 +6,7 @@ main(async () => {
   const { garment, assets } = await getGarment(arg("garment"))
   const kind = arg("kind", "ghost-front")
   const targets = assets.filter((a) => a.kind === kind)
-  if (!targets.length) throw new Error(`nessun asset "${kind}"`)
+  if (!targets.length) throw new Error(`no "${kind}" asset`)
   const rows = await Promise.all(
     targets.map(async (asset) => ({ modelId: asset.gen?.modelId ?? "?", asset, qa: await qaAsset(asset.id) })),
   )

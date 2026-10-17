@@ -8,7 +8,7 @@ import type { Output } from "./types"
 
 function falKey(): string {
   const key = process.env.FAL_KEY
-  if (!key) throw new Error("FAL_KEY mancante in .env")
+  if (!key) throw new Error("FAL_KEY missing in .env")
   return key
 }
 
@@ -46,11 +46,11 @@ export async function falQueue(endpoint: string, body: Record<string, unknown>, 
   const startedAt = Date.now()
   const elapsed = () => ((Date.now() - startedAt) / 1000).toFixed(1)
   const fail = (message: string): never => {
-    console.error(`[fal] ${endpoint} · errore dopo ${elapsed()}s · ${message}`)
+    console.error(`[fal] ${endpoint} · error after ${elapsed()}s · ${message}`)
     throw new Error(message)
   }
 
-  console.log(`[fal] ${endpoint} · invio`)
+  console.log(`[fal] ${endpoint} · submitting`)
   const submit = await fetch(`https://queue.fal.run/${endpoint}`, {
     method: "POST",
     headers: { ...auth, "Content-Type": "application/json" },
@@ -61,7 +61,7 @@ export async function falQueue(endpoint: string, body: Record<string, unknown>, 
   if (!submit.ok) fail(falError(queued, `fal ${submit.status}`))
   const statusUrl = String(queued.status_url)
   let responseUrl = String(queued.response_url)
-  console.log(`[fal] ${endpoint} · in coda ${queued.request_id ?? ""}`)
+  console.log(`[fal] ${endpoint} · queued ${queued.request_id ?? ""}`)
 
   const deadline = Date.now() + timeoutMs
   let polls = 0
@@ -92,7 +92,7 @@ export async function falQueue(endpoint: string, body: Record<string, unknown>, 
   const res = await fetch(responseUrl, { headers: auth })
   const result = await readJson(res)
   if (!res.ok) fail(falError(result, `fal result ${res.status}`))
-  console.log(`[fal] ${endpoint} · fatto in ${elapsed()}s`)
+  console.log(`[fal] ${endpoint} · done in ${elapsed()}s`)
   return result
 }
 
@@ -103,13 +103,13 @@ async function uploadToFal(data: Buffer, contentType: string, fileName: string):
     body: JSON.stringify({ file_name: fileName, content_type: contentType }),
   })
   const json = (await init.json()) as { upload_url?: string; file_url?: string; detail?: string }
-  if (!init.ok || !json.upload_url || !json.file_url) throw new Error(json.detail ?? "fal upload fallito")
+  if (!init.ok || !json.upload_url || !json.file_url) throw new Error(json.detail ?? "fal upload failed")
   const put = await fetch(json.upload_url, {
     method: "PUT",
     headers: { "Content-Type": contentType },
     body: new Uint8Array(data),
   })
-  if (!put.ok) throw new Error("fal upload fallito")
+  if (!put.ok) throw new Error("fal upload failed")
   return json.file_url
 }
 
@@ -133,19 +133,19 @@ export async function falUrl(media: Media): Promise<string> {
 export function falImage(result: Record<string, unknown>): Output {
   const images = result.images as Array<{ url?: string }> | undefined
   const url = images?.[0]?.url ?? (result.image as { url?: string } | undefined)?.url
-  if (!url) throw new Error("fal: nessuna immagine restituita")
+  if (!url) throw new Error("fal: no image returned")
   return { url }
 }
 
 export function falAudio(result: Record<string, unknown>): Output {
   const url = (result.audio as { url?: string } | undefined)?.url
-  if (!url) throw new Error("fal: nessun audio restituito")
+  if (!url) throw new Error("fal: no audio returned")
   return { url }
 }
 
 export function falVideo(result: Record<string, unknown>): Output {
   const url = (result.video as { url?: string } | undefined)?.url
-  if (!url) throw new Error("fal: nessun video restituito")
+  if (!url) throw new Error("fal: no video returned")
   return { url }
 }
 
@@ -155,5 +155,5 @@ export function falFile(result: Record<string, unknown>, keys: string[]): Output
     const file = result[key] as { url?: string } | undefined
     if (file?.url) return { url: file.url }
   }
-  throw new Error("fal: nessun file 3D restituito")
+  throw new Error("fal: no 3D file returned")
 }

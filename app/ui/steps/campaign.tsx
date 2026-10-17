@@ -7,14 +7,14 @@ import type { Workspace } from "@/lib/workspace-types"
 import { Hint, Icon, api, useToast } from "../kit"
 import { StepHead, useWs } from "../workspace"
 
-export const eur = (n: number, digits = 0) => n.toLocaleString("it-IT", { style: "currency", currency: "EUR", maximumFractionDigits: digits, minimumFractionDigits: digits })
-export const int = (n: number) => Math.round(n).toLocaleString("it-IT")
-export const pct = (n: number, of: number, digits = 2) => (of ? `${((n / of) * 100).toFixed(digits).replace(".", ",")}%` : "—")
+export const eur = (n: number, digits = 0) => n.toLocaleString("en-GB", { style: "currency", currency: "EUR", maximumFractionDigits: digits, minimumFractionDigits: digits })
+export const int = (n: number) => Math.round(n).toLocaleString("en-GB")
+export const pct = (n: number, of: number, digits = 2) => (of ? `${((n / of) * 100).toFixed(digits)}%` : "—")
 
 const BUDGETS = [1000, 2500, 5000]
 const DURATIONS = [7, 10, 14]
-const TYPE_LABEL: Record<string, string> = { ugc: "Reel UGC", editorial: "Editorial", onmodel: "On-model", lifestyle: "Lifestyle", packshot: "Packshot" }
-const SENTIMENT = { positive: { label: "positivo", tone: "ok" }, neutral: { label: "neutro", tone: "outline" }, negative: { label: "critico", tone: "bad" } } as const
+const TYPE_LABEL: Record<string, string> = { ugc: "UGC reel", editorial: "Editorial", onmodel: "On-model", lifestyle: "Lifestyle", packshot: "Packshot" }
+const SENTIMENT = { positive: { label: "positive", tone: "ok" }, neutral: { label: "neutral", tone: "outline" }, negative: { label: "critical", tone: "bad" } } as const
 
 function sum(days: DayResult[]): Funnel {
   const out: Funnel = { spend: 0, impressions: 0, reach: 0, likes: 0, comments: 0, saves: 0, shares: 0, clicks: 0, sessions: 0, waitlist: 0, preorders: 0 }
@@ -50,7 +50,7 @@ export function CampaignStep() {
       setDay(1)
       setPlaying(true)
     } catch (err) {
-      toast({ title: "Test non lanciato", body: err instanceof Error ? err.message : String(err), tone: "error" })
+      toast({ title: "Test not launched", body: err instanceof Error ? err.message : String(err), tone: "error" })
     } finally {
       setSending(false)
     }
@@ -74,7 +74,7 @@ export function CampaignStep() {
         actions={
           c && !changed ? (
             <button className="btn primary sm" onClick={() => go("validazione")}>
-              Leggi i risultati <Icon name="right" size={12} />
+              Read the results <Icon name="right" size={12} />
             </button>
           ) : undefined
         }
@@ -82,14 +82,14 @@ export function CampaignStep() {
       <div className="mk fill">
         <section className="card mk-card mk-plan scroll">
           <header>
-            <h3>Piano del test</h3>
+            <h3>Test plan</h3>
             <Hint align="right">
-              L&apos;audience è simulata: un modello a imbuto (CPM → impression → clic → pagina di pre-ordine → pre-ordine) con tassi per contenuto, mercato ed età
-              presi dallo storico del brand. Stesso piano, stessi numeri.
+              The audience is simulated: a funnel model (CPM → impressions → clicks → pre-order page → pre-order) with rates per content, market and age
+              taken from the brand&apos;s history. Same plan, same numbers.
             </Hint>
           </header>
           <div className="mk-field">
-            <span className="label">Budget media</span>
+            <span className="label">Media budget</span>
             <div className="seg" role="group" aria-label="Budget">
               {BUDGETS.map((b) => (
                 <button key={b} aria-pressed={plan.budget === b} onClick={() => setPlan({ ...plan, budget: b })}>
@@ -99,17 +99,17 @@ export function CampaignStep() {
             </div>
           </div>
           <div className="mk-field">
-            <span className="label">Durata</span>
-            <div className="seg" role="group" aria-label="Durata">
+            <span className="label">Duration</span>
+            <div className="seg" role="group" aria-label="Duration">
               {DURATIONS.map((d) => (
                 <button key={d} aria-pressed={plan.days === d} onClick={() => setPlan({ ...plan, days: d })}>
-                  {d} giorni
+                  {d} days
                 </button>
               ))}
             </div>
           </div>
           <div className="mk-field">
-            <span className="label">Canali</span>
+            <span className="label">Channels</span>
             <div className="mk-chips">
               {m.channels.map((ch) => (
                 <button key={ch.id} className="mk-chip" aria-pressed={plan.channels.includes(ch.id)} onClick={() => toggle("channels", ch.id as ChannelId)}>
@@ -119,7 +119,7 @@ export function CampaignStep() {
             </div>
           </div>
           <div className="mk-field">
-            <span className="label">Mercati</span>
+            <span className="label">Markets</span>
             <div className="mk-chips">
               {m.markets.map((mk) => (
                 <button key={mk.id} className="mk-chip" aria-pressed={plan.markets.includes(mk.id)} onClick={() => toggle("markets", mk.id as MarketId)}>
@@ -129,7 +129,7 @@ export function CampaignStep() {
             </div>
           </div>
           <label className="mk-field">
-            <span className="label">Prezzo di pre-ordine</span>
+            <span className="label">Pre-order price</span>
             <input
               className="field-input num"
               type="number"
@@ -141,7 +141,7 @@ export function CampaignStep() {
           </label>
           <div className="mk-field">
             <span className="label">
-              Contenuti in campagna <span className="muted">· {m.creatives.length}</span>
+              Content in the campaign <span className="muted">· {m.creatives.length}</span>
             </span>
             <ul className="mk-ads">
               {m.creatives.map((cr) => (
@@ -157,7 +157,7 @@ export function CampaignStep() {
           </div>
           <button className="btn primary" disabled={sending || !plan.channels.length || !plan.markets.length || !changed} onClick={launch}>
             {sending ? <span className="spinner" style={{ width: 12, height: 12 }} /> : <Icon name="play" size={12} />}
-            {c ? (changed ? "Rilancia con questo piano" : "Test lanciato") : "Lancia il test"}
+            {c ? (changed ? "Relaunch with this plan" : "Test launched") : "Launch the test"}
           </button>
         </section>
 
@@ -166,10 +166,10 @@ export function CampaignStep() {
             <Results day={day} setDay={(d) => (setPlaying(false), setDay(d))} playing={playing} play={() => (setDay((d) => (d >= total ? 1 : d)), setPlaying(true))} thumb={thumb} />
           ) : (
             <div className="empty" style={{ height: "100%" }}>
-              <h3>Nessun campione fisico, già un segnale di mercato</h3>
+              <h3>No physical sample, already a market signal</h3>
               <p>
-                I {m.creatives.length} contenuti approvati vanno in una campagna a pagamento con una pagina di pre-ordine. Dopo {plan.days} giorni si sa se e quanto
-                produrre.
+                The {m.creatives.length} approved assets go into a paid campaign with a pre-order page. After {plan.days} days you know whether to produce,
+                and how much.
               </p>
             </div>
           )}
@@ -199,12 +199,12 @@ function Results({ day, setDay, playing, play, thumb }: { day: number; setDay: (
   const label = (id: string) => r.creatives.find((x) => x.id === id)?.label ?? ""
 
   const kpis = [
-    { label: "Spesa", value: eur(shown.spend), sub: `di ${eur(r.plan.budget)}` },
-    { label: "Reach", value: int(shown.reach), sub: `${int(shown.impressions)} impression` },
-    { label: "Save rate", value: pct(shown.saves, shown.reach), sub: `${int(shown.saves)} salvataggi` },
-    { label: "CTR", value: pct(shown.clicks, shown.impressions), sub: `${int(shown.sessions)} visite al pre-ordine` },
-    { label: "Pre-ordini", value: int(shown.preorders), sub: `conv. ${pct(shown.preorders, shown.sessions)}`, hero: true },
-    { label: "Lista d'attesa", value: int(shown.waitlist), sub: `${int(shown.comments)} commenti` },
+    { label: "Spend", value: eur(shown.spend), sub: `of ${eur(r.plan.budget)}` },
+    { label: "Reach", value: int(shown.reach), sub: `${int(shown.impressions)} impressions` },
+    { label: "Save rate", value: pct(shown.saves, shown.reach), sub: `${int(shown.saves)} saves` },
+    { label: "CTR", value: pct(shown.clicks, shown.impressions), sub: `${int(shown.sessions)} pre-order visits` },
+    { label: "Pre-orders", value: int(shown.preorders), sub: `conv. ${pct(shown.preorders, shown.sessions)}`, hero: true },
+    { label: "Waitlist", value: int(shown.waitlist), sub: `${int(shown.comments)} comments` },
   ]
 
   return (
@@ -212,14 +212,14 @@ function Results({ day, setDay, playing, play, thumb }: { day: number; setDay: (
       <section className="card mk-card">
         <header>
           <h3>
-            Giorno {day} di {r.plan.days}
-            <span className="badge outline">Audience simulata</span>
+            Day {day} of {r.plan.days}
+            <span className="badge outline">Simulated audience</span>
           </h3>
           <div className="mk-play">
-            <button className="icon-btn" onClick={play} disabled={playing} aria-label="Riproduci il test giorno per giorno">
+            <button className="icon-btn" onClick={play} disabled={playing} aria-label="Replay the test day by day">
               <Icon name="play" size={12} />
             </button>
-            <input type="range" min={1} max={r.plan.days} value={day} onChange={(e) => setDay(Number(e.target.value))} aria-label="Giorno del test" />
+            <input type="range" min={1} max={r.plan.days} value={day} onChange={(e) => setDay(Number(e.target.value))} aria-label="Test day" />
           </div>
         </header>
         <div className="mk-kpis">
@@ -236,19 +236,19 @@ function Results({ day, setDay, playing, play, thumb }: { day: number; setDay: (
 
       <section className="card mk-card" data-dim={!done}>
         <header>
-          <h3>Contenuti</h3>
-          <span className="muted">{done ? "a fine test · il budget si sposta su ciò che converte dal giorno 3" : "a fine test"}</span>
+          <h3>Content</h3>
+          <span className="muted">{done ? "at the end of the test · budget shifts to what converts from day 3" : "at the end of the test"}</span>
         </header>
         <div className="mk-table-wrap">
           <table className="mk-table">
             <thead>
               <tr>
-                <th>Contenuto</th>
-                <th className="r">Spesa</th>
+                <th>Asset</th>
+                <th className="r">Spend</th>
                 <th className="r">CTR</th>
                 <th className="r">Save</th>
-                <th className="r">Pre-ordini</th>
-                <th className="r">€ / pre-ordine</th>
+                <th className="r">Pre-orders</th>
+                <th className="r">€ / pre-order</th>
               </tr>
             </thead>
             <tbody>
@@ -259,7 +259,7 @@ function Results({ day, setDay, playing, play, thumb }: { day: number; setDay: (
                       <span className="mk-ad-thumb">{thumb(cr.assetId) && <img src={thumb(cr.assetId)} alt="" />}</span>
                       <span className="mk-ad-text">
                         <b>
-                          {cr.label} {i === 0 && <span className="badge ok">migliore</span>}
+                          {cr.label} {i === 0 && <span className="badge ok">best</span>}
                         </b>
                         <span>{TYPE_LABEL[cr.type]} · {cr.channels.join(" + ")}</span>
                       </span>
@@ -280,19 +280,19 @@ function Results({ day, setDay, playing, play, thumb }: { day: number; setDay: (
       </section>
 
       <div className="mk-pair" data-dim={!done}>
-        <Segments title="Mercati" rows={r.markets} />
-        <Segments title="Età" rows={r.ages} />
+        <Segments title="Markets" rows={r.markets} />
+        <Segments title="Age" rows={r.ages} />
       </div>
 
       <section className="card mk-card" data-dim={!done}>
         <header>
           <h3>
-            Commenti <span className="muted num">{r.comments.length} letti su {int(r.totals.comments)}</span>
+            Comments <span className="muted num">{r.comments.length} read of {int(r.totals.comments)}</span>
           </h3>
         </header>
         <div className="mk-chips">
           <button className="mk-chip" aria-pressed={theme === null} onClick={() => setTheme(null)}>
-            Tutti
+            All
           </button>
           {themes.map(([id, t]) => (
             <button key={id} className="mk-chip" aria-pressed={theme === id} onClick={() => setTheme(theme === id ? null : id)} data-s={t.sentiment}>
@@ -309,7 +309,7 @@ function Results({ day, setDay, playing, play, thumb }: { day: number; setDay: (
                 <span className="mk-comment-text">
                   {x.text}
                   <span className="muted">
-                    {label(x.creativeId)} · giorno {x.day} · {x.likes} like
+                    {label(x.creativeId)} · day {x.day} · {x.likes} likes
                   </span>
                 </span>
                 <span className={`badge ${SENTIMENT[x.sentiment].tone}`}>{SENTIMENT[x.sentiment].label}</span>
@@ -334,9 +334,9 @@ function DailyBars({ days, day }: { days: DayResult[]; day: number }) {
   const h = hover !== null ? days[hover] : undefined
   return (
     <figure className="mk-chart">
-      <figcaption className="caps">Pre-ordini al giorno</figcaption>
+      <figcaption className="caps">Pre-orders per day</figcaption>
       <div className="mk-chart-box">
-        <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Pre-ordini al giorno" onMouseLeave={() => setHover(null)}>
+        <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Pre-orders per day" onMouseLeave={() => setHover(null)}>
           {[0, top / 2, top].map((v) => (
             <g key={v}>
               <line x1={pad.l} x2={W - pad.r} y1={y(v)} y2={y(v)} className="mk-grid" />
@@ -366,12 +366,12 @@ function DailyBars({ days, day }: { days: DayResult[]; day: number }) {
         </svg>
         {h && h.day <= day && (
           <div className="mk-tip" style={{ left: `${((pad.l + (hover! + 0.5) * bw) / W) * 100}%` }}>
-            <b>Giorno {h.day}</b>
+            <b>Day {h.day}</b>
             <span>
-              {h.preorders} pre-ordini · {int(h.sessions)} visite
+              {h.preorders} pre-orders · {int(h.sessions)} visits
             </span>
             <span>
-              {eur(h.spend)} spesi · {int(h.saves)} salvataggi
+              {eur(h.spend)} spent · {int(h.saves)} saves
             </span>
           </div>
         )}
@@ -393,17 +393,17 @@ function Segments({ title, rows }: { title: string; rows: SegmentResult[] }) {
     <section className="card mk-card">
       <header>
         <h3>{title}</h3>
-        <span className="muted">conversione al pre-ordine</span>
+        <span className="muted">pre-order conversion</span>
       </header>
       <ul className="mk-bars">
         {rows.map((s) => (
-          <li key={s.id} title={`${s.preorders} pre-ordini su ${int(s.sessions)} visite · ${eur(s.spend)}`}>
+          <li key={s.id} title={`${s.preorders} pre-orders from ${int(s.sessions)} visits · ${eur(s.spend)}`}>
             <span>{s.label}</span>
             <span className="mk-track">
               <span style={{ width: `${(conv(s) / max) * 100}%` }} />
             </span>
             <span className="num">{pct(s.preorders, s.sessions)}</span>
-            <span className="num muted">{s.preorders} pz</span>
+            <span className="num muted">{s.preorders} pcs</span>
           </li>
         ))}
       </ul>

@@ -6,5 +6,5 @@ main(async () => {
   const file = resolve(arg("file", "examples/ophidia/product.json"))
   const garment = await importHandoff(file)
   console.log(`${garment.sku} · ${garment.name} · ${garment.id}`)
-  console.log("DNA misurato e viste bloccate. Da qui: indossato, studio, UGC, pagina.")
+  console.log("DNA measured and views locked. From here: on-model, studio, UGC, page.")
 })

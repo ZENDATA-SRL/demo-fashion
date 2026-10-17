@@ -12,8 +12,8 @@ import type { Asset, AssetKind, Garment, Pdp } from "./types"
 
 const run = promisify(execFile)
 
-export const DISCLOSURE_IT = "Pubblicità · Contenuto generato con IA · creator virtuale"
-const LABEL_PNG = join(process.cwd(), "assets", "disclosure-it.png")
+export const DISCLOSURE = "Advertisement · AI-generated content · virtual creator"
+const LABEL_PNG = join(process.cwd(), "assets", "disclosure-en.png")
 
 const SITE_ORDER: Array<[AssetKind, string]> = [
   ["ghost-front", "01_fronte"],
@@ -53,14 +53,14 @@ ${pdp.description}
 
 ${pdp.details.map((d) => `- ${d}`).join("\n")}
 
-**Vestibilità** ${pdp.fit}
+**Fit** ${pdp.fit}
 
-**Composizione** ${pdp.composition}
+**Composition** ${pdp.composition}
 
-**Cura**
+**Care**
 ${pdp.care.map((c) => `- ${c}`).join("\n")}
 
-**Pre-ordine** ${pdp.preorder}
+**Pre-order** ${pdp.preorder}
 
 ## FAQ
 ${pdp.faq.map((f) => `**${f.q}**\n${f.a}`).join("\n\n")}
@@ -71,30 +71,30 @@ function signOff(garment: Garment, exported: Array<{ file: string; asset: Asset 
   const invented = garment.dna?.fields.filter((f) => f.source === "invented") ?? []
   const claims = garment.pdp?.claims.filter((c) => c.needsSignOff) ?? []
   const ugc = exported.filter((e) => e.asset.kind === "ugc-video")
-  return `# Firma prima della pubblicazione · ${garment.sku}
+  return `# Sign-off before publishing · ${garment.sku}
 
-Nulla di questa cartella va online senza le firme sotto. Ogni file è tracciato in \`manifest.json\` (modello, provider, hash, riferimenti usati).
+Nothing in this folder goes online without the signatures below. Every file is tracked in \`manifest.json\` (model, provider, hash, references used).
 
-## 1. Dettagli del capo inventati dal sistema (non presenti in sketch, archivio o nota)
-${invented.map((f) => `- [ ] **${f.label}**: ${f.value}`).join("\n") || "- nessuno"}
+## 1. Garment details invented by the system (not in the sketch, archive or note)
+${invented.map((f) => `- [ ] **${f.label}**: ${f.value}`).join("\n") || "- none"}
 
-## 2. Affermazioni della pagina prodotto da verificare
-${claims.map((c) => `- [ ] [${c.source}] ${c.text}`).join("\n") || "- nessuna"}
+## 2. Product page claims to verify
+${claims.map((c) => `- [ ] [${c.source}] ${c.text}`).join("\n") || "- none"}
 
-## 3. Testi di policy (pre-ordine e FAQ)
-Scritti dal sistema come bozza: ogni impegno su pagamento, resi, tempi e modifiche di produzione va validato con legale e customer care.
-${garment.pdp ? [`- [ ] Pre-ordine: ${garment.pdp.preorder}`, ...garment.pdp.faq.map((f) => `- [ ] ${f.q} — ${f.a}`)].join("\n") : "- nessun testo"}
+## 3. Policy texts (pre-order and FAQ)
+Drafted by the system: every commitment on payment, returns, lead times and production changes must be validated with legal and customer care.
+${garment.pdp ? [`- [ ] Pre-order: ${garment.pdp.preorder}`, ...garment.pdp.faq.map((f) => `- [ ] ${f.q} — ${f.a}`)].join("\n") : "- no text"}
 
-## 4. Contenuti UGC sintetici
-Ogni clip porta impresso il cartello "${DISCLOSURE_IT}" per tutta la durata. Le creator sono volti inventati, non repliche di persone reali; nessun marchio terzo nei prompt. Le battute descrivono il prodotto e non simulano esperienze d'acquisto.
-${ugc.map((e) => `- [ ] \`${e.file}\``).join("\n") || "- nessuna clip approvata"}
+## 4. Synthetic UGC content
+Every clip carries the label "${DISCLOSURE}" burned in for its whole length. The creators are invented faces, not replicas of real people; no third-party brands in the prompts. The lines describe the product and do not simulate purchase experiences.
+${ugc.map((e) => `- [ ] \`${e.file}\``).join("\n") || "- no approved clip"}
 
-## 5. Pubblicazione
-- [ ] Caption con "#adv" / "Pubblicità" visibile senza espandere il testo
-- [ ] Bio o descrizione dell'account dichiara i creator virtuali
-- [ ] Metadati di provenienza conservati nel file caricato, dove la piattaforma li supporta
+## 5. Publishing
+- [ ] Caption with "#ad" / "Advertisement" visible without expanding the text
+- [ ] Account bio or description declares the virtual creators
+- [ ] Provenance metadata kept in the uploaded file, where the platform supports it
 
-Firmato: ______________________  Ruolo: ______________  Data: __________
+Signed: ______________________  Role: ______________  Date: __________
 `
 }
 
@@ -154,7 +154,7 @@ export async function exportPack(garmentId?: string): Promise<{ dir: string; fil
     const models = [...new Set(video.refs.map((id) => byId.get(id)?.gen?.modelId).filter(Boolean))].join("-") || "reel"
     const file = `ugc/${garment.sku}_ugc_${formatId}_${creatorId}_${models}.mp4`
     await burnDisclosure(mediaPath(video.media), join(dir, file))
-    exported.push({ file, asset: video, extra: { creator: creatorId, format: formatId, hook: copy?.hook, disclosure: DISCLOSURE_IT } })
+    exported.push({ file, asset: video, extra: { creator: creatorId, format: formatId, hook: copy?.hook, disclosure: DISCLOSURE } })
   }
 
   const fileOf = new Map(exported.map((e) => [e.asset.id, e.file]))
@@ -162,7 +162,7 @@ export async function exportPack(garmentId?: string): Promise<{ dir: string; fil
     garment: { sku: garment.sku, name: garment.name, maison: garment.maison, brief: garment.brief, goal: garment.goal },
     dna: garment.dna,
     exportedAt: new Date().toISOString(),
-    disclosure: DISCLOSURE_IT,
+    disclosure: DISCLOSURE,
     assets: await Promise.all(
       exported.map(async ({ file, asset, extra }) => ({
         file,

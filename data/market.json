@@ -1,5 +1,5 @@
 {
-  "_note": "Dati SIMULATI per la demo: archivio dei lanci passati del brand, benchmark di canale e pool di commenti. Nessun dato reale.",
+  "_note": "SIMULATED demo data: the brand's past launches, channel benchmarks and comment pools. No real data.",
   "brand": "Aurenzi Milano",
   "currency": "EUR",
   "economics": {
@@ -36,25 +36,25 @@
   },
   "markets": {
     "IT": {
-      "label": "Italia",
+      "label": "Italy",
       "lang": "it",
       "cpm": 1.0,
       "intent": 1.1
     },
     "FR": {
-      "label": "Francia",
+      "label": "France",
       "lang": "fr",
       "cpm": 1.15,
       "intent": 1.0
     },
     "DE": {
-      "label": "Germania",
+      "label": "Germany",
       "lang": "de",
       "cpm": 1.2,
       "intent": 0.9
     },
     "UK": {
-      "label": "Regno Unito",
+      "label": "United Kingdom",
       "lang": "en",
       "cpm": 1.3,
       "intent": 0.95
@@ -84,7 +84,7 @@
   ],
   "creativeTypes": {
     "ugc": {
-      "label": "Reel UGC",
+      "label": "UGC reel",
       "channels": [
         "instagram",
         "tiktok"
@@ -127,7 +127,7 @@
       "conv": 0.95
     },
     "packshot": {
-      "label": "Packshot carosello",
+      "label": "Packshot carousel",
       "channels": [
         "instagram"
       ],
@@ -150,7 +150,8 @@
         "capienza": 0.12,
         "prezzo": 0.1,
         "disponibilita": 0.08
-      }
+      },
+      "family": "leather"
     },
     "FW26-015": {
       "price": 390,
@@ -164,7 +165,8 @@
         "lavaggio": 0.07,
         "prezzo-maglia": 0.1,
         "disponibilita": 0.1
-      }
+      },
+      "family": "knit"
     }
   },
   "defaultThemes": {
@@ -180,7 +182,7 @@
   "comments": {
     "colore": {
       "sentiment": "positive",
-      "label": "Colore cognac",
+      "label": "Cognac colour",
       "text": {
         "it": [
           "Questo cognac è perfetto, caldo ma non arancione",
@@ -204,7 +206,7 @@
     },
     "pelle": {
       "sentiment": "positive",
-      "label": "Pelle e struttura",
+      "label": "Leather and structure",
       "text": {
         "it": [
           "Si vede che è pelle seria, sta in piedi da sola",
@@ -227,7 +229,7 @@
     },
     "minimal": {
       "sentiment": "positive",
-      "label": "Nessun logo",
+      "label": "No logo",
       "text": {
         "it": [
           "Senza logo, finalmente. Lusso silenzioso",
@@ -249,7 +251,7 @@
     },
     "tracolla": {
       "sentiment": "negative",
-      "label": "Manca la tracolla",
+      "label": "Missing shoulder strap",
       "text": {
         "it": [
           "Bellissima ma senza tracolla per me è scomoda tutti i giorni",
@@ -273,7 +275,7 @@
     },
     "chiusura": {
       "sentiment": "negative",
-      "label": "Chiusura solo magnetica",
+      "label": "Magnetic-only closure",
       "text": {
         "it": [
           "Solo il magnete? In metro a Milano mi serve una zip",
@@ -295,7 +297,7 @@
     },
     "capienza": {
       "sentiment": "neutral",
-      "label": "Capienza",
+      "label": "Capacity",
       "text": {
         "it": [
           "Ci sta un iPad mini?",
@@ -318,7 +320,7 @@
     },
     "prezzo": {
       "sentiment": "neutral",
-      "label": "Prezzo",
+      "label": "Price",
       "text": {
         "it": [
           "590 euro sono tanti ma per una pelle così ci stanno",
@@ -341,7 +343,7 @@
     },
     "disponibilita": {
       "sentiment": "positive",
-      "label": "Intenzione d'acquisto",
+      "label": "Purchase intent",
       "text": {
         "it": [
           "Quando arriva? Ho già fatto il pre-ordine",
@@ -364,7 +366,7 @@
     },
     "colore-beige": {
       "sentiment": "positive",
-      "label": "Colore beige",
+      "label": "Beige colour",
       "text": {
         "it": [
           "Questo beige sta con tutto, dal jeans al grigio",
@@ -387,7 +389,7 @@
     },
     "mano": {
       "sentiment": "positive",
-      "label": "Maglia e costa",
+      "label": "Knit and rib",
       "text": {
         "it": [
           "Si vede che è una maglia pesante, bella la costa inglese",
@@ -410,7 +412,7 @@
     },
     "zip": {
       "sentiment": "neutral",
-      "label": "Zip in metallo",
+      "label": "Metal zip",
       "text": {
         "it": [
           "La zip è a doppio cursore? Seduto in macchina serve",
@@ -430,7 +432,7 @@
     },
     "taglia": {
       "sentiment": "neutral",
-      "label": "Taglie e vestibilità",
+      "label": "Sizing and fit",
       "text": {
         "it": [
           "Veste regolare o abbondante? Sono 1,80 per 80 kg",
@@ -453,7 +455,7 @@
     },
     "prurito": {
       "sentiment": "negative",
-      "label": "Lana che pizzica",
+      "label": "Itchy wool",
       "text": {
         "it": [
           "Bello, ma la lana grossa a me pizzica sul collo",
@@ -476,7 +478,7 @@
     },
     "lavaggio": {
       "sentiment": "neutral",
-      "label": "Lavaggio e cura",
+      "label": "Washing and care",
       "text": {
         "it": [
           "Si lava in lavatrice o solo a secco?"
@@ -494,7 +496,7 @@
     },
     "prezzo-maglia": {
       "sentiment": "neutral",
-      "label": "Prezzo",
+      "label": "Price",
       "text": {
         "it": [
           "390 per un cardigan sono tanti, ma se è lana buona ci stanno",
@@ -516,8 +518,8 @@
   "archive": [
     {
       "sku": "SS23-021",
-      "name": "Bauletto Notte",
-      "category": "bauletto",
+      "name": "Night Bowling Bag",
+      "category": "bowling bag",
       "price": 640,
       "test": {
         "budget": 3000,
@@ -533,11 +535,12 @@
         "soldFullPrice": 320,
         "sellThrough": 0.5,
         "markdownUnits": 320
-      }
+      },
+      "family": "leather"
     },
     {
       "sku": "SS23-034",
-      "name": "Tote Sabbia Grande",
+      "name": "Large Sand Tote",
       "category": "tote",
       "price": 720,
       "test": {
@@ -554,12 +557,13 @@
         "soldFullPrice": 757,
         "sellThrough": 0.78,
         "markdownUnits": 213
-      }
+      },
+      "family": "leather"
     },
     {
       "sku": "AW23-104",
-      "name": "Secchiello Bordeaux",
-      "category": "secchiello",
+      "name": "Bordeaux Bucket Bag",
+      "category": "bucket bag",
       "price": 560,
       "test": {
         "budget": 3000,
@@ -575,11 +579,12 @@
         "soldFullPrice": 355,
         "sellThrough": 0.563,
         "markdownUnits": 275
-      }
+      },
+      "family": "leather"
     },
     {
       "sku": "AW23-118",
-      "name": "Clutch Ottone",
+      "name": "Brass Frame Clutch",
       "category": "clutch",
       "price": 420,
       "test": {
@@ -596,11 +601,12 @@
         "soldFullPrice": 503,
         "sellThrough": 0.689,
         "markdownUnits": 227
-      }
+      },
+      "family": "leather"
     },
     {
       "sku": "SS24-007",
-      "name": "Cabas Mini Nero",
+      "name": "Black Mini Cabas",
       "category": "tote",
       "price": 520,
       "test": {
@@ -617,12 +623,13 @@
         "soldFullPrice": 445,
         "sellThrough": 0.524,
         "markdownUnits": 405
-      }
+      },
+      "family": "leather"
     },
     {
       "sku": "SS24-019",
-      "name": "Tracolla Cuoio",
-      "category": "tracolla",
+      "name": "Leather Crossbody",
+      "category": "crossbody",
       "price": 480,
       "test": {
         "budget": 2000,
@@ -638,11 +645,12 @@
         "soldFullPrice": 361,
         "sellThrough": 0.656,
         "markdownUnits": 189
-      }
+      },
+      "family": "leather"
     },
     {
       "sku": "AW24-052",
-      "name": "Hobo Testa di Moro",
+      "name": "Dark Brown Hobo",
       "category": "hobo",
       "price": 610,
       "test": {
@@ -659,11 +667,12 @@
         "soldFullPrice": 473,
         "sellThrough": 0.788,
         "markdownUnits": 127
-      }
+      },
+      "family": "leather"
     },
     {
       "sku": "AW24-066",
-      "name": "Shopper Tela e Pelle",
+      "name": "Canvas and Leather Shopper",
       "category": "tote",
       "price": 390,
       "test": {
@@ -680,11 +689,12 @@
         "soldFullPrice": 155,
         "sellThrough": 0.646,
         "markdownUnits": 85
-      }
+      },
+      "family": "leather"
     },
     {
       "sku": "SS25-012",
-      "name": "Baguette Avorio",
+      "name": "Ivory Baguette",
       "category": "baguette",
       "price": 450,
       "test": {
@@ -701,11 +711,12 @@
         "soldFullPrice": 769,
         "sellThrough": 0.719,
         "markdownUnits": 301
-      }
+      },
+      "family": "leather"
     },
     {
       "sku": "SS25-028",
-      "name": "Tote Strutturata Fumo",
+      "name": "Smoke Structured Tote",
       "category": "tote",
       "price": 680,
       "test": {
@@ -722,12 +733,13 @@
         "soldFullPrice": 195,
         "sellThrough": 0.591,
         "markdownUnits": 135
-      }
+      },
+      "family": "leather"
     },
     {
       "sku": "AW25-041",
-      "name": "Bauletto Cognac",
-      "category": "bauletto",
+      "name": "Cognac Bowling Bag",
+      "category": "bowling bag",
       "price": 650,
       "test": {
         "budget": 3000,
@@ -743,11 +755,12 @@
         "soldFullPrice": 471,
         "sellThrough": 0.645,
         "markdownUnits": 259
-      }
+      },
+      "family": "leather"
     },
     {
       "sku": "AW25-077",
-      "name": "Pochette Intrecciata",
+      "name": "Woven Pouch",
       "category": "clutch",
       "price": 360,
       "test": {
@@ -764,6 +777,139 @@
         "soldFullPrice": 397,
         "sellThrough": 0.794,
         "markdownUnits": 103
+      },
+      "family": "leather"
+    },
+    {
+      "sku": "AW23-201",
+      "name": "Grey Merino Crewneck",
+      "category": "crewneck",
+      "family": "knit",
+      "price": 290,
+      "test": {
+        "budget": 2500,
+        "days": 10,
+        "saveRate": 2.4,
+        "ctr": 0.71,
+        "conversion": 0.85,
+        "preorders": 17,
+        "preordersPer1k": 6.97
+      },
+      "outcome": {
+        "produced": 630,
+        "soldFullPrice": 380,
+        "sellThrough": 0.603,
+        "markdownUnits": 250
+      }
+    },
+    {
+      "sku": "AW23-214",
+      "name": "Camel Shawl Cardigan",
+      "category": "cardigan",
+      "family": "knit",
+      "price": 420,
+      "test": {
+        "budget": 2500,
+        "days": 10,
+        "saveRate": 3.6,
+        "ctr": 1.02,
+        "conversion": 1.3,
+        "preorders": 27,
+        "preordersPer1k": 10.66
+      },
+      "outcome": {
+        "produced": 610,
+        "soldFullPrice": 400,
+        "sellThrough": 0.656,
+        "markdownUnits": 210
+      }
+    },
+    {
+      "sku": "AW24-203",
+      "name": "Ivory Cashmere Turtleneck",
+      "category": "turtleneck",
+      "family": "knit",
+      "price": 480,
+      "test": {
+        "budget": 2500,
+        "days": 10,
+        "saveRate": 4.1,
+        "ctr": 0.84,
+        "conversion": 1.55,
+        "preorders": 32,
+        "preordersPer1k": 12.71
+      },
+      "outcome": {
+        "produced": 800,
+        "soldFullPrice": 640,
+        "sellThrough": 0.8,
+        "markdownUnits": 160
+      }
+    },
+    {
+      "sku": "AW24-219",
+      "name": "Navy Zip Polo",
+      "category": "polo",
+      "family": "knit",
+      "price": 260,
+      "test": {
+        "budget": 2500,
+        "days": 10,
+        "saveRate": 1.9,
+        "ctr": 0.66,
+        "conversion": 0.7,
+        "preorders": 14,
+        "preordersPer1k": 5.74
+      },
+      "outcome": {
+        "produced": 470,
+        "soldFullPrice": 210,
+        "sellThrough": 0.447,
+        "markdownUnits": 260
+      }
+    },
+    {
+      "sku": "AW25-205",
+      "name": "Ecru Rib Mock Neck",
+      "category": "mock neck",
+      "family": "knit",
+      "price": 340,
+      "test": {
+        "budget": 2500,
+        "days": 10,
+        "saveRate": 3.9,
+        "ctr": 0.95,
+        "conversion": 1.2,
+        "preorders": 25,
+        "preordersPer1k": 9.84
+      },
+      "outcome": {
+        "produced": 740,
+        "soldFullPrice": 520,
+        "sellThrough": 0.703,
+        "markdownUnits": 220
+      }
+    },
+    {
+      "sku": "AW25-222",
+      "name": "Tobacco Mohair Zip Cardigan",
+      "category": "cardigan",
+      "family": "knit",
+      "price": 450,
+      "test": {
+        "budget": 2500,
+        "days": 10,
+        "saveRate": 3.0,
+        "ctr": 0.79,
+        "conversion": 1.05,
+        "preorders": 22,
+        "preordersPer1k": 8.61
+      },
+      "outcome": {
+        "produced": 520,
+        "soldFullPrice": 330,
+        "sellThrough": 0.635,
+        "markdownUnits": 190
       }
     }
   ]

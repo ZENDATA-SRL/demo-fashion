@@ -13,7 +13,7 @@ function loadViewer(): Promise<void> {
     script.onload = () => resolve()
     script.onerror = () => {
       loading = undefined
-      reject(new Error("model-viewer non caricato"))
+      reject(new Error("model-viewer failed to load"))
     }
     document.head.appendChild(script)
   })
@@ -46,7 +46,7 @@ export function MeshView({ src, onSize, compare = false }: { src: string; onSize
         el.setAttribute("exposure", compare ? "1.22" : "1.05")
         el.setAttribute("tone-mapping", "commerce")
         el.setAttribute("interaction-prompt", "auto")
-        el.setAttribute("alt", "Modello 3D, trascina per ruotare")
+        el.setAttribute("alt", "3D model, drag to rotate")
         el.addEventListener("load", () => {
           const size = (el as HTMLElement & { getDimensions?: () => MeshSize }).getDimensions?.()
           if (size && !dead) sized.current?.({ x: size.x, y: size.y, z: size.z })
@@ -54,7 +54,7 @@ export function MeshView({ src, onSize, compare = false }: { src: string; onSize
         node.replaceChildren(el)
       })
       .catch(() => {
-        if (!dead) node.textContent = "Viewer non disponibile"
+        if (!dead) node.textContent = "Viewer unavailable"
       })
     return () => {
       dead = true

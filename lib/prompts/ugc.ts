@@ -38,7 +38,7 @@ export const CREATORS: Creator[] = [
     look: "early 20s, long straight light brown hair with curtain bangs, hazel eyes, a few freckles, slim build, small gold hoop earrings",
     outfit: "oversized grey cropped hoodie, black wide-leg joggers, chunky white sneakers",
     shoes: "chunky white sneakers",
-    city: "Milano",
+    city: "Milan",
     home: "small bedroom in a shared Milan flat: warm fairy lights along the wall, polaroids taped above the bed, a clothes rail crammed with outfits, a folded ring light in the corner, a few clothes on the chair",
     exit: "the narrow old lift of her Milan building: a mirror wall, brass buttons, folding inner doors, a warm ceiling light",
   },
@@ -49,7 +49,7 @@ export const CREATORS: Creator[] = [
     look: "mid 20s Southern Italian woman, long dark brown wavy hair worn down past the shoulders, brown eyes, softly groomed brows, high cheekbones, a striking photogenic fashion-model face, very slender sample-size fashion model, narrow frame, fine narrow lower legs and narrow ankles, wears Italian size 36 clothes, about 176 cm",
     outfit: "white fitted baby tee, light-wash straight jeans, brown suede ballet flats",
     shoes: "brown suede ballet flats",
-    city: "Roma",
+    city: "Rome",
     home: "living room of a Roman flat: beige linen sofa, a tall monstera, a round wall mirror, warm afternoon sun in stripes through half-closed wooden shutters, a tote bag and keys on the side table",
     exit: "the entrance hall of her old Roman palazzo: a tall mirror next to the letterboxes, a marble floor, the big wooden front door ajar with daylight coming in",
   },
@@ -60,7 +60,7 @@ export const CREATORS: Creator[] = [
     look: "mid 20s Black Italian woman, long knotless braids worn down past the shoulders, warm brown eyes, high cheekbones, a striking photogenic fashion-model face, very slender sample-size fashion model, narrow frame, fine narrow lower legs and narrow ankles, tall, wears Italian size 36 clothes, about 180 cm, small silver nose ring",
     outfit: "black fitted ribbed tank top, straight dark jeans, black leather loafers",
     shoes: "black leather loafers",
-    city: "Torino",
+    city: "Turin",
     home: "loft in Torino: exposed brick wall, big arched window, vinyl records and a turntable on a low shelf, a pothos plant trailing from a bookcase, soft daylight",
     exit: "the small modern lift of her Torino building: brushed steel walls, a full mirror at the back, cool overhead light, the floor display glowing",
   },
@@ -74,7 +74,7 @@ export const CREATORS_MEN: Creator[] = [
     look: "mid 20s Italian man, short dark brown hair, light stubble, brown eyes, lean build, wears Italian size 48 clothes, about 184 cm",
     outfit: "charcoal overshirt, straight dark trousers, white leather sneakers",
     shoes: "white leather sneakers",
-    city: "Milano",
+    city: "Milan",
     home: "small bedroom in a shared Milan flat: warm lamp on the desk, a clothes rail with shirts and jackets, a folded ring light in the corner, sneakers by the door",
     exit: "the narrow old lift of his Milan building: a mirror wall, brass buttons, folding inner doors, a warm ceiling light",
   },
@@ -85,7 +85,7 @@ export const CREATORS_MEN: Creator[] = [
     look: "mid 20s Southern Italian man, short black hair, dark brown eyes, clean-shaven, lean build, wears Italian size 48 clothes, about 182 cm",
     outfit: "white oxford shirt with the sleeves rolled, light-wash straight jeans, brown suede loafers",
     shoes: "brown suede loafers",
-    city: "Roma",
+    city: "Rome",
     home: "living room of a Roman flat: beige linen sofa, a tall monstera, a round wall mirror, warm afternoon sun in stripes through half-closed wooden shutters, keys on the side table",
     exit: "the entrance hall of his old Roman palazzo: a tall mirror next to the letterboxes, a marble floor, the big wooden front door ajar with daylight coming in",
   },
@@ -96,7 +96,7 @@ export const CREATORS_MEN: Creator[] = [
     look: "late 20s Black Italian man, very short cropped hair, warm brown eyes, short beard, lean build, tall, wears Italian size 50 clothes, about 188 cm",
     outfit: "black merino knit, straight dark jeans, black leather loafers",
     shoes: "black leather loafers",
-    city: "Torino",
+    city: "Turin",
     home: "loft in Torino: exposed brick wall, big arched window, vinyl records and a turntable on a low shelf, a pothos plant trailing from a bookcase, soft daylight",
     exit: "the small modern lift of his Torino building: brushed steel walls, a full mirror at the back, cool overhead light, the floor display glowing",
   },
@@ -110,7 +110,7 @@ export function creatorsFor(line: Line): Creator[] {
 
 export function creator(id: string): Creator {
   const found = allCreators().find((c) => c.id === id)
-  if (!found) throw new Error(`creator sconosciuto: ${id} (disponibili: ${allCreators().map((c) => c.id).join(", ")})`)
+  if (!found) throw new Error(`unknown creator: ${id} (available: ${allCreators().map((c) => c.id).join(", ")})`)
   return found
 }
 
@@ -207,8 +207,8 @@ export type UgcTrack = { id: string; label: string; note: string; prompt: string
 export const UGC_TRACKS: UgcTrack[] = [
   {
     id: "drive",
-    label: "Più attiva",
-    note: "Un filo più veloce, kick più secco e un gancio che entra subito.",
+    label: "More upbeat",
+    note: "A touch faster, a drier kick and a hook that comes in straight away.",
     prompt:
       "Driving high-energy fashion pop instrumental at 128 BPM, full power on the very first beat, hard four-on-the-floor kick, cracking claps and a tight snare, pulsing synth bass, bright staccato chords and a catchy hook that lifts every four bars, urgent and exciting, loud modern mix, viral fashion reel",
     bpm: 128,
@@ -217,7 +217,7 @@ export const UGC_TRACKS: UgcTrack[] = [
 
 export function ugcTrack(id: string): UgcTrack {
   const track = UGC_TRACKS.find((t) => t.id === id)
-  if (!track) throw new Error(`musica UGC sconosciuta: ${id}`)
+  if (!track) throw new Error(`unknown UGC music: ${id}`)
   return track
 }
 
@@ -288,7 +288,7 @@ export const UGC_FORMATS: UgcFormat[] = [
     shots: [
       {
         id: "look",
-        label: "Il look",
+        label: "The look",
         note: "Gancio: il look finito, occhiali da sole e borsa, in posa.",
         garment: "wears",
         voice: "none",
@@ -303,7 +303,7 @@ export const UGC_FORMATS: UgcFormat[] = [
       },
       {
         id: "hanger",
-        label: "Lo presenta",
+        label: "Shows it",
         note: "Ancora coi suoi vestiti, tiene il capo sulla gruccia davanti a sé e lo fa ondeggiare.",
         garment: "holds",
         voice: "none",
@@ -318,7 +318,7 @@ export const UGC_FORMATS: UgcFormat[] = [
       },
       {
         id: "on",
-        label: "Addosso",
+        label: "Wearing it",
         note: "Stacco: ce l'ha addosso, lo sistema, un giro sul posto a velocità normale per il retro.",
         garment: "wears",
         shows: "back",
@@ -334,7 +334,7 @@ export const UGC_FORMATS: UgcFormat[] = [
       },
       {
         id: "close",
-        label: "Da vicino",
+        label: "Close up",
         note: "Si avvicina al telefono: orecchino, sguardo in camera, lo scollo del capo in primo piano.",
         garment: "wears",
         voice: "none",
@@ -349,7 +349,7 @@ export const UGC_FORMATS: UgcFormat[] = [
       },
       {
         id: "style",
-        label: "Accessori e passerella",
+        label: "Accessories and catwalk",
         note: "Occhiali, borsa, colpo di capelli, profilo; cammina verso il telefono e copre l'obiettivo.",
         garment: "wears",
         voice: "none",
@@ -382,13 +382,13 @@ export const UGC_FORMATS: UgcFormat[] = [
   },
   {
     id: "street-check",
-    label: "Outfit check in strada",
+    label: "Street outfit check",
     note: "Un'amica la filma sul marciapiede: girata, sguardo da sopra la spalla, capelli, lucidalabbra, saluto. Stacchi a ogni battuta tra figura intera e primo piano.",
     angle: "relatable street outfit check: fast beat cuts between poses, a self-ironic caption keeps them watching",
     shots: [
       {
         id: "wide",
-        label: "Figura intera",
+        label: "Full figure",
         note: "Da un paio di metri, sempre sullo stesso punto: sorride, gira su se stessa, si guarda da sopra la spalla, profilo, saluta.",
         garment: "wears",
         shows: "back",
@@ -404,7 +404,7 @@ export const UGC_FORMATS: UgcFormat[] = [
       },
       {
         id: "near",
-        label: "Primo piano",
+        label: "Close-up",
         note: "L'amica si avvicina: fruga nella borsa, lucidalabbra, mani nei capelli, poi tocca il dettaglio del capo.",
         garment: "wears",
         voice: "none",
@@ -444,13 +444,13 @@ export const UGC_FORMATS: UgcFormat[] = [
   },
   {
     id: "get-dressed",
-    label: "Si veste",
+    label: "Getting dressed",
     note: "Telefono fermo in un salotto bianco, e lo stesso specchio intagliato per aprire e chiudere. A stacchi: il look finito, la vita, le scarpe, il capo, gli occhiali, la borsa, il calcio e il giro di spalle. Muto, a tempo di musica.",
     angle: "get-dressed hook: the finished mirror look first, then each piece and pose on its own jump cut, closed back at the mirror",
     shots: [
       {
         id: "base",
-        label: "La base",
+        label: "The base",
         note: "Maglietta lunga, orlo sopra il ginocchio, senza scarpe: tira l'orlo e appoggia le mani in vita.",
         garment: "own",
         clothes: BASE_CLOTHES,
@@ -467,7 +467,7 @@ export const UGC_FORMATS: UgcFormat[] = [
       },
       {
         id: "heels",
-        label: "Le scarpe",
+        label: "The shoes",
         note: "Tende verso la camera un paio di scarpe nere a punta, una per mano. Stesso look della base, senza scarpe ai piedi.",
         garment: "own",
         clothes: BASE_CLOTHES,
@@ -485,7 +485,7 @@ export const UGC_FORMATS: UgcFormat[] = [
       },
       {
         id: "hold",
-        label: "Lo mostra",
+        label: "Holds it up",
         note: "Una mano in alto: il capo appeso accanto a lei. Scarpe e tutto ciò che ha già addosso restano quelli dello scatto prima.",
         garment: "holds",
         voice: "none",
@@ -502,7 +502,7 @@ export const UGC_FORMATS: UgcFormat[] = [
       },
       {
         id: "on",
-        label: "Lo indossa",
+        label: "Puts it on",
         note: "Stacco: ce l'ha già addosso, le tiene tese ai lati, poi le lascia cadere di colpo. Il resto del look resta quello dello scatto prima.",
         garment: "wears",
         voice: "none",
@@ -519,7 +519,7 @@ export const UGC_FORMATS: UgcFormat[] = [
       },
       {
         id: "shades",
-        label: "Gli occhiali",
+        label: "The sunglasses",
         note: "Li tiene al collo e li infila in un gesto solo.",
         garment: "wears",
         voice: "none",
@@ -534,7 +534,7 @@ export const UGC_FORMATS: UgcFormat[] = [
       },
       {
         id: "bag",
-        label: "La borsa",
+        label: "The bag",
         note: "La fa girare in un arco e la riprende, poi le mani tornano alla vita.",
         garment: "wears",
         voice: "none",
@@ -550,7 +550,7 @@ export const UGC_FORMATS: UgcFormat[] = [
       },
       {
         id: "kick",
-        label: "Il calcio",
+        label: "The kick",
         note: "Una gamba attraversa davanti, poi la borsa sale in spalla con la testa inclinata.",
         garment: "wears",
         voice: "none",
@@ -566,7 +566,7 @@ export const UGC_FORMATS: UgcFormat[] = [
       },
       {
         id: "turn",
-        label: "Il giro",
+        label: "The turn",
         note: "Un passo verso la camera, poi tre quarti di spalle e lo sguardo indietro.",
         garment: "wears",
         shows: "back",
@@ -583,7 +583,7 @@ export const UGC_FORMATS: UgcFormat[] = [
       },
       {
         id: "mirror",
-        label: "Allo specchio",
+        label: "At the mirror",
         note: "Gancio fermo col telefono; in chiusura il ginocchio, la mano agli occhiali e un saluto con la mano.",
         garment: "wears",
         voice: "none",
@@ -627,13 +627,13 @@ export const UGC_FORMATS: UgcFormat[] = [
 export const TALKING_FORMATS: UgcFormat[] = [
   {
     id: "fit-check-mirror",
-    label: "Fit check allo specchio",
+    label: "Mirror fit check",
     note: "Parla allo specchio col suo outfit e copre l'obiettivo; stacco: ce l'ha addosso e parla mentre gira; chiude sul dettaglio.",
     angle: "transformation hook: from her everyday outfit to the garment, cut on the beat, then the detail",
     shots: [
       {
         id: "before",
-        label: "Prima",
+        label: "Before",
         note: "Allo specchio con i suoi vestiti dice che così non va, poi copre l'obiettivo con la mano.",
         garment: "own",
         voice: "on",
@@ -665,7 +665,7 @@ export const TALKING_FORMATS: UgcFormat[] = [
       },
       {
         id: "detail",
-        label: "Dettaglio",
+        label: "Detail",
         note: "Da vicino, solo la mano sul dettaglio; la sua voce da dietro il telefono.",
         garment: "wears",
         voice: "over",
@@ -690,7 +690,7 @@ export const TALKING_FORMATS: UgcFormat[] = [
     shots: [
       {
         id: "unbox",
-        label: "Apre il pacco",
+        label: "Opens the parcel",
         note: "Seduta sul letto, parla in camera mentre toglie la carta velina e tira fuori il capo.",
         garment: "holds",
         voice: "on",
@@ -706,7 +706,7 @@ export const TALKING_FORMATS: UgcFormat[] = [
       },
       {
         id: "on",
-        label: "Addosso",
+        label: "Wearing it",
         note: "Stacco: in piedi in camera, ce l'ha addosso, fa un giro e poi dice cosa ne pensa guardando in camera.",
         garment: "wears",
         voice: "on",
@@ -730,7 +730,7 @@ export const TALKING_FORMATS: UgcFormat[] = [
     shots: [
       {
         id: "ready",
-        label: "Si prepara",
+        label: "Getting ready",
         note: "Al tavolino con lo specchio, col suo outfit: si scioglie i capelli e racconta dove va.",
         garment: "own",
         voice: "on",
@@ -746,7 +746,7 @@ export const TALKING_FORMATS: UgcFormat[] = [
       },
       {
         id: "look",
-        label: "Il look",
+        label: "The look",
         note: "Allo specchio col capo addosso: parla mentre si gira di lato e tocca il dettaglio.",
         garment: "wears",
         voice: "on",
@@ -762,7 +762,7 @@ export const TALKING_FORMATS: UgcFormat[] = [
       },
       {
         id: "out",
-        label: "Esce",
+        label: "Heads out",
         note: "Ultimo selfie allo specchio uscendo di casa, borsa in spalla: una battuta e va.",
         garment: "wears",
         voice: "on",
@@ -782,7 +782,7 @@ export const TALKING_FORMATS: UgcFormat[] = [
 
 export function ugcFormat(id: string): UgcFormat {
   const format = UGC_FORMATS.find((f) => f.id === id)
-  if (!format) throw new Error(`formato UGC sconosciuto: ${id} (disponibili: ${UGC_FORMATS.map((f) => f.id).join(", ")})`)
+  if (!format) throw new Error(`unknown UGC format: ${id} (available: ${UGC_FORMATS.map((f) => f.id).join(", ")})`)
   return format
 }
 
@@ -1059,8 +1059,8 @@ export type UgcVoice = {
 export const UGC_VOICES: UgcVoice[] = [
   {
     id: "hype",
-    label: "Entusiasta",
-    note: "Energia alta da TikTok: «Raga, no, guardate»",
+    label: "Enthusiastic",
+    note: "High TikTok energy: «Raga, no, guardate»",
     tone: "high energy, fast and bubbly, genuinely excited, like a Gen Z creator talking to her followers",
     words: "carica e veloce, esclamazioni vere ('Ma quanto è bello?', 'Guardate che roba'), può ridere una volta.",
     opener: "un'esclamazione, per esempio 'Ragazze!', 'Ma quanto è bello?', 'Oddio, è arrivato.'",
@@ -1068,8 +1068,8 @@ export const UGC_VOICES: UgcVoice[] = [
   },
   {
     id: "bestie",
-    label: "Complice",
-    note: "Come un vocale alle amiche: «Ragazze, ve lo devo far vedere»",
+    label: "Confidential",
+    note: "Like a voice note to her friends: «Ragazze, ve lo devo far vedere»",
     tone: "warm and playful, quick conversational pace, like a voice note to her followers",
     words: "come un vocale alle amiche, tono divertito da chiacchiera.",
     opener: "da chiacchiera, per esempio 'Non so voi, ma io…', 'Ve lo devo far vedere.', 'Allora, raga.'",
@@ -1077,8 +1077,8 @@ export const UGC_VOICES: UgcVoice[] = [
   },
   {
     id: "review",
-    label: "Recensione",
-    note: "Parere sincero: «Allora, vi dico com'è»",
+    label: "Review",
+    note: "Honest opinion: «Allora, vi dico com'è»",
     tone: "confident and direct, brisk pace, an honest fashion creator giving her opinion",
     words: "parere sincero, una cosa concreta che le piace (come cade, il colore, come sta addosso), chiude con 'per me è sì' o 've lo consiglio'.",
     opener: "da parere, per esempio 'Allora, vi dico com'è.', 'Vi dico la verità.', 'Parere sincero?'",
@@ -1086,8 +1086,8 @@ export const UGC_VOICES: UgcVoice[] = [
   },
   {
     id: "dry",
-    label: "Ironica",
-    note: "Autoironia leggera: «Dovevo solo guardare. Appunto.»",
+    label: "Ironic",
+    note: "Light self-irony: «Dovevo solo guardare. Appunto.»",
     tone: "deadpan and dry, quick timing, a small smirk in the voice",
     words: "autoironia leggera all'italiana ('Il mio autocontrollo? Zero.'), una battuta asciutta alla fine.",
     opener: "autoironico, per esempio 'Dovevo solo guardare.', 'Non dovevo comprare niente.', 'Non ho niente da mettere.'",
@@ -1095,8 +1095,8 @@ export const UGC_VOICES: UgcVoice[] = [
   },
   {
     id: "chill",
-    label: "Rilassata",
-    note: "Casual da stories: «Allora, oggi vi faccio vedere questo»",
+    label: "Relaxed",
+    note: "Casual, stories style: «Allora, oggi vi faccio vedere questo»",
     tone: "relaxed and casual but fluent, easy pace, like an Instagram story",
     words: "tranquilla da stories, frasi semplici che scorrono, qualche 'tipo' o 'cioè' dove viene naturale, niente esclamazioni forti.",
     opener: "tranquillo, per esempio 'Allora, oggi vi faccio vedere questo.', 'Ok, finalmente.', 'Allora.'",

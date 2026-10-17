@@ -1,4 +1,5 @@
 import { saveBuffer, saveRemote } from "./media"
+import { amdReady } from "./providers/text"
 import { imageModel, meshModel, musicModel, textModel, videoModel } from "./providers/registry"
 import type { ImageModel, ImageRequest, MeshRequest, ModelInfo, MusicRequest, Output, TextRequest, VideoRequest } from "./providers/types"
 import type { Generation, Media } from "./types"
@@ -57,8 +58,18 @@ export async function askJson<T>(req: TextRequest): Promise<{ data: T; model: st
   return askJsonWith<T>(undefined, req)
 }
 
-/** Same as askJson on a named text model; `undefined` is the one set in TEXT_MODEL. */
+/**
+ * Same as askJson on a named text model; `undefined` is the one set in TEXT_MODEL.
+ * With AMD_API_KEY set, AMD Token Factory answers first and the named model is the fallback.
+ */
 export async function askJsonWith<T>(modelId: string | undefined, req: TextRequest): Promise<{ data: T; model: string }> {
   const model = textModel(modelId)
+  if (amdReady() && model.id !== "amd") {
+    try {
+      return { data: await textModel("amd").json<T>(req), model: "amd" }
+    } catch (err) {
+      console.warn(`AMD Token Factory failed, falling back to ${model.id}: ${(err as Error).message}`)
+    }
+  }
   return { data: await model.json<T>(req), model: model.id }
 }

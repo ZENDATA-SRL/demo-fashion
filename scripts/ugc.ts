@@ -47,17 +47,17 @@ main(async () => {
   if (step === "frames") {
     const person = await ensureCreator(creatorId, creatorModel)
     const results = await generateUgcFrames(garment.id, person.id, format.id, list(arg("models", "qwen-image-2.1")), shots)
-    console.log(`\n${garment.sku} · ${creatorId} · ${format.id} · fotogrammi\n`)
+    console.log(`\n${garment.sku} · ${creatorId} · ${format.id} · frames\n`)
     printRanking(results)
     const ok = results.filter((r) => r.asset)
     const sheet = await contactSheet([person.media, ...ok.map((r) => r.asset!.media)], `${garment.sku}-ugc-${format.id}`)
-    console.log(`\nfoglio (ordine: creator · ${ok.map((r) => r.asset!.label).join(" · ")}) → ${sheet}`)
+    console.log(`\nsheet (order: creator · ${ok.map((r) => r.asset!.label).join(" · ")}) → ${sheet}`)
     return
   }
 
   if (step === "clips") {
     const results = await generateUgcClips(garment.id, creatorId, format.id, list(arg("models", "h3-max")), { shots, voice: arg("voice") })
-    console.log(`\n${garment.sku} · ${creatorId} · ${format.id} · clip (QA sulla parte che resta nel montaggio)\n`)
+    console.log(`\n${garment.sku} · ${creatorId} · ${format.id} · clips (QA on the part kept in the edit)\n`)
     printRanking(results)
     return
   }
@@ -68,5 +68,5 @@ main(async () => {
     return
   }
 
-  throw new Error("uso: npm run ugc -- frames | clips | reel")
+  throw new Error("usage: npm run ugc -- frames | clips | reel")
 })

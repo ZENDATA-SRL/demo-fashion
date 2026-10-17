@@ -10,7 +10,7 @@ export async function POST(_req: Request, { params }: Ctx) {
   try {
     const { garment } = await getGarment(id)
     const glb = operatorGlbFor(garment.sku)
-    if (!glb) throw new Error("Nessun intervento operatore preparato per questo capo")
+    if (!glb) throw new Error("No operator pass prepared for this product")
     await simulateOperator(id, glb)
     return NextResponse.json(await buildWorkspace(id))
   } catch (err) {

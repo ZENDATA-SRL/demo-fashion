@@ -106,12 +106,12 @@ export function WorkspaceApp({ initial, initialStep }: { initial: Workspace; ini
       const before = prevJobs.current.get(j.id)
       if (before === "running" && j.status !== "running") {
         const where = j.type === "prepare" && j.status === "done" ? "input" : stepOfTarget(j.target)
-        const view = where !== step ? { label: "Vedi", run: () => go(where) } : undefined
+        const view = where !== step ? { label: "View", run: () => go(where) } : undefined
         if (j.status === "done") {
-          const failed = j.errors.length ? `${j.errors.length} modelli non hanno risposto` : undefined
-          toast({ title: `${j.label}: pronto`, body: failed, action: view })
+          const failed = j.errors.length ? `${j.errors.length} models did not respond` : undefined
+          toast({ title: `${j.label}: ready`, body: failed, action: view })
         } else {
-          toast({ title: `${j.label}: non riuscito`, body: j.error, tone: "error", action: view })
+          toast({ title: `${j.label}: failed`, body: j.error, tone: "error", action: view })
         }
       }
       prevJobs.current.set(j.id, j.status)
@@ -127,7 +127,7 @@ export function WorkspaceApp({ initial, initialStep }: { initial: Workspace; ini
         await refresh()
         return job
       } catch (err) {
-        toast({ title: "Non avviato", body: err instanceof Error ? err.message : String(err), tone: "error" })
+        toast({ title: "Not started", body: err instanceof Error ? err.message : String(err), tone: "error" })
       }
     },
     [initial.garment.id, refresh, toast],
@@ -149,9 +149,9 @@ export function WorkspaceApp({ initial, initialStep }: { initial: Workspace; ini
         }
       })
       try {
-        await api(`/api/assets/${assetId}`, { method: "POST", json: { status, by: "direzione creativa" } })
+        await api(`/api/assets/${assetId}`, { method: "POST", json: { status, by: "creative director" } })
       } catch (err) {
-        toast({ title: "Non salvato", body: err instanceof Error ? err.message : String(err), tone: "error" })
+        toast({ title: "Not saved", body: err instanceof Error ? err.message : String(err), tone: "error" })
       }
       await refresh()
     },
@@ -163,7 +163,7 @@ export function WorkspaceApp({ initial, initialStep }: { initial: Workspace; ini
       try {
         setWs(await api<Workspace>(`/api/garments/${initial.garment.id}`, { method: "PATCH", json: body }))
       } catch (err) {
-        toast({ title: "Non salvato", body: err instanceof Error ? err.message : String(err), tone: "error" })
+        toast({ title: "Not saved", body: err instanceof Error ? err.message : String(err), tone: "error" })
       }
     },
     [initial.garment.id, toast],
@@ -193,7 +193,7 @@ export function WorkspaceApp({ initial, initialStep }: { initial: Workspace; ini
   return (
     <WsCtx.Provider value={ctx}>
       <Topbar
-        crumbs={[{ label: "Capi", href: "/" }, { label: g.name }]}
+        crumbs={[{ label: "Products", href: "/" }, { label: g.name }]}
         right={
           <>
             <span className="mono muted" style={{ marginRight: 4 }}>
@@ -204,7 +204,7 @@ export function WorkspaceApp({ initial, initialStep }: { initial: Workspace; ini
         }
       />
       <div className="ws">
-        <button className="menu-btn" onClick={() => setMenu(true)} aria-label="Apri i passi" aria-expanded={menu}>
+        <button className="menu-btn" onClick={() => setMenu(true)} aria-label="Open steps" aria-expanded={menu}>
           <span className="menu-thumb">{thumb && <img src={thumb.src} alt="" />}</span>
           <span className="menu-text">
             <b>{g.name}</b>
@@ -215,12 +215,12 @@ export function WorkspaceApp({ initial, initialStep }: { initial: Workspace; ini
           <Icon name="down" size={12} />
         </button>
         {menu && <div className="drawer-scrim" onClick={() => setMenu(false)} />}
-        <aside className="rail" aria-label="Passi" data-open={menu} onClick={(e) => (e.target as HTMLElement).closest("button") && setMenu(false)}>
+        <aside className="rail" aria-label="Steps" data-open={menu} onClick={(e) => (e.target as HTMLElement).closest("button") && setMenu(false)}>
           <div className="rail-garment">
             <div className="rail-thumb">{thumb && <img src={thumb.src} alt="" />}</div>
             <div style={{ minWidth: 0 }}>
               <h2>{g.name}</h2>
-              <span className="mono muted">{g.maison} · {g.line === "uomo" ? "Uomo" : "Donna"}</span>
+              <span className="mono muted">{g.maison} · {g.line === "uomo" ? "Men" : "Women"}</span>
             </div>
           </div>
           <ol className="steps">
@@ -250,11 +250,11 @@ export function WorkspaceApp({ initial, initialStep }: { initial: Workspace; ini
           </ol>
           <div className="rail-foot">
             <div>
-              <span>Generazioni</span>
+              <span>Generations</span>
               <b className="num">{generated.length}</b>
             </div>
             <div>
-              <span>Costo generazioni</span>
+              <span>Generation cost</span>
               <b className="num">${ws.cost.toFixed(2)}</b>
             </div>
           </div>
@@ -311,8 +311,8 @@ function StepPill() {
   const next = nextIdx >= 0 ? STEPS[nextIdx] : undefined
   const skipped = nextIdx > i + 1 ? states[i + 1] : undefined
   return (
-    <nav className="pill" aria-label="Passi">
-      <button className="icon-btn" onClick={() => prev && go(prev.id)} disabled={!prev} aria-label={prev ? `Indietro: ${prev.label}` : "Indietro"}>
+    <nav className="pill" aria-label="Steps">
+      <button className="icon-btn" onClick={() => prev && go(prev.id)} disabled={!prev} aria-label={prev ? `Back: ${prev.label}` : "Back"}>
         <Icon name="left" />
       </button>
       <ol className="pill-dots">

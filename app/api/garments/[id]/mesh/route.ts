@@ -12,8 +12,8 @@ export async function POST(req: Request, { params }: Ctx) {
   try {
     const form = await req.formData()
     const file = form.get("file")
-    if (!(file instanceof File) || file.size === 0) throw new Error("nessun file")
-    if (extname(file.name).toLowerCase() !== ".glb") throw new Error("serve un file .glb")
+    if (!(file instanceof File) || file.size === 0) throw new Error("no file")
+    if (extname(file.name).toLowerCase() !== ".glb") throw new Error("a .glb file is required")
     const label = form.get("label") === "pixal3d" ? "pixal3d" : "operatore"
     await addOperatorMesh(id, await saveBuffer(Buffer.from(await file.arrayBuffer()), ".glb"), label)
     return NextResponse.json(await buildWorkspace(id))

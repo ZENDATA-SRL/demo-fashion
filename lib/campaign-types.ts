@@ -115,6 +115,8 @@ export type ArchiveLaunch = {
   sku: string
   name: string
   category: string
+  /** leather goods or knitwear: a product is forecast against the past launches of its own family */
+  family: "leather" | "knit"
   price: number
   test: { budget: number; days: number; saveRate: number; ctr: number; conversion: number; preorders: number; preordersPer1k: number }
   outcome: { produced: number; soldFullPrice: number; sellThrough: number; markdownUnits: number }

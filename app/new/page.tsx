@@ -14,14 +14,14 @@ export default async function NewPage() {
     ? {
         archive: input("archive") ?? fallback("archive"),
         sketch: input("sketch") ?? fallback("sketch"),
-        brief: "nuova interpretazione FW26, lana double, bottoni staffa, rosso lacca",
+        brief: "new FW26 take, double-face wool, toggle buttons, lacquer red",
         name: first.name,
         maison: first.maison,
       }
     : undefined
   return (
     <>
-      <Topbar crumbs={[{ label: "Capi", href: "/" }, { label: "Nuovo prodotto" }]} />
+      <Topbar crumbs={[{ label: "Products", href: "/" }, { label: "New product" }]} />
       <NewGarment example={example} />
     </>
   )

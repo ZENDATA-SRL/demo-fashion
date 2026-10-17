@@ -12,7 +12,7 @@ main(async () => {
     console.log(`${flag} ${f.label.padEnd(18)} ${SOURCE_LABEL[f.source].padEnd(10)} ${f.value}`)
   }
   const invented = dna.fields.filter((f) => f.source === "invented")
-  console.log(`\n● = critico (controllato su ogni asset) · ${invented.length} campi inventati da firmare`)
+  console.log(`\n● = critical (checked on every asset) · ${invented.length} invented fields to sign off`)
   const plan = await writeShootPlan(garment.id)
-  console.log(`\nPiano di scatti: ${plan.noun} · ${plan.description}`)
+  console.log(`\nShoot plan: ${plan.noun} · ${plan.description}`)
 })

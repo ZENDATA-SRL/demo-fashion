@@ -14,7 +14,7 @@ export const IMAGE_MODELS: ImageModel[] = [
   {
     id: "qwen-image-2.1-runpod",
     label: "Qwen Image 2.1 · RunPod",
-    note: "Default. Il grafo di qwen-loro sul pod ComfyUI: riferimenti in ordine, 40 step, CFG 1",
+    note: "Default. The qwen-loro graph on the ComfyUI pod: ordered references, 40 steps, CFG 1",
     provider: "runpod",
     hosting: "self-hosted",
     weights: "open",
@@ -23,7 +23,7 @@ export const IMAGE_MODELS: ImageModel[] = [
   {
     id: "gpt-image-2.5-sunburst",
     label: "GPT Image 2.5 Sunburst",
-    note: "Subject preservation e coerenza multi-turno, precisione",
+    note: "Subject preservation and multi-turn consistency, precision",
     provider: "fal",
     hosting: "managed",
     weights: "closed",
@@ -52,7 +52,7 @@ export const IMAGE_MODELS: ImageModel[] = [
   {
     id: "qwen-image-2.1",
     label: "Qwen Image 2.1 · fal",
-    note: "Edit e text-to-image su fal, prompt non espanso",
+    note: "Edit and text-to-image on fal, prompt not expanded",
     provider: "fal",
     hosting: "managed",
     weights: "open",
@@ -79,7 +79,7 @@ export const VIDEO_MODELS: VideoModel[] = [
   {
     id: "h3-max",
     label: "MiniMax H3 Max · 768p",
-    note: "Parla italiano in modo nativo, buono sui panni in movimento. $0.04/s in promo fino al 30/9",
+    note: "Speaks Italian natively, good on fabric in motion. $0.04/s promo until 30/9",
     provider: "fal",
     hosting: "managed",
     weights: "closed",
@@ -118,7 +118,7 @@ export const MESH_MODELS: MeshModel[] = [
   {
     id: "pixal3d-runpod",
     label: "Pixal3D · RunPod",
-    note: "Default. Template ComfyUI Pixal3D sul pod: BiRefNet, MoGe, upsample 1536, PBR",
+    note: "Default. ComfyUI Pixal3D template on the pod: BiRefNet, MoGe, upsample 1536, PBR",
     provider: "runpod",
     hosting: "self-hosted",
     weights: "open",
@@ -127,7 +127,7 @@ export const MESH_MODELS: MeshModel[] = [
   {
     id: "trellis-2-runpod",
     label: "TRELLIS.2 · RunPod",
-    note: "Stesso template sul pod, ramo TRELLIS.2",
+    note: "Same template on the pod, TRELLIS.2 branch",
     provider: "runpod",
     hosting: "self-hosted",
     weights: "open",
@@ -136,7 +136,7 @@ export const MESH_MODELS: MeshModel[] = [
   {
     id: "trellis-2",
     label: "TRELLIS.2",
-    note: "Default. Superfici aperte e texture PBR, MIT. Risoluzione 1024, mesh alleggerita per il viewer",
+    note: "Default. Open surfaces and PBR textures, MIT. Resolution 1024, mesh decimated for the viewer",
     provider: "fal",
     hosting: "managed",
     weights: "open",
@@ -156,7 +156,7 @@ export const MESH_MODELS: MeshModel[] = [
   {
     id: "trellis",
     label: "TRELLIS",
-    note: "La versione precedente, più economica, mesh texturizzata. MIT",
+    note: "The previous version, cheaper, textured mesh. MIT",
     provider: "fal",
     hosting: "managed",
     weights: "open",
@@ -173,7 +173,7 @@ export const MESH_MODELS: MeshModel[] = [
   {
     id: "triposr",
     label: "TripoSR",
-    note: "Bozza in pochi secondi, geometria rozza, senza PBR. MIT",
+    note: "Draft in a few seconds, rough geometry, no PBR. MIT",
     provider: "fal",
     hosting: "managed",
     weights: "open",
@@ -193,7 +193,7 @@ export const MESH_MODELS: MeshModel[] = [
   {
     id: "hunyuan3d-v21",
     label: "Hunyuan3D 2.1",
-    note: "Texture PBR spesso migliori. Pesi aperti, licenza Tencent: uso commerciale in UE da verificare",
+    note: "Often better PBR textures. Open weights, Tencent licence: commercial use in the EU to be verified",
     provider: "fal",
     hosting: "managed",
     weights: "open",
@@ -213,7 +213,7 @@ export const MESH_MODELS: MeshModel[] = [
   {
     id: "sam-3d",
     label: "SAM 3D",
-    note: "Ricostruzione Meta da una foto, mesh con texture. Licenza SAM",
+    note: "Meta reconstruction from one photo, textured mesh. SAM licence",
     provider: "fal",
     hosting: "managed",
     weights: "open",
@@ -234,7 +234,7 @@ export const MUSIC_MODELS: MusicModel[] = [
   {
     id: "lyria2",
     label: "Google Lyria 2",
-    note: "Strumentale di 30 s a 48 kHz, basta per un reel",
+    note: "30 s instrumental at 48 kHz, enough for a reel",
     provider: "fal",
     hosting: "managed",
     weights: "closed",
@@ -245,7 +245,7 @@ export const MUSIC_MODELS: MusicModel[] = [
 
 function find<T extends { id: string }>(list: T[], id: string, kind: string): T {
   const model = list.find((m) => m.id === id)
-  if (!model) throw new Error(`modello ${kind} sconosciuto: ${id} (disponibili: ${list.map((m) => m.id).join(", ")})`)
+  if (!model) throw new Error(`unknown ${kind} model: ${id} (available: ${list.map((m) => m.id).join(", ")})`)
   return model
 }
 
@@ -255,8 +255,8 @@ export const comfyReady = () => !!process.env.COMFY_BASE && !process.env.COMFY_B
 /** Same open model on fal while the RunPod pod is not configured, so the defaults keep working. */
 const RUNPOD_FALLBACK: Record<string, string> = { "qwen-image-2.1-runpod": "qwen-image-2.1" }
 
-export const imageModel = (id: string) => find(IMAGE_MODELS, !comfyReady() && RUNPOD_FALLBACK[id] ? RUNPOD_FALLBACK[id] : id, "immagine")
+export const imageModel = (id: string) => find(IMAGE_MODELS, !comfyReady() && RUNPOD_FALLBACK[id] ? RUNPOD_FALLBACK[id] : id, "image")
 export const videoModel = (id: string) => find(VIDEO_MODELS, id, "video")
-export const musicModel = (id: string) => find(MUSIC_MODELS, id, "musica")
+export const musicModel = (id: string) => find(MUSIC_MODELS, id, "music")
 export const meshModel = (id: string) => find(MESH_MODELS, id, "3d")
-export const textModel = (id = process.env.TEXT_MODEL ?? "gemini"): TextModel => find(TEXT_MODELS, id, "testo")
+export const textModel = (id = process.env.TEXT_MODEL ?? "gemini"): TextModel => find(TEXT_MODELS, id, "text")

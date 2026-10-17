@@ -8,7 +8,7 @@ import { Bench } from "../bench"
 import { MeshView } from "../mesh-view"
 import { StepHead, useWs } from "../workspace"
 
-const fmt = (n: number) => n.toFixed(1).replace(".0", "").replace(".", ",")
+const fmt = (n: number) => n.toFixed(1).replace(".0", "")
 
 export function SceneStep() {
   const { ws } = useWs()
@@ -21,10 +21,10 @@ export function SceneStep() {
       <StepHead />
       {m && (
         <p className="size-line" data-ok={Math.abs(m.cm / m.target - 1) <= 0.1}>
-          <span className="caps">Sul tavolo</span>
+          <span className="caps">On the table</span>
           <b className="num">{fmt(m.cm)} cm</b>
           <span className="muted">
-            quota {fmt(m.target)} cm · {m.how}
+            spec {fmt(m.target)} cm · {m.how}
           </span>
         </p>
       )}
@@ -34,8 +34,8 @@ export function SceneStep() {
         toolbar={null}
         empty={
           <div className="empty">
-            <h3>Nessuna scena</h3>
-            <p className="muted">La scena si fa fuori dall&apos;app, con la pipeline layout → 3D → Qwen, partendo dal 3D approvato.</p>
+            <h3>No scene yet</h3>
+            <p className="muted">The scene is made outside the app, with the layout → 3D → Qwen pipeline, starting from the approved 3D model.</p>
           </div>
         }
       />
@@ -58,16 +58,16 @@ function Thread({ scene }: { scene: AssetView }) {
     a && { label, step, node: <img src={a.src} alt={label} onClick={() => light({ src: a.src, alt: label })} /> }
   const model = (label: string, a: AssetView | undefined, note?: string): Cell | undefined => a && { label, note, step: "3d", node: <MeshView src={a.src} /> }
   const cells = [
-    image("Riferimento", ws.assets.find((a) => a.kind === "archive"), "input"),
+    image("Reference", ws.assets.find((a) => a.kind === "archive"), "input"),
     image("Concept Sketch", currentOf(ws.assets, "sketch"), "input"),
     image("Concept Visualization", approvedOf(ws, "ghost-front"), "concept"),
     model("Image-to-3D", generated),
-    model("Mesh Cleanup", refined, refined?.operator ? `${refined.operator.minutes} min di operatore` : undefined),
-    image("Scena", scene, "scena"),
+    model("Mesh Cleanup", refined, refined?.operator ? `${refined.operator.minutes} operator min` : undefined),
+    image("Scene", scene, "scena"),
   ].filter((c): c is Cell => !!c)
 
   return (
-    <section className="thread" aria-label="Filo del progetto">
+    <section className="thread" aria-label="Project thread">
       <ol>
         {cells.map((c) => (
           <li key={c.label}>

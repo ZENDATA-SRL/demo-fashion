@@ -18,37 +18,37 @@ export async function POST(req: Request, { params }: Ctx) {
   const action = (await req.json().catch(() => ({}))) as Action
   const live = process.env.DEMO_LIVE === "1" || (action.type === "campaign-analysis" && process.env.CAMPAIGN_LLM === "1")
   if (!live) return NextResponse.json({ offline: true })
-  if (!TYPES.includes(action.type)) return NextResponse.json({ error: "azione sconosciuta" }, { status: 400 })
+  if (!TYPES.includes(action.type)) return NextResponse.json({ error: "unknown action" }, { status: 400 })
   if ("models" in action && (!Array.isArray(action.models) || !action.models.length)) {
-    return NextResponse.json({ error: "Scegli almeno un modello" }, { status: 400 })
+    return NextResponse.json({ error: "Pick at least one model" }, { status: 400 })
   }
   if (action.type === "studio" && !STUDIO_LOOKS.some((l) => l.id === action.look)) {
-    return NextResponse.json({ error: "look studio sconosciuto" }, { status: 400 })
+    return NextResponse.json({ error: "unknown studio look" }, { status: 400 })
   }
   if (action.type === "ugc-frame" || action.type === "ugc-clip" || action.type === "ugc-reel" || action.type === "ugc-auto") {
     const format = UGC_FORMATS.find((f) => f.id === action.format)
-    if (!format) return NextResponse.json({ error: "formato UGC sconosciuto" }, { status: 400 })
+    if (!format) return NextResponse.json({ error: "unknown UGC format" }, { status: 400 })
     if ("shots" in action && action.shots?.some((id) => !format.shots.some((s) => s.id === id))) {
-      return NextResponse.json({ error: "scatto UGC sconosciuto" }, { status: 400 })
+      return NextResponse.json({ error: "unknown UGC shot" }, { status: 400 })
     }
     if ((action.type === "ugc-clip" || action.type === "ugc-auto") && action.voice && !UGC_VOICES.some((v) => v.id === action.voice)) {
-      return NextResponse.json({ error: "voce UGC sconosciuta" }, { status: 400 })
+      return NextResponse.json({ error: "unknown UGC voice" }, { status: 400 })
     }
     if ((action.type === "ugc-reel" || action.type === "ugc-auto") && action.music && !UGC_TRACKS.some((t) => t.id === action.music)) {
-      return NextResponse.json({ error: "musica UGC sconosciuta" }, { status: 400 })
+      return NextResponse.json({ error: "unknown UGC track" }, { status: 400 })
     }
   }
   if (action.type === "onmodel" && action.model && !allCast().some((m) => m.id === action.model)) {
-    return NextResponse.json({ error: "cast sconosciuto" }, { status: 400 })
+    return NextResponse.json({ error: "unknown cast model" }, { status: 400 })
   }
   if (action.type === "refine" && !action.instruction?.trim()) {
-    return NextResponse.json({ error: "Scrivi cosa correggere" }, { status: 400 })
+    return NextResponse.json({ error: "Say what to fix" }, { status: 400 })
   }
   if (action.type === "brand-dna" && !BRAND_LORA_IDS.includes(action.brandId)) {
-    return NextResponse.json({ error: "Brand LoRA sconosciuto" }, { status: 400 })
+    return NextResponse.json({ error: "Unknown brand LoRA" }, { status: 400 })
   }
   if (action.type === "brand-dna" && action.note !== undefined && (typeof action.note !== "string" || action.note.length > 2000)) {
-    return NextResponse.json({ error: "Nota non valida" }, { status: 400 })
+    return NextResponse.json({ error: "Invalid note" }, { status: 400 })
   }
   try {
     return NextResponse.json(await startAction(id, action))

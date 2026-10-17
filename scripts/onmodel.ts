@@ -10,7 +10,7 @@ main(async () => {
   if (!personId) {
     const person = await ensureCastView(castId, "front", arg("person-model", "qwen-image-2.1"))
     personId = person.id
-    console.log(`modella creata ${person.id} (${person.label})`)
+    console.log(`model created ${person.id} (${person.label})`)
   }
 
   const results = await generateOnModel(garment.id, personId, list(arg("models", "qwen-image-2.1")))
@@ -20,5 +20,5 @@ main(async () => {
   const person = (await getGarment(garment.id)).assets.find((a) => a.id === personId)!
   const ok = results.filter((r) => r.asset)
   const sheet = await contactSheet([person.media, ...ok.map((r) => r.asset!.media)], `${garment.sku}-on-model`)
-  console.log(`\nfoglio (ordine: modella · ${ok.map((r) => r.modelId).join(" · ")}) → ${sheet}`)
+  console.log(`\nsheet (order: model · ${ok.map((r) => r.modelId).join(" · ")}) → ${sheet}`)
 })

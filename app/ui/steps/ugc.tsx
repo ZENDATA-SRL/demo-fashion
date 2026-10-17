@@ -29,7 +29,7 @@ function viewOf(cell: Cell): View {
   return { shot: REEL }
 }
 
-const secs = (n: number) => `${n.toFixed(1).replace(".", ",").replace(",0", "")} s`
+const secs = (n: number) => `${n.toFixed(1).replace(".0", "")} s`
 
 /**
  * Left, the brief of the ad (which ad, who, which voice) and the one button that makes the whole reel. Right, the
@@ -93,7 +93,7 @@ export function UgcStep() {
       <StepHead />
 
       <div className="ugc-layout">
-        <aside className="ugc-setup" aria-label="Regia">
+        <aside className="ugc-setup" aria-label="Direction">
           <div className="ugc-setup-body scroll">
             <Field n={1} label="Template">
               <div className="ugc-list">
@@ -104,11 +104,11 @@ export function UgcStep() {
                       <span className="ugc-choice-text">
                         <b>{f.label}</b>
                         <small>
-                          {f.shots.length} clip · {Math.round(f.seconds)} s{f.speaks ? "" : " · musica"}
+                          {f.shots.length} clips · {Math.round(f.seconds)} s{f.speaks ? "" : " · music"}
                         </small>
                       </span>
                       <span className="ugc-count" data-done={done > 0}>
-                        {done ? `${done} reel` : "Da fare"}
+                        {done ? `${done} ${done === 1 ? "reel" : "reels"}` : "To do"}
                       </span>
                     </button>
                   )
@@ -121,14 +121,14 @@ export function UgcStep() {
                 {creatorsFor(sel.format).map((c) => {
                   const x = ugcCell(ws, c.id, sel.format)
                   const a = avatar(c.id)
-                  const state = x.video ? "Reel approvato" : x.jobs.length ? "In lavorazione" : x.clipsDone ? `${x.clipsDone}/${x.shots.length} clip` : x.framesDone ? `${x.framesDone}/${x.shots.length} fotogrammi` : "Da fare"
+                  const state = x.video ? "Reel approved" : x.jobs.length ? "In progress" : x.clipsDone ? `${x.clipsDone}/${x.shots.length} clips` : x.framesDone ? `${x.framesDone}/${x.shots.length} frames` : "To do"
                   return (
                     <button key={c.id} className="ugc-choice" aria-pressed={c.id === sel.creator} onClick={() => open(c.id, sel.format)}>
                       <span className="avatar">{a ? <img src={a.src} alt="" /> : c.name[0]}</span>
                       <span className="ugc-choice-text">
                         <b>{c.name}</b>
                         <small>
-                          {c.age} anni · {c.city}
+                          {c.age} · {c.city}
                         </small>
                       </span>
                       <span className="ugc-state" data-s={x.video ? "done" : x.jobs.length ? "busy" : undefined}>
@@ -141,15 +141,15 @@ export function UgcStep() {
             </Field>
 
             <details className="advanced ugc-more">
-              <summary>{format?.speaks ? "Voce" : "Musica"}</summary>
+              <summary>{format?.speaks ? "Voice" : "Music"}</summary>
             {format?.speaks ? (
-              <Field n={3} label="Voce">
+              <Field n={3} label="Voice">
                 <Options options={ws.ugcVoices} value={voice} onChange={setVoice} />
               </Field>
             ) : (
-              <Field n={3} label="Musica">
+              <Field n={3} label="Music">
                 <Options
-                  options={[{ id: "", label: "Del formato", note: "La base di questo template, sul suo tempo." }, ...ws.ugcTracks]}
+                  options={[{ id: "", label: "Template's own", note: "This template's backing track, on its tempo." }, ...ws.ugcTracks]}
                   value={music}
                   onChange={setMusic}
                 />
@@ -161,9 +161,9 @@ export function UgcStep() {
           <div className="ugc-setup-foot">
             <button className="btn primary ugc-go" onClick={auto} disabled={busy}>
               {autoRunning ? <span className="spinner" style={{ width: 12, height: 12 }} /> : <Icon name="spark" />}
-              {autoRunning ? "Sto facendo il reel…" : allClips ? "Rimonta il reel" : "Fai il reel"}
+              {autoRunning ? "Making the reel…" : allClips ? "Re-edit the reel" : "Make the reel"}
             </button>
-            {autoRunning && <p className="ugc-help">{cell.jobs.find((j) => j.type === "ugc-auto")?.phase ?? "In corso"}</p>}
+            {autoRunning && <p className="ugc-help">{cell.jobs.find((j) => j.type === "ugc-auto")?.phase ?? "Running"}</p>}
           </div>
         </aside>
 
@@ -176,7 +176,7 @@ export function UgcStep() {
             </div>
           </div>
 
-          <ol className="ugc-board" aria-label="Scatti del reel">
+          <ol className="ugc-board" aria-label="Reel shots">
             {cell.shots.map((s, i) => {
               const thumb = s.clip?.poster ?? s.frame?.src ?? s.frames.at(-1)?.src
               return (
@@ -188,7 +188,7 @@ export function UgcStep() {
                         {i + 1}. {s.label}
                       </b>
                       <span className="ugc-marks">
-                        <Mark done={!!s.frame} label="Foto" />
+                        <Mark done={!!s.frame} label="Photo" />
                         <Mark done={!!s.clip} label="Clip" />
                       </span>
                     </span>
@@ -203,7 +203,7 @@ export function UgcStep() {
                   <b>Reel</b>
                   <small>{secs(format?.seconds ?? 0)}</small>
                   <span className="ugc-marks">
-                    <Mark done={!!cell.video} label={cell.video ? "Approvato" : cell.reels.length ? "Da approvare" : "Da montare"} />
+                    <Mark done={!!cell.video} label={cell.video ? "Approved" : cell.reels.length ? "To approve" : "To edit"} />
                   </span>
                 </span>
               </button>
@@ -221,9 +221,9 @@ export function UgcStep() {
                 {shot && view.shot !== REEL ? (
                   <>
                     <div className="ugc-bar-left">
-                      <div className="seg" role="group" aria-label="Livello">
+                      <div className="seg" role="group" aria-label="Layer">
                         <button aria-pressed={layer === "frame"} onClick={() => setView({ shot: shot.id, layer: "frame" })}>
-                          {shot.frame && <Icon name="check" size={10} />} Fotogramma
+                          {shot.frame && <Icon name="check" size={10} />} Frame
                         </button>
                         <button aria-pressed={layer === "clip"} onClick={() => setView({ shot: shot.id, layer: "clip" })} disabled={!shot.frame}>
                           {shot.clip && <Icon name="check" size={10} />} Clip
@@ -232,16 +232,16 @@ export function UgcStep() {
                     </div>
                     <div className="ugc-bar-right">
                       {layer === "frame" ? (
-                        <GenerateButton label={shot.frames.length ? "Altro fotogramma" : "Genera fotogramma"} models={ws.models} modelIds={frameModels} onRun={() => genFrames([shot])} busy={busy} quiet />
+                        <GenerateButton label={shot.frames.length ? "Another frame" : "Generate frame"} models={ws.models} modelIds={frameModels} onRun={() => genFrames([shot])} busy={busy} quiet />
                       ) : (
-                        <GenerateButton label={shot.clips.length ? "Altra clip" : "Genera clip"} models={ws.models} modelIds={clipModels} onRun={() => genClips([shot])} busy={busy} disabled={!shot.frame} quiet />
+                        <GenerateButton label={shot.clips.length ? "Another clip" : "Generate clip"} models={ws.models} modelIds={clipModels} onRun={() => genClips([shot])} busy={busy} disabled={!shot.frame} quiet />
                       )}
                     </div>
                   </>
                 ) : (
                   <>
                     <button className="btn secondary" onClick={assemble} disabled={busy || !allClips}>
-                      {allClips ? (cell.reels.length ? "Rimonta" : "Monta") : `Mancano ${n - cell.clipsDone} clip approvate`}
+                      {allClips ? (cell.reels.length ? "Re-edit" : "Edit") : `${n - cell.clipsDone} approved ${n - cell.clipsDone === 1 ? "clip" : "clips"} missing`}
                     </button>
                   </>
                 )}
@@ -251,14 +251,14 @@ export function UgcStep() {
               <div className="empty">
                 {shot && layer === "frame" ? (
                   <button className="link-btn" onClick={() => genFrames([shot])} disabled={busy}>
-                    Genera solo questo fotogramma
+                    Generate only this frame
                   </button>
                 ) : shot && layer === "clip" ? (
                   <button className="link-btn" onClick={() => genClips([shot])} disabled={busy || !shot.frame}>
-                    Genera solo questa clip
+                    Generate only this clip
                   </button>
                 ) : (
-                  <p className="muted">Il reel montato compare qui.</p>
+                  <p className="muted">The edited reel shows up here.</p>
                 )}
               </div>
             }

@@ -18,7 +18,7 @@ async function inputMedia(form: FormData, field: string): Promise<Media | undefi
   const file = form.get(field)
   if (file instanceof File && file.size > 0) {
     const ext = extname(file.name).toLowerCase().replace(".jpeg", ".jpg")
-    if (!MIME[ext] || ext === ".mp4") throw new Error(`formato non supportato: ${file.name}`)
+    if (!MIME[ext] || ext === ".mp4") throw new Error(`unsupported format: ${file.name}`)
     return saveBuffer(Buffer.from(await file.arrayBuffer()), ext)
   }
   const from = form.get(`${field}From`)
@@ -33,12 +33,12 @@ export async function POST(req: Request) {
     const form = await req.formData()
     const text = (k: string) => String(form.get(k) ?? "").trim()
     const brief = text("brief")
-    if (!brief) return NextResponse.json({ error: "Scrivi la descrizione del prodotto" }, { status: 400 })
+    if (!brief) return NextResponse.json({ error: "Write the product description" }, { status: 400 })
 
     const archive = await inputMedia(form, "archive")
     const sketch = await inputMedia(form, "sketch")
     const created = text("start") === "ai"
-    if (!archive && !sketch && !created) return NextResponse.json({ error: "Carica una foto o un bozzetto, oppure fallo creare dalla descrizione" }, { status: 400 })
+    if (!archive && !sketch && !created) return NextResponse.json({ error: "Upload a photo or a sketch, or have it created from the description" }, { status: 400 })
 
     const db = await readDb()
     const base = text("sku") || `FW26-${String(db.garments.length + 1).padStart(3, "0")}`
@@ -47,11 +47,11 @@ export async function POST(req: Request) {
 
     const garment = await createGarment({
       sku,
-      name: text("name") || "Nuovo capo",
+      name: text("name") || "New product",
       maison: text("maison") || "Aurenzi Milano",
       line: text("line") === "uomo" ? "uomo" : "donna",
       brief,
-      goal: text("goal") || "pre-order sul sito + 6 UGC ads per testare 3 hook prima di produrre",
+      goal: text("goal") || "site pre-orders + 6 UGC ads to test 3 hooks before production",
     })
     if (archive) await addInput(garment.id, "archive", archive)
     if (sketch) await addInput(garment.id, "sketch", sketch)

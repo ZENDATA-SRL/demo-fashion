@@ -9,10 +9,10 @@ import { StepHead, useWs } from "../workspace"
 
 export const SOURCE_LABEL: Record<Source, string> = {
   sketch: "Flat",
-  archive: "Archivio",
-  note: "Nota",
-  invented: "Inventato",
-  measured: "Misurato",
+  archive: "Archive",
+  note: "Note",
+  invented: "Inferred",
+  measured: "Measured",
 }
 
 /** The constraints of the product. Embedded in the sketch step it shows only the critical fields and one action. */
@@ -29,15 +29,15 @@ export function DnaStep({ embedded = false }: { embedded?: boolean }) {
         dna && !busy ? (
           ws.garment.dnaConfirmed ? (
             <span className="badge ok">
-              <Icon name="check" size={10} /> Confermato
+              <Icon name="check" size={10} /> Confirmed
             </span>
           ) : (
             <>
               <button className="btn ghost" onClick={() => act({ type: "dna" })}>
-                Riestrai
+                Re-extract
               </button>
               <button className="btn primary" onClick={() => patch({ confirmDna: true })}>
-                <Icon name="check" /> Conferma il DNA
+                <Icon name="check" /> Confirm the DNA
               </button>
             </>
           )
@@ -65,10 +65,10 @@ export function DnaStep({ embedded = false }: { embedded?: boolean }) {
           </div>
         ) : (
           <div className="empty">
-            <h3>Il DNA non è ancora stato estratto</h3>
-            <p>Leggiamo il bozzetto, l&apos;archivio e la nota e scriviamo ogni dettaglio del capo, misure comprese, con la sua fonte.</p>
+            <h3>The DNA has not been extracted yet</h3>
+            <p>We read the sketch, the archive and the note, and write down every detail of the product, measurements included, with its source.</p>
             <button className="btn primary" onClick={() => act({ type: "dna" })}>
-              <Icon name="spark" /> Estrai il DNA
+              <Icon name="spark" /> Extract the DNA
             </button>
           </div>
         )}
@@ -87,8 +87,8 @@ export function DnaStep({ embedded = false }: { embedded?: boolean }) {
       <div className="constraints">
         <p className="step-lede">
           {ws.garment.dnaConfirmed
-            ? "Vincoli confermati. Ogni concept, render e video viene controllato su questi."
-            : "Letti dal bozzetto e dalla nota. Correggi un valore cliccandolo, poi conferma: ogni immagine dopo viene controllata su questi."}
+            ? "Constraints confirmed. Every concept, render and video is checked against these."
+            : "Read from the sketch and the note. Click a value to correct it, then confirm: every image after this is checked against these."}
         </p>
         <div className="card table scroll constraints-table">
           {rows.map((f) => (
@@ -108,12 +108,12 @@ export function DnaStep({ embedded = false }: { embedded?: boolean }) {
         <p title={dna.summary}>{dna.summary}</p>
       </div>
       <div className="toolbar">
-        <div className="tabs" role="tablist" aria-label="Sezione">
+        <div className="tabs" role="tablist" aria-label="Section">
           <button id="tab-fields" role="tab" aria-selected={tab === "fields"} aria-controls="panel-dna" onClick={() => setTab("fields")}>
-            Campi <span className="mono muted">{dna.fields.length}</span>
+            Fields <span className="mono muted">{dna.fields.length}</span>
           </button>
           <button id="tab-plan" role="tab" aria-selected={tab === "plan"} aria-controls="panel-dna" onClick={() => setTab("plan")}>
-            Piano di scatti
+            Shoot plan
           </button>
         </div>
         {tab === "fields" ? (
@@ -121,16 +121,16 @@ export function DnaStep({ embedded = false }: { embedded?: boolean }) {
             <BrandDnaWriteButton disabled={busy} />
             {!ws.garment.dnaConfirmed && (
               <span className="toolbar-note">
-                <Icon name="pen" size={12} /> Clicca un valore per correggerlo
+                <Icon name="pen" size={12} /> Click a value to correct it
                 <Hint align="right">
-                  Rivedi prima di confermare. Fonte e criticità si cambiano dalla riga. I campi critici diventano i controlli su ogni immagine. Estratto da {dna.model}.
+                  Review before confirming. Source and criticality are changed from the row. Critical fields become the checks on every image. Extracted by {dna.model}.
                 </Hint>
               </span>
             )}
-            <div className="seg" role="group" aria-label="Filtra">
+            <div className="seg" role="group" aria-label="Filter">
               {filters.map((f) => (
                 <button key={f} aria-pressed={filter === f} onClick={() => setFilter(f)}>
-                  {f === "all" ? "Tutti" : f === "critical" ? "Critici" : SOURCE_LABEL[f]} <span className="mono muted">{count(f)}</span>
+                  {f === "all" ? "All" : f === "critical" ? "Critical" : SOURCE_LABEL[f]} <span className="mono muted">{count(f)}</span>
                 </button>
               ))}
             </div>
@@ -142,10 +142,10 @@ export function DnaStep({ embedded = false }: { embedded?: boolean }) {
       {tab === "fields" ? (
         <div className="card table fill scroll" id="panel-dna" role="tabpanel" aria-labelledby="tab-fields">
           <div className="row head">
-            <span className="caps">Campo</span>
-            <span className="caps">Valore</span>
-            <span className="caps">Fonte</span>
-            <span className="caps">Critico</span>
+            <span className="caps">Field</span>
+            <span className="caps">Value</span>
+            <span className="caps">Source</span>
+            <span className="caps">Critical</span>
           </div>
           {dna.fields.map((f) => (
             <FieldRow
@@ -163,46 +163,46 @@ export function DnaStep({ embedded = false }: { embedded?: boolean }) {
   )
 }
 
-/** The rows of the shoot plan in reading order: [dotted path, Italian label]. */
+/** The rows of the shoot plan in reading order: [dotted path, label]. */
 function planRows(plan: ShootPlan, formats: Workspace["formats"]): Array<[string, string]> {
   const d1 = plan.details["detail-button"].label
   const d2 = plan.details["detail-fabric"].label
   return [
-    ["noun", "Nome nei prompt"],
-    ["description", "Descrizione"],
-    ["identity", "Da non perdere mai"],
-    ["lock", "Da tenere identico"],
-    ["scale", "Proporzioni sul corpo"],
-    ["views.front", "Fronte"],
-    ["views.back", "Retro"],
-    ["views.side", "Tre quarti"],
-    ["details.detail-button.label", "Dettaglio 1 · nome"],
-    ["details.detail-button.region", `${d1} · zona`],
-    ["details.detail-button.shot", `${d1} · scatto`],
-    ["details.detail-fabric.label", "Dettaglio 2 · nome"],
-    ["details.detail-fabric.region", `${d2} · zona`],
-    ["details.detail-fabric.shot", `${d2} · scatto`],
+    ["noun", "Name in prompts"],
+    ["description", "Description"],
+    ["identity", "Never lose"],
+    ["lock", "Keep identical"],
+    ["scale", "Proportions on the body"],
+    ["views.front", "Front"],
+    ["views.back", "Back"],
+    ["views.side", "Three-quarter"],
+    ["details.detail-button.label", "Detail 1 · name"],
+    ["details.detail-button.region", `${d1} · area`],
+    ["details.detail-button.shot", `${d1} · shot`],
+    ["details.detail-fabric.label", "Detail 2 · name"],
+    ["details.detail-fabric.region", `${d2} · area`],
+    ["details.detail-fabric.shot", `${d2} · shot`],
     ...(plan.hardware
       ? ([
-          ["hardware.label", "Minuteria"],
-          ["hardware.target", "Minuteria · dove"],
+          ["hardware.label", "Hardware"],
+          ["hardware.target", "Hardware · where"],
         ] as Array<[string, string]>)
       : []),
-    ["outfit", "Look della modella"],
-    ["wear", "Come lo indossa"],
-    ["ugc.wear", "UGC · come lo indossa"],
-    ["ugc.show", "UGC · cosa mostra"],
-    ["ugc.touch", "UGC · cosa tocca"],
+    ["outfit", "Model's outfit"],
+    ["wear", "How it is worn"],
+    ["ugc.wear", "UGC · how it is worn"],
+    ["ugc.show", "UGC · what it shows"],
+    ["ugc.touch", "UGC · what it touches"],
     ...formats.flatMap((f): Array<[string, string]> =>
       plan.ugc.copy[f.id]
         ? [
-            [`ugc.copy.${f.id}.hook`, `${f.label} · ipotesi`],
-            ...(f.speaks ? [[`ugc.copy.${f.id}.line`, `${f.label} · battuta`] as [string, string]] : []),
+            [`ugc.copy.${f.id}.hook`, `${f.label} · hook`],
+            ...(f.speaks ? [[`ugc.copy.${f.id}.line`, `${f.label} · line`] as [string, string]] : []),
           ]
         : [],
     ),
-    ...plan.zones.map((z, i): [string, string] => [`zones.${i}.target`, `Confronto · ${z.label}`]),
-    ...plan.backZones.map((_, i): [string, string] => [`backZones.${i}`, `Controllo retro ${i + 1}`]),
+    ...plan.zones.map((z, i): [string, string] => [`zones.${i}.target`, `Comparison · ${z.label}`]),
+    ...plan.backZones.map((_, i): [string, string] => [`backZones.${i}`, `Back check ${i + 1}`]),
   ]
 }
 
@@ -218,15 +218,15 @@ function ShootPlanActions() {
   return (
     <div className="toolbar-right">
       <span className="toolbar-note">
-        Frasi che entrano nei prompt
+        Phrases that go into the prompts
         <Hint align="right">
-          Le frasi di questo capo che entrano nei prompt di viste, indossato e UGC. Sfondo, luce e formato restano fissi. Nelle immagini con una persona il DNA completo non entra
-          nel prompt: al suo posto vanno descrizione e dettagli da non perdere, scritti in modo da passare i filtri.
+          The phrases of this product that go into the view, on-model and UGC prompts. Background, light and format stay fixed. In images with a person the full DNA does not go
+          into the prompt: the description and the details never to lose go in its place, written to pass the filters.
         </Hint>
       </span>
       {!planBusy(ws) && ws.garment.dna && (
         <button className="btn secondary sm" onClick={() => act({ type: "shoot" })}>
-          {ws.garment.shoot ? "Riscrivi dal DNA" : "Scrivi il piano"}
+          {ws.garment.shoot ? "Rewrite from the DNA" : "Write the plan"}
         </button>
       )}
     </div>
@@ -252,8 +252,8 @@ function ShootPlanCard() {
       ) : (
         !busy && (
           <div className="empty">
-            <h3>Nessun piano di scatti</h3>
-            <p>Viene scritto dal DNA alla prima generazione, oppure adesso.</p>
+            <h3>No shoot plan</h3>
+            <p>It is written from the DNA at the first generation, or now.</p>
           </div>
         )
       )}
@@ -287,10 +287,10 @@ function EditableText({ value, label, onSave }: { value: string; label: string; 
               setEditing(false)
             }
           }}
-          aria-label={`Valore di ${label}`}
+          aria-label={`Value of ${label}`}
         />
       ) : (
-        <button onClick={() => setEditing(true)} title="Modifica">
+        <button onClick={() => setEditing(true)} title="Edit">
           {value}
         </button>
       )}
@@ -304,7 +304,7 @@ function FieldRow({ field: f, dim, onChange }: { field: DnaField; dim: boolean; 
       <span className="row-label">{f.label}</span>
       <EditableText value={f.value} label={f.label} onSave={(value) => onChange({ value })} />
       <label className="src" data-s={f.source}>
-        <select className="src-select" value={f.source} onChange={(e) => onChange({ source: e.target.value as Source })} aria-label={`Fonte di ${f.label}`}>
+        <select className="src-select" value={f.source} onChange={(e) => onChange({ source: e.target.value as Source })} aria-label={`Source of ${f.label}`}>
           {(Object.keys(SOURCE_LABEL) as Source[]).map((s) => (
             <option key={s} value={s}>
               {SOURCE_LABEL[s]}
@@ -312,8 +312,8 @@ function FieldRow({ field: f, dim, onChange }: { field: DnaField; dim: boolean; 
           ))}
         </select>
       </label>
-      <button className="crit" aria-pressed={f.critical} onClick={() => onChange({ critical: !f.critical })} aria-label={`${f.label} critico`}>
-        <i /> {f.critical ? "Sì" : "No"}
+      <button className="crit" aria-pressed={f.critical} onClick={() => onChange({ critical: !f.critical })} aria-label={`${f.label} critical`}>
+        <i /> {f.critical ? "Yes" : "No"}
       </button>
     </div>
   )

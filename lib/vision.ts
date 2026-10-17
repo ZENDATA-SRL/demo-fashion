@@ -213,7 +213,7 @@ export async function crop(media: Media, box: Box, pad = 0.15): Promise<Media> {
   const top = Math.max(0, Math.floor((y0 - padY) * height))
   const w = Math.min(width - left, Math.ceil((x1 - x0 + 2 * padX) * width))
   const h = Math.min(height - top, Math.ceil((y1 - y0 + 2 * padY) * height))
-  if (w < 8 || h < 8) throw new Error("ritaglio troppo piccolo")
+  if (w < 8 || h < 8) throw new Error("crop too small")
   const out = join(tmpdir(), `${newId("crop")}.jpg`)
   const scale = w < h ? "scale=max(768\\,iw):-2" : "scale=-2:max(768\\,ih)"
   await run("ffmpeg", ["-y", "-loglevel", "error", "-i", src, "-vf", `crop=${w}:${h}:${left}:${top},${scale}:flags=lanczos`, "-q:v", "2", out])

@@ -1,7 +1,7 @@
 import { existsSync } from "node:fs"
 import { readdir } from "node:fs/promises"
 import { join, relative } from "node:path"
-import { CHANNEL_IDS, MARKET_IDS, analysisKey, archive, channelLabel, creativesOf, defaultPlan, economics, forecastFrom, impactOf, marketLabel, themeLabels } from "./campaign"
+import { CHANNEL_IDS, MARKET_IDS, analysisKey, archive, channelLabel, creativesOf, defaultPlan, economics, familyOf, forecastFrom, impactOf, marketLabel, themeLabels } from "./campaign"
 import { zoneKey } from "./focus"
 import { castAsset, getGarment, operatorGlbFor } from "./garment"
 import { jobsFor } from "./jobs"
@@ -273,11 +273,11 @@ export async function buildWorkspace(id: string): Promise<Workspace> {
         ? {
             result: garment.campaign.result,
             analysis: garment.campaign.analyses?.[analysisKey(garment.campaign.result)],
-            forecast: forecastFrom(garment.campaign.result),
+            forecast: forecastFrom(garment.campaign.result, familyOf(garment.sku)),
             impact: impactOf(assets, garment.campaign.result),
           }
         : null,
-      archive: archive(),
+      archive: archive(familyOf(garment.sku)),
       economics: economics(),
       themes: themeLabels(),
     },

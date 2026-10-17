@@ -17,7 +17,7 @@ main(async () => {
     const ok = results.filter((r) => r.asset)
     if (ok.length) {
       const sheet = await contactSheet(ok.map((r) => r.asset!.media), `${garment.sku}-${kind}`)
-      console.log(`foglio (ordine: ${ok.map((r) => r.modelId).join(" · ")}) → ${sheet}`)
+      console.log(`sheet (order: ${ok.map((r) => r.modelId).join(" · ")}) → ${sheet}`)
     }
   }
 })

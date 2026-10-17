@@ -5,7 +5,7 @@ import { getGarment, setStatus, simulateOperator } from "../lib/garment"
 main(async () => {
   const gid = arg("garment") ?? "g_mupr1ayauch6"
   const glb = arg("glb") ?? process.env.DEMO_OPERATOR_GLB
-  if (!glb) throw new Error("serve --glb o DEMO_OPERATOR_GLB")
+  if (!glb) throw new Error("needs --glb or DEMO_OPERATOR_GLB")
 
   const { assets } = await getGarment(gid)
   for (const a of assets.filter((x) => x.kind === "mesh")) {

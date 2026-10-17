@@ -26,7 +26,7 @@ const SIZES = [
   { id: "l", label: "L", h: 520 },
 ] as const
 
-const byModel = (a: AssetView, b: AssetView) => a.model.localeCompare(b.model, "it") || a.createdAt.localeCompare(b.createdAt, "it")
+const byModel = (a: AssetView, b: AssetView) => a.model.localeCompare(b.model, "en") || a.createdAt.localeCompare(b.createdAt, "en")
 
 /** All generated candidates, one row per slot, side by side at the same height: the model choice is made by eye here. */
 export function CompareView() {
@@ -42,7 +42,7 @@ export function CompareView() {
   const rows = useMemo(() => {
     const out: Row[] = []
     out.push({ key: "ghost-front", section: "viste", title: "Concept Visualization", assets: generated.filter((a) => a.kind === "ghost-front") })
-    out.push({ key: "mesh", section: "3d", title: "Image-to-3D", sub: "Trascina per ruotare", assets: generated.filter((a) => a.kind === "mesh") })
+    out.push({ key: "mesh", section: "3d", title: "Image-to-3D", sub: "Drag to rotate", assets: generated.filter((a) => a.kind === "mesh") })
     for (const s of renderSlots(ws.garment.shoot).filter((v) => v.kind !== "ghost-front"))
       out.push({ key: s.kind, section: "viste", title: slotLabel(ws.garment.shoot, s.kind), assets: generated.filter((a) => a.kind === s.kind) })
     out.push({ key: "on-model", section: "indossato", title: "On-Model", assets: generated.filter((a) => a.kind === "on-model") })
@@ -99,14 +99,14 @@ export function CompareView() {
     <>
       <header className="step-head">
         <div className="step-title">
-          <span className="caps">Confronto</span>
-          <h1>Modelli a confronto</h1>
-          <Hint>Tutte le immagini e i video generati, affiancati per sezione. Ogni riga è lo stesso scatto richiesto a modelli diversi.</Hint>
+          <span className="caps">Compare</span>
+          <h1>Models side by side</h1>
+          <Hint>Every generated image and video, side by side by section. Each row is the same shot asked of different models.</Hint>
         </div>
       </header>
 
       <div className="compare-bar">
-        <div className="seg" role="group" aria-label="Sezioni">
+        <div className="seg" role="group" aria-label="Sections">
           {SECTIONS.map((s) => (
             <button key={s.id} aria-pressed={sections.has(s.id)} onClick={() => toggle(s.id)}>
               {s.label}
@@ -114,9 +114,9 @@ export function CompareView() {
           ))}
         </div>
         <label className="compare-check">
-          <input type="checkbox" checked={hideRejected} onChange={(e) => setHideRejected(e.target.checked)} /> Nascondi scartati
+          <input type="checkbox" checked={hideRejected} onChange={(e) => setHideRejected(e.target.checked)} /> Hide discarded
         </label>
-        <div className="seg" role="group" aria-label="Dimensione">
+        <div className="seg" role="group" aria-label="Size">
           {SIZES.map((s) => (
             <button key={s.id} aria-pressed={size === s.id} onClick={() => setSize(s.id)}>
               {s.label}
@@ -128,16 +128,16 @@ export function CompareView() {
       <div className="fill scroll compare-scroll">
         {summary.length > 0 && (
           <div className="card compare-summary">
-            <Section title="Riepilogo per modello" meta={`${summary.length} modelli`}>
+            <Section title="Summary by model" meta={`${summary.length} models`}>
               <table>
                 <thead>
                   <tr>
-                    <th>Modello</th>
-                    <th>Generati</th>
-                    <th>Approvati</th>
-                    <th>QA medio</th>
-                    <th>Tempo medio</th>
-                    <th>Costo</th>
+                    <th>Model</th>
+                    <th>Generated</th>
+                    <th>Approved</th>
+                    <th>Avg QA</th>
+                    <th>Avg time</th>
+                    <th>Cost</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -165,8 +165,8 @@ export function CompareView() {
 
         {rows.length === 0 ? (
           <div className="empty">
-            <h3>Niente da confrontare</h3>
-            <p>Concept, modelli 3D, render, indossato, studio e UGC compaiono qui, affiancati per modello.</p>
+            <h3>Nothing to compare</h3>
+            <p>Concepts, 3D models, renders, on-model, studio and UGC shots show up here, side by side by model.</p>
           </div>
         ) : (
           rows.map((r) => (
@@ -174,7 +174,7 @@ export function CompareView() {
               <div className="compare-row-head">
                 <h3>{r.title}</h3>
                 {r.sub && <span className="muted">{r.sub}</span>}
-                <span className="caps">{r.assets.length} candidati</span>
+                <span className="caps">{r.assets.length} candidates</span>
               </div>
               <div className="compare-strip" data-tall={r.section === "fotogrammi" || r.section === "video"} style={{ "--h": `${height}px` } as React.CSSProperties}>
                 {r.assets.map((a) => (
@@ -184,7 +184,7 @@ export function CompareView() {
                     ) : a.video ? (
                       <TapVideo src={a.src} poster={a.poster} preload="none" />
                     ) : (
-                      <button onClick={() => light({ src: a.src, alt: a.model })} aria-label={`Ingrandisci ${a.model}`}>
+                      <button onClick={() => light({ src: a.src, alt: a.model })} aria-label={`Enlarge ${a.model}`}>
                         <img src={a.src} alt={a.model} loading="lazy" />
                       </button>
                     )}
@@ -193,10 +193,10 @@ export function CompareView() {
                       <span className="compare-tags">
                         {a.status === "approved" && (
                           <span className="badge ink">
-                            <Icon name="check" size={10} /> Approvato
+                            <Icon name="check" size={10} /> Approved
                           </span>
                         )}
-                        {a.status === "rejected" && <span className="badge">Scartato</span>}
+                        {a.status === "rejected" && <span className="badge">Discarded</span>}
                         <span className="score" data-t={scoreTone(a.qa?.score)}>
                           {a.qa?.score ?? "—"}
                         </span>

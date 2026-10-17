@@ -59,7 +59,7 @@ export function startJob(
         job.errors = failed.map((c) => ({ modelId: c.modelId, error: c.error! }))
         if (failed.length && failed.length === result.length) {
           job.status = "error"
-          job.error = "Nessun modello ha prodotto un risultato"
+          job.error = "No model produced a result"
         }
       }
       if (job.status === "running") job.status = "done"

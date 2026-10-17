@@ -36,8 +36,8 @@ export type StudioLook = {
 export const STUDIO_LOOKS: StudioLook[] = [
   {
     id: "grigio-scolpito",
-    label: "Grigio scolpito",
-    note: "Fondale grigio senza giunte, luce morbida dall'alto a sinistra, figura intera.",
+    label: "Sculpted grey",
+    note: "Seamless grey backdrop, soft light from the top left, full figure.",
     view: "front",
     beauty: "a dewy satin complexion, softly defined brows, subtly smoked bronze eyelids and satin rose-brown lips",
     gaze: "a calm, composed expression with her gaze held steadily toward the lens",
@@ -59,8 +59,8 @@ export const STUDIO_LOOKS: StudioLook[] = [
   },
   {
     id: "bianco-vento",
-    label: "Bianco e vento",
-    note: "Ciclorama bianco caldo, una brezza muove i capelli, busto ruotato verso l'obiettivo.",
+    label: "White and wind",
+    note: "Warm white cyclorama, a breeze moves her hair, torso turned towards the lens.",
     view: "front",
     beauty: "a luminous fresh complexion, natural brushed-up brows and glossy nude-rose lips",
     gaze: "lips softly parted and an unhurried direct gaze into the lens",
@@ -82,8 +82,8 @@ export const STUDIO_LOOKS: StudioLook[] = [
   },
   {
     id: "flash-diretto",
-    label: "Flash diretto",
-    note: "Studio bianco, flash frontale duro, ombra netta sul muro.",
+    label: "Direct flash",
+    note: "White studio, hard frontal flash, a sharp shadow on the wall.",
     view: "front",
     beauty: "a fresh satin complexion, softly groomed brows and satin berry lips",
     gaze: "a confident, self-possessed expression looking straight into the lens",
@@ -105,8 +105,8 @@ export const STUDIO_LOOKS: StudioLook[] = [
   },
   {
     id: "spot-poltrona",
-    label: "Spot e poltrona",
-    note: "Cerchio di luce sul fondale grigio, poltrona in pelle blu e cromo, seduta.",
+    label: "Spotlight and armchair",
+    note: "A circle of light on the grey backdrop, blue leather and chrome armchair, seated.",
     view: "front",
     beauty: "a velvety matte complexion, defined warm brown brows, soft bronze smoky eyelids and satin brick-red lips",
     gaze: "chin slightly raised and a steady, magnetic gaze toward the camera",
@@ -128,8 +128,8 @@ export const STUDIO_LOOKS: StudioLook[] = [
   },
   {
     id: "passo-high-key",
-    label: "Passo high-key",
-    note: "Bianco puro, luce frontale morbida, colta a metà passo come in passerella.",
+    label: "High-key stride",
+    note: "Pure white, soft frontal light, caught mid-stride as on a runway.",
     view: "front",
     beauty: "a clean luminous complexion, naturally groomed brows and soft rosy-nude lips",
     gaze: "a relaxed, focused expression looking just past the lens",
@@ -151,8 +151,8 @@ export const STUDIO_LOOKS: StudioLook[] = [
   },
   {
     id: "retro-spalla",
-    label: "Retro, sguardo in spalla",
-    note: "Di spalle sul ciclorama caldo, mostra il retro del capo e guarda indietro.",
+    label: "Back, over-the-shoulder look",
+    note: "Back to camera on the warm cyclorama, showing the back of the garment and looking back.",
     view: "back",
     beauty: "a dewy satin complexion, softly defined brows and glossy mauve lips",
     gaze: "her face in three-quarter profile, glancing back at the lens with a poised, unhurried look",
@@ -176,7 +176,7 @@ export const STUDIO_LOOKS: StudioLook[] = [
 
 export function studioLook(id: string): StudioLook {
   const look = STUDIO_LOOKS.find((l) => l.id === id)
-  if (!look) throw new Error(`look studio sconosciuto: ${id} (disponibili: ${STUDIO_LOOKS.map((l) => l.id).join(", ")})`)
+  if (!look) throw new Error(`unknown studio look: ${id} (available: ${STUDIO_LOOKS.map((l) => l.id).join(", ")})`)
   return look
 }
 

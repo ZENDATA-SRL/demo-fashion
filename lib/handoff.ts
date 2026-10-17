@@ -40,41 +40,41 @@ export type ProductHandoff = {
 }
 
 function need(value: unknown, label: string): string {
-  if (typeof value !== "string" || !value.trim()) throw new Error(`handoff: manca ${label}`)
+  if (typeof value !== "string" || !value.trim()) throw new Error(`handoff: missing ${label}`)
   return value.trim()
 }
 
 export function parseHandoff(raw: unknown): ProductHandoff {
-  if (!raw || typeof raw !== "object") throw new Error("handoff: JSON non valido")
+  if (!raw || typeof raw !== "object") throw new Error("handoff: invalid JSON")
   const o = raw as Record<string, unknown>
   const line = o.line === "uomo" ? "uomo" : o.line === "donna" || o.line === undefined ? "donna" : null
-  if (!line) throw new Error("handoff: line è donna o uomo")
-  if (!Array.isArray(o.fields) || o.fields.length === 0) throw new Error("handoff: servono i campi del DNA")
+  if (!line) throw new Error("handoff: line is donna or uomo")
+  if (!Array.isArray(o.fields) || o.fields.length === 0) throw new Error("handoff: the DNA fields are required")
   const fields: HandoffField[] = o.fields.map((item, i) => {
-    if (!item || typeof item !== "object") throw new Error(`handoff: campo ${i + 1} non valido`)
+    if (!item || typeof item !== "object") throw new Error(`handoff: field ${i + 1} is invalid`)
     const f = item as Record<string, unknown>
     const source = f.source
     if (typeof source !== "string" || !FIELD_SOURCES.includes(source as Source) || source === "measured") {
-      throw new Error(`handoff: fonte non valida su ${String(f.key ?? i + 1)}`)
+      throw new Error(`handoff: invalid source on ${String(f.key ?? i + 1)}`)
     }
     return {
-      key: need(f.key, `key del campo ${i + 1}`),
-      label: need(f.label, `label di ${String(f.key)}`),
-      value: need(f.value, `value di ${String(f.key)}`),
+      key: need(f.key, `key of field ${i + 1}`),
+      label: need(f.label, `label of ${String(f.key)}`),
+      value: need(f.value, `value of ${String(f.key)}`),
       source: source as HandoffField["source"],
       critical: f.critical === true,
     }
   })
   const keys = new Set(fields.map((f) => f.key))
-  if (keys.size !== fields.length) throw new Error("handoff: chiavi DNA duplicate")
+  if (keys.size !== fields.length) throw new Error("handoff: duplicate DNA keys")
   for (const reserved of ["measurements", "trim_size"]) {
-    if (keys.has(reserved)) throw new Error(`handoff: ${reserved} si scrive nel campo dedicato, non tra i fields`)
+    if (keys.has(reserved)) throw new Error(`handoff: ${reserved} goes in its own field, not among the fields`)
   }
   const views: ProductHandoff["views"] = {}
   if (o.views !== undefined) {
-    if (!o.views || typeof o.views !== "object") throw new Error("handoff: views non valido")
+    if (!o.views || typeof o.views !== "object") throw new Error("handoff: invalid views")
     for (const [kind, path] of Object.entries(o.views as Record<string, unknown>)) {
-      if (!HANDOFF_VIEWS.includes(kind as HandoffView)) throw new Error(`handoff: vista sconosciuta ${kind}`)
+      if (!HANDOFF_VIEWS.includes(kind as HandoffView)) throw new Error(`handoff: unknown view ${kind}`)
       views[kind as HandoffView] = need(path, kind)
     }
   }
@@ -124,13 +124,13 @@ export async function importHandoff(file: string): Promise<Garment> {
   const path = resolve(file)
   const handoff = parseHandoff(JSON.parse(await readFile(path, "utf8")))
   const db = await readDb()
-  if (db.garments.some((g) => g.sku === handoff.sku)) throw new Error(`SKU già presente: ${handoff.sku}`)
+  if (db.garments.some((g) => g.sku === handoff.sku)) throw new Error(`SKU already exists: ${handoff.sku}`)
 
   const dir = dirname(path)
   const views = Object.entries(handoff.views ?? {}) as Array<[HandoffView, string]>
   for (const [kind, rel] of views) {
     const abs = isAbsolute(rel) ? rel : join(dir, rel)
-    if (!existsSync(abs)) throw new Error(`handoff: file mancante per ${kind}: ${abs}`)
+    if (!existsSync(abs)) throw new Error(`handoff: missing file for ${kind}: ${abs}`)
   }
 
   const garment = await createGarment({
@@ -139,7 +139,7 @@ export async function importHandoff(file: string): Promise<Garment> {
     maison: handoff.maison,
     line: handoff.line,
     brief: handoff.brief,
-    goal: handoff.goal ?? "pre-order sul sito + 6 UGC ads per testare 3 hook prima di produrre",
+    goal: handoff.goal ?? "pre-order on the site + 6 UGC ads to test 3 hooks before producing",
   })
   await putDna(garment.id, dnaFromHandoff(handoff))
   for (const [kind, rel] of views) {

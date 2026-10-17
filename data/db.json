@@ -2,11 +2,11 @@
   "garments": [
     {
       "sku": "FW26-015",
-      "name": "Nuovo capo",
+      "name": "New product",
       "maison": "Aurenzi Milano",
       "line": "uomo",
-      "brief": "copia esatta",
-      "goal": "pre-order sul sito + 6 UGC ads per testare 3 hook prima di produrre",
+      "brief": "exact copy",
+      "goal": "pre-order on the website + 6 UGC ads to test 3 hooks before production",
       "id": "g_mul19n4iilgd",
       "createdAt": "2026-09-28T09:16:39.378Z",
       "dna": {
@@ -14,7 +14,7 @@
         "fields": [
           {
             "key": "garment_type",
-            "label": "Tipo di capo",
+            "label": "Garment type",
             "value": "zip-up knit cardigan sweater",
             "source": "sketch",
             "critical": true
@@ -28,175 +28,175 @@
           },
           {
             "key": "length",
-            "label": "Lunghezza",
+            "label": "Length",
             "value": "hip length",
             "source": "sketch",
             "critical": true
           },
           {
             "key": "closure",
-            "label": "Chiusura",
+            "label": "Closure",
             "value": "exposed full-length front metal zipper running from the hem up to the top of the mock neck",
             "source": "sketch",
             "critical": true
           },
           {
             "key": "button_count_layout",
-            "label": "Bottoni",
+            "label": "Buttons",
             "value": "none",
             "source": "sketch",
             "critical": false
           },
           {
             "key": "button_design",
-            "label": "Design bottoni",
+            "label": "Button design",
             "value": "none",
             "source": "sketch",
             "critical": false
           },
           {
             "key": "lapel",
-            "label": "Revers",
+            "label": "Lapels",
             "value": "none",
             "source": "sketch",
             "critical": false
           },
           {
             "key": "collar",
-            "label": "Collo",
+            "label": "Neck",
             "value": "ribbed mock neck stand collar (collo a lupetto) extending seamlessly from the body",
             "source": "sketch",
             "critical": true
           },
           {
             "key": "shoulders",
-            "label": "Spalle",
+            "label": "Shoulders",
             "value": "raglan shoulder construction defined by fully fashioned diagonal rib decrease seams",
             "source": "sketch",
             "critical": true
           },
           {
             "key": "sleeves",
-            "label": "Maniche",
+            "label": "Sleeves",
             "value": "long raglan sleeves with continuous vertical ribbing",
             "source": "sketch",
             "critical": false
           },
           {
             "key": "cuffs",
-            "label": "Polsi",
+            "label": "Cuffs",
             "value": "integrated rib-knit cuffs",
             "source": "sketch",
             "critical": false
           },
           {
             "key": "pockets",
-            "label": "Tasche",
+            "label": "Pockets",
             "value": "none",
             "source": "sketch",
             "critical": true
           },
           {
             "key": "back",
-            "label": "Dietro",
+            "label": "Back",
             "value": "solid ribbed back with diagonal raglan seamlines connecting the underarm to the neckline",
             "source": "sketch",
             "critical": false
           },
           {
             "key": "vent",
-            "label": "Spacco",
+            "label": "Vent",
             "value": "none",
             "source": "sketch",
             "critical": false
           },
           {
             "key": "belt",
-            "label": "Cintura",
+            "label": "Belt",
             "value": "none",
             "source": "sketch",
             "critical": false
           },
           {
             "key": "fabric",
-            "label": "Tessuto",
+            "label": "Fabric",
             "value": "chunky wool or cashmere-blend knit",
             "source": "archive",
             "critical": true
           },
           {
             "key": "fabric_weight",
-            "label": "Peso tessuto",
+            "label": "Fabric weight",
             "value": "heavyweight, 5-gauge knit",
             "source": "invented",
             "critical": false
           },
           {
             "key": "surface_texture",
-            "label": "Texture superficiale",
+            "label": "Surface texture",
             "value": "pronounced vertical English rib / cardigan stitch with dense, three-dimensional wales",
             "source": "archive",
             "critical": true
           },
           {
             "key": "colour",
-            "label": "Colore",
+            "label": "Colour",
             "value": "beige",
             "source": "sketch",
             "critical": true
           },
           {
             "key": "colour_hex",
-            "label": "Codice hex",
+            "label": "Hex code",
             "value": "#B7A392",
             "source": "archive",
             "critical": false
           },
           {
             "key": "lining",
-            "label": "Fodera",
+            "label": "Lining",
             "value": "unlined",
             "source": "invented",
             "critical": false
           },
           {
             "key": "stitching",
-            "label": "Cuciture",
+            "label": "Stitching",
             "value": "fully fashioned linked knit seams",
             "source": "archive",
             "critical": false
           },
           {
             "key": "hardware_finish",
-            "label": "Finitura minuteria",
+            "label": "Trim hardware finish",
             "value": "polished silver-tone metal teeth and elongated rectangular puller",
             "source": "archive",
             "critical": true
           },
           {
             "key": "fit_notes",
-            "label": "Vestibilità",
+            "label": "Fit",
             "value": "relaxed through the chest and upper body, anchoring gently at the waist via the ribbed hem",
             "source": "archive",
             "critical": false
           },
           {
             "key": "sample_size",
-            "label": "Taglia campione",
+            "label": "Sample size",
             "value": "M",
             "source": "invented",
             "critical": false
           },
           {
             "key": "measurements",
-            "label": "Misure",
+            "label": "Measurements",
             "value": "total length 66 cm, chest half-circumference 56 cm, raglan sleeve length from neck point 80 cm, collar height 9 cm, hem band height 7 cm",
             "source": "invented",
             "critical": false
           },
           {
             "key": "trim_size",
-            "label": "Dimensioni finiture",
+            "label": "Trim sizes",
             "value": "zip pull 3 cm long by 0.8 cm wide, approximately the size of a standard paperclip",
             "source": "invented",
             "critical": false
@@ -222,7 +222,7 @@
             "shot": "the polished silver-tone rectangular puller and metal zipper teeth against the beige ribbed knit, raking studio light accentuating the metallic reflection and clean edges."
           },
           "detail-fabric": {
-            "label": "Lavorazione",
+            "label": "Knit",
             "region": "the diagonal fully fashioned raglan seam where the sleeve joins the collar and front panel",
             "shot": "the three-dimensional texture of the heavyweight 5-gauge English rib stitch and the linking along the raglan seam; soft studio lighting emphasizing depth and wool blend fiber."
           }
@@ -244,31 +244,34 @@
           ],
           "copy": {
             "ootd": {
-              "hook": "styling: look a strati con cardigan pesante",
+              "hook": "styling: a layered look with a heavy cardigan",
               "line": ""
             },
             "street-check": {
-              "hook": "relatable: outfit check ignorando il resto del mondo",
+              "hook": "relatable: outfit check ignoring the rest of the world",
               "line": "Ignoro le chiamate di lavoro per fare questo rapido video per ventiquattro like e zero vendite"
             },
             "get-dressed": {
-              "hook": "styling: si veste a stacchi allo specchio",
+              "hook": "styling: getting dressed in jump cuts at the mirror",
               "line": ""
             }
           }
         },
         "zones": [
           {
-            "label": "Collo",
-            "target": "the ribbed mock-neck collar and the top of the front zipper"
+            "label": "Collar",
+            "target": "the ribbed mock-neck collar and the top of the front zipper",
+            "key": "collo"
           },
           {
-            "label": "Tessuto",
-            "target": "the ribbed knit texture across the upper body and raglan seam"
+            "label": "Fabric",
+            "target": "the ribbed knit texture across the upper body and raglan seam",
+            "key": "tessuto"
           },
           {
-            "label": "Bordo",
-            "target": "the ribbed hem band at the bottom edge"
+            "label": "Hem",
+            "target": "the ribbed hem band at the bottom edge",
+            "key": "bordo"
           }
         ],
         "backZones": [
@@ -280,98 +283,98 @@
       },
       "dnaConfirmedAt": "2026-09-28T09:18:10.760Z",
       "pdp": {
-        "title": "Cardigan a coste con zip",
-        "subtitle": "Beige, maglia di lana o misto cashmere",
-        "description": "Il capo riprende fedelmente un modello d'archivio della maison, preservandone la struttura originale. Realizzato a coste inglesi con calature sagomate lungo il raglan, presenta un collo a lupetto e una chiusura frontale a tutta lunghezza con cerniera metallica a vista. La metalleria lucida tonalità argento comprende denti a vista e un tiretto rettangolare allungato. La maglia a costine verticali cade dritta sul busto, per poi raccogliersi leggermente al punto vita tramite il bordo a costine. Le maniche raglan garantiscono comfort naturale sulle spalle. Privo di tasche e sfoderato, il cardigan ha lunghezza ai fianchi e si indossa agevolmente sia a vista sia sotto un cappotto.",
+        "title": "Ribbed zip cardigan",
+        "subtitle": "Beige, wool or cashmere-blend knit",
+        "description": "A faithful take on an archive piece from the maison, preserving its original structure. Knitted in English rib with shaped decreases along the raglan, it has a mock-neck collar and a full-length front closure with an exposed metal zip. The polished silver-tone hardware includes exposed teeth and an elongated rectangular pull. The vertical rib knit falls straight over the torso, then gathers slightly at the waist through the ribbed hem. Raglan sleeves give natural comfort across the shoulders. Pocketless and unlined, the cardigan is hip length and works both on its own and under a coat.",
         "details": [
-          "Maglia a coste inglesi con coste verticali accentuate",
-          "Collo a lupetto lavorato in continuità con il corpo",
-          "Maniche raglan con calature diagonali a vista",
-          "Chiusura frontale con zip metallica a vista e tiretto rettangolare lucido",
-          "Polsini e bordo inferiore lavorati a costina elastica integrata",
-          "Costruzione sfoderata con cuciture rimagliate fully fashioned",
-          "Design lineare privo di tasche, lunghezza ai fianchi"
+          "English rib knit with pronounced vertical ribs",
+          "Mock-neck collar knitted in one with the body",
+          "Raglan sleeves with visible diagonal decreases",
+          "Front closure with exposed metal zip and polished rectangular pull",
+          "Cuffs and hem in integrated elastic rib",
+          "Unlined construction with fully fashioned linked seams",
+          "Clean pocketless design, hip length"
         ],
-        "fit": "Silhouette diritta e rilassata lungo il busto, con un leggero affusolamento al bacino dato dal bordo a costine. Il volume morbido su petto e spalle raglan assicura libertà di movimento, assestandosi in modo naturale sulla vita.",
-        "composition": "Lana o misto cashmere (composizione definitiva da confermare al campione)",
+        "fit": "Straight, relaxed silhouette through the torso, slightly tapering at the hips thanks to the ribbed hem. The soft volume across the chest and raglan shoulders allows freedom of movement and settles naturally at the waist.",
+        "composition": "Wool or cashmere blend (final composition to be confirmed on the sample)",
         "care": [
-          "Lavare a secco delicatamente con percloroetilene",
-          "Non trattare con candeggina o cloro",
-          "Stirare a temperatura moderata senza vapore",
-          "Asciugare in piano a ombra, lontano da fonti dirette di calore"
+          "Gentle dry clean with perchloroethylene",
+          "Do not bleach or use chlorine",
+          "Iron at a moderate temperature without steam",
+          "Dry flat in the shade, away from direct heat"
         ],
-        "preorder": "Il capo viene prodotto esclusivamente su richiesta per garantire precisione artigianale ed evitare eccedenze di magazzino. La spedizione è prevista a partire dal [DATA SPEDIZIONE].",
+        "preorder": "This piece is made to order only, to ensure artisanal precision and avoid excess stock. Shipping is expected from [SHIPPING DATE].",
         "faq": [
           {
-            "q": "È possibile rendere o cambiare un articolo acquistato in pre-ordine?",
-            "a": "Sì, i capi in pre-ordine possono essere resi o sostituiti entro [GIORNI RESO] giorni dalla ricezione dell'ordine, a condizione che siano integri, mai indossati e provvisti di cartellino originale."
+            "q": "Can I return or exchange an item bought on pre-order?",
+            "a": "Yes, pre-order items can be returned or exchanged within [RETURN DAYS] days of receiving the order, as long as they are intact, unworn and still have the original tag."
           },
           {
-            "q": "Come selezionare la taglia corretta?",
-            "a": "Consigliamo di ordinare la propria misura abituale per ottenere la vestibilità rilassata concepita dall'archivio. In caso di dubbi tra due misure, il nostro servizio clienti è a disposizione per un consiglio dedicato."
+            "q": "How do I select the correct size?",
+            "a": "We recommend ordering your usual size to get the relaxed fit designed from the archive. If you're between two sizes, our customer service is happy to advise."
           },
           {
-            "q": "In quale momento viene addebitato l'importo dell'ordine?",
-            "a": "L'addebito viene effettuato al momento della conferma dell'ordine per consentire l'allocazione delle filature e l'avvio della tessitura dedicata."
+            "q": "When is the order amount charged?",
+            "a": "Payment is taken when the order is confirmed, so that the yarn can be allocated and the dedicated knitting can begin."
           },
           {
-            "q": "Cosa accade qualora la produzione richieda modifiche su un dettaglio?",
-            "a": "Se durante la prototipazione finale si rendesse necessaria una variazione costruttiva rispetto al modello illustrato, il nostro team fornirà tempestiva comunicazione via email offrendo la possibilità di confermare o annullare l'ordine."
+            "q": "What happens if production requires changes to a detail?",
+            "a": "If the final prototyping requires a construction change from the model shown, our team will let you know promptly by email and offer the option to confirm or cancel the order."
           }
         ],
         "claims": [
           {
-            "text": "Modello fedele a un capo d'archivio della maison",
+            "text": "Faithful to an archive piece from the maison",
             "source": "note",
             "needsSignOff": false
           },
           {
-            "text": "Filato in lana o misto cashmere",
+            "text": "Wool or cashmere-blend yarn",
             "source": "archive",
             "needsSignOff": true
           },
           {
-            "text": "Lavorazione a coste inglesi con coste verticali tridimensionali",
+            "text": "English rib knit with three-dimensional vertical ribs",
             "source": "archive",
             "needsSignOff": false
           },
           {
-            "text": "Cuciture rimagliate fully fashioned con calature sagomate a vista sul raglan",
+            "text": "Fully fashioned linked seams with shaped decreases visible on the raglan",
             "source": "archive",
             "needsSignOff": false
           },
           {
-            "text": "Zip frontale in metallo a vista con denti e tiretto rettangolare finitura argento lucido",
+            "text": "Exposed metal front zip with teeth and rectangular pull in polished silver finish",
             "source": "archive",
             "needsSignOff": false
           },
           {
-            "text": "Collo a lupetto a costine lavorato senza soluzione di continuità dal busto",
+            "text": "Ribbed mock-neck collar knitted seamlessly from the body",
             "source": "sketch",
             "needsSignOff": false
           },
           {
-            "text": "Spalle e maniche a costruzione raglan",
+            "text": "Raglan-construction shoulders and sleeves",
             "source": "sketch",
             "needsSignOff": false
           },
           {
-            "text": "Capo privo di tasche",
+            "text": "Garment without pockets",
             "source": "sketch",
             "needsSignOff": false
           },
           {
-            "text": "Capo privo di fodera interna (sfoderato)",
+            "text": "Unlined garment",
             "source": "invented",
             "needsSignOff": true
           },
           {
-            "text": "Lunghezza ai fianchi",
+            "text": "Hip length",
             "source": "sketch",
             "needsSignOff": false
           },
           {
-            "text": "Colore beige",
+            "text": "Beige colour",
             "source": "sketch",
             "needsSignOff": false
           }
@@ -559,7 +562,7 @@
               "id": "cr_a_mvca3108uyr9",
               "assetId": "a_mvca3108uyr9",
               "type": "ugc",
-              "label": "Reel UGC · Outfit of the day",
+              "label": "UGC reel · Outfit of the day",
               "channels": [
                 "instagram",
                 "tiktok"
@@ -580,7 +583,7 @@
               "id": "cr_a_mvc9y3chm63k",
               "assetId": "a_mvc9y3chm63k",
               "type": "editorial",
-              "label": "Editorial · Bianco e vento",
+              "label": "Editorial · White and wind",
               "channels": [
                 "instagram",
                 "pinterest"
@@ -601,7 +604,7 @@
               "id": "cr_a_mvc9y8bxp2cv",
               "assetId": "a_mvc9y8bxp2cv",
               "type": "editorial",
-              "label": "Editorial · Flash diretto",
+              "label": "Editorial · Direct flash",
               "channels": [
                 "instagram",
                 "pinterest"
@@ -622,7 +625,7 @@
               "id": "cr_a_mvc9yd74ij8f",
               "assetId": "a_mvc9yd74ij8f",
               "type": "editorial",
-              "label": "Editorial · Spot e poltrona",
+              "label": "Editorial · Spotlight and armchair",
               "channels": [
                 "instagram",
                 "pinterest"
@@ -643,7 +646,7 @@
               "id": "cr_a_mvc9ygrc3z3p",
               "assetId": "a_mvc9ygrc3z3p",
               "type": "editorial",
-              "label": "Editorial · Passo high-key",
+              "label": "Editorial · High-key stride",
               "channels": [
                 "instagram",
                 "pinterest"
@@ -664,7 +667,7 @@
               "id": "cr_a_mvc9ym29t2cf",
               "assetId": "a_mvc9ym29t2cf",
               "type": "editorial",
-              "label": "Editorial · Grigio scolpito",
+              "label": "Editorial · Sculpted grey",
               "channels": [
                 "instagram",
                 "pinterest"
@@ -685,7 +688,7 @@
               "id": "cr_a_mvc9zejey3il",
               "assetId": "a_mvc9zejey3il",
               "type": "editorial",
-              "label": "Editorial · Retro, sguardo in spalla",
+              "label": "Editorial · Back view, over-the-shoulder glance",
               "channels": [
                 "instagram",
                 "pinterest"
@@ -747,7 +750,7 @@
               "id": "cr_a_mul1cjyh66dx",
               "assetId": "a_mul1cjyh66dx",
               "type": "packshot",
-              "label": "Packshot carosello",
+              "label": "Packshot carousel",
               "channels": [
                 "instagram"
               ],
@@ -767,7 +770,7 @@
           "markets": [
             {
               "id": "IT",
-              "label": "Italia",
+              "label": "Italy",
               "spend": 625,
               "impressions": 109769,
               "reach": 72685,
@@ -782,7 +785,7 @@
             },
             {
               "id": "FR",
-              "label": "Francia",
+              "label": "France",
               "spend": 625,
               "impressions": 95642,
               "reach": 63339,
@@ -797,7 +800,7 @@
             },
             {
               "id": "DE",
-              "label": "Germania",
+              "label": "Germany",
               "spend": 625,
               "impressions": 91718,
               "reach": 60728,
@@ -812,7 +815,7 @@
             },
             {
               "id": "UK",
-              "label": "Regno Unito",
+              "label": "United Kingdom",
               "spend": 625,
               "impressions": 84702,
               "reach": 56093,
@@ -1554,334 +1557,334 @@
         "analyses": {
           "3051924538": {
             "verdict": "iterate",
-            "headline": "Iterare: il sell-through previsto è 56.8% contro un obiettivo del 65%, e il limite è la conversione (0.83%), non l'interesse.",
-            "summary": "L'intervallo all'80% (51.6%–62.0%) non arriva al 65%, quindi la decisione statistica è iterate e i commenti non danno motivo di cambiarla. L'interesse c'è: save rate 3.14% e 79 iscritti alla lista d'attesa. Ma solo 14 persone hanno pre-ordinato (conversione 0.83%, percentile 17). I commenti spiegano in parte il motivo: 14 su 60 chiedono la taglia, 8 parlano della zip e 5 chiedono quale lana sia e se pizzica. Sono dubbi risolvibili con una modifica di design (zip a doppio cursore) e con informazioni in tutti i contenuti. Non ordinare ora. Se si ordina dopo il secondo test, il tetto è 220 pezzi, non i 650 abituali.",
+            "headline": "Iterate: forecast sell-through is 56.8% against a 65% target, and the constraint is conversion (0.83%), not interest.",
+            "summary": "The 80% interval (51.6%–62.0%) doesn't reach 65%, so the statistical decision is iterate and the comments give no reason to change it. The interest is there: save rate 3.14% and 79 waitlist sign-ups. But only 14 people pre-ordered (conversion 0.83%, 17th percentile). The comments partly explain why: 14 of 60 ask about size, 8 mention the zip and 5 ask which wool it is and whether it itches. These are doubts that a design change (two-way zip) and information in all content can resolve. Don't order now. If ordering after the second test, the cap is 220 units, not the usual 650.",
             "insights": [
               {
-                "title": "Il collo di bottiglia è la conversione, non la visibilità",
-                "evidence": "Save rate 3.14% (percentile 33), conversione 0.83% (percentile 17), pre-ordini per €1k 5.6 (percentile 8). Nell'archivio i lanci con conversione ≥1.45% hanno ST tra 52% e 79%; Cabas Mini Nero (1.45%) è il più basso, con save 1.21%."
+                "title": "The bottleneck is conversion, not visibility",
+                "evidence": "Save rate 3.14% (33rd percentile), conversion 0.83% (17th percentile), pre-orders per €1k 5.6 (8th percentile). In the archive, launches with conversion ≥1.45% have ST between 52% and 79%; the Black Mini Cabas (1.45%) is the lowest, with a 1.21% save rate."
               },
               {
-                "title": "L'interesse non si trasforma in acquisto",
-                "evidence": "79 iscritti alla lista d'attesa contro 14 pre-ordini, cioè 5.6 iscritti per ogni pre-ordine. Le 1692 sessioni hanno prodotto lo 0.83% di conversione."
+                "title": "Interest doesn't turn into purchase",
+                "evidence": "79 waitlist sign-ups vs 14 pre-orders, i.e. 5.6 sign-ups per pre-order. The 1692 sessions produced a 0.83% conversion."
               },
               {
-                "title": "Il budget sui 18-24 rende poco",
-                "evidence": "18-24: €450, 1 pre-ordine, conversione 0.29%, anche se il CTR è il più alto (0.69%). 25-44: €1650, 11 pre-ordini su 14, cioè 6.7 per €1k contro 2.2 per €1k dei 18-24."
+                "title": "The 18-24 budget returns little",
+                "evidence": "18-24: €450, 1 pre-order, conversion 0.29%, even though the CTR is the highest (0.69%). 25-44: €1650, 11 of 14 pre-orders, i.e. 6.7 per €1k vs 2.2 per €1k for 18-24."
               },
               {
-                "title": "Le differenze tra contenuti e mercati sono troppo piccole per decidere",
-                "evidence": "Ogni contenuto ha 0–3 pre-ordini. Retro, sguardo in spalla ne ha 3 (conv. 1.66%), Flash diretto e Grigio scolpito 0, ma con circa 170–200 sessioni lo zero è compatibile con il caso. I mercati hanno 3–4 pre-ordini ciascuno (Italia 0.60%, UK 1.07%) a parità di spesa (€625). Il segnale più chiaro è che i formati dove si valuta la vestibilità salvano meno: packshot 2.20%, on-model 2.38%, contro la media di 3.14%."
+                "title": "Differences between content and markets are too small to decide on",
+                "evidence": "Each piece of content has 0–3 pre-orders. Back view, over-the-shoulder glance has 3 (conv. 1.66%), Direct flash and Sculpted grey 0, but with about 170–200 sessions zero is compatible with chance. Markets have 3–4 pre-orders each (Italy 0.60%, UK 1.07%) on equal spend (€625). The clearest signal is that the formats where fit is judged get fewer saves: packshot 2.20%, on-model 2.38%, against an average of 3.14%."
               },
               {
-                "title": "Non c'è calo di rendimento nei 10 giorni, ma le sessioni scendono",
-                "evidence": "Pre-ordini 6 nei giorni 1-5 e 8 nei giorni 6-10, con 3 giorni a zero (g3, g5, g8). Le sessioni passano da 203 e 208 (g1, g2) a 161 (g10) con la stessa spesa di €250 al giorno."
+                "title": "No performance decline over the 10 days, but sessions are falling",
+                "evidence": "6 pre-orders on days 1-5 and 8 on days 6-10, with 3 zero days (d3, d5, d8). Sessions go from 203 and 208 (d1, d2) to 161 (d10) on the same €250 daily spend."
               }
             ],
             "themes": [
               {
                 "theme": "taglia",
-                "label": "Taglie e vestibilità",
+                "label": "Sizes and fit",
                 "sentiment": "neutral",
                 "share": 0.233,
                 "quote": "True to size or oversized?",
-                "action": "Mettere in ogni contenuto altezza e taglia del modello (M), lunghezza 66 cm e indicazione di vestibilità. Rispondere ai commenti sulla lunghezza (\"Arriva alla vita o copre il sedere?\")."
+                "action": "Put the model's height and size (M), the 66 cm length and a fit note in every piece of content. Answer the comments about length (\"Arriva alla vita o copre il sedere?\")."
               },
               {
                 "theme": "mano",
-                "label": "Maglia e costa",
+                "label": "Knit and rib",
                 "sentiment": "positive",
                 "share": 0.183,
                 "quote": "Il collo alto con la zip è il dettaglio giusto",
-                "action": "Mantenere costa inglese, collo a lupetto e peso della maglia come elementi principali. Usare dettagli ravvicinati della costa nei contenuti scalati."
+                "action": "Keep the English rib, the mock-neck collar and the knit weight as the main elements. Use rib close-ups in the scaled content."
               },
               {
                 "theme": "colore-beige",
-                "label": "Colore beige",
+                "label": "Beige colour",
                 "sentiment": "positive",
                 "share": 0.15,
                 "quote": "Finalmente un beige che non tira al giallo",
-                "action": "Non toccare il colore (#B7A392). Citare \"beige che non tira al giallo\" nelle didascalie e tenere la luce neutra nei contenuti."
+                "action": "Don't touch the colour (#B7A392). Quote \"a beige that doesn't turn yellow\" in the captions and keep the lighting neutral in the content."
               },
               {
                 "theme": "zip",
-                "label": "Zip in metallo",
+                "label": "Metal zip",
                 "sentiment": "negative",
                 "share": 0.133,
                 "quote": "La zip è a doppio cursore? Seduto in macchina serve",
-                "action": "Passare a una zip a doppio cursore e aggiungere un riparo interno morbido. Sono le risposte dirette ai 5 commenti sul doppio cursore e ai 2 sull'impigliarsi nella maglia."
+                "action": "Switch to a two-way zip and add a soft inner guard. These are the direct answers to the 5 comments on the two-way zip and the 2 about snagging the knit."
               },
               {
                 "theme": "disponibilita",
-                "label": "Intenzione d'acquisto",
+                "label": "Purchase intent",
                 "sentiment": "positive",
                 "share": 0.083,
                 "quote": "Wann wird geliefert?",
-                "action": "Indicare date di consegna e paesi serviti (Belgio e Svizzera sono stati chiesti). Inviare questi dati alla lista d'attesa di 79 iscritti."
+                "action": "State delivery dates and countries served (Belgium and Switzerland were asked about). Send this information to the waitlist of 79 sign-ups."
               },
               {
                 "theme": "prurito",
-                "label": "Lana che pizzica",
+                "label": "Itchy wool",
                 "sentiment": "negative",
                 "share": 0.083,
                 "quote": "Welche Wolle genau? Merino?",
-                "action": "Dichiarare composizione e fibra in ogni contenuto. Verificare con il produttore una fibra morbida a contatto con il collo, perché questa obiezione (\"Kratzt die Wolle am Hals?\") non si risolve con un'immagine."
+                "action": "Declare composition and fibre in every piece of content. Check with the manufacturer for a soft fibre against the neck, because this objection (\"Kratzt die Wolle am Hals?\") can't be solved with an image."
               },
               {
                 "theme": "prezzo-maglia",
-                "label": "Prezzo",
+                "label": "Price",
                 "sentiment": "neutral",
                 "share": 0.067,
                 "quote": "Prix correct si c'est de la bonne laine",
-                "action": "Tenere €390. Il prezzo è accettato se la qualità è dichiarata, quindi mostrare composizione e peso della maglia."
+                "action": "Keep €390. The price is accepted if the quality is declared, so show composition and knit weight."
               },
               {
                 "theme": "lavaggio",
-                "label": "Lavaggio e cura",
+                "label": "Washing and care",
                 "sentiment": "neutral",
                 "share": 0.067,
                 "quote": "Si lava in lavatrice o solo a secco?",
-                "action": "Aggiungere le istruzioni di lavaggio alla scheda e a una slide del carosello. Includere la risposta sul pilling (\"Will it pill after a few washes?\")."
+                "action": "Add washing instructions to the product sheet and to a carousel slide. Include the answer on pilling (\"Will it pill after a few washes?\")."
               }
             ],
             "actions": [
               {
                 "area": "design",
-                "action": "Sostituire la zip con una a doppio cursore e aggiungere un riparo morbido interno sul collo, in cima alla zip. Mantenere finitura argento e tiretto rettangolare.",
-                "why": "5 commenti chiedono il doppio cursore (\"Seduto in macchina serve\", 129 like), 2 temono che la zip si impigli e 5 chiedono se la lana pizzica sul collo.",
-                "impact": "Risponde alle obiezioni del 13% dei commenti (8 su 60 sulla zip) e a parte del 8% sulla lana."
+                "action": "Replace the zip with a two-way one and add a soft inner guard at the neck, at the top of the zip. Keep the silver finish and the rectangular pull.",
+                "why": "5 comments ask for a two-way zip (\"Seduto in macchina serve\", 129 likes), 2 worry that the zip snags and 5 ask whether the wool itches at the neck.",
+                "impact": "Answers the objections in 13% of the comments (8 of 60 on the zip) and part of the 8% on the wool."
               },
               {
                 "area": "creative",
-                "action": "Rigirare i contenuti con didascalia fissa: altezza e taglia del modello (M), lunghezza 66 cm, vestibilità, composizione, istruzioni di lavaggio. Sostituire il packshot carosello con una versione che ha una slide di misure e una di cura.",
-                "why": "Taglie e vestibilità è il tema più grande (14 su 60, 23%). I formati dove si valuta la vestibilità salvano meno: packshot 2.20%, on-model 2.38%.",
-                "impact": "Obiettivo: conversione da 0.83% a 1.35% (ipotesi di lavoro, non una nuova previsione). Con i coefficienti della regressione, +0.52 punti di conversione varrebbero circa +8 punti di ST, cioè 65%."
+                "action": "Reshoot the content with a fixed caption: model height and size (M), 66 cm length, fit, composition, care instructions. Replace the packshot carousel with a version that has one slide for measurements and one for care.",
+                "why": "Sizes and fit is the biggest theme (14 of 60, 23%). The formats where fit is judged get fewer saves: packshot 2.20%, on-model 2.38%.",
+                "impact": "Target: conversion from 0.83% to 1.35% (a working hypothesis, not a new forecast). With the regression coefficients, +0.52 conversion points would be worth about +8 ST points, i.e. 65%."
               },
               {
                 "area": "creative",
-                "action": "Scalare Retro, sguardo in spalla (conv. 1.66%) e Lifestyle (save 3.70%, 12 in lista d'attesa). Tagliare Flash diretto (0 pre-ordini, €242). Tenere Grigio scolpito (save 3.61%) solo con l'aggiunta di taglia e composizione.",
-                "why": "I numeri per contenuto sono piccoli (0–3 pre-ordini), quindi si taglia un solo contenuto e si ripete il confronto nel prossimo test.",
-                "impact": "Sposta circa €240 dal contenuto con 0 pre-ordini a quelli con conversione ≥1.5% o save ≥3.7%."
+                "action": "Scale Back view, over-the-shoulder glance (conv. 1.66%) and Lifestyle (save 3.70%, 12 on the waitlist). Cut Direct flash (0 pre-orders, €242). Keep Sculpted grey (save 3.61%) only with size and composition added.",
+                "why": "The numbers per piece of content are small (0–3 pre-orders), so cut only one piece and repeat the comparison in the next test.",
+                "impact": "Moves about €240 from the content with 0 pre-orders to those with conversion ≥1.5% or save ≥3.7%."
               },
               {
                 "area": "audience",
-                "action": "Spostare i €450 dai 18-24 ai 25-34 e 35-44. Non redistribuire tra i mercati: tenere i €625 per paese.",
-                "why": "18-24: conversione 0.29%, 1 pre-ordine. 25-34 e 35-44: 0.99% e 1.08%, con 11 pre-ordini su 14. I mercati si distinguono per 1 pre-ordine (3–4 ciascuno).",
-                "impact": "Circa +2 pre-ordini a parità di spesa (6.7 contro 2.2 per €1k)."
+                "action": "Move the €450 from 18-24 to 25-34 and 35-44. Don't reallocate across markets: keep €625 per country.",
+                "why": "18-24: conversion 0.29%, 1 pre-order. 25-34 and 35-44: 0.99% and 1.08%, with 11 of 14 pre-orders. Markets differ by 1 pre-order (3–4 each).",
+                "impact": "About +2 pre-orders for the same spend (6.7 vs 2.2 per €1k)."
               },
               {
                 "area": "audience",
-                "action": "Quando taglia, composizione e consegna sono chiare, scrivere ai 79 iscritti alla lista d'attesa con scheda aggiornata e data di consegna.",
-                "why": "79 iscritti contro 14 pre-ordini; molte domande sono informative (taglia, lana, lavaggio, consegna) e a quel pubblico basta una risposta.",
-                "impact": "Se il 10% degli iscritti pre-ordina, +8 pre-ordini (+57% sui 14 attuali). È un'ipotesi da verificare."
+                "action": "Once size, composition and delivery are clear, write to the 79 waitlist sign-ups with the updated product sheet and delivery date.",
+                "why": "79 sign-ups vs 14 pre-orders; many questions are informational (size, wool, washing, delivery) and that audience just needs an answer.",
+                "impact": "If 10% of sign-ups pre-order, +8 pre-orders (+57% on the current 14). It's a hypothesis to verify."
               },
               {
                 "area": "production",
-                "action": "Non ordinare finché non c'è il secondo test. Se dopo l'iterazione il ST previsto supera il 65%, ordinare 220 pezzi (MOQ 200). Non usare l'ordine abituale di 650.",
-                "why": "Domanda mediana 206 pezzi (80%: 153–277). A 220 pezzi il margine atteso è €27137 con 24 pezzi invenduti. A 650 pezzi il margine è €-7785 con 439 invenduti.",
-                "impact": "Evita una perdita di €7785 e 439 pezzi invenduti. Il MOQ di 200 lascia solo 20 pezzi di margine sull'ordine ottimale."
+                "action": "Don't order until the second test. If after the iteration the forecast ST is above 65%, order 220 units (MOQ 200). Don't use the usual 650 order.",
+                "why": "Median demand 206 units (80%: 153–277). At 220 units the expected margin is €27137 with 24 unsold units. At 650 units the margin is €-7785 with 439 unsold.",
+                "impact": "Avoids a €7785 loss and 439 unsold units. The 200 MOQ leaves only 20 units of headroom on the optimal order."
               },
               {
                 "area": "pricing",
-                "action": "Tenere €390 per il secondo test, senza sconti. Spostare il messaggio dal prezzo alla qualità del filato.",
-                "why": "Il prezzo è il tema più piccolo (4 su 60) e mai negativo: \"Prezzo giusto per il peso della maglia\", \"Für die Qualität okay\". Le riserve sono condizionate alla lana (\"Fair if it's proper wool\").",
-                "impact": "Mantiene il margine pieno. Un ribasso non risolverebbe i dubbi su taglia e lana, che sono le obiezioni più frequenti."
+                "action": "Keep €390 for the second test, no discounts. Shift the message from price to yarn quality.",
+                "why": "Price is the smallest theme (4 of 60) and never negative: \"Prezzo giusto per il peso della maglia\", \"Für die Qualität okay\". The reservations hinge on the wool (\"Fair if it's proper wool\").",
+                "impact": "Keeps the full margin. A markdown wouldn't resolve the doubts about size and wool, which are the most frequent objections."
               }
             ],
             "dnaChanges": [
               {
                 "field": "closure",
                 "to": "exposed full-length front metal two-way zipper (double slider) running from the hem up to the top of the mock neck, with soft inner zip guard to avoid snagging the knit",
-                "why": "5 commenti chiedono il doppio cursore (\"La zip è a doppio cursore? Seduto in macchina serve\") e 2 temono che la zip si impigli (\"Hope the zip doesn't snag the knit\")."
+                "why": "5 comments ask for a two-way zip (\"La zip è a doppio cursore? Seduto in macchina serve\") and 2 worry that the zip snags (\"Hope the zip doesn't snag the knit\")."
               },
               {
                 "field": "fabric",
-                "to": "composizione dichiarata e unica, con percentuali, e fibra morbida a contatto con la pelle (es. merino extrafine). Da confermare con il produttore.",
-                "why": "Il campo oggi dice \"chunky wool or cashmere-blend knit\" e non risponde a \"Welche Wolle genau? Merino?\" (118 like). Altri 4 commenti riguardano il prurito e il pilling."
+                "to": "a single declared composition, with percentages, and a soft fibre against the skin (e.g. extrafine merino). To be confirmed with the manufacturer.",
+                "why": "The field currently says \"chunky wool or cashmere-blend knit\" and doesn't answer \"Welche Wolle genau? Merino?\" (118 likes). Another 4 comments are about itch and pilling."
               },
               {
                 "field": "collar",
                 "to": "ribbed mock neck stand collar (collo a lupetto) extending seamlessly from the body, with soft-touch inner chin guard at the top of the zip",
-                "why": "\"Kratzt die Wolle am Hals?\" (75 like). Il collo piace (\"That mock neck is spot on\"), quindi si cambia solo l'interno."
+                "why": "\"Kratzt die Wolle am Hals?\" (75 likes). The collar is liked (\"That mock neck is spot on\"), so only the inside changes."
               }
             ],
             "risks": [
-              "Solo 14 pre-ordini: la conversione 0.83% ha un'incertezza alta, e le differenze tra contenuti e mercati (0–3 pre-ordini) non sono affidabili.",
-              "La regressione è calibrata su 12 lanci passati, tutti borse e accessori in pelle o tela. Questo è un capo di maglieria, quindi il modello potrebbe non trasferirsi bene. Il R² di 0.91 vale sull'archivio.",
-              "Nessun campione fisico: i contenuti generati non provano il prurito della lana (5 commenti), il pilling o la tenuta della zip. Queste obiezioni si risolvono solo con composizione dichiarata e un campione reale.",
-              "Il commento è un campione di 60 su 624 e il tema delle taglie (14 su 60) potrebbe pesare di più o di meno sul totale.",
-              "Con MOQ 200 e quantità ottimale 220, un ST sotto il 52% (estremo basso dell'intervallo) lascerebbe invenduto più di quanto previsto (24 pezzi)."
+              "Only 14 pre-orders: the 0.83% conversion is highly uncertain, and the differences between content and markets (0–3 pre-orders) aren't reliable.",
+              "The regression is calibrated on 12 past launches, all leather or canvas bags and accessories. This is a knitwear piece, so the model may not transfer well. The R² of 0.91 holds on the archive.",
+              "No physical sample: the generated content can't prove wool itch (5 comments), pilling or zip durability. These objections are only resolved with a declared composition and a real sample.",
+              "The comments are a sample of 60 out of 624, and the sizing theme (14 of 60) could weigh more or less on the total.",
+              "With a 200 MOQ and an optimal quantity of 220, an ST below 52% (low end of the interval) would leave more unsold than forecast (24 units)."
             ],
             "model": "eu.anthropic.claude-sonnet-5-5",
             "at": "2026-10-17T10:54:52.142Z"
           },
           "3051924538|a_mvca3108uyr9,a_mvc9y3chm63k,a_mvc9y8bxp2cv,a_mvc9yd74ij8f,a_mvc9ygrc3z3p,a_mvc9ym29t2cf,a_mvc9zejey3il,a_mul2w2j3bnk0,a_mvc9zieuv6d2,a_mul1cjyh66dx": {
             "verdict": "iterate",
-            "headline": "Iterare: sell-through previsto 55.4% (80%: 50.1%–60.7%) contro il 65% richiesto, perché la conversione è 0.75% (percentile 8).",
-            "summary": "Il prodotto attira interesse ma lo trasforma poco in acquisto: save rate 3.12% (percentile 33) e solo 14 pre-ordini su 1875 sessioni. Nessun valore dell'intervallo raggiunge il 65%. I commenti indicano il freno: la fibra non è dichiarata e il collo alto fa temere il prurito (5 commenti), mentre il prezzo viene giudicato giusto \"se è buona lana\" (6 commenti). Colore e maglia sono apprezzati (13 commenti ciascuno). Non servono tagli drastici: serve chiarire la lana, aggiungere la zip a doppio cursore e rifare il test su UK e 35-44. Ordine al produttore solo dopo il secondo test: 220 pezzi, non i 650 abituali.",
+            "headline": "Iterate: forecast sell-through is 57.6% against a 65% target, the look is liked, but conversion (0.75%) is held back by open questions on wool, zip and size.",
+            "summary": "The statistical decision is ITERATE and the comments support it. Save rate is 3.12% (percentile 50), but conversion is 0.75% (percentile 17) and pre-orders per €1k are 5.6 (percentile 0). Beige and the rib-knit mock neck are praised (26 of 60 comments), while 22 of 60 comments are questions on wool, zip, size and care that block the purchase. The 80% interval (40.8%–74.3%) contains the target, so this is not a stop. The base is thin: 14 pre-orders and a regression on 6 launches.",
             "insights": [
               {
-                "title": "L'interesse c'è, l'acquisto no",
-                "evidence": "Save rate 3.12% (percentile 33) ma conversione 0.75% (percentile 8) e 5.6 pre-ordini per €1k (percentile 8). Nel modello ogni +0.1 punti di conversione vale circa +1.6 punti di sell-through (coefficiente 0.157)."
+                "title": "Forecast is below target but the target is inside the interval",
+                "evidence": "Sell-through 57.6% (80%: 40.8%–74.3%) vs 65% target. Regression on 6 launches, R² 0.89, with only 14 pre-orders behind it."
               },
               {
-                "title": "Il Regno Unito converte, l'Italia no",
-                "evidence": "Con €625 a mercato: UK 6 pre-ordini (conv. 1.48%), Germania 4 (0.82%), Francia 3 (0.68%), Italia 1 (0.18%). I numeri sono piccoli, ma il divario IT/UK è netto."
+                "title": "Conversion is the gap, not interest",
+                "evidence": "Save rate 3.12% is percentile 50, conversion 0.75% is percentile 17. With save rate unchanged, conversion of about 1.17% would give 65% (each +0.1pp adds about 1.75 points of ST). The closest past launch, Tobacco Mohair Zip Cardigan, had 1.05% and 64% ST."
               },
               {
-                "title": "L'UGC vende, on-model e lifestyle no",
-                "evidence": "Reel UGC: 4 pre-ordini con €303 (conv. 1.72%). On-model e Lifestyle: 0 pre-ordini con €441 di spesa e 400 sessioni (171 + 229). Il Lifestyle ha però il save più alto (3.98%)."
+                "title": "Comments show what blocks the purchase",
+                "evidence": "Of 60 comments: 22 are questions on wool/itch (5), zip (6), size (9) and care (2). 6 more say the price is fair only 'if it's proper wool'. Colour and knit are positive in 26 of 60 (13 + 13)."
               },
               {
-                "title": "La lana è il dubbio principale",
-                "evidence": "5 commenti su prurito, es. \"Che lana è? Se non è merino sul collo alto non lo reggo\". I 6 commenti sul prezzo sono tutti condizionati: \"Prix correct si c'est de la bonne laine\". Il campo fabric è ancora \"wool or cashmere-blend\"."
+                "title": "UGC, the UK and 35-44 convert best; Italy converts worst",
+                "evidence": "UGC reel: 1.72% conv, 4 pre-orders on €303. UK: 1.48% (6 pre-orders, 9.6 per €1k). Italy: 0.18% (1 pre-order, 1.6 per €1k) despite the most sessions (547). 35-44: 1.00% vs 0.54% for 18-24."
               },
               {
-                "title": "Quantità: il rischio è ordinare troppo",
-                "evidence": "Domanda mediana 206 pezzi (153–277), consigliati 220 (MOQ 200), invenduto atteso 24 pz. Con l'ordine abituale di 650 pezzi: margine €-7785 e 439 pz invenduti."
+                "title": "Pre-orders came early and traffic faded",
+                "evidence": "Days 1-5: 10 pre-orders, about 214 sessions a day. Days 6-10: 4 pre-orders, about 161 sessions a day. Day 8 had 0."
               }
             ],
             "themes": [
               {
                 "theme": "prurito",
-                "label": "Lana che pizzica",
+                "label": "Itchy wool",
                 "sentiment": "negative",
                 "share": 0.083,
-                "quote": "Welche Wolle genau? Merino?",
-                "action": "Dichiarare la fibra in ogni contenuto e in scheda prodotto. Se possibile passare a merino extrafine o misto cashmere."
+                "quote": "Che lana è? Se non è merino sul collo alto non lo reggo",
+                "action": "State the fibre and add soft-touch handling at the neck. Answer in the next creative and in the product page."
               },
               {
                 "theme": "zip",
-                "label": "Zip in metallo",
+                "label": "Metal zip",
                 "sentiment": "neutral",
                 "share": 0.1,
                 "quote": "Le zip est-il à double curseur ?",
-                "action": "Valutare la zip a doppio cursore e dichiararlo. Verificare con il produttore che il metallo non strappi la maglia pesante."
+                "action": "Decide on a two-way zip. Show the zip close-up and show it working on the chunky knit (no snagging)."
               },
               {
                 "theme": "mano",
-                "label": "Maglia e costa",
+                "label": "Knit and rib",
                 "sentiment": "positive",
                 "share": 0.217,
                 "quote": "Le col montant est top",
-                "action": "Mantenere costa inglese e collo a lupetto. Inquadrarli in primo piano nei contenuti da scalare."
+                "action": "Keep the mock neck, the English rib and the raglan unchanged. Use them as the lead in the creative."
               },
               {
                 "theme": "taglia",
-                "label": "Taglie e vestibilità",
+                "label": "Sizing and fit",
                 "sentiment": "neutral",
                 "share": 0.15,
-                "quote": "Fällt der normal aus?",
-                "action": "Scrivere in didascalia taglia e altezza della modella e la lunghezza di 66 cm. Aggiungere una guida alla vestibilità (regolare, sciolta sul petto)."
+                "quote": "Veste regolare o abbondante? Sono 1,80 per 80 kg",
+                "action": "Show model height and size on every asset. State 66 cm length and relaxed fit. Add a fit note on the page."
               },
               {
                 "theme": "disponibilita",
-                "label": "Intenzione d'acquisto",
+                "label": "Purchase intent",
                 "sentiment": "positive",
                 "share": 0.1,
                 "quote": "Livraison en Belgique possible ?",
-                "action": "Indicare date di consegna e paesi serviti nella pagina di pre-ordine. Contattare la lista d'attesa di 106 persone."
+                "action": "Answer delivery date and Belgium shipping in the replies. Confirm the pre-order delivery window on the page."
               },
               {
                 "theme": "colore-beige",
-                "label": "Colore beige",
+                "label": "Beige colour",
                 "sentiment": "positive",
                 "share": 0.217,
                 "quote": "Finalmente un beige che non tira al giallo",
-                "action": "Non toccare il colore #B7A392. Usarlo come messaggio nei titoli (\"va con tutto\")."
+                "action": "Keep #B7A392. Use 'goes with everything' styling (jeans, grey) in the next content."
               },
               {
                 "theme": "lavaggio",
-                "label": "Lavaggio e cura",
+                "label": "Washing and care",
                 "sentiment": "neutral",
                 "share": 0.033,
                 "quote": "Lavable en machine ?",
-                "action": "Aggiungere le istruzioni di cura nella scheda prodotto. Tema marginale: solo 2 commenti su 60."
+                "action": "Publish the care instruction once the fibre is fixed. Low volume, low priority."
               },
               {
                 "theme": "prezzo-maglia",
-                "label": "Prezzo",
+                "label": "Price",
                 "sentiment": "neutral",
                 "share": 0.1,
                 "quote": "Prix correct si c'est de la bonne laine",
-                "action": "Tenere €390 e giustificarlo con la composizione della fibra. Nessun commento chiede uno sconto."
+                "action": "Hold €390. Price is accepted if the wool quality is shown, so prove the quality instead of cutting."
               }
             ],
             "actions": [
               {
                 "area": "design",
-                "action": "Specificare la fibra (merino extrafine o misto merino-cashmere), prevedere una zip a doppio cursore e un interno collo in filato più morbido. Aggiornare il DNA e rigenerare i contenuti.",
-                "why": "Prurito (5 commenti), zip (6) e dubbi sul prezzo \"se è buona lana\" (6) ruotano attorno a lana e collo alto.",
-                "impact": "Punta a portare la conversione da 0.75% verso 1.0%, circa +4 punti di sell-through (0.157 per punto di conversione)."
+                "action": "Specify the yarn (extra-fine merino or merino-cashmere blend) and a soft neck feel. Decide whether to add a two-way zip, then regenerate the product and rerun the test.",
+                "why": "Itch (5), zip (6) and price-if-good-wool (6) comments all point to fibre and zip. The DNA says only 'wool or cashmere-blend'.",
+                "impact": "Target conversion of about 1.17% from 0.75%, which takes forecast sell-through from 57.6% to about 65%."
               },
               {
                 "area": "creative",
-                "action": "Scalare il Reel UGC Outfit of the day. Tagliare On-model e Lifestyle. Con i €441 liberati produrre altri 2 UGC con taglia, altezza della modella e fibra in didascalia.",
-                "why": "UGC: conv. 1.72% e 4 pre-ordini con €303. On-model e Lifestyle: 0 pre-ordini. 9 commenti su 60 chiedono la taglia.",
-                "impact": "Con la conversione UGC (1.72%), €441 su UGC darebbero circa 6 pre-ordini invece di 0, a parità di sessioni."
+                "action": "Scale the UGC reel (Outfit of the day). Cut Sculpted grey (0.52% conv), Spotlight and armchair (0.59%) and On-model (0 pre-orders on 171 sessions). Keep Lifestyle only for saves (3.98%). Add neck close-up, zip-in-use and model height/size clips.",
+                "why": "UGC converts at 1.72% vs 0.52%–1.29% for the other editorials. Lifestyle and On-model had 400 sessions and 0 pre-orders together.",
+                "impact": "Moving spend to UGC-style content, 13.2 pre-orders per €1k vs 5.6 average, should lift the blended conversion."
               },
               {
                 "area": "audience",
-                "action": "Spostare il budget: UK da €625 a circa €1000 e Germania stabile. Italia ridotta a circa €250. Sull'età, portare il 35-44 da €700 a circa €900 togliendo budget al 25-34 (€950).",
-                "why": "UK conv. 1.48% (6 pre-ordini), Italia 0.18% (1). 35-44 conv. 1.00% contro 0.72% del 25-34 e 0.54% del 18-24.",
-                "impact": "Mira a più di 14 pre-ordini a parità di €2500. Il campione è piccolo, quindi da confermare nel secondo test."
+                "action": "Move budget from Italy to the UK and Germany, and weight 35-44 and 25-34. Cut Italy from €625 to about €300. Keep 18-24 minimal.",
+                "why": "UK 9.6 and DE 6.4 pre-orders per €1k vs Italy 1.6. 35-44 has 7.1 per €1k vs 4.4 for 18-24. Counts are small (1 to 6 pre-orders per market).",
+                "impact": "Blended pre-orders per €1k should move from 5.6 towards 7 or more. Verify in the retest before treating it as fact."
               },
               {
                 "area": "production",
-                "action": "Non confermare l'ordine ora. Dopo il secondo test, ordinare 220 pezzi (MOQ 200). Non andare vicino ai 650 abituali.",
-                "why": "Domanda mediana 206 (153–277). L'ordine a 650 pezzi dà margine €-7785 e 439 invenduti.",
-                "impact": "220 pezzi: margine atteso €27137 e 24 invenduti, contro 439 invenduti a 650."
+                "action": "Do not place the usual 630-unit order. Hold until the retest reaches at least 65% forecast. Then order 270 units (the newsvendor figure). If the forecast does not improve, order the 200-unit MOQ at most.",
+                "why": "Recommended 270 units: expected margin €33,232, 30 unsold. The usual 630: margin €4,168, 376 unsold. Demand median 248 (192–322).",
+                "impact": "About €29,000 more expected margin and 346 fewer unsold units than the 630 order."
               },
               {
                 "area": "pricing",
-                "action": "Mantenere €390 al pre-ordine, senza sconti. Giustificarlo nei contenuti con fibra e peso della maglia (5-gauge, heavyweight).",
-                "why": "Nessun commento dice che costa troppo. I 6 commenti sul prezzo sono condizionati alla qualità della lana.",
-                "impact": "Evita di erodere il margine atteso di €27137 prima di sapere se la fibra risolve il dubbio."
+                "action": "Keep the pre-order price at €390 for the retest. Show the fibre and care on the page.",
+                "why": "€390 sits between Ecru Rib Mock Neck (€340, ST 70%) and Camel Shawl Cardigan (€420, ST 66%). Price comments are conditional on wool quality, not on the figure.",
+                "impact": "Avoids margin loss. The 6 price comments depend on the wool answer, so conversion should move with the fibre answer."
               },
               {
-                "area": "audience",
-                "action": "Chiamare la lista d'attesa (106 iscritti) con un messaggio che riporti fibra, taglia e date di consegna, e un pre-ordine a tempo.",
-                "why": "Gli iscritti sono 106 contro 14 pre-ordini. Nei commenti compaiono richieste di consegna (\"Wann wird geliefert?\") e \"Précommandée !\".",
-                "impact": "Se convertisse il 5% della lista, sarebbero circa 5 pre-ordini in più, senza spesa media."
+                "area": "creative",
+                "action": "Refresh the creative every 4-5 days and run the retest for 10 days with a daily cap on the strongest assets.",
+                "why": "Sessions fell from about 214 a day (days 1-5) to about 161 (days 6-10). Pre-orders fell from 10 to 4.",
+                "impact": "Aim to keep sessions at 200 or more a day, as in days 1-5, instead of 150."
               }
             ],
             "dnaChanges": [
               {
                 "field": "fabric",
-                "to": "chunky extrafine merino wool or merino-cashmere blend, soft hand-feel, composition declared",
-                "why": "5 commenti su prurito e 6 sul prezzo chiedono quale lana sia (\"Welche Wolle genau? Merino?\")."
+                "to": "chunky extra-fine merino or merino-cashmere blend knit, soft against the neck",
+                "why": "5 itch comments about the mock neck (e.g. 'Kratzt die Wolle am Hals?') and 6 price comments conditional on good wool. 'Wool or cashmere-blend' leaves it open."
               },
               {
                 "field": "closure",
-                "to": "exposed full-length two-way metal zipper (double slider) running from the hem up to the top of the mock neck",
-                "why": "Richiesta ripetuta in FR, DE e IT: \"Le zip est-il à double curseur ?\", \"La zip è a doppio cursore? Seduto in macchina serve\"."
+                "to": "exposed full-length two-way metal zipper (double slider) from hem to top of mock neck",
+                "why": "Double slider asked 4 times in 3 languages (FR 104 and 11 likes, IT 57, DE 24), and the IT comment notes it is needed when seated. Check cost with the manufacturer before fixing."
               },
               {
-                "field": "collar",
-                "to": "ribbed mock neck stand collar (collo a lupetto) extending seamlessly from the body, with softer inner yarn against the skin",
-                "why": "Il collo piace (\"Le col montant est top\") ma si teme il prurito: \"La laine gratte ? Avec le col montant c'est important\"."
+                "field": "fit_notes",
+                "to": "relaxed through chest, hip length 66 cm covering the seat, model height and size M stated",
+                "why": "9 sizing comments, e.g. 'Arriva alla vita o copre il sedere?' and 'Che taglia indossa il modello?'. This is mostly a content fix, with the DNA note kept consistent."
               }
             ],
             "risks": [
-              "Base statistica piccola: 14 pre-ordini totali. Le differenze tra mercati (1 contro 6) e tra contenuti (0 contro 4) possono essere in parte casuali.",
-              "L'intervallo 80% del sell-through (50.1%–60.7%) non include il 65%. Cambiare solo la comunicazione potrebbe non bastare.",
-              "Il passaggio a merino o misto cashmere può alzare il costo e ridurre il margine. Va verificato col produttore prima di mantenere €390.",
-              "I pre-ordini si concentrano in due giorni (3 il g1 e 4 il g4 su 14). Dal g5 in poi sono al massimo 1 al giorno, con sessioni in calo da 238 (g3) a 149 (g8): possibile saturazione del pubblico.",
-              "Concentrare il budget sul Regno Unito, dove vengono chiesti consegna e taglie, può peggiorare la conversione se il pubblico si esaurisce."
+              "Only 14 pre-orders. The market split (1 to 6 per market) is mostly noise, so the Italy cut and the UK push must be confirmed in the retest.",
+              "The forecast rests on 6 past launches. The interval is wide (40.8%–74.3%) and the target of 65% sits inside it.",
+              "A better yarn or a two-way zip adds unit cost. Margin figures (€33,232 at 270 units) do not include it and must be recomputed.",
+              "Comments are a sample of 60 out of 607. Theme shares are indicative.",
+              "Pre-orders were front-loaded (10 in the first 5 days). Part of the early result may be a novelty effect that does not repeat."
             ],
             "model": "eu.anthropic.claude-sonnet-5-5",
-            "at": "2026-10-17T10:55:39.443Z"
+            "at": "2026-10-17T12:05:41.765Z"
           }
         }
       }
     },
     {
       "sku": "DEMO-CABAS-01",
-      "name": "Cabas Cognac",
+      "name": "Cognac Cabas",
       "maison": "Aurenzi Milano",
       "line": "donna",
-      "brief": "Nuova tote che reinterpreta la Small Everyday Cabas della foto. Cambia la forma: corpo più largo e basso, strutturato e semirigido, non morbido e senza pieghe. Pelle liscia semirigida color cognac, non martellata. Al posto della tracolla unica, due manici corti, larghi e semplici, uno sul fronte e uno sul retro, attaccati sul bordo superiore. Chiusura magnetica interna al centro del bordo. Una cucitura verticale centrale sul fronte, dal bordo superiore al fondo. Fondo piano con angoli leggermente arrotondati. Nessuna scritta e nessun logo. Misure: L 28 cm, A 22 cm, P 10 cm (corpo, manici esclusi).",
-      "goal": "demo: dal concept a un asset 3D affinato e riutilizzabile, una ambientazione",
+      "brief": "A new tote reinterpreting the Small Everyday Cabas in the photo. The shape changes: a wider, lower body, structured and semi-rigid, not soft and without folds. Smooth semi-rigid cognac leather, not pebbled. Instead of the single strap, two short, wide, simple handles, one on the front and one on the back, attached at the top edge. Internal magnetic closure at the centre of the rim. A central vertical seam on the front, from the top edge to the base. Flat base with slightly rounded corners. No lettering and no logo. Measurements: W 28 cm, H 22 cm, D 10 cm (body, handles excluded).",
+      "goal": "demo: from concept to a refined, reusable 3D asset, one setting",
       "id": "g_mupr1ayauch6",
       "createdAt": "2026-10-01T16:29:05.074Z",
       "dna": {
@@ -1889,7 +1892,7 @@
         "fields": [
           {
             "key": "garment_type",
-            "label": "Tipologia",
+            "label": "Type",
             "value": "structured small tote bag",
             "source": "note",
             "critical": true
@@ -1903,196 +1906,196 @@
           },
           {
             "key": "length",
-            "label": "Lunghezza",
+            "label": "Length",
             "value": "22 cm body height excluding handles",
             "source": "note",
             "critical": true
           },
           {
             "key": "closure",
-            "label": "Chiusura",
+            "label": "Closure",
             "value": "internal concealed magnetic snap fastener centered along the upper rim on an inner leather tab",
             "source": "note",
             "critical": true
           },
           {
             "key": "button_count_layout",
-            "label": "Bottoni",
+            "label": "Buttons",
             "value": "none",
             "source": "sketch",
             "critical": false
           },
           {
             "key": "button_design",
-            "label": "Design bottoni",
+            "label": "Button design",
             "value": "none",
             "source": "sketch",
             "critical": false
           },
           {
             "key": "lapel",
-            "label": "Revers",
+            "label": "Lapels",
             "value": "none",
             "source": "sketch",
             "critical": false
           },
           {
             "key": "collar",
-            "label": "Colletto",
+            "label": "Collar",
             "value": "none",
             "source": "sketch",
             "critical": false
           },
           {
             "key": "shoulders",
-            "label": "Spalle",
+            "label": "Shoulders",
             "value": "none",
             "source": "sketch",
             "critical": false
           },
           {
             "key": "sleeves",
-            "label": "Maniche",
+            "label": "Sleeves",
             "value": "none",
             "source": "sketch",
             "critical": false
           },
           {
             "key": "cuffs",
-            "label": "Polsini",
+            "label": "Cuffs",
             "value": "none",
             "source": "sketch",
             "critical": false
           },
           {
             "key": "pockets",
-            "label": "Tasche",
+            "label": "Pockets",
             "value": "none visible on exterior",
             "source": "sketch",
             "critical": false
           },
           {
             "key": "back",
-            "label": "Retro",
+            "label": "Back",
             "value": "smooth flat leather panel with top horizontal reinforcement stitch line and symmetrical flush handle attachments",
             "source": "sketch",
             "critical": true
           },
           {
             "key": "vent",
-            "label": "Spacco",
+            "label": "Vent",
             "value": "none",
             "source": "sketch",
             "critical": false
           },
           {
             "key": "belt",
-            "label": "Cintura",
+            "label": "Belt",
             "value": "none",
             "source": "sketch",
             "critical": false
           },
           {
             "key": "fabric",
-            "label": "Tessuto",
+            "label": "Fabric",
             "value": "semi-rigid full-grain smooth leather",
             "source": "note",
             "critical": true
           },
           {
             "key": "fabric_weight",
-            "label": "Peso tessuto",
+            "label": "Fabric weight",
             "value": "medium-heavyweight structured leather, approximately 1.6 mm gauge",
             "source": "invented",
             "critical": false
           },
           {
             "key": "surface_texture",
-            "label": "Texture superficiale",
+            "label": "Surface texture",
             "value": "smooth, non-pebbled, matte-satin calf leather finish",
             "source": "note",
             "critical": true
           },
           {
             "key": "colour",
-            "label": "Colore",
+            "label": "Colour",
             "value": "cognac brown",
             "source": "note",
             "critical": true
           },
           {
             "key": "colour_hex",
-            "label": "Codice esadecimale",
+            "label": "Hex code",
             "value": "#B8652A",
             "source": "sketch",
             "critical": false
           },
           {
             "key": "lining",
-            "label": "Fodera",
+            "label": "Lining",
             "value": "tonal cognac bonded suede or microfiber lining",
             "source": "invented",
             "critical": false
           },
           {
             "key": "stitching",
-            "label": "Impunture",
+            "label": "Topstitching",
             "value": "tonal edge topstitching along perimeter rims, vertical center front line, and handle edges",
             "source": "sketch",
             "critical": true
           },
           {
             "key": "hardware_finish",
-            "label": "Finitura metalleria",
+            "label": "Hardware finish",
             "value": "concealed magnetic hardware with no exterior exposed metal components",
             "source": "note",
             "critical": false
           },
           {
             "key": "fit_notes",
-            "label": "Vestibilità",
+            "label": "Fit",
             "value": "rigid self-standing construction designed for hand or forearm carry",
             "source": "note",
             "critical": false
           },
           {
             "key": "sample_size",
-            "label": "Taglia campione",
+            "label": "Sample size",
             "value": "One Size (OS)",
             "source": "invented",
             "critical": false
           },
           {
             "key": "measurements",
-            "label": "Misure",
+            "label": "Measurements",
             "value": "width 28 cm, height 22 cm, depth 10 cm",
             "source": "note",
             "critical": true
           },
           {
             "key": "trim_size",
-            "label": "Dimensione finiture",
+            "label": "Trim size",
             "value": "none",
             "source": "note",
             "critical": false
           },
           {
             "key": "handles",
-            "label": "Manici",
+            "label": "Handles",
             "value": "dual short wide flat leather handles anchored seamlessly to the front and back top edges",
             "source": "note",
             "critical": true
           },
           {
             "key": "front_construction",
-            "label": "Costruzione frontale",
+            "label": "Front construction",
             "value": "single vertical seam centered on the front face running from top edge to base seam",
             "source": "note",
             "critical": true
           },
           {
             "key": "logo_branding",
-            "label": "Logo e branding",
+            "label": "Logo and branding",
             "value": "completely unbranded with no embossed, foil-stamped, or metallic lettering",
             "source": "note",
             "critical": true
@@ -2126,31 +2129,34 @@
           ],
           "copy": {
             "ootd": {
-              "hook": "styling: l'accessorio che completa il look",
+              "hook": "styling: the accessory that completes the look",
               "line": ""
             },
             "street-check": {
-              "hook": "relatable: outfit check veloce per strada",
+              "hook": "relatable: quick outfit check on the street",
               "line": "Salto l'appuntamento dal dentista per fare questo video davanti a trenta follower e mia nonna."
             },
             "get-dressed": {
-              "hook": "styling: gli accessori prima di uscire",
+              "hook": "styling: the accessories before heading out",
               "line": ""
             }
           }
         },
         "zones": [
           {
-            "label": "Manico",
-            "target": "the flat leather handle and its attachment along the top rim"
+            "label": "Handle",
+            "target": "the flat leather handle and its attachment along the top rim",
+            "key": "manico"
           },
           {
-            "label": "Cucitura",
-            "target": "the vertical centre seam on the front leather face"
+            "label": "Seam",
+            "target": "the vertical centre seam on the front leather face",
+            "key": "cucitura"
           },
           {
             "label": "Base",
-            "target": "the flat structured base and rounded bottom corner"
+            "target": "the flat structured base and rounded bottom corner",
+            "key": "base"
           }
         ],
         "backZones": [
@@ -2166,108 +2172,108 @@
       },
       "dnaConfirmedAt": "2026-10-01T16:43:09.861Z",
       "pdp": {
-        "title": "Borsa Cabas Cognac",
-        "subtitle": "Cognac in pelle liscia semirigida",
-        "description": "Il modello reinterpreta la borsa Small Everyday Cabas d'archivio, evolvendone le proporzioni in una sagoma orizzontale strutturata. Realizzata in pelle liscia pieno fiore semirigida con finitura satinata opaca priva di grana martellata, la borsa presenta un pannello frontale scandito da una cucitura verticale mediana che scende dal bordo fino alla base piana ad angoli smussati. L'accesso al vano interno è regolato da una chiusura magnetica a scomparsa posizionata su linguetta interna centrale, senza minuterie metalliche visibili all'esterno. Due manici piatti e larghi sono ancorati sul perimetro superiore di fronte e retro. La struttura compatta e autoportante consente una comoda portata a mano o all'avambraccio, preservando una silhouette geometrica pulita e priva di marchiature esterne.",
+        "title": "Cognac Cabas Bag",
+        "subtitle": "Cognac, in semi-rigid smooth leather",
+        "description": "This piece reinterprets the archive Small Everyday Cabas, evolving its proportions into a structured horizontal silhouette. Made in semi-rigid smooth full-grain leather with a matte satin finish free of pebbling, the bag has a front panel marked by a central vertical seam running from the rim to the flat base with softened corners. Access to the interior is through a concealed magnetic closure on a central inner tab, with no metal hardware visible on the outside. Two wide flat handles are anchored on the top edge of the front and back. The compact, self-standing structure is comfortable to carry by hand or on the forearm, keeping a clean geometric silhouette with no exterior branding.",
         "details": [
-          "Costruzione rettangolare semirigida e autoportante",
-          "Pelle liscia pieno fiore a finitura satinata opaca",
-          "Cucitura verticale centrale continua sul fronte",
-          "Chiusura magnetica a scomparsa su linguetta interna",
-          "Doppi manici piatti integrati a filo lungo il bordo superiore",
-          "Fondo piano con raccordi angolari arrotondati",
-          "Impunture tono su tono e totale assenza di loghi esterni"
+          "Semi-rigid, self-standing rectangular construction",
+          "Smooth full-grain leather with a matte satin finish",
+          "Continuous central vertical seam on the front",
+          "Concealed magnetic closure on an inner tab",
+          "Twin flat handles set flush along the top edge",
+          "Flat base with rounded corners",
+          "Tonal topstitching and no exterior logos at all"
         ],
-        "fit": "Costruzione semirigida a sviluppo orizzontale autoportante, sagomata per essere portata a mano o all'avambraccio. Il corpo borsa presenta una larghezza di 28 cm, un'altezza di 22 cm e una profondità di 10 cm, esclusi i manici.",
-        "composition": "Pelle liscia pieno fiore semirigida (composizione definitiva da confermare al campione)",
+        "fit": "Semi-rigid, self-standing horizontal construction, shaped to be carried by hand or on the forearm. The bag body is 28 cm wide, 22 cm high and 10 cm deep, handles excluded.",
+        "composition": "Semi-rigid smooth full-grain leather (final composition to be confirmed on the sample)",
         "care": [
-          "Proteggere da fonti dirette di luce, calore e umidità.",
-          "Pulire con un panno morbido e asciutto, privo di pigmenti.",
-          "Evitare il contatto con acqua, profumi, oli e solventi chimici.",
-          "Custodire nell'apposita custodia in tessuto protettivo."
+          "Protect from direct light, heat and humidity.",
+          "Clean with a soft, dry, pigment-free cloth.",
+          "Avoid contact with water, perfume, oils and chemical solvents.",
+          "Store in the protective fabric dust bag provided."
         ],
-        "preorder": "Questo modello viene confezionato esclusivamente su ordinazione per assicurare la cura rigorosa di ogni fase di manifattura. La spedizione è prevista a partire dal [DATA SPEDIZIONE].",
+        "preorder": "This style is made to order only, to ensure rigorous care at every stage of production. Shipping is expected from [SHIPPING DATE].",
         "faq": [
           {
-            "q": "Quali sono le condizioni per resi e cambi di un articolo in pre-ordine?",
-            "a": "È possibile richiedere il reso o la sostituzione entro [GIORNI RESO] giorni dalla ricezione del prodotto, a condizione che l'articolo risulti integro, non utilizzato e corredato dell'imballo originale."
+            "q": "What are the return and exchange conditions for a pre-order item?",
+            "a": "You can request a return or exchange within [RETURN DAYS] days of receiving the product, as long as the item is intact, unused and in its original packaging."
           },
           {
-            "q": "Come scegliere la misura corretta?",
-            "a": "La borsa è proposta in misura unica; le proporzioni e le dimensioni esterne riportate nella scheda tecnica riflettono fedelmente il volume del corpo borsa a vuoto."
+            "q": "How do I choose the right size?",
+            "a": "The bag comes in one size; the proportions and external dimensions in the technical sheet faithfully reflect the volume of the empty bag body."
           },
           {
-            "q": "Quando viene addebitato l'importo dell'ordine?",
-            "a": "L'addebito avviene contestualmente alla conferma del pre-ordine sul sito, per consentire l'avvio della lavorazione artigianale dedicata."
+            "q": "When is the order amount charged?",
+            "a": "Payment is taken when the pre-order is confirmed on the website, so that the dedicated artisanal production can begin."
           },
           {
-            "q": "Cosa accade qualora la produzione apporti variazioni a un dettaglio?",
-            "a": "Qualsiasi eventuale modifica tecnica o di finitura rispetto al prototipo viene prontamente comunicata prima della spedizione, riservando la facoltà di confermare o annullare l'ordine senza costi aggiuntivi."
+            "q": "What happens if production changes a detail?",
+            "a": "Any technical or finishing change from the prototype is communicated promptly before shipping, and you can confirm or cancel the order at no extra cost."
           }
         ],
         "claims": [
           {
-            "text": "Reinterpretazione della borsa Small Everyday Cabas d'archivio",
+            "text": "A reinterpretation of the archive Small Everyday Cabas bag",
             "source": "note",
             "needsSignOff": false
           },
           {
-            "text": "Costruzione rettangolare semirigida e autoportante",
+            "text": "Semi-rigid, self-standing rectangular construction",
             "source": "note",
             "needsSignOff": false
           },
           {
-            "text": "Pelle liscia pieno fiore semirigida",
+            "text": "Semi-rigid smooth full-grain leather",
             "source": "note",
             "needsSignOff": true
           },
           {
-            "text": "Finitura liscia satinata opaca senza grana martellata",
+            "text": "Smooth matte satin finish without pebbled grain",
             "source": "note",
             "needsSignOff": false
           },
           {
-            "text": "Cucitura verticale centrale sul fronte dal bordo superiore al fondo",
+            "text": "Central vertical seam on the front from the top edge to the base",
             "source": "note",
             "needsSignOff": false
           },
           {
-            "text": "Fondo piano con angoli arrotondati",
+            "text": "Flat base with rounded corners",
             "source": "note",
             "needsSignOff": false
           },
           {
-            "text": "Chiusura interna centrale con magnete a scomparsa su linguetta",
+            "text": "Central internal closure with a concealed magnet on a tab",
             "source": "note",
             "needsSignOff": false
           },
           {
-            "text": "Assenza di minuterie metalliche visibili all'esterno",
+            "text": "No metal hardware visible on the outside",
             "source": "note",
             "needsSignOff": false
           },
           {
-            "text": "Doppi manici piatti e larghi posizionati su fronte e retro",
+            "text": "Twin wide flat handles on front and back",
             "source": "note",
             "needsSignOff": false
           },
           {
-            "text": "Impunture perimetrali tono su tono",
+            "text": "Tonal perimeter topstitching",
             "source": "sketch",
             "needsSignOff": false
           },
           {
-            "text": "Assenza completa di loghi o marchiature visibili all'esterno",
+            "text": "No logos or branding visible on the outside at all",
             "source": "note",
             "needsSignOff": false
           },
           {
-            "text": "Dimensioni corpo borsa: larghezza 28 cm, altezza 22 cm, profondità 10 cm",
+            "text": "Bag body dimensions: width 28 cm, height 22 cm, depth 10 cm",
             "source": "note",
             "needsSignOff": true
           },
           {
-            "text": "Portata a mano o all'avambraccio",
+            "text": "Carried by hand or on the forearm",
             "source": "note",
             "needsSignOff": false
           }
@@ -2455,7 +2461,7 @@
               "id": "cr_a_mupz5d97bubx",
               "assetId": "a_mupz5d97bubx",
               "type": "ugc",
-              "label": "Reel UGC · Outfit check in strada",
+              "label": "UGC reel · Street outfit check",
               "channels": [
                 "instagram",
                 "tiktok"
@@ -2476,7 +2482,7 @@
               "id": "cr_a_muptbt9shrem",
               "assetId": "a_muptbt9shrem",
               "type": "editorial",
-              "label": "Editorial · Passo high-key",
+              "label": "Editorial · High-key stride",
               "channels": [
                 "instagram",
                 "pinterest"
@@ -2497,7 +2503,7 @@
               "id": "cr_a_mupyubb0x50w",
               "assetId": "a_mupyubb0x50w",
               "type": "editorial",
-              "label": "Editorial · Bianco e vento",
+              "label": "Editorial · White and wind",
               "channels": [
                 "instagram",
                 "pinterest"
@@ -2559,7 +2565,7 @@
               "id": "cr_a_muq0ot71p267",
               "assetId": "a_muq0ot71p267",
               "type": "packshot",
-              "label": "Packshot carosello",
+              "label": "Packshot carousel",
               "channels": [
                 "instagram"
               ],
@@ -2579,7 +2585,7 @@
           "markets": [
             {
               "id": "IT",
-              "label": "Italia",
+              "label": "Italy",
               "spend": 1250,
               "impressions": 208650,
               "reach": 135033,
@@ -2594,7 +2600,7 @@
             },
             {
               "id": "FR",
-              "label": "Francia",
+              "label": "France",
               "spend": 1250,
               "impressions": 181059,
               "reach": 117268,
@@ -2609,7 +2615,7 @@
             },
             {
               "id": "DE",
-              "label": "Germania",
+              "label": "Germany",
               "spend": 1250,
               "impressions": 174500,
               "reach": 112935,
@@ -2624,7 +2630,7 @@
             },
             {
               "id": "UK",
-              "label": "Regno Unito",
+              "label": "United Kingdom",
               "spend": 1250,
               "impressions": 161005,
               "reach": 104242,
@@ -3366,315 +3372,315 @@
         "analyses": {
           "2004624445|a_mupz5d97bubx,a_muptbt9shrem,a_mupyubb0x50w,a_mupy95tgtin1,a_muq0ccx7qmmf,a_muq0ot71p267": {
             "verdict": "go",
-            "headline": "Go: sell-through previsto 67% contro un obiettivo del 65%. Ordinare 460 pezzi e aggiungere tracolla staccabile e tasca interna con zip.",
-            "summary": "La previsione statistica dà 67% (80%: 62,1%–71,9%) contro il 65% richiesto, e 460 pezzi sono sopra il MOQ di 200. Il save rate è buono (3,64%, percentile 58). La conversione è debole (1,27%, percentile 33) e pesa sul risultato. Il freno principale nei commenti è l'assenza della tracolla: 12 commenti su 60. Non basta per ribaltare la decisione statistica, ma va corretto nel design prima dell'ordine. Il colore, l'assenza di logo e la pelle sono apprezzati (27 commenti su 60 in totale), quindi il prodotto resta com'è.",
+            "headline": "Go: forecast sell-through 67% against a 65% target. Order 460 units and add a detachable strap and an inner zip pocket.",
+            "summary": "The statistical forecast gives 67% (80%: 62.1%–71.9%) against the required 65%, and 460 units are above the 200 MOQ. The save rate is good (3.64%, 58th percentile). Conversion is weak (1.27%, 33rd percentile) and weighs on the result. The main blocker in the comments is the missing strap: 12 comments of 60. It isn't enough to overturn the statistical decision, but it should be fixed in the design before the order. Colour, absence of logo and leather are liked (27 comments of 60 in total), so the product stays as it is.",
             "insights": [
               {
-                "title": "Il go regge, ma l'intervallo tocca il limite",
-                "evidence": "Sell-through 67,0% con intervallo 80% 62,1%–71,9%. Il limite basso è sotto l'obiettivo del 65%, quindi il margine di sicurezza è di soli 2 punti."
+                "title": "The go holds, but the interval touches the limit",
+                "evidence": "Sell-through 67.0% with an 80% interval of 62.1%–71.9%. The low bound is below the 65% target, so the safety margin is only 2 points."
               },
               {
-                "title": "Interesse buono, conversione debole",
-                "evidence": "Save rate 3,64% (percentile 58), conversione 1,27% (percentile 33), 10,4 pre-ordini per €1k (percentile 33). Nel modello ogni 0,1 punti di conversione valgono 1,6 punti di sell-through (coefficiente 0,157)."
+                "title": "Good interest, weak conversion",
+                "evidence": "Save rate 3.64% (58th percentile), conversion 1.27% (33rd percentile), 10.4 pre-orders per €1k (33rd percentile). In the model every 0.1 conversion points are worth 1.6 sell-through points (coefficient 0.157)."
               },
               {
-                "title": "La tracolla mancante è il primo ostacolo all'acquisto",
-                "evidence": "12 commenti su 60 (20%) la chiedono. «Solo a mano? Con la tracolla la prendevo subito» (IT) e «Dommage, sans bandoulière je ne peux pas la porter au quotidien» (FR) indicano acquisti persi."
+                "title": "The missing strap is the first barrier to purchase",
+                "evidence": "12 comments out of 60 (20%) ask for it. «Solo a mano? Con la tracolla la prendevo subito» (IT) and «Dommage, sans bandoulière je ne peux pas la porter au quotidien» (FR) point to lost purchases."
               },
               {
-                "title": "Lifestyle e UGC rendono, On-model e Bianco e vento no",
-                "evidence": "Lifestyle: 14 pre-ordini su €939, save 4,64%. Reel UGC: 14 su €965, CTR 0,88%. On-model: 2 su €677 (conv. 0,53%). Bianco e vento: 4 su €782 (conv. 0,66%)."
+                "title": "Lifestyle and UGC perform, On-model and White and wind don't",
+                "evidence": "Lifestyle: 14 pre-orders on €939, save 4.64%. UGC reel: 14 on €965, CTR 0.88%. On-model: 2 on €677 (conv. 0.53%). White and wind: 4 on €782 (conv. 0.66%)."
               },
               {
-                "title": "Italia e Regno Unito convertono il doppio di Francia e Germania",
-                "evidence": "IT 1,61% e UK 1,69% (35 pre-ordini su €2500) contro FR 0,93% e DE 0,80% (17 su €2500). La Germania ha però 72 iscritti in lista d'attesa, quasi quanti il Regno Unito (70)."
+                "title": "Italy and the UK convert at twice the rate of France and Germany",
+                "evidence": "IT 1.61% and UK 1.69% (35 pre-orders on €2500) vs FR 0.93% and DE 0.80% (17 on €2500). Germany, however, has 72 waitlist sign-ups, almost as many as the UK (70)."
               }
             ],
             "themes": [
               {
                 "theme": "tracolla",
-                "label": "Manca la tracolla",
+                "label": "Missing strap",
                 "sentiment": "negative",
                 "share": 0.2,
                 "quote": "Il manque une bandoulière amovible",
-                "action": "Aggiungere una tracolla staccabile come accessorio e mostrarla nei contenuti."
+                "action": "Add a detachable strap as an accessory and show it in the content."
               },
               {
                 "theme": "minimal",
-                "label": "Nessun logo",
+                "label": "No logo",
                 "sentiment": "positive",
                 "share": 0.167,
                 "quote": "Pulitissima, niente loghi: la comprerei solo per questo",
-                "action": "Mantenere l'assenza di logo come messaggio centrale in tutti i mercati."
+                "action": "Keep the absence of logo as the core message in all markets."
               },
               {
                 "theme": "colore",
-                "label": "Colore cognac",
+                "label": "Cognac colour",
                 "sentiment": "positive",
                 "share": 0.167,
                 "quote": "Cette couleur cognac est sublime",
-                "action": "Non toccare #B8652A. Usare inquadrature da vicino sul colore nei contenuti di punta."
+                "action": "Don't touch #B8652A. Use colour close-ups in the lead content."
               },
               {
                 "theme": "prezzo",
-                "label": "Prezzo",
+                "label": "Price",
                 "sentiment": "neutral",
                 "share": 0.15,
                 "quote": "Fair price for this quality",
-                "action": "Tenere €590. I commenti sul prezzo sono 6 favorevoli e 3 contrari («Bit pricey for the size»), e il rilievo riguarda soprattutto la misura."
+                "action": "Keep €590. The price comments are 6 favourable and 3 against («Bit pricey for the size»), and the objection is mostly about size."
               },
               {
                 "theme": "pelle",
-                "label": "Pelle e struttura",
+                "label": "Leather and structure",
                 "sentiment": "positive",
                 "share": 0.117,
                 "quote": "Looks like proper full-grain leather",
-                "action": "Mostrare cuciture e rigidità in dettaglio. Il commento «Love that it stands on its own» è un buon spunto per un reel."
+                "action": "Show stitching and rigidity in detail. The comment «Love that it stands on its own» is a good starting point for a reel."
               },
               {
                 "theme": "chiusura",
-                "label": "Chiusura solo magnetica",
+                "label": "Magnet-only closure",
                 "sentiment": "negative",
                 "share": 0.083,
                 "quote": "Solo il magnete? In metro a Milano mi serve una zip",
-                "action": "Aggiungere una tasca interna con zip per i valori. Il magnete resta."
+                "action": "Add an inner zip pocket for valuables. The magnet stays."
               },
               {
                 "theme": "capienza",
-                "label": "Capienza",
+                "label": "Capacity",
                 "sentiment": "negative",
                 "share": 0.067,
                 "quote": "Carina ma un po' piccola per il lavoro, farete una misura più grande?",
-                "action": "Rispondere con i contenuti mostrando cosa entra in 28×22×10 cm. Valutare una misura più grande solo dopo la prossima lettura."
+                "action": "Answer with content showing what fits in 28×22×10 cm. Consider a larger size only after the next reading."
               },
               {
                 "theme": "disponibilita",
-                "label": "Intenzione d'acquisto",
+                "label": "Purchase intent",
                 "sentiment": "positive",
                 "share": 0.05,
                 "quote": "Quando arriva? Ho già fatto il pre-ordine",
-                "action": "Inviare ai pre-ordinanti una data di consegna certa e ai 272 iscritti in lista d'attesa un avviso di apertura."
+                "action": "Send pre-order customers a firm delivery date and the 272 waitlist sign-ups an opening notice."
               }
             ],
             "actions": [
               {
                 "area": "design",
-                "action": "Aggiungere una tracolla staccabile piatta in pelle cognac e una tasca interna con zip. Non cambiare corpo, colore, misure o assenza di logo.",
-                "why": "Tracolla: 12 commenti su 60. Chiusura e sicurezza: 5 commenti, tra cui «Mettete almeno una tasca interna con zip» (85 like).",
-                "impact": "Se la conversione sale da 1,27% a 1,5%, il sell-through previsto sale di circa 3,6 punti (0,157 × 0,23), a condizione che il modello regga."
+                "action": "Add a flat detachable strap in cognac leather and an inner zip pocket. Don't change body, colour, measurements or the absence of logo.",
+                "why": "Strap: 12 comments out of 60. Closure and security: 5 comments, including «Mettete almeno una tasca interna con zip» (85 likes).",
+                "impact": "If conversion rises from 1.27% to 1.5%, forecast sell-through rises by about 3.6 points (0.157 × 0.23), provided the model holds."
               },
               {
                 "area": "creative",
-                "action": "Tagliare On-model (€677) e Bianco e vento (€782). Spostare i €1459 su Lifestyle e Reel UGC. Tenere Passo high-key come terzo contenuto, con pochi aggiustamenti.",
-                "why": "Lifestyle e UGC fanno 14 pre-ordini ciascuno con circa €950 di spesa. On-model e Bianco e vento ne fanno 2 e 4 con conversioni di 0,53% e 0,66%.",
-                "impact": "Circa +15 pre-ordini a parità di budget (da 6 a circa 21 sui €1459), se il rendimento di Lifestyle e UGC regge."
+                "action": "Cut On-model (€677) and White and wind (€782). Move the €1459 to Lifestyle and UGC reel. Keep High-key stride as the third piece of content, with small tweaks.",
+                "why": "Lifestyle and UGC make 14 pre-orders each with about €950 of spend. On-model and White and wind make 2 and 4, with conversion of 0.53% and 0.66%.",
+                "impact": "About +15 pre-orders on the same budget (from 6 to about 21 on the €1459), if Lifestyle and UGC performance holds."
               },
               {
                 "area": "creative",
-                "action": "Produrre un contenuto breve in cui si vede cosa entra nella borsa (28×22×10 cm) e la tracolla staccabile. Pubblicarlo come risposta ai commenti.",
-                "why": "Capienza: 4 commenti, per esempio «28 cm: entra una borraccia?». Il Packshot carosello è il peggiore per save (2,07%) e non risponde a queste domande.",
-                "impact": "Rispondere alle domande più frequenti punta a portare la conversione da 1,27% verso 1,5% (media dei contenuti migliori)."
+                "action": "Produce a short piece of content showing what fits in the bag (28×22×10 cm) and the detachable strap. Post it as a reply to the comments.",
+                "why": "Capacity: 4 comments, for example «28 cm: entra una borraccia?». The packshot carousel is the worst for saves (2.07%) and doesn't answer these questions.",
+                "impact": "Answering the most frequent questions aims to lift conversion from 1.27% towards 1.5% (the average of the best content)."
               },
               {
                 "area": "audience",
-                "action": "Spostare €1000 da Francia e Germania a Italia e Regno Unito. Concentrare il budget su 25-34 e 45+. Ridurre i 18-24 (€900). In Germania usare le campagne sulla lista d'attesa.",
-                "why": "IT+UK: 14,0 pre-ordini per €1k. FR+DE: 6,8 per €1k. 25-34: 22 pre-ordini su €1900. 45+: conv. 1,55%. 18-24: conv. 0,88%.",
-                "impact": "Circa +7 pre-ordini ogni €1000 spostati (14,0 contro 6,8 per €1k)."
+                "action": "Move €1000 from France and Germany to Italy and the UK. Focus the budget on 25-34 and 45+. Reduce 18-24 (€900). In Germany use waitlist campaigns.",
+                "why": "IT+UK: 14.0 pre-orders per €1k. FR+DE: 6.8 per €1k. 25-34: 22 pre-orders on €1900. 45+: conv. 1.55%. 18-24: conv. 0.88%.",
+                "impact": "About +7 pre-orders for every €1000 moved (14.0 vs 6.8 per €1k)."
               },
               {
                 "area": "production",
-                "action": "Ordinare 460 pezzi al produttore, non i 650 abituali. Confermare con il produttore che tracolla e tasca zip rientrano nel lotto senza alzare il MOQ di 200.",
-                "why": "Domanda di stagione mediana 382 pezzi (80%: 284–514). Con 460 pezzi l'invenduto atteso è 82 pz contro 258 con 650.",
-                "impact": "Margine atteso €125031 contro €113934 con l'ordine abituale: circa +€11100. Vendite perse attese: 14 pz."
+                "action": "Order 460 units from the manufacturer, not the usual 650. Confirm with the manufacturer that strap and zip pocket fit in the batch without raising the 200 MOQ.",
+                "why": "Median season demand 382 units (80%: 284–514). With 460 units the expected unsold is 82 units vs 258 with 650.",
+                "impact": "Expected margin €125031 vs €113934 with the usual order: about +€11100. Expected lost sales: 14 units."
               },
               {
                 "area": "pricing",
-                "action": "Tenere il prezzo di pre-ordine a €590. Non fare sconti. Se serve, spiegare la qualità (pelle full-grain, cuciture) nelle schede prodotto.",
-                "why": "Commenti sul prezzo: 6 favorevoli su 9 («Prezzo onesto rispetto ai marchi grandi»). I 3 critici parlano di misura: «Un peu cher pour une petite taille».",
-                "impact": "Conserva il sell-through previsto del 67% e il margine di €125031 senza ribassi."
+                "action": "Keep the pre-order price at €590. No discounts. If needed, explain the quality (full-grain leather, stitching) in the product sheets.",
+                "why": "Price comments: 6 of 9 favourable («Prezzo onesto rispetto ai marchi grandi»). The 3 critical ones are about size: «Un peu cher pour une petite taille».",
+                "impact": "Keeps the forecast 67% sell-through and the €125031 margin without markdowns."
               }
             ],
             "dnaChanges": [
               {
                 "field": "handles",
                 "to": "dual short wide flat leather handles anchored seamlessly to the front and back top edges, plus an optional detachable flat leather shoulder strap in matching cognac leather",
-                "why": "12 commenti su 60 chiedono la tracolla, per esempio «Needs a detachable strap, I can't do hand-carry only»."
+                "why": "12 comments out of 60 ask for the strap, for example «Needs a detachable strap, I can't do hand-carry only»."
               },
               {
                 "field": "pockets",
                 "to": "none visible on exterior; one internal zippered pocket on the lining",
-                "why": "«Mettete almeno una tasca interna con zip» (85 like). Il nuovo contenuto non altera l'esterno pulito."
+                "why": "«Mettete almeno una tasca interna con zip» (85 likes). The new content doesn't alter the clean exterior."
               },
               {
                 "field": "hardware_finish",
                 "to": "concealed magnetic hardware with no exterior exposed metal components; strap attachment hardware in a matte tonal cognac finish, unbranded",
-                "why": "La tracolla richiede attacchi. Vanno tenuti tonali e senza marchio per non perdere il pregio di «Pulitissima, niente loghi»."
+                "why": "The strap needs attachments. They should stay tonal and unbranded so as not to lose the appeal of «Pulitissima, niente loghi»."
               }
             ],
             "risks": [
-              "Il limite basso dell'intervallo (62,1%) è sotto l'obiettivo del 65%. Se la conversione resta al percentile 33, il go è meno solido.",
-              "I pre-ordini sono solo 52 e i commenti analizzati 60 su 1243. I tassi per contenuto e per mercato sono stime fragili: 2 pre-ordini su On-model, 4 su Bianco e vento.",
-              "Aggiungere la tracolla cambia il prodotto. Non è stata testata sul mercato e potrebbe costare di più in produzione o ridurre la pulizia del design.",
-              "Le sessioni giornaliere scendono da 416 (g1) a 315 (g10). Il giorno 4 ha avuto 1 solo pre-ordine, quindi l'andamento è irregolare.",
-              "Nessun campione fisico esiste: qualità reale della pelle e della struttura va verificata sul prototipo prima di confermare l'ordine di 460 pezzi."
+              "The low end of the interval (62.1%) is below the 65% target. If conversion stays at the 33rd percentile, the go is less solid.",
+              "There are only 52 pre-orders and 60 of 1243 comments were analysed. Rates per piece of content and per market are fragile estimates: 2 pre-orders on On-model, 4 on White and wind.",
+              "Adding the strap changes the product. It hasn't been tested on the market and could cost more to produce or reduce the cleanness of the design.",
+              "Daily sessions fall from 416 (d1) to 315 (d10). Day 4 had just 1 pre-order, so the trend is irregular.",
+              "No physical sample exists: the real quality of the leather and structure must be checked on the prototype before confirming the 460-unit order."
             ],
             "model": "eu.anthropic.claude-sonnet-5-5",
             "at": "2026-10-17T10:42:53.355Z"
           },
           "956183481|a_mupz5d97bubx,a_muptbt9shrem,a_mupyubb0x50w,a_mupy95tgtin1,a_muq0ccx7qmmf,a_muq0ot71p267": {
             "verdict": "go",
-            "headline": "Si va in produzione: sell-through previsto 74.5% contro un obiettivo del 65%, con il limite basso dell'intervallo (69.5%) ancora sopra l'obiettivo.",
-            "summary": "La previsione statistica dice GO. Il sell-through a 8 settimane è 74.5% (80%: 69.5%–79.6%) e la quantità consigliata è 710 pezzi, contro un MOQ di 200. I commenti non danno motivi forti per fermarsi: colore (15 su 60), pelle e struttura (11) e assenza di logo (6) sono apprezzati. Il problema è la mancanza di tracolla (9 commenti su 60), da risolvere con un accessorio prima del lancio. Il test ha prodotto solo 40 pre-ordini, quindi le differenze tra mercati e pubblici vanno trattate come indicazioni.",
+            "headline": "Go to production: forecast sell-through 74.5% against a 65% target, with the low end of the interval (69.5%) still above target.",
+            "summary": "The statistical forecast says GO. 8-week sell-through is 74.5% (80%: 69.5%–79.6%) and the recommended quantity is 710 units, against a 200 MOQ. The comments give no strong reason to stop: colour (15 of 60), leather and structure (11) and the absence of logo (6) are liked. The issue is the missing strap (9 comments of 60), to be solved with an accessory before launch. The test produced only 40 pre-orders, so differences between markets and audiences should be treated as indications.",
             "insights": [
               {
-                "title": "La previsione è solida e supera l'obiettivo",
-                "evidence": "Sell-through 74.5% (80%: 69.5%–79.6%) contro il 65% richiesto. La regressione su 12 lanci ha R² 0.91. Conversione 1.76% al percentile 75 e pre-ordini per €1k 16.0 al percentile 83 reggono il risultato, mentre il save rate 3.60% è al percentile 50."
+                "title": "The forecast is solid and beats the target",
+                "evidence": "Sell-through 74.5% (80%: 69.5%–79.6%) against the required 65%. The regression on 12 launches has R² 0.91. Conversion of 1.76% at the 75th percentile and 16.0 pre-orders per €1k at the 83rd percentile support the result, while the 3.60% save rate is at the 50th percentile."
               },
               {
-                "title": "Il Regno Unito converte il doppio degli altri mercati",
-                "evidence": "UK: 15 pre-ordini e conv. 3.11% con €625, cioè 24 pre-ordini per €1k. Francia: 1.21% (7 pre-ordini). Germania: 1.26% (7). Italia: 1.67% (11). Il CTR è identico nei quattro mercati (0.76%–0.78%): la differenza nasce dopo il click. Il campione è piccolo."
+                "title": "The UK converts at twice the rate of the other markets",
+                "evidence": "UK: 15 pre-orders and conv. 3.11% on €625, i.e. 24 pre-orders per €1k. France: 1.21% (7 pre-orders). Germany: 1.26% (7). Italy: 1.67% (11). CTR is identical across the four markets (0.76%–0.78%): the difference arises after the click. The sample is small."
               },
               {
-                "title": "Lifestyle e Reel UGC rendono, packshot e on-model no",
-                "evidence": "Lifestyle: save 5.10%, conv. 2.06%, 13 pre-ordini a circa €37 l'uno. Reel UGC: CTR 1.05%, 9 pre-ordini a circa €53. Packshot carosello: save 1.91%, 4 pre-ordini a circa €90. On-model: conv. 1.34%, 4 pre-ordini a circa €100. I due editorial costano circa €77 per pre-ordine (5 pre-ordini ciascuno)."
+                "title": "Lifestyle and UGC reel perform, packshot and on-model don't",
+                "evidence": "Lifestyle: save 5.10%, conv. 2.06%, 13 pre-orders at about €37 each. UGC reel: CTR 1.05%, 9 pre-orders at about €53. Packshot carousel: save 1.91%, 4 pre-orders at about €90. On-model: conv. 1.34%, 4 pre-orders at about €100. The two editorials cost about €77 per pre-order (5 pre-orders each)."
               },
               {
-                "title": "Il pubblico 35-44 compra meglio dei giovani",
-                "evidence": "35-44: conv. 2.52% e 16 pre-ordini con €700. 18-24: conv. 1.02% e 5 pre-ordini con €450, pur con il CTR più alto (0.91%). Il 18-24 clicca ma non compra."
+                "title": "The 35-44 audience buys better than younger people",
+                "evidence": "35-44: conv. 2.52% and 16 pre-orders on €700. 18-24: conv. 1.02% and 5 pre-orders on €450, despite the highest CTR (0.91%). 18-24 clicks but doesn't buy."
               },
               {
-                "title": "Le creatività si stancano nei 10 giorni",
-                "evidence": "I pre-ordini scendono da 7 al giorno 1 a 2 al giorno 10, con la spesa fissa a €250 al giorno. Le sessioni passano da 285 a 214. La lista d'attesa (142) è 3.5 volte i pre-ordini (40): c'è domanda non ancora convertita."
+                "title": "Creatives fatigue within the 10 days",
+                "evidence": "Pre-orders fall from 7 on day 1 to 2 on day 10, with spend fixed at €250 a day. Sessions go from 285 to 214. The waitlist (142) is 3.5 times the pre-orders (40): there is demand not yet converted."
               }
             ],
             "themes": [
               {
                 "theme": "colore",
-                "label": "Colore cognac",
+                "label": "Cognac colour",
                 "sentiment": "positive",
                 "share": 0.25,
                 "quote": "That cognac shade is everything",
-                "action": "Tenere il cognac #B8652A come colore guida in tutti i contenuti."
+                "action": "Keep cognac #B8652A as the lead colour in all content."
               },
               {
                 "theme": "pelle",
-                "label": "Pelle e struttura",
+                "label": "Leather and structure",
                 "sentiment": "positive",
                 "share": 0.183,
                 "quote": "Mi piace che sia rigida, le borse morbide si afflosciano",
-                "action": "Mostrare la borsa in piedi da sola e le cuciture tono su tono nei contenuti scalati."
+                "action": "Show the bag standing on its own and the tonal stitching in the scaled content."
               },
               {
                 "theme": "tracolla",
-                "label": "Manca la tracolla",
+                "label": "Missing strap",
                 "sentiment": "negative",
                 "share": 0.15,
                 "quote": "Dommage, sans bandoulière je ne peux pas la porter au quotidien",
-                "action": "Aggiungere una tracolla removibile come accessorio. Avvisare la lista d'attesa quando è confermata."
+                "action": "Add a removable strap as an accessory. Notify the waitlist once it's confirmed."
               },
               {
                 "theme": "capienza",
-                "label": "Capienza",
+                "label": "Capacity",
                 "sentiment": "neutral",
                 "share": 0.117,
                 "quote": "Does a 13 inch laptop fit?",
-                "action": "Girare un contenuto con gli oggetti dentro (tablet, borraccia) e dichiarare le misure reali. Valutare una taglia maggiore per dopo."
+                "action": "Shoot content with items inside (tablet, water bottle) and state the real measurements. Consider a larger size for later."
               },
               {
                 "theme": "minimal",
-                "label": "Nessun logo",
+                "label": "No logo",
                 "sentiment": "positive",
                 "share": 0.1,
                 "quote": "Pulitissima, niente loghi: la comprerei solo per questo",
-                "action": "Mantenere la borsa senza scritte e usare «senza logo» come messaggio nei testi."
+                "action": "Keep the bag free of lettering and use «no logo» as a message in the copy."
               },
               {
                 "theme": "chiusura",
-                "label": "Chiusura solo magnetica",
+                "label": "Magnet-only closure",
                 "sentiment": "negative",
                 "share": 0.067,
                 "quote": "Juste un aimant ? Pas rassurant dans le métro",
-                "action": "Aggiungere una tasca interna con zip. Non cambiare la chiusura esterna: i commenti sono solo 4 su 60."
+                "action": "Add an inner zip pocket. Don't change the outer closure: only 4 comments out of 60."
               },
               {
                 "theme": "disponibilita",
-                "label": "Intenzione d'acquisto",
+                "label": "Purchase intent",
                 "sentiment": "positive",
                 "share": 0.067,
                 "quote": "Quando arriva? Ho già fatto il pre-ordine",
-                "action": "Comunicare una data di consegna e rispondere alla domanda sulla Svizzera."
+                "action": "Communicate a delivery date and answer the question about Switzerland."
               },
               {
                 "theme": "prezzo",
-                "label": "Prezzo",
+                "label": "Price",
                 "sentiment": "neutral",
                 "share": 0.067,
                 "quote": "Le prix est correct pour la qualité",
-                "action": "Tenere €590. Tre commenti su quattro sono favorevoli e uno dice «Bit pricey for the size»."
+                "action": "Keep €590. Three comments out of four are favourable and one says «Bit pricey for the size»."
               }
             ],
             "actions": [
               {
                 "area": "design",
-                "action": "Aggiungere una tracolla removibile piatta, venduta come accessorio, e una tasca interna con zip. Lasciare invariati forma, colore e assenza di logo.",
-                "why": "9 commenti su 60 chiedono la tracolla (es. «Mit abnehmbarem Schulterriemen wäre sie perfekt»). 2 chiedono la tasca interna con zip, e 4 temono la chiusura solo magnetica.",
-                "impact": "Un acquirente su sei nel campione dei commenti (9 su 60) citava la tracolla come ostacolo. Obiettivo: portare la conversione da 1.76% verso 2.0%, il livello del contenuto Lifestyle (2.06%)."
+                "action": "Add a flat removable strap, sold as an accessory, and an inner zip pocket. Keep shape, colour and the absence of logo unchanged.",
+                "why": "9 comments out of 60 ask for the strap (e.g. «Mit abnehmbarem Schulterriemen wäre sie perfekt»). 2 ask for an inner zip pocket, and 4 worry about the magnet-only closure.",
+                "impact": "One buyer in six in the comment sample (9 of 60) mentioned the strap as a blocker. Target: lift conversion from 1.76% towards 2.0%, the level of the Lifestyle content (2.06%)."
               },
               {
                 "area": "creative",
-                "action": "Scalare Lifestyle e Reel UGC. Tagliare packshot carosello e on-model. Ridurre i due editorial. Sostituire le creatività dopo 5-6 giorni.",
-                "why": "Costo per pre-ordine: Lifestyle circa €37, UGC circa €53, editorial circa €77, packshot circa €90, on-model circa €100. I pre-ordini calano da 7 (g1) a 2 (g10).",
-                "impact": "Spostando i €1135 di packshot, on-model e editorial su Lifestyle e UGC, il costo medio scende da circa €62 (2500/40) verso circa €40 per pre-ordine."
+                "action": "Scale Lifestyle and UGC reel. Cut packshot carousel and on-model. Reduce the two editorials. Refresh the creatives after 5-6 days.",
+                "why": "Cost per pre-order: Lifestyle about €37, UGC about €53, editorial about €77, packshot about €90, on-model about €100. Pre-orders drop from 7 (d1) to 2 (d10).",
+                "impact": "Moving the €1135 of packshot, on-model and editorial to Lifestyle and UGC lowers the average cost from about €62 (2500/40) towards about €40 per pre-order."
               },
               {
                 "area": "creative",
-                "action": "Produrre un contenuto con gli oggetti dentro la borsa e le misure 28×22×10 cm in sovrimpressione. Rispondere ai commenti su tablet, laptop e borraccia.",
-                "why": "7 commenti su 60 chiedono la capienza («Passt ein Tablet rein?»). Una borsa larga 28 cm probabilmente non contiene un portatile da 13 pollici: va detto chiaramente.",
-                "impact": "Raccogliere parte dei 142 contatti in lista d'attesa. Obiettivo: 10 pre-ordini in più dalla lista, cioè +25% sui 40 attuali."
+                "action": "Produce content with the items inside the bag and the 28×22×10 cm measurements overlaid. Reply to the comments about tablet, laptop and water bottle.",
+                "why": "7 comments out of 60 ask about capacity («Passt ein Tablet rein?»). A 28 cm wide bag probably won't hold a 13-inch laptop: say so clearly.",
+                "impact": "Capture part of the 142 waitlist contacts. Target: 10 more pre-orders from the list, i.e. +25% on the current 40."
               },
               {
                 "area": "audience",
-                "action": "Concentrare il budget del prossimo ciclo sul Regno Unito (circa 40% invece del 25%) e sul pubblico 35-44. Ridurre il 18-24. Mantenere Italia, Francia e Germania con un budget di controllo.",
-                "why": "UK conv. 3.11% (24 pre-ordini per €1k) contro Francia 1.21% e Germania 1.26%. 35-44 conv. 2.52%, 18-24 conv. 1.02%.",
-                "impact": "Se il Regno Unito mantiene 24 pre-ordini per €1k contro la media di 16.0, €1000 in UK rendono circa 24 pre-ordini invece di 16. Il campione è di soli 15 pre-ordini: verificare nel prossimo ciclo."
+                "action": "Focus next cycle's budget on the UK (about 40% instead of 25%) and on the 35-44 audience. Cut 18-24. Keep Italy, France and Germany on a control budget.",
+                "why": "UK conv. 3.11% (24 pre-orders per €1k) vs France 1.21% and Germany 1.26%. 35-44 conv. 2.52%, 18-24 conv. 1.02%.",
+                "impact": "If the UK keeps 24 pre-orders per €1k against the 16.0 average, €1000 in the UK yields about 24 pre-orders instead of 16. The sample is only 15 pre-orders: verify in the next cycle."
               },
               {
                 "area": "production",
-                "action": "Ordinare 710 pezzi, come da modello newsvendor. Se il produttore lo consente, dividere in 500 subito e 210 dopo 4 settimane, in base alle vendite. Il MOQ è 200.",
-                "why": "La domanda mediana è 588 pezzi (80%: 437–790). Con 710 pezzi il margine atteso è €192360 e l'invenduto atteso 128 pz. Con l'ordine abituale di 650 pezzi il margine è €190740 e l'invenduto 84 pz: la differenza è piccola.",
-                "impact": "710 pezzi danno +€1620 di margine atteso rispetto a 650, ma 44 pezzi invenduti in più. Dividere l'ordine riduce il rischio sui 210 pezzi finali."
+                "action": "Order 710 units, as per the newsvendor model. If the manufacturer allows it, split into 500 now and 210 after 4 weeks, based on sales. The MOQ is 200.",
+                "why": "Median demand is 588 units (80%: 437–790). With 710 units the expected margin is €192360 and expected unsold 128 units. With the usual 650-unit order the margin is €190740 and unsold 84 units: the difference is small.",
+                "impact": "710 units give +€1620 expected margin versus 650, but 44 more unsold units. Splitting the order reduces the risk on the final 210 units."
               },
               {
                 "area": "pricing",
-                "action": "Mantenere il prezzo di pre-ordine a €590. Non fare sconti sul lancio e valutare il prezzo della tracolla separatamente.",
-                "why": "Il sell-through previsto 74.5% è già sopra l'obiettivo del 65%. Solo 1 commento su 4 sul prezzo è negativo («Bit pricey for the size»). Lo storico mostra ST 78% per Tote Sabbia Grande a €720 e 59% per Tote Strutturata Fumo a €680.",
-                "impact": "Tenendo €590 si protegge il sell-through a prezzo pieno del 74.5%. Ogni ribasso riduce il margine atteso di €192360."
+                "action": "Keep the pre-order price at €590. No launch discounts, and price the strap separately.",
+                "why": "The forecast 74.5% sell-through is already above the 65% target. Only 1 of 4 price comments is negative («Bit pricey for the size»). History shows 78% ST for the Large Sand Tote at €720 and 59% for the Smoke Structured Tote at €680.",
+                "impact": "Holding €590 protects the 74.5% full-price sell-through. Any markdown cuts the €192360 expected margin."
               }
             ],
             "dnaChanges": [
               {
                 "field": "handles",
                 "to": "dual short wide flat leather handles anchored seamlessly to the front and back top edges, plus an optional detachable flat crossbody strap in matching cognac leather",
-                "why": "9 commenti su 60 chiedono una tracolla, in molti casi removibile («Il manque une bandoulière amovible»)."
+                "why": "9 comments out of 60 ask for a strap, often a removable one («Il manque une bandoulière amovible»)."
               },
               {
                 "field": "hardware_finish",
                 "to": "concealed magnetic hardware; small tonal-finished strap clips on inner side tabs, used only when the strap is attached",
-                "why": "La tracolla richiede un attacco. Va tenuto discreto per non perdere l'apprezzamento per l'aspetto pulito e senza logo (6 commenti)."
+                "why": "The strap needs an attachment. It should stay discreet so as not to lose the appreciation for the clean, logo-free look (6 comments)."
               },
               {
                 "field": "pockets",
                 "to": "none visible on exterior; one interior zip pocket",
-                "why": "2 commenti chiedono la tasca interna con zip («An inner zip pocket would make it perfect»). 4 commenti sulla chiusura temono il solo magnete nella metropolitana."
+                "why": "2 comments ask for an inner zip pocket («An inner zip pocket would make it perfect»). 4 comments on the closure worry about a magnet-only closure on the underground."
               }
             ],
             "risks": [
-              "Il test ha solo 40 pre-ordini. Il 3.11% del Regno Unito (15 pre-ordini) e il 2.52% del 35-44 (16 pre-ordini) possono essere in parte casuali.",
-              "La previsione vale per la borsa testata, senza tracolla. Aggiungere tracolla e tasca cambia il prodotto, anche se solo in parte. Venderla come accessorio limita il rischio.",
-              "L'ordine di 710 pezzi è sopra la domanda mediana di 588. Se la domanda finisce al limite basso di 437, l'invenduto supera di molto i 128 pezzi attesi.",
-              "Il save rate 3.60% è al percentile 50. La previsione dipende molto dalla conversione (1.76%, percentile 75), che sul calo giornaliero (da 7 a 2 pre-ordini) può peggiorare.",
-              "I commenti analizzati sono 60 su 625. Le quote dei temi sono approssimative.",
-              "Le domande sulla capienza (7 commenti) possono portare a delusione se la borsa non contiene un portatile da 13 pollici. Serve comunicare le misure con chiarezza."
+              "The test has only 40 pre-orders. The UK's 3.11% (15 pre-orders) and the 35-44's 2.52% (16 pre-orders) may be partly random.",
+              "The forecast applies to the bag as tested, without a strap. Adding strap and pocket changes the product, if only in part. Selling the strap as an accessory limits the risk.",
+              "The 710-unit order is above the 588 median demand. If demand ends at the low bound of 437, unsold stock far exceeds the expected 128 units.",
+              "The 3.60% save rate is at the 50th percentile. The forecast depends heavily on conversion (1.76%, 75th percentile), which may worsen given the daily decline (from 7 to 2 pre-orders).",
+              "60 of 625 comments were analysed. Theme shares are approximate.",
+              "Capacity questions (7 comments) may lead to disappointment if the bag doesn't hold a 13-inch laptop. Measurements need to be communicated clearly."
             ],
             "model": "eu.anthropic.claude-sonnet-5-5",
             "at": "2026-10-17T10:17:06.476Z"
@@ -4773,7 +4779,7 @@
         "ms": 30459
       },
       "createdAt": "2026-10-01T16:41:07.638Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_muprk1tmgad9",
@@ -4796,7 +4802,7 @@
         "ms": 29722
       },
       "createdAt": "2026-10-01T16:43:39.706Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mups7zqfnafp",
@@ -4812,7 +4818,7 @@
       ],
       "label": "blender",
       "createdAt": "2026-10-01T17:02:16.743Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mups7zrgpoeo",
@@ -4828,7 +4834,7 @@
       ],
       "label": "blender",
       "createdAt": "2026-10-01T17:02:16.780Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mups7zsdphsv",
@@ -4844,7 +4850,7 @@
       ],
       "label": "blender",
       "createdAt": "2026-10-01T17:02:16.813Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mups7ztcc5nn",
@@ -4860,7 +4866,7 @@
       ],
       "label": "blender",
       "createdAt": "2026-10-01T17:02:16.848Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mupso5pt79nw",
@@ -4880,7 +4886,7 @@
       "measure": {
         "cm": 29.5,
         "target": 28,
-        "how": "fondo proiettato sul piano del tavolo; il 3D nella stessa scena misura 30,3 cm"
+        "how": "base projected onto the table plane; the 3D in the same scene measures 30.3 cm"
       },
       "qa": {
         "score": 100,
@@ -4940,7 +4946,7 @@
       ],
       "label": "blender",
       "createdAt": "2026-10-01T17:24:41.338Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_muptbt9shrem",
@@ -4972,77 +4978,77 @@
           {
             "key": "deliverable",
             "pass": true,
-            "note": "Foto editoriale in studio su sfondo neutro continuo con modella a figura intera."
+            "note": "Studio editorial photo on a seamless neutral backdrop with a full-length model."
           },
           {
             "key": "scale",
             "pass": true,
-            "note": "Dimensioni e proporzioni corrette, il fondo della borsa arriva a metà coscia."
+            "note": "Dimensions and proportions correct, the bottom of the bag reaches mid-thigh."
           },
           {
             "key": "garment_type",
             "pass": true,
-            "note": "Borsa tote piccola strutturata corrispondente al riferimento."
+            "note": "Small structured tote matching the reference."
           },
           {
             "key": "silhouette",
             "pass": true,
-            "note": "Forma rettangolare pulita con base piatta e fianchi strutturati semi-rigidi."
+            "note": "Clean rectangular shape with flat base and structured semi-rigid sides."
           },
           {
             "key": "length",
             "pass": true,
-            "note": "Altezza del corpo borsa coerente con le specifiche."
+            "note": "Bag body height consistent with the specifications."
           },
           {
             "key": "closure",
             "pass": true,
-            "note": "non visibile"
+            "note": "not visible"
           },
           {
             "key": "back",
             "pass": true,
-            "note": "non visibile"
+            "note": "not visible"
           },
           {
             "key": "fabric",
             "pass": true,
-            "note": "Pelle liscia semi-rigida conforme al locked product view."
+            "note": "Smooth semi-rigid leather matching the locked product view."
           },
           {
             "key": "surface_texture",
             "pass": true,
-            "note": "Texture liscia e opaca senza grana evidente."
+            "note": "Smooth, matte texture with no obvious grain."
           },
           {
             "key": "colour",
             "pass": true,
-            "note": "Tonalità marrone cognac fedele al prodotto bloccato."
+            "note": "Cognac brown tone faithful to the locked product."
           },
           {
             "key": "stitching",
             "pass": true,
-            "note": "Cuciture tono su tono visibili sul bordo e lungo la linea centrale."
+            "note": "Tonal stitching visible on the rim and along the centre line."
           },
           {
             "key": "measurements",
             "pass": true,
-            "note": "Proporzioni d'insieme conformi alle misure dichiarate."
+            "note": "Overall proportions match the stated measurements."
           },
           {
             "key": "handles",
             "pass": true,
-            "note": "Doppi manici corti e piatti in pelle fissati sulla parte superiore."
+            "note": "Twin short flat leather handles fixed at the top."
           },
           {
             "key": "front_construction",
             "pass": true,
-            "note": "Cucitura verticale centrale visibile sul pannello frontale."
+            "note": "Central vertical seam visible on the front panel."
           },
           {
             "key": "logo_branding",
             "pass": true,
-            "note": "Completamente priva di loghi, scritte o marchi visibili."
+            "note": "Completely free of visible logos, lettering or marks."
           }
         ],
         "artifacts": [],
@@ -5104,7 +5110,7 @@
       ],
       "label": "blender",
       "createdAt": "2026-10-01T19:47:47.225Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mupy4u61nglr",
@@ -5120,7 +5126,7 @@
       ],
       "label": "blender",
       "createdAt": "2026-10-01T19:47:47.257Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mupy4u6xd89w",
@@ -5136,7 +5142,7 @@
       ],
       "label": "blender",
       "createdAt": "2026-10-01T19:47:47.289Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mupy7gvzpfcw",
@@ -5204,7 +5210,7 @@
       ],
       "label": "blender",
       "createdAt": "2026-10-01T19:49:50.148Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mupy7h0l19rk",
@@ -5220,7 +5226,7 @@
       ],
       "label": "blender",
       "createdAt": "2026-10-01T19:49:50.181Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mupy7h1jh7je",
@@ -5236,7 +5242,7 @@
       ],
       "label": "blender",
       "createdAt": "2026-10-01T19:49:50.215Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mupy8rmsyiy3",
@@ -5343,7 +5349,7 @@
       ],
       "label": "blender",
       "createdAt": "2026-10-01T19:51:08.588Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mupy95jmq6ko",
@@ -5359,7 +5365,7 @@
       ],
       "label": "blender",
       "createdAt": "2026-10-01T19:51:08.626Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mupy95kq0acf",
@@ -5375,7 +5381,7 @@
       ],
       "label": "blender",
       "createdAt": "2026-10-01T19:51:08.666Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mupy95r45r98",
@@ -5599,7 +5605,7 @@
       ],
       "label": "blender",
       "createdAt": "2026-10-01T19:52:52.538Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mupyubb0x50w",
@@ -5631,77 +5637,77 @@
           {
             "key": "deliverable",
             "pass": true,
-            "note": "Editoriale in studio su fondo neutro con modella a figura intera."
+            "note": "Studio editorial on a neutral backdrop with a full-length model."
           },
           {
             "key": "scale",
             "pass": true,
-            "note": "Proporzioni e altezza borsa a metà coscia perfettamente corrispondenti al brief."
+            "note": "Proportions and bag height at mid-thigh match the brief perfectly."
           },
           {
             "key": "garment_type",
             "pass": true,
-            "note": "Piccola borsa tote strutturata corrispondente."
+            "note": "Matching small structured tote."
           },
           {
             "key": "silhouette",
             "pass": true,
-            "note": "Forma rettangolare pulita con soffietti laterali semirigidi e fondo piatto."
+            "note": "Clean rectangular shape with semi-rigid side gussets and flat base."
           },
           {
             "key": "length",
             "pass": true,
-            "note": "Altezza corpo borsa coerente con i 22 cm indicati."
+            "note": "Bag body height consistent with the stated 22 cm."
           },
           {
             "key": "closure",
             "pass": true,
-            "note": "non visibile"
+            "note": "not visible"
           },
           {
             "key": "back",
             "pass": true,
-            "note": "non visibile"
+            "note": "not visible"
           },
           {
             "key": "fabric",
             "pass": true,
-            "note": "Pelle liscia semirigida conforme al riferimento."
+            "note": "Smooth semi-rigid leather matching the reference."
           },
           {
             "key": "surface_texture",
             "pass": true,
-            "note": "Finitura liscia, opaca e priva di grana evidente."
+            "note": "Smooth, matte finish with no obvious grain."
           },
           {
             "key": "colour",
             "pass": true,
-            "note": "Tonalità marrone cognac perfettamente corrispondente al prodotto locked."
+            "note": "Cognac brown tone matching the locked product perfectly."
           },
           {
             "key": "stitching",
             "pass": true,
-            "note": "Impunture tonali lungo la linea centrale verticale e i bordi presenti."
+            "note": "Tonal topstitching present along the vertical centre line and the edges."
           },
           {
             "key": "measurements",
             "pass": true,
-            "note": "Dimensioni complessive coerenti con 28x22x10 cm rispetto al corpo."
+            "note": "Overall dimensions consistent with 28x22x10 cm relative to the body."
           },
           {
             "key": "handles",
             "pass": true,
-            "note": "Doppi manici corti piatti in pelle ancorati sul bordo superiore."
+            "note": "Twin short flat leather handles anchored on the top edge."
           },
           {
             "key": "front_construction",
             "pass": true,
-            "note": "Cucitura verticale centrale sul pannello frontale con doppia impuntura."
+            "note": "Central vertical seam on the front panel with double topstitching."
           },
           {
             "key": "logo_branding",
             "pass": true,
-            "note": "Completamente priva di loghi o scritte visibili."
+            "note": "Completely free of visible logos or lettering."
           }
         ],
         "artifacts": [],
@@ -5738,77 +5744,77 @@
           {
             "key": "deliverable",
             "pass": false,
-            "note": "La borsa tote è completamente assente dall'inquadratura; presente solo la modella."
+            "note": "The tote is completely missing from the frame; only the model is present."
           },
           {
             "key": "scale",
             "pass": false,
-            "note": "Impossibile valutare la scala poiché la borsa non è presente."
+            "note": "Scale can't be assessed because the bag isn't in the shot."
           },
           {
             "key": "garment_type",
             "pass": false,
-            "note": "Nessuna borsa presente nell'immagine generata."
+            "note": "No bag in the generated image."
           },
           {
             "key": "silhouette",
             "pass": false,
-            "note": "Nessuna silhouette di borsa rilevabile nello scatto."
+            "note": "No bag silhouette detectable in the shot."
           },
           {
             "key": "length",
             "pass": false,
-            "note": "Prodotto assente."
+            "note": "Product missing."
           },
           {
             "key": "closure",
             "pass": false,
-            "note": "Prodotto assente."
+            "note": "Product missing."
           },
           {
             "key": "back",
             "pass": false,
-            "note": "Prodotto assente."
+            "note": "Product missing."
           },
           {
             "key": "fabric",
             "pass": false,
-            "note": "Prodotto assente."
+            "note": "Product missing."
           },
           {
             "key": "surface_texture",
             "pass": false,
-            "note": "Prodotto assente."
+            "note": "Product missing."
           },
           {
             "key": "colour",
             "pass": false,
-            "note": "Prodotto assente."
+            "note": "Product missing."
           },
           {
             "key": "stitching",
             "pass": false,
-            "note": "Prodotto assente."
+            "note": "Product missing."
           },
           {
             "key": "measurements",
             "pass": false,
-            "note": "Prodotto assente."
+            "note": "Product missing."
           },
           {
             "key": "handles",
             "pass": false,
-            "note": "Prodotto assente."
+            "note": "Product missing."
           },
           {
             "key": "front_construction",
             "pass": false,
-            "note": "Prodotto assente."
+            "note": "Product missing."
           },
           {
             "key": "logo_branding",
             "pass": false,
-            "note": "Prodotto assente."
+            "note": "Product missing."
           }
         ],
         "artifacts": [],
@@ -5843,84 +5849,84 @@
       },
       "label": "street-check:wide",
       "createdAt": "2026-10-01T20:14:10.493Z",
-      "approvedBy": "direzione creativa",
+      "approvedBy": "creative director",
       "qa": {
         "score": 100,
         "checks": [
           {
             "key": "deliverable",
             "pass": true,
-            "note": "Formato 9:16 verticale UGC in esterni, borsa portata a mano correttamente."
+            "note": "Vertical 9:16 outdoor UGC format, bag carried by hand correctly."
           },
           {
             "key": "scale",
             "pass": true,
-            "note": "Proporzioni corrette, fondo della borsa a metà coscia con braccio disteso."
+            "note": "Proportions correct, bottom of the bag at mid-thigh with the arm extended."
           },
           {
             "key": "garment_type",
             "pass": true,
-            "note": "Borsa tote piccola strutturata presente."
+            "note": "Small structured tote present."
           },
           {
             "key": "silhouette",
             "pass": true,
-            "note": "Forma rettangolare pulita con base piatta e angoli inferiori smussati."
+            "note": "Clean rectangular shape with flat base and softened bottom corners."
           },
           {
             "key": "length",
             "pass": true,
-            "note": "Altezza del corpo borsa coerente con le specifiche."
+            "note": "Bag body height consistent with the specifications."
           },
           {
             "key": "closure",
             "pass": true,
-            "note": "Linguetta interna visibile sul bordo superiore interno."
+            "note": "Inner tab visible on the inside top edge."
           },
           {
             "key": "back",
             "pass": true,
-            "note": "non visibile"
+            "note": "not visible"
           },
           {
             "key": "fabric",
             "pass": true,
-            "note": "Pelle liscia semirigida conforme al riferimento."
+            "note": "Smooth semi-rigid leather matching the reference."
           },
           {
             "key": "surface_texture",
             "pass": true,
-            "note": "Texture liscia satinata non martellata."
+            "note": "Smooth satin texture, not pebbled."
           },
           {
             "key": "colour",
             "pass": true,
-            "note": "Tonalità marrone cognac fedele al riferimento."
+            "note": "Cognac brown tone faithful to the reference."
           },
           {
             "key": "stitching",
             "pass": true,
-            "note": "Impunture tonali presenti lungo la cucitura centrale e i bordi."
+            "note": "Tonal topstitching present along the centre seam and the edges."
           },
           {
             "key": "measurements",
             "pass": true,
-            "note": "Dimensioni proporzionate rispetto alla figura."
+            "note": "Dimensions in proportion to the figure."
           },
           {
             "key": "handles",
             "pass": true,
-            "note": "Doppi manici corti piatti con ancoraggi rettangolari conformi."
+            "note": "Twin short flat handles with rectangular anchors, compliant."
           },
           {
             "key": "front_construction",
             "pass": true,
-            "note": "Cucitura verticale singola centrata sul pannello frontale."
+            "note": "Single vertical seam centred on the front panel."
           },
           {
             "key": "logo_branding",
             "pass": true,
-            "note": "Nessun logo o scritta visibile."
+            "note": "No visible logo or lettering."
           }
         ],
         "artifacts": [],
@@ -6012,77 +6018,77 @@
           {
             "key": "deliverable",
             "pass": true,
-            "note": "Inquadratura 9:16 verticale in ambiente reale street style conforme."
+            "note": "Vertical 9:16 framing in a real street-style setting, compliant."
           },
           {
             "key": "scale",
             "pass": true,
-            "note": "Proporzioni e dimensioni rispetto alla mano e alla figura pienamente rispettate."
+            "note": "Proportions and size relative to the hand and figure fully respected."
           },
           {
             "key": "garment_type",
             "pass": true,
-            "note": "Borsa tote bag strutturata conforme."
+            "note": "Structured tote bag, compliant."
           },
           {
             "key": "silhouette",
             "pass": true,
-            "note": "Forma rettangolare pulita con base piatta e angoli arrotondati corretta."
+            "note": "Clean rectangular shape with flat base and rounded corners, correct."
           },
           {
             "key": "length",
             "pass": true,
-            "note": "Altezza del corpo borsa coerente con le proporzioni richieste."
+            "note": "Bag body height consistent with the required proportions."
           },
           {
             "key": "closure",
             "pass": true,
-            "note": "Chiusura magnetica interna non visibile dall'angolazione."
+            "note": "Internal magnetic closure not visible from this angle."
           },
           {
             "key": "back",
             "pass": true,
-            "note": "Pannello posteriore non visibile da questa prospettiva frontale."
+            "note": "Back panel not visible from this front view."
           },
           {
             "key": "fabric",
             "pass": true,
-            "note": "Pelle liscia semirigida corrispondente al riferimento."
+            "note": "Smooth semi-rigid leather corresponding to the reference."
           },
           {
             "key": "surface_texture",
             "pass": true,
-            "note": "Finitura liscia e opaca-satinata senza grana visibile."
+            "note": "Smooth matte-satin finish with no visible grain."
           },
           {
             "key": "colour",
             "pass": true,
-            "note": "Tonalità cuoio cognac perfettamente corrispondente al prodotto di riferimento."
+            "note": "Cognac leather tone matching the reference product perfectly."
           },
           {
             "key": "stitching",
             "pass": true,
-            "note": "Impunture tono su tono sul perimetro e sulla linea centrale presenti."
+            "note": "Tonal topstitching present on the perimeter and the centre line."
           },
           {
             "key": "measurements",
             "pass": true,
-            "note": "Rapporto tra larghezza, altezza e profondità conforme al modello."
+            "note": "Width, height and depth ratio matching the model."
           },
           {
             "key": "handles",
             "pass": true,
-            "note": "Doppi manici corti e piatti applicati frontalmente conformi al riferimento."
+            "note": "Twin short flat handles applied at the front, matching the reference."
           },
           {
             "key": "front_construction",
             "pass": true,
-            "note": "Cucitura verticale centrale sul pannello frontale correttamente riprodotta."
+            "note": "Central vertical seam on the front panel reproduced correctly."
           },
           {
             "key": "logo_branding",
             "pass": true,
-            "note": "Esterno privo di loghi o scritte, conforme."
+            "note": "Exterior free of logos or lettering, compliant."
           }
         ],
         "artifacts": [],
@@ -6162,7 +6168,7 @@
       ],
       "label": "street-check",
       "createdAt": "2026-10-01T20:16:11.611Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mupz89gkvch8",
@@ -6205,14 +6211,14 @@
         "minutes": 9,
         "tool": "Blender · tools/refine_cabas.py",
         "changes": [
-          "Dal 3D generato: profondità 71,2 cm invece di 10, corpo alto 23,8 cm invece di 22, manico posteriore spezzato, frammenti all'interno",
-          "Allineato e messo in scala: corpo 28 × 22 × 10 cm, fondo a quota zero",
-          "Corpo ricostruito strutturato: pareti dritte, pelle 2,5 mm, fondo piano, angoli arrotondati 1,2 cm",
-          "Manici rifatti: due nastri piatti da 2,2 cm, luce aperta sotto l'arco, attacchi a linguetta sul fronte e sul retro",
-          "Cucitura centrale come pezzo separato, con le due file di impunture",
-          "Linguetta interna con il magnete di chiusura",
-          "Componenti separati: corpo, interno, manici, cucitura, chiusura",
-          "Materiali: pelle liscia cognac con grana, interno scamosciato, bordi tinti"
+          "From the generated 3D: depth 71.2 cm instead of 10, body height 23.8 cm instead of 22, broken back handle, fragments inside",
+          "Aligned and scaled: body 28 × 22 × 10 cm, base at zero height",
+          "Body rebuilt structured: straight walls, 2.5 mm leather, flat base, 1.2 cm rounded corners",
+          "Handles rebuilt: two 2.2 cm flat straps, open gap under the arch, tab attachments on front and back",
+          "Centre seam as a separate piece, with both rows of topstitching",
+          "Inner tab with the closure magnet",
+          "Separate components: body, lining, handles, seam, closure",
+          "Materials: grained smooth cognac leather, suede lining, painted edges"
         ],
         "body": {
           "w": 28,
@@ -6254,14 +6260,14 @@
         "minutes": 9,
         "tool": "Blender · tools/refine_cabas.py",
         "changes": [
-          "Dal 3D generato: profondità 77,2 cm invece di 10, corpo alto 77,9 cm invece di 22, manico posteriore spezzato, frammenti all'interno",
-          "Allineato e messo in scala: corpo 28 × 22 × 10 cm, fondo a quota zero",
-          "Corpo ricostruito strutturato: pareti dritte, pelle 2,5 mm, fondo piano, angoli arrotondati 1,2 cm",
-          "Manici rifatti: due nastri piatti da 2,2 cm, luce aperta sotto l'arco, attacchi a linguetta sul fronte e sul retro",
-          "Cucitura centrale come pezzo separato, con le due file di impunture",
-          "Linguetta interna con il magnete di chiusura",
-          "Componenti separati: corpo, interno, manici, cucitura, chiusura",
-          "Materiali: pelle liscia cognac con grana, interno scamosciato, bordi tinti"
+          "From the generated 3D: depth 77.2 cm instead of 10, body height 77.9 cm instead of 22, broken back handle, fragments inside",
+          "Aligned and scaled: body 28 × 22 × 10 cm, base at zero height",
+          "Body rebuilt structured: straight walls, 2.5 mm leather, flat base, 1.2 cm rounded corners",
+          "Handles rebuilt: two 2.2 cm flat straps, open gap under the arch, tab attachments on front and back",
+          "Centre seam as a separate piece, with both rows of topstitching",
+          "Inner tab with the closure magnet",
+          "Separate components: body, lining, handles, seam, closure",
+          "Materials: grained smooth cognac leather, suede lining, painted edges"
         ],
         "body": {
           "w": 28,
@@ -6303,14 +6309,14 @@
         "minutes": 9,
         "tool": "Blender · tools/refine_cabas.py",
         "changes": [
-          "Dal 3D generato: profondità 77,2 cm invece di 10, corpo alto 77,9 cm invece di 22, manico posteriore spezzato, frammenti all'interno",
-          "Allineato e messo in scala: corpo 28 × 22 × 10 cm, fondo a quota zero",
-          "Corpo ricostruito strutturato: pareti dritte, pelle 2,5 mm, fondo piano, angoli arrotondati 1,2 cm",
-          "Manici rifatti: due nastri piatti da 2,2 cm, luce aperta sotto l'arco, attacchi a linguetta sul fronte e sul retro",
-          "Cucitura centrale come pezzo separato, con le due file di impunture",
-          "Linguetta interna con il magnete di chiusura",
-          "Componenti separati: corpo, interno, manici, cucitura, chiusura",
-          "Materiali: pelle liscia cognac con grana, interno scamosciato, bordi tinti"
+          "From the generated 3D: depth 77.2 cm instead of 10, body height 77.9 cm instead of 22, broken back handle, fragments inside",
+          "Aligned and scaled: body 28 × 22 × 10 cm, base at zero height",
+          "Body rebuilt structured: straight walls, 2.5 mm leather, flat base, 1.2 cm rounded corners",
+          "Handles rebuilt: two 2.2 cm flat straps, open gap under the arch, tab attachments on front and back",
+          "Centre seam as a separate piece, with both rows of topstitching",
+          "Inner tab with the closure magnet",
+          "Separate components: body, lining, handles, seam, closure",
+          "Materials: grained smooth cognac leather, suede lining, painted edges"
         ],
         "body": {
           "w": 28,
@@ -6352,14 +6358,14 @@
         "minutes": 9,
         "tool": "Blender · tools/refine_cabas.py",
         "changes": [
-          "Dal 3D generato: profondità 77,2 cm invece di 10, corpo alto 77,9 cm invece di 22, manico posteriore spezzato, frammenti all'interno",
-          "Allineato e messo in scala: corpo 28 × 22 × 10 cm, fondo a quota zero",
-          "Corpo ricostruito strutturato: pareti dritte, pelle 2,5 mm, fondo piano, angoli arrotondati 1,2 cm",
-          "Manici rifatti: due nastri piatti da 2,2 cm, luce aperta sotto l'arco, attacchi a linguetta sul fronte e sul retro",
-          "Cucitura centrale come pezzo separato, con le due file di impunture",
-          "Linguetta interna con il magnete di chiusura",
-          "Componenti separati: corpo, interno, manici, cucitura, chiusura",
-          "Materiali: pelle liscia cognac con grana, interno scamosciato, bordi tinti"
+          "From the generated 3D: depth 77.2 cm instead of 10, body height 77.9 cm instead of 22, broken back handle, fragments inside",
+          "Aligned and scaled: body 28 × 22 × 10 cm, base at zero height",
+          "Body rebuilt structured: straight walls, 2.5 mm leather, flat base, 1.2 cm rounded corners",
+          "Handles rebuilt: two 2.2 cm flat straps, open gap under the arch, tab attachments on front and back",
+          "Centre seam as a separate piece, with both rows of topstitching",
+          "Inner tab with the closure magnet",
+          "Separate components: body, lining, handles, seam, closure",
+          "Materials: grained smooth cognac leather, suede lining, painted edges"
         ],
         "body": {
           "w": 28,
@@ -6401,14 +6407,14 @@
         "minutes": 9,
         "tool": "Blender · tools/refine_cabas.py",
         "changes": [
-          "Dal 3D generato: profondità 77,2 cm invece di 10, corpo alto 77,9 cm invece di 22, manico posteriore spezzato, frammenti all'interno",
-          "Allineato e messo in scala: corpo 28 × 22 × 10 cm, fondo a quota zero",
-          "Corpo ricostruito strutturato: pareti dritte, pelle 2,5 mm, fondo piano, angoli arrotondati 1,2 cm",
-          "Manici rifatti: due nastri piatti da 2,2 cm, luce aperta sotto l'arco, attacchi a linguetta sul fronte e sul retro",
-          "Cucitura centrale come pezzo separato, con le due file di impunture",
-          "Linguetta interna con il magnete di chiusura",
-          "Componenti separati: corpo, interno, manici, cucitura, chiusura",
-          "Materiali: pelle liscia cognac con grana, interno scamosciato, bordi tinti"
+          "From the generated 3D: depth 77.2 cm instead of 10, body height 77.9 cm instead of 22, broken back handle, fragments inside",
+          "Aligned and scaled: body 28 × 22 × 10 cm, base at zero height",
+          "Body rebuilt structured: straight walls, 2.5 mm leather, flat base, 1.2 cm rounded corners",
+          "Handles rebuilt: two 2.2 cm flat straps, open gap under the arch, tab attachments on front and back",
+          "Centre seam as a separate piece, with both rows of topstitching",
+          "Inner tab with the closure magnet",
+          "Separate components: body, lining, handles, seam, closure",
+          "Materials: grained smooth cognac leather, suede lining, painted edges"
         ],
         "body": {
           "w": 28,
@@ -6450,14 +6456,14 @@
         "minutes": 9,
         "tool": "Blender · tools/refine_cabas.py",
         "changes": [
-          "Dal 3D generato: profondità 77,2 cm invece di 10, corpo alto 77,9 cm invece di 22, manico posteriore spezzato, frammenti all'interno",
-          "Allineato e messo in scala: corpo 28 × 22 × 10 cm, fondo a quota zero",
-          "Corpo ricostruito strutturato: pareti dritte, pelle 2,5 mm, fondo piano, angoli arrotondati 1,2 cm",
-          "Manici rifatti: due nastri piatti da 2,2 cm, luce aperta sotto l'arco, attacchi a linguetta sul fronte e sul retro",
-          "Cucitura centrale come pezzo separato, con le due file di impunture",
-          "Linguetta interna con il magnete di chiusura",
-          "Componenti separati: corpo, interno, manici, cucitura, chiusura",
-          "Materiali: pelle liscia cognac con grana, interno scamosciato, bordi tinti"
+          "From the generated 3D: depth 77.2 cm instead of 10, body height 77.9 cm instead of 22, broken back handle, fragments inside",
+          "Aligned and scaled: body 28 × 22 × 10 cm, base at zero height",
+          "Body rebuilt structured: straight walls, 2.5 mm leather, flat base, 1.2 cm rounded corners",
+          "Handles rebuilt: two 2.2 cm flat straps, open gap under the arch, tab attachments on front and back",
+          "Centre seam as a separate piece, with both rows of topstitching",
+          "Inner tab with the closure magnet",
+          "Separate components: body, lining, handles, seam, closure",
+          "Materials: grained smooth cognac leather, suede lining, painted edges"
         ],
         "body": {
           "w": 28,
@@ -6499,14 +6505,14 @@
         "minutes": 9,
         "tool": "Blender · tools/refine_cabas.py",
         "changes": [
-          "Dal 3D generato: profondità 77,2 cm invece di 10, corpo alto 77,9 cm invece di 22, manico posteriore spezzato, frammenti all'interno",
-          "Allineato e messo in scala: corpo 28 × 22 × 10 cm, fondo a quota zero",
-          "Corpo ricostruito strutturato: pareti dritte, pelle 2,5 mm, fondo piano, angoli arrotondati 1,2 cm",
-          "Manici rifatti: due nastri piatti da 2,2 cm, luce aperta sotto l'arco, attacchi a linguetta sul fronte e sul retro",
-          "Cucitura centrale come pezzo separato, con le due file di impunture",
-          "Linguetta interna con il magnete di chiusura",
-          "Componenti separati: corpo, interno, manici, cucitura, chiusura",
-          "Materiali: pelle liscia cognac con grana, interno scamosciato, bordi tinti"
+          "From the generated 3D: depth 77.2 cm instead of 10, body height 77.9 cm instead of 22, broken back handle, fragments inside",
+          "Aligned and scaled: body 28 × 22 × 10 cm, base at zero height",
+          "Body rebuilt structured: straight walls, 2.5 mm leather, flat base, 1.2 cm rounded corners",
+          "Handles rebuilt: two 2.2 cm flat straps, open gap under the arch, tab attachments on front and back",
+          "Centre seam as a separate piece, with both rows of topstitching",
+          "Inner tab with the closure magnet",
+          "Separate components: body, lining, handles, seam, closure",
+          "Materials: grained smooth cognac leather, suede lining, painted edges"
         ],
         "body": {
           "w": 28,
@@ -6764,7 +6770,7 @@
       "measure": {
         "cm": 21.3,
         "target": 28,
-        "how": "fondo proiettato sul piano del tavolo; mesh ×0,75, stessa presenza dell'indossato; il 3D nella stessa scena misura 21,8 cm"
+        "how": "base projected onto the table plane; mesh ×0.75, same presence as the worn shot; the 3D in the same scene measures 21.8 cm"
       },
       "qa": {
         "score": 100,
@@ -6809,7 +6815,7 @@
         "model": "gemini · qwen-loro vlm_judge",
         "at": "2026-10-01T20:49:37.407Z"
       },
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_muq0craiuqb0",
@@ -7192,7 +7198,7 @@
       ],
       "label": "blender",
       "createdAt": "2026-10-01T20:59:18.447Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mvc9y3chm63k",
@@ -7220,7 +7226,7 @@
       },
       "label": "bianco-vento",
       "createdAt": "2026-10-17T10:49:23.825Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mvc9y4ebm2i1",
@@ -7272,7 +7278,7 @@
       },
       "label": "flash-diretto",
       "createdAt": "2026-10-17T10:49:30.285Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mvc9yd74ij8f",
@@ -7300,7 +7306,7 @@
       },
       "label": "spot-poltrona",
       "createdAt": "2026-10-17T10:49:36.592Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mvc9ygrc3z3p",
@@ -7328,7 +7334,7 @@
       },
       "label": "passo-high-key",
       "createdAt": "2026-10-17T10:49:41.208Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mvc9ym29t2cf",
@@ -7356,7 +7362,7 @@
       },
       "label": "grigio-scolpito",
       "createdAt": "2026-10-17T10:49:48.081Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mvc9yp7yu2sk",
@@ -7408,7 +7414,7 @@
       },
       "label": "retro-spalla",
       "createdAt": "2026-10-17T10:50:24.986Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mvc9zieuv6d2",
@@ -7433,7 +7439,7 @@
         "usd": 0.035
       },
       "createdAt": "2026-10-17T10:50:30.006Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mvc9zm18l55p",
@@ -7771,7 +7777,7 @@
       ],
       "label": "ootd",
       "createdAt": "2026-10-17T10:53:14.072Z",
-      "approvedBy": "direzione creativa"
+      "approvedBy": "creative director"
     },
     {
       "id": "a_mvcbsvp6hxyd",

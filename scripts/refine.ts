@@ -6,7 +6,7 @@ import { readDb } from "../lib/store"
 main(async () => {
   const assetId = process.argv[2]
   const instruction = arg("do")
-  if (!assetId || assetId.startsWith("--") || !instruction) throw new Error('uso: npm run refine -- <assetId> --do "cosa cambiare" [--models a,b]')
+  if (!assetId || assetId.startsWith("--") || !instruction) throw new Error('usage: npm run refine -- <assetId> --do "what to change" [--models a,b]')
   const models = list(arg("models", "qwen-image-2.1"))
 
   const results = await refineAsset(assetId, instruction, models)
@@ -17,6 +17,6 @@ main(async () => {
   const ok = results.filter((r) => r.asset)
   if (source && ok.length) {
     const sheet = await contactSheet([source.media, ...ok.map((r) => r.asset!.media)], `refine-${assetId}`)
-    console.log(`\nfoglio (ordine: originale · ${ok.map((r) => r.modelId).join(" · ")}) → ${sheet}`)
+    console.log(`\nsheet (order: original · ${ok.map((r) => r.modelId).join(" · ")}) → ${sheet}`)
   }
 })

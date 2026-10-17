@@ -6,11 +6,11 @@ import { Icon } from "./kit"
 import { useWs } from "./workspace"
 
 const CAT_LABEL: Record<LoraTagCategory, string> = {
-  fabric: "Tessuto",
+  fabric: "Fabric",
   texture: "Texture",
-  hardware: "Minuteria",
-  colour: "Colore",
-  finish: "Finitura",
+  hardware: "Hardware",
+  colour: "Colour",
+  finish: "Finish",
 }
 
 const MENTION = /@([\w]*)$/
@@ -38,12 +38,12 @@ export function BrandDnaDialog({ onClose }: { onClose: () => void }) {
       <div className="dialog card brand-dna-dialog" role="dialog" aria-modal="true" aria-labelledby="brand-dna-title">
         <header className="dialog-head">
           <div>
-            <h2 id="brand-dna-title">Scrivi con AI</h2>
+            <h2 id="brand-dna-title">Write with AI</h2>
             <p className="muted" style={{ fontSize: 13, marginTop: 4 }}>
-              Descrivi tessuti, texture e minuteria. Digita <kbd>@</kbd> per inserire un tag del LoRA del brand.
+              Describe fabrics, textures and hardware. Type <kbd>@</kbd> to insert a tag from the brand's LoRA.
             </p>
           </div>
-          <button className="icon-btn" type="button" onClick={onClose} disabled={busy} aria-label="Chiudi">
+          <button className="icon-btn" type="button" onClick={onClose} disabled={busy} aria-label="Close">
             <Icon name="x" />
           </button>
         </header>
@@ -72,16 +72,16 @@ export function BrandDnaDialog({ onClose }: { onClose: () => void }) {
           <UsedTags brand={brand} note={note} />
         </div>
 
-        {!hasDna && <p className="dialog-note err">Estrai prima il DNA dal bozzetto, poi puoi riscriverlo con il lessico del brand.</p>}
-        {ws.garment.dnaConfirmed && <p className="dialog-note">I vincoli confermati verranno riscritti: dovrai confermarli di nuovo prima dei render.</p>}
+        {!hasDna && <p className="dialog-note err">Extract the DNA from the sketch first, then you can rewrite it in the brand's vocabulary.</p>}
+        {ws.garment.dnaConfirmed && <p className="dialog-note">The confirmed constraints will be rewritten: you will need to confirm them again before the renders.</p>}
 
         <footer className="dialog-foot">
           <button type="button" className="btn ghost" onClick={onClose} disabled={busy}>
-            Annulla
+            Cancel
           </button>
           <button type="button" className="btn primary" onClick={run} disabled={busy || !hasDna}>
             {busy ? <span className="spinner" style={{ width: 12, height: 12 }} /> : <Icon name="spark" size={12} />}
-            Scrivi vincoli
+            Write constraints
           </button>
         </footer>
       </div>
@@ -143,7 +143,7 @@ function TagComposer({ brand, value, onChange, disabled }: { brand: BrandLoraPro
   }
 
   const [a, b] = brand.tags
-  const placeholder = `Es. pelle liscia semirigida @${a.token}, manici con @${b.token}…`
+  const placeholder = `E.g. smooth semi-rigid leather @${a.token}, handles with @${b.token}…`
 
   return (
     <div className="tag-composer">
@@ -174,7 +174,7 @@ function TagComposer({ brand, value, onChange, disabled }: { brand: BrandLoraPro
           onClick={sync}
           onScroll={sync}
           onBlur={() => setTimeout(() => setQuery(null), 120)}
-          aria-label="Descrizione con tag LoRA"
+          aria-label="Description with LoRA tags"
           aria-autocomplete="list"
           aria-expanded={matches.length > 0}
         />
@@ -203,7 +203,7 @@ function UsedTags({ brand, note }: { brand: BrandLoraProfile; note: string }) {
     return brand.tags.filter((t) => names.has(t.token))
   }, [brand, note])
 
-  if (!used.length) return <p className="tag-used-empty muted">Nessun tag: l’AI sceglie da sola fra i tag del brand.</p>
+  if (!used.length) return <p className="tag-used-empty muted">No tags: the AI picks from the brand's tags on its own.</p>
   return (
     <ul className="tag-used">
       {used.map((t) => (
@@ -222,7 +222,7 @@ export function BrandDnaWriteButton({ disabled, className }: { disabled?: boolea
   return (
     <>
       <button type="button" className={className ?? "btn secondary sm"} disabled={disabled} onClick={() => setOpen(true)}>
-        <Icon name="spark" size={12} /> Scrivi con AI
+        <Icon name="spark" size={12} /> Write with AI
       </button>
       {open && <BrandDnaDialog onClose={() => setOpen(false)} />}
     </>

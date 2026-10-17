@@ -20,7 +20,7 @@ import type {
 } from "./campaign-types"
 import { askJsonWith } from "./generate"
 import { getGarment } from "./garment"
-import { bedrockModelId } from "./providers/text"
+import { amdModelId, bedrockModelId } from "./providers/text"
 import { CAMPAIGN_SYSTEM, campaignPrompt } from "./prompts/campaign"
 import { STUDIO_LOOKS } from "./prompts/studio"
 import { UGC_FORMATS } from "./prompts/ugc"
@@ -45,7 +45,7 @@ const CHANNELS = market.channels as Record<ChannelId, { label: string; cpm: numb
 const MARKETS = market.markets as Record<MarketId, { label: string; lang: string; cpm: number; intent: number }>
 const TYPES = market.creativeTypes as Record<CreativeType, { label: string; channels: ChannelId[]; ctr: number; save: number; er: number; conv: number }>
 const COMMENTS = market.comments as Record<string, { sentiment: Sentiment; label: string; text: Record<string, string[]> }>
-type Product = { price: number; appeal: number; themes: Record<string, number> }
+type Product = { price: number; appeal: number; themes: Record<string, number>; family?: ArchiveLaunch["family"] }
 const PRODUCTS = market.products as Record<string, Product>
 
 export const CHANNEL_IDS = Object.keys(CHANNELS) as ChannelId[]
@@ -125,7 +125,7 @@ export function creativesOf(assets: Asset[]): CreativeSpec[] {
   const out: CreativeSpec[] = []
   for (const a of ok.filter((x) => x.kind === "ugc-video")) {
     const format = UGC_FORMATS.find((f) => f.id === (a.label ?? "").split(":")[0])
-    out.push(spec(a, "ugc", `Reel UGC · ${format?.label ?? "creator"}`))
+    out.push(spec(a, "ugc", `UGC reel · ${format?.label ?? "creator"}`))
   }
   for (const a of ok.filter((x) => x.kind === "lookbook")) {
     out.push(spec(a, "editorial", `Editorial · ${STUDIO_LOOKS.find((l) => l.id === a.label)?.label ?? a.label ?? "look"}`))
@@ -135,7 +135,7 @@ export function creativesOf(assets: Asset[]): CreativeSpec[] {
   const scene = first("scene")
   if (scene) out.push(spec(scene, "lifestyle", "Lifestyle"))
   const front = first("ghost-front")
-  if (front) out.push(spec(front, "packshot", "Packshot carosello"))
+  if (front) out.push(spec(front, "packshot", "Packshot carousel"))
   return out
 }
 
@@ -155,10 +155,10 @@ const BASE = { ctr: 0.0085, save: 0.028, like: 0.045, comment: 0.0025, share: 0.
 
 export function simulateCampaign(garment: Garment, assets: Asset[], plan: CampaignPlan): CampaignResult {
   const creatives = creativesOf(assets)
-  if (!creatives.length) throw new Error("Servono contenuti approvati per lanciare il test")
+  if (!creatives.length) throw new Error("Approved content is needed to launch the test")
   const channels = plan.channels.filter((c) => c in CHANNELS)
   const markets = plan.markets.filter((m) => m in MARKETS)
-  if (!channels.length || !markets.length) throw new Error("Scegli almeno un canale e un mercato")
+  if (!channels.length || !markets.length) throw new Error("Pick at least one channel and one market")
 
   const seed = hash(`${garment.id}|${JSON.stringify(plan)}`)
   const r = rng(seed)
@@ -168,7 +168,7 @@ export function simulateCampaign(garment: Garment, assets: Asset[], plan: Campai
   // each creative is a little better or worse than its type, for the whole test
   const luck = new Map(creatives.map((c) => [c.id, Math.exp(gauss(r) * 0.16)]))
   const live = creatives.map((c) => ({ ...c, channels: c.channels.filter((ch) => channels.includes(ch)) })).filter((c) => c.channels.length)
-  if (!live.length) throw new Error("Nessun contenuto adatto ai canali scelti")
+  if (!live.length) throw new Error("No content suits the chosen channels")
 
   const byCreative = new Map(live.map((c) => [c.id, zero()]))
   const byMarket = new Map(markets.map((m) => [m, zero()]))
@@ -313,7 +313,18 @@ function outcomeOf(q: number, median: number, sigma: number, price: number) {
   return { margin: Math.round(margin / n), markdownUnits: Math.round(markdown / n), lostSales: Math.round(lost / n) }
 }
 
-export function forecastFrom(result: CampaignResult): Forecast {
+/** Leather goods or knitwear, from the product's entry in data/market.json; unknown products count as leather goods. */
+export const familyOf = (sku: string): ArchiveLaunch["family"] => PRODUCTS[sku]?.family ?? "leather"
+
+/** The past launches a product is read against: its own family, so a cardigan is not forecast on bags. */
+export const archiveFor = (family: ArchiveLaunch["family"]) => ARCHIVE.filter((a) => a.family === family)
+
+/** Student t at 0.90 by degrees of freedom: the half-width of an 80% prediction interval on a small archive. */
+const T90 = [3.078, 1.886, 1.638, 1.533, 1.476, 1.44, 1.415, 1.397, 1.383, 1.372, 1.363, 1.356, 1.35, 1.345, 1.341]
+const t90 = (df: number) => T90.at(Math.min(df, T90.length) - 1) ?? 1.282
+
+export function forecastFrom(result: CampaignResult, family: ArchiveLaunch["family"] = "leather"): Forecast {
+  const past = archiveFor(family)
   const t = result.totals
   const signals = {
     saveRate: (t.saves / Math.max(1, t.reach)) * 100,
@@ -323,8 +334,8 @@ export function forecastFrom(result: CampaignResult): Forecast {
   }
 
   // sell-through at full price ~ save rate + pre-order conversion, ordinary least squares on the past launches
-  const X = ARCHIVE.map((a) => [1, a.test.saveRate, a.test.conversion])
-  const y = ARCHIVE.map((a) => a.outcome.sellThrough)
+  const X = past.map((a) => [1, a.test.saveRate, a.test.conversion])
+  const y = past.map((a) => a.outcome.sellThrough)
   const XtX = [0, 1, 2].map((i) => [0, 1, 2].map((j) => X.reduce((s, row) => s + row[i] * row[j], 0)))
   const Xty = [0, 1, 2].map((i) => X.reduce((s, row, k) => s + row[i] * y[k], 0))
   const inv = inverse3(XtX)
@@ -332,16 +343,16 @@ export function forecastFrom(result: CampaignResult): Forecast {
   const fit = X.map((row) => row.reduce((s, v, j) => s + v * beta[j], 0))
   const sse = y.reduce((s, v, i) => s + (v - fit[i]) ** 2, 0)
   const sst = y.reduce((s, v) => s + (v - mean(y)) ** 2, 0)
-  const n = ARCHIVE.length
+  const n = past.length
   const s2 = sse / (n - 3)
   const x0 = [1, signals.saveRate, signals.conversion]
   const lever = x0.reduce((s, xi, i) => s + xi * x0.reduce((u, xj, j) => u + inv[i][j] * xj, 0), 0)
   const predicted = x0.reduce((s, v, j) => s + v * beta[j], 0)
-  const half = 1.383 * Math.sqrt(s2 * (1 + lever)) // t(0.90, 9 df): an 80% prediction interval
+  const half = t90(n - 3) * Math.sqrt(s2 * (1 + lever)) // an 80% prediction interval
   const clamp = (v: number) => Math.min(0.98, Math.max(0.05, v))
 
   // season units = pre-orders per €1k of media × the brand's multiplier, log-normal across past launches
-  const logs = ARCHIVE.map((a) => Math.log(a.outcome.soldFullPrice / a.test.preordersPer1k))
+  const logs = past.map((a) => Math.log(a.outcome.soldFullPrice / a.test.preordersPer1k))
   const mu = mean(logs)
   const sigma = sd(logs) * Math.sqrt(1 + 1 / n)
   const median = Math.exp(mu) * signals.preordersPer1k
@@ -351,19 +362,19 @@ export function forecastFrom(result: CampaignResult): Forecast {
   const criticalRatio = (price - ECON.unitCost) / (price - ECON.salvage)
   const raw = median * Math.exp(sigma * zOf(criticalRatio))
   const quantity = Math.max(0, Math.round(raw / 10) * 10)
-  const baseline = Math.round(mean(ARCHIVE.map((a) => a.outcome.produced)) / 10) * 10
+  const baseline = Math.round(mean(past.map((a) => a.outcome.produced)) / 10) * 10
 
   const st = { predicted: clamp(predicted), low: clamp(predicted - half), high: clamp(predicted + half) }
   const target = ECON.targetSellThrough
   const reasons: string[] = []
-  reasons.push(`Sell-through previsto ${pct(st.predicted)} (80%: ${pct(st.low)}–${pct(st.high)}) contro un obiettivo del ${pct(target)}`)
-  reasons.push(`Quantità ottimale ${quantity} pezzi contro un minimo d'ordine del produttore di ${ECON.moq}`)
+  reasons.push(`Predicted sell-through ${pct(st.predicted)} (80%: ${pct(st.low)}–${pct(st.high)}) against a ${pct(target)} target`)
+  reasons.push(`Optimal quantity ${quantity} units against a manufacturer minimum order of ${ECON.moq}`)
   const decision: Forecast["decision"] =
     st.predicted >= target && quantity >= ECON.moq ? "go" : st.predicted >= target - 0.1 && quantity >= ECON.moq * 0.6 ? "iterate" : "stop"
 
-  const saves = ARCHIVE.map((a) => a.test.saveRate)
-  const convs = ARCHIVE.map((a) => a.test.conversion)
-  const per1k = ARCHIVE.map((a) => a.test.preordersPer1k)
+  const saves = past.map((a) => a.test.saveRate)
+  const convs = past.map((a) => a.test.conversion)
+  const per1k = past.map((a) => a.test.preordersPer1k)
   return {
     signals,
     percentile: { saveRate: percentile(saves, signals.saveRate), conversion: percentile(convs, signals.conversion), preordersPer1k: percentile(per1k, signals.preordersPer1k) },
@@ -398,7 +409,7 @@ export function impactOf(assets: Asset[], result: CampaignResult): Impact {
   }
 }
 
-export const archive = () => ARCHIVE
+export const archive = (family?: ArchiveLaunch["family"]) => (family ? archiveFor(family) : ARCHIVE)
 export const economics = () => ECON
 
 // ---------------------------------------------------------------- persistence and analysis
@@ -411,7 +422,7 @@ export async function runCampaign(garmentId: string, plan: CampaignPlan): Promis
   const result = simulateCampaign(garment, assets, plan)
   return updateDb((db) => {
     const g = db.garments.find((x) => x.id === garmentId)
-    if (!g) throw new Error("capo non trovato")
+    if (!g) throw new Error("garment not found")
     // the same plan gives the same numbers, so its analysis still holds
     const analyses = g.campaign?.analyses ?? {}
     g.campaign = { result, analyses }
@@ -429,14 +440,15 @@ export async function clearCampaign(garmentId: string) {
 export async function analyzeCampaign(garmentId: string): Promise<CampaignAnalysis> {
   const { garment, assets } = await getGarment(garmentId)
   const campaign = garment.campaign
-  if (!campaign) throw new Error("Lancia prima il test di mercato")
-  const forecast = forecastFrom(campaign.result)
+  if (!campaign) throw new Error("Launch the market test first")
+  const family = familyOf(garment.sku)
+  const forecast = forecastFrom(campaign.result, family)
   const { data, model } = await askJsonWith<Omit<CampaignAnalysis, "model" | "at">>(process.env.CAMPAIGN_TEXT_MODEL ?? "bedrock", {
     system: CAMPAIGN_SYSTEM,
-    prompt: campaignPrompt({ garment, result: campaign.result, forecast, impact: impactOf(assets, campaign.result), archive: ARCHIVE, themeLabel }),
+    prompt: campaignPrompt({ garment, result: campaign.result, forecast, impact: impactOf(assets, campaign.result), archive: archiveFor(family), themeLabel }),
     temperature: 0.3,
   })
-  const analysis: CampaignAnalysis = { ...data, model: model === "bedrock" ? bedrockModelId() : model, at: new Date().toISOString() }
+  const analysis: CampaignAnalysis = { ...data, model: model === "bedrock" ? bedrockModelId() : model === "amd" ? amdModelId() : model, at: new Date().toISOString() }
   await updateDb((db) => {
     const g = db.garments.find((x) => x.id === garmentId)
     if (g?.campaign) g.campaign.analyses = { ...g.campaign.analyses, [analysisKey(campaign.result)]: analysis }

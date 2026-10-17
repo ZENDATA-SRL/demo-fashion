@@ -33,13 +33,13 @@ export async function saveBuffer(data: Buffer, ext: string): Promise<Media> {
 
 export async function saveRemote(url: string, fallbackExt: string): Promise<Media> {
   const res = await fetch(url)
-  if (!res.ok) throw new Error(`download fallito (${res.status})`)
+  if (!res.ok) throw new Error(`download failed (${res.status})`)
   const ext = extname(new URL(url).pathname).toLowerCase()
   return saveBuffer(Buffer.from(await res.arrayBuffer()), MIME[ext] ? ext : fallbackExt)
 }
 
 export async function importFile(path: string): Promise<Media> {
   const ext = extname(path).toLowerCase()
-  if (!MIME[ext]) throw new Error(`formato non supportato: ${ext}`)
+  if (!MIME[ext]) throw new Error(`unsupported format: ${ext}`)
   return saveBuffer(await readFile(path), ext)
 }

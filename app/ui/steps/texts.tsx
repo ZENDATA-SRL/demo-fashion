@@ -57,7 +57,7 @@ export function TextsStep() {
         ) : (
           <div className="empty">
             <button className="btn primary" onClick={() => act({ type: "pdp" })}>
-              <Icon name="pen" /> Scrivi la pagina prodotto
+              <Icon name="pen" /> Write the product page
             </button>
           </div>
         )}
@@ -85,7 +85,7 @@ export function TextsStep() {
             <Tokens text={pdp.description} />
           </p>
           <div className="secs pdp-secs">
-            <Section title="Dettagli" meta={pdp.details.length}>
+            <Section title="Details" meta={pdp.details.length}>
               <ul>
                 {pdp.details.map((d) => (
                   <li key={d}>
@@ -94,10 +94,10 @@ export function TextsStep() {
                 ))}
               </ul>
             </Section>
-            <Section title="Vestibilità">
+            <Section title="Fit">
               <Tokens text={pdp.fit} />
             </Section>
-            <Section title="Composizione e cura">
+            <Section title="Composition and care">
               <Tokens text={pdp.composition} />
               <ul style={{ marginTop: 6 }}>
                 {pdp.care.map((c) => (
@@ -105,10 +105,10 @@ export function TextsStep() {
                 ))}
               </ul>
             </Section>
-            <Section title="Pre-ordine">
+            <Section title="Pre-order">
               <Tokens text={pdp.preorder} />
             </Section>
-            <Section title="Domande" meta={pdp.faq.length}>
+            <Section title="FAQ" meta={pdp.faq.length}>
               {pdp.faq.map((f) => (
                 <p key={f.q} style={{ marginBottom: 8 }}>
                   <b style={{ fontWeight: 500, color: "var(--ink)" }}>{f.q}</b>
@@ -118,7 +118,7 @@ export function TextsStep() {
               ))}
             </Section>
             {toSign.length > 0 && (
-              <Section title="Affermazioni da firmare" meta={`${toSign.length} su ${pdp.claims.length}`}>
+              <Section title="Claims to sign off" meta={`${toSign.length} of ${pdp.claims.length}`}>
                 {toSign.map((c) => (
                   <div className="claim" key={c.text}>
                     <span>{c.text}</span>
@@ -132,7 +132,7 @@ export function TextsStep() {
           </div>
           {!busy && (
             <button className="link-btn" onClick={() => act({ type: "pdp" })}>
-              Riscrivi
+              Rewrite
             </button>
           )}
         </div>

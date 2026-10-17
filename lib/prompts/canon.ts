@@ -100,7 +100,7 @@ ${dna.fields.map((f) => `- ${f.key}: ${f.value}`).join("\n")}`
 /** Packshots carry the whole DNA: no person in frame, so the content checkers let the construction vocabulary through. */
 export function canonPrompt(kind: AssetKind, dna: GarmentDna, plan: ShootPlan, roles: RefRole[]): string {
   const shot = shotSpec(kind, plan)
-  if (!shot) throw new Error(`nessun prompt canonico per ${kind}`)
+  if (!shot) throw new Error(`no canonical prompt for ${kind}`)
   return `Photorealistic product photograph of a garment that must match its technical specification exactly.
 
 ${rolesText(roles, plan)}

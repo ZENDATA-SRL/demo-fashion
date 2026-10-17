@@ -6,5 +6,5 @@ import { getGarment } from "../lib/garment"
 main(async () => {
   const { garment } = await getGarment(arg("garment"))
   const n = await computeFocus(garment.id, true)
-  console.log(`${garment.sku}: regioni salvate su ${n} immagini`)
+  console.log(`${garment.sku}: regions saved on ${n} images`)
 })

@@ -3,27 +3,27 @@ import type { AssetKind, AssetView, JobType, ShootPlan, StepStatus, Workspace } 
 /** The pipeline as the UI sees it: pure functions over a Workspace, shared by server (library) and client. */
 
 export const STEPS = [
-  { id: "input", phase: "creativo", label: "Design Brief", title: "Design Brief · Concept Sketch", lede: "Il punto di partenza e i vincoli da rispettare." },
-  { id: "concept", phase: "creativo", label: "Concept Visualization", title: "Concept Visualization", lede: "Il bozzetto diventa un prodotto reale." },
-  { id: "3d", phase: "tecnico", label: "Digital Prototype", title: "Image-to-3D · Digital Prototype", lede: "Le misure, verificate sul modello." },
-  { id: "viste", phase: "contenuti", label: "Packshot", title: "Product Rendering · Packshot", lede: "Fronte, lato e retro del prodotto approvato." },
-  { id: "scena", phase: "contenuti", label: "Lifestyle", title: "Lifestyle Rendering · Scene Integration", lede: "Il modello approvato in una scena vera, con le scelte del bozzetto." },
-  { id: "indossato", phase: "contenuti", label: "On-Model", title: "On-Model Rendering", lede: "Il prodotto addosso a una modella." },
-  { id: "studio", phase: "contenuti", label: "Editorial", title: "Campaign Editorial", lede: "Scatti editoriali." },
-  { id: "ugc", phase: "contenuti", label: "UGC", title: "UGC · Campaign Video", lede: "Video con creator." },
-  { id: "testi", phase: "delivery", label: "PDP", title: "Product Detail Page", lede: "La pagina prodotto." },
-  { id: "pubblica", phase: "delivery", label: "Sign-off", title: "Sign-off · Asset Delivery", lede: "Controlla, firma, esporta." },
-  { id: "prova", phase: "delivery", label: "Virtual Try-On", title: "Virtual Try-On", lede: "Il prodotto addosso a te, dal vivo." },
-  { id: "campagna", phase: "mercato", label: "Market Test", title: "Market Test · Campagna social", lede: "I contenuti approvati in una campagna a pagamento, prima del campione fisico." },
-  { id: "validazione", phase: "mercato", label: "Go / No-Go", title: "Validazione · Decisione di produzione", lede: "Cosa ha detto il mercato, quanto produrre e cosa cambiare." },
+  { id: "input", phase: "creativo", label: "Design Brief", title: "Design Brief · Concept Sketch", lede: "The starting point and the constraints to respect." },
+  { id: "concept", phase: "creativo", label: "Concept Visualization", title: "Concept Visualization", lede: "The sketch becomes a real product." },
+  { id: "3d", phase: "tecnico", label: "Digital Prototype", title: "Image-to-3D · Digital Prototype", lede: "The measurements, checked on the model." },
+  { id: "viste", phase: "contenuti", label: "Packshot", title: "Product Rendering · Packshot", lede: "Front, side and back of the approved product." },
+  { id: "scena", phase: "contenuti", label: "Lifestyle", title: "Lifestyle Rendering · Scene Integration", lede: "The approved model in a real scene, with the choices of the sketch." },
+  { id: "indossato", phase: "contenuti", label: "On-Model", title: "On-Model Rendering", lede: "The product worn by a model." },
+  { id: "studio", phase: "contenuti", label: "Editorial", title: "Campaign Editorial", lede: "Editorial shots." },
+  { id: "ugc", phase: "contenuti", label: "UGC", title: "UGC · Campaign Video", lede: "Videos with creators." },
+  { id: "testi", phase: "delivery", label: "PDP", title: "Product Detail Page", lede: "The product page." },
+  { id: "pubblica", phase: "delivery", label: "Sign-off", title: "Sign-off · Asset Delivery", lede: "Review, sign, export." },
+  { id: "prova", phase: "delivery", label: "Virtual Try-On", title: "Virtual Try-On", lede: "The product on you, live." },
+  { id: "campagna", phase: "mercato", label: "Market Test", title: "Market Test · Social campaign", lede: "The approved content in a paid campaign, before the physical sample." },
+  { id: "validazione", phase: "mercato", label: "Go / No-Go", title: "Validation · Production decision", lede: "What the market said, how much to make and what to change." },
 ] as const
 
 export const PHASES = [
-  { id: "creativo", label: "Sviluppo creativo" },
-  { id: "tecnico", label: "Sviluppo tecnico" },
-  { id: "contenuti", label: "Contenuti commerciali" },
+  { id: "creativo", label: "Creative development" },
+  { id: "tecnico", label: "Technical development" },
+  { id: "contenuti", label: "Commercial content" },
   { id: "delivery", label: "Delivery" },
-  { id: "mercato", label: "Validazione di mercato" },
+  { id: "mercato", label: "Market validation" },
 ] as const
 
 export type StepId = (typeof STEPS)[number]["id"]
@@ -32,11 +32,11 @@ export type StepId = (typeof STEPS)[number]["id"]
 export const QA_KINDS: AssetKind[] = ["ghost-front", "on-model", "lookbook", "ugc-frame"]
 
 export const VIEW_SLOTS: Array<{ kind: AssetKind; label: string }> = [
-  { kind: "ghost-front", label: "Fronte" },
-  { kind: "ghost-side", label: "Lato" },
-  { kind: "ghost-back", label: "Retro" },
-  { kind: "detail-button", label: "Dettaglio" },
-  { kind: "detail-fabric", label: "Tessuto" },
+  { kind: "ghost-front", label: "Front" },
+  { kind: "ghost-side", label: "Side" },
+  { kind: "ghost-back", label: "Back" },
+  { kind: "detail-button", label: "Detail" },
+  { kind: "detail-fabric", label: "Fabric" },
 ]
 
 /** Cabas-style packshots: front, strict side and back (same refs as the concept trilogy). */
@@ -151,110 +151,110 @@ export function stepStates(ws: Workspace): StepState[] {
   const inputJob = ws.jobs.find((j) => j.status === "running" && j.target === "input")
   const critical = g.dna?.fields.filter((f) => f.critical).length ?? 0
   const input: StepState = inputJob || busy("dna")
-    ? { id: "input", status: "running", detail: inputJob?.type === "refine" ? "Correggo il bozzetto" : inputJob ? "Creo il prodotto" : "Leggo i vincoli" }
+    ? { id: "input", status: "running", detail: inputJob?.type === "refine" ? "Correcting the sketch" : inputJob ? "Creating the product" : "Reading the constraints" }
     : !has("sketch") && !g.dna
-      ? { id: "input", status: "todo", detail: "Carica un bozzetto o fallo creare" }
+      ? { id: "input", status: "todo", detail: "Upload a sketch or have one made" }
       : !g.dna
-        ? { id: "input", status: "todo", detail: "Vincoli da leggere" }
+        ? { id: "input", status: "todo", detail: "Constraints to read" }
         : g.dnaConfirmed
-          ? { id: "input", status: "done", detail: `${critical} vincoli confermati` }
-          : { id: "input", status: "todo", detail: "Conferma i vincoli" }
+          ? { id: "input", status: "done", detail: `${critical} constraints confirmed` }
+          : { id: "input", status: "todo", detail: "Confirm the constraints" }
 
   const conceptDrafts = ws.assets.filter((a) => a.kind === "ghost-front" && a.status === "draft").length
   const concept: StepState = !g.dnaConfirmed
-    ? { id: "concept", status: "locked", detail: "Dopo il bozzetto" }
+    ? { id: "concept", status: "locked", detail: "After the sketch" }
     : busy("ghost-front")
-      ? { id: "concept", status: "running", detail: "Qwen sta disegnando" }
+      ? { id: "concept", status: "running", detail: "Qwen is drawing" }
       : front
-        ? { id: "concept", status: "done", detail: "Concept approvato" }
-        : { id: "concept", status: "todo", detail: conceptDrafts ? `${conceptDrafts} da scegliere` : "Da generare" }
+        ? { id: "concept", status: "done", detail: "Concept approved" }
+        : { id: "concept", status: "todo", detail: conceptDrafts ? `${conceptDrafts} to choose from` : "To generate" }
 
   const meshes = ws.assets.filter((a) => a.kind === "mesh" && a.status !== "rejected")
   const bozza: StepState = !front
-    ? { id: "3d", status: "locked", detail: "Dopo il concept" }
+    ? { id: "3d", status: "locked", detail: "After the concept" }
     : busy("mesh")
-      ? { id: "3d", status: "running", detail: "Ricostruisco il volume" }
+      ? { id: "3d", status: "running", detail: "Rebuilding the volume" }
       : meshOf(ws)
-        ? { id: "3d", status: "done", detail: approvedOf(ws, "mesh") ? "Modello approvato" : "Modello pronto" }
-        : { id: "3d", status: "todo", detail: meshes.length ? `${meshes.length} modelli da scegliere` : "Da generare" }
+        ? { id: "3d", status: "done", detail: approvedOf(ws, "mesh") ? "Model approved" : "Model ready" }
+        : { id: "3d", status: "todo", detail: meshes.length ? `${meshes.length} models to choose from` : "To generate" }
 
   const render = renderSlots(ws.garment.shoot)
   const viewsDone = render.filter((s) => approvedOf(ws, s.kind)).length
   const viste: StepState = !front
-    ? { id: "viste", status: "locked", detail: "Dopo il concept" }
+    ? { id: "viste", status: "locked", detail: "After the concept" }
     : busy("viste", ...render.map((s) => s.kind))
-      ? { id: "viste", status: "running", detail: `${viewsDone}/${render.length} approvati · in corso` }
+      ? { id: "viste", status: "running", detail: `${viewsDone}/${render.length} approved · running` }
       : {
           id: "viste",
           status: viewsDone === render.length ? "done" : "todo",
-          detail: meshOf(ws) || viewsDone ? `${viewsDone}/${render.length} approvati` : "Meglio dopo il 3D",
+          detail: meshOf(ws) || viewsDone ? `${viewsDone}/${render.length} approved` : "Better after the 3D",
         }
 
   const scena: StepState = !meshOf(ws)
-    ? { id: "scena", status: "locked", detail: "Dopo il modello 3D" }
+    ? { id: "scena", status: "locked", detail: "After the 3D model" }
     : approvedOf(ws, "scene")
-      ? { id: "scena", status: "done", detail: "Scena approvata" }
-      : { id: "scena", status: "todo", detail: has("scene") ? "Da scegliere" : "Dalla pipeline scena" }
+      ? { id: "scena", status: "done", detail: "Scene approved" }
+      : { id: "scena", status: "todo", detail: has("scene") ? "To choose" : "From the scene pipeline" }
 
   const indossato: StepState = !front
-    ? { id: "indossato", status: "locked", detail: "Serve il concept approvato" }
+    ? { id: "indossato", status: "locked", detail: "Needs the approved concept" }
     : busy("on-model")
-      ? { id: "indossato", status: "running", detail: "In corso" }
+      ? { id: "indossato", status: "running", detail: "Running" }
       : approvedOf(ws, "on-model")
-        ? { id: "indossato", status: "done", detail: "Approvato" }
-        : { id: "indossato", status: "todo", detail: "Da generare" }
+        ? { id: "indossato", status: "done", detail: "Approved" }
+        : { id: "indossato", status: "todo", detail: "To generate" }
 
   const looks = ws.looks.filter((l) => studioCell(ws, l.id).shot).length
   const studio: StepState = !approvedOf(ws, "on-model")
-    ? { id: "studio", status: "locked", detail: "Serve l'indossato approvato" }
+    ? { id: "studio", status: "locked", detail: "Needs the approved on-model shot" }
     : busy("studio:")
-      ? { id: "studio", status: "running", detail: `${looks}/${ws.looks.length} look · in corso` }
-      : { id: "studio", status: looks > 0 ? "done" : "todo", detail: looks ? `${looks}/${ws.looks.length} look approvati` : "Da generare" }
+      ? { id: "studio", status: "running", detail: `${looks}/${ws.looks.length} looks · running` }
+      : { id: "studio", status: looks > 0 ? "done" : "todo", detail: looks ? `${looks}/${ws.looks.length} looks approved` : "To generate" }
 
   const videos = ws.formats.filter((f) => ugcDone(ws, f.id)).length
   const ugc: StepState = !front
-    ? { id: "ugc", status: "locked", detail: "Serve il concept approvato" }
+    ? { id: "ugc", status: "locked", detail: "Needs the approved concept" }
     : busy("ugc:")
-      ? { id: "ugc", status: "running", detail: `${videos}/${ws.formats.length} reel · in corso` }
-      : { id: "ugc", status: videos === ws.formats.length ? "done" : "todo", detail: `${videos}/${ws.formats.length} reel approvati` }
+      ? { id: "ugc", status: "running", detail: `${videos}/${ws.formats.length} reels · running` }
+      : { id: "ugc", status: videos === ws.formats.length ? "done" : "todo", detail: `${videos}/${ws.formats.length} reels approved` }
 
   const testi: StepState = !front
-    ? { id: "testi", status: "locked", detail: "Serve il concept approvato" }
+    ? { id: "testi", status: "locked", detail: "Needs the approved concept" }
     : busy("pdp")
-      ? { id: "testi", status: "running", detail: "Scrivo" }
+      ? { id: "testi", status: "running", detail: "Writing" }
       : g.pdp
-        ? { id: "testi", status: "done", detail: "Scheda scritta" }
-        : { id: "testi", status: "todo", detail: "Da scrivere" }
+        ? { id: "testi", status: "done", detail: "Page written" }
+        : { id: "testi", status: "todo", detail: "To write" }
 
   const pubblica: StepState = !g.pdp
-    ? { id: "pubblica", status: "locked", detail: "Dopo la scheda" }
+    ? { id: "pubblica", status: "locked", detail: "After the product page" }
     : busy("export")
-      ? { id: "pubblica", status: "running", detail: "Esporto" }
+      ? { id: "pubblica", status: "running", detail: "Exporting" }
       : g.exportedAt && g.signoff
-        ? { id: "pubblica", status: "done", detail: "Firmato ed esportato" }
-        : { id: "pubblica", status: "todo", detail: g.signoff ? "Firmato · da esportare" : "Da firmare" }
+        ? { id: "pubblica", status: "done", detail: "Signed and exported" }
+        : { id: "pubblica", status: "todo", detail: g.signoff ? "Signed · to export" : "To sign" }
 
-  const hasLook = !!approvedOf(ws, "ghost-front") || has("sketch") || has("archive")
-  const prova: StepState = !hasLook
-    ? { id: "prova", status: "locked", detail: "Serve un'immagine del capo" }
+  // a delivery step: with only the sketch it would be the one open step after the brief, and the pill would jump to it
+  const prova: StepState = !front
+    ? { id: "prova", status: "locked", detail: "Needs the approved concept" }
     : { id: "prova", status: "todo", detail: "Webcam · Lucy VTON" }
 
   const campaign = ws.market.campaign
   const ads = ws.market.creatives.length
   const campagna: StepState = !ads
-    ? { id: "campagna", status: "locked", detail: "Servono contenuti approvati" }
+    ? { id: "campagna", status: "locked", detail: "Needs approved content" }
     : campaign
-      ? { id: "campagna", status: "done", detail: `${campaign.result.totals.preorders} pre-ordini in ${campaign.result.plan.days} giorni` }
-      : { id: "campagna", status: "todo", detail: `${ads} contenuti pronti al lancio` }
+      ? { id: "campagna", status: "done", detail: `${campaign.result.totals.preorders} pre-orders in ${campaign.result.plan.days} days` }
+      : { id: "campagna", status: "todo", detail: `${ads} assets ready to launch` }
 
-  const verdict = { go: "GO", iterate: "Iterare", stop: "Stop" } as const
+  const verdict = { go: "GO", iterate: "Iterate", stop: "Stop" } as const
   const validazione: StepState = !campaign
-    ? { id: "validazione", status: "locked", detail: "Dopo il test di mercato" }
+    ? { id: "validazione", status: "locked", detail: "After the market test" }
     : busy("campaign-analysis")
-      ? { id: "validazione", status: "running", detail: "Leggo il test" }
+      ? { id: "validazione", status: "running", detail: "Reading the test" }
       : campaign.analysis
-        ? { id: "validazione", status: "done", detail: `${verdict[campaign.forecast.decision]} · ${campaign.forecast.order.quantity} pezzi` }
-        : { id: "validazione", status: "todo", detail: `${verdict[campaign.forecast.decision]} statistico · da analizzare` }
+        ? { id: "validazione", status: "done", detail: `${verdict[campaign.forecast.decision]} · ${campaign.forecast.order.quantity} units` }
+        : { id: "validazione", status: "todo", detail: `${verdict[campaign.forecast.decision]} statistical · to analyse` }
 
   return [input, concept, bozza, viste, scena, indossato, studio, ugc, testi, pubblica, prova, campagna, validazione]
 }
@@ -267,5 +267,5 @@ export function scoreTone(score?: number): "ok" | "warn" | "bad" | undefined {
 export function creatorName(ws: Pick<Workspace, "creators">, id?: string, withCity = true) {
   const c = ws.creators.find((x) => x.id === id)
   if (!c) return id ?? ""
-  return [c.name, `${c.age} anni`, withCity ? c.city : ""].filter(Boolean).join(" · ")
+  return [c.name, `${c.age} y/o`, withCity ? c.city : ""].filter(Boolean).join(" · ")
 }

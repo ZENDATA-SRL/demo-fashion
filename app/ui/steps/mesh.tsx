@@ -43,7 +43,7 @@ export function MeshStep() {
     if (refined) return setShown(true)
     setSending(true)
     const res = await fetch(`/api/garments/${ws.garment.id}/mesh/simulate`, { method: "POST" })
-    if (!res.ok) toast({ title: "Intervento non caricato", body: ((await res.json()) as { error?: string }).error, tone: "error" })
+    if (!res.ok) toast({ title: "Operator pass not loaded", body: ((await res.json()) as { error?: string }).error, tone: "error" })
     await refresh()
     setTab("confronto")
     setShown(true)
@@ -58,7 +58,7 @@ export function MeshStep() {
         actions={
           current && (refined ? hidden : ws.garment.operatorDemo) && !busy ? (
             <button className="btn primary" onClick={simulate} disabled={sending}>
-              {sending ? <span className="spinner" /> : <Icon name="pen" />} Simula intervento operatore
+              {sending ? <span className="spinner" /> : <Icon name="pen" />} Simulate operator pass
             </button>
           ) : undefined
         }
@@ -66,12 +66,12 @@ export function MeshStep() {
       <input ref={input} type="file" accept=".glb,model/gltf-binary" hidden onChange={(e) => upload(e.target.files?.[0])} />
 
       {refined && before && !hidden && (
-        <div className="seg step-tabs" role="tablist" aria-label="Vista">
+        <div className="seg step-tabs" role="tablist" aria-label="View">
           <button role="tab" aria-pressed={tab === "confronto"} onClick={() => setTab("confronto")}>
-            Prima e dopo
+            Before and after
           </button>
           <button role="tab" aria-pressed={tab === "versioni"} onClick={() => setTab("versioni")}>
-            Versioni <span className="mono muted">{live.length}</span>
+            Versions <span className="mono muted">{live.length}</span>
           </button>
         </div>
       )}
@@ -87,21 +87,21 @@ export function MeshStep() {
             noApprove
             toolbar={
               <>
-                <GenerateButton label="Nuova versione" models={ws.models} modelIds={models} onRun={() => act({ type: "mesh", models })} busy={busy} disabled={locked} quiet />
+                <GenerateButton label="New version" models={ws.models} modelIds={models} onRun={() => act({ type: "mesh", models })} busy={busy} disabled={locked} quiet />
                 {current && (
                   <a href={current.src} download={`${ws.garment.sku}-3d.glb`}>
-                    <Icon name="download" size={12} /> Scarica GLB per l&apos;operatore
+                    <Icon name="download" size={12} /> Download GLB for the operator
                   </a>
                 )}
                 <button onClick={() => input.current?.click()} disabled={sending}>
-                  <Icon name="upload" size={12} /> Carica il modello rifinito
+                  <Icon name="upload" size={12} /> Upload the refined model
                 </button>
               </>
             }
             empty={
               <div className="empty">
-                {locked && <h3>Prima approva il concept</h3>}
-                {!locked && <GenerateButton label="Genera il modello 3D" models={ws.models} modelIds={models} onRun={() => act({ type: "mesh", models })} busy={busy} />}
+                {locked && <h3>Approve the concept first</h3>}
+                {!locked && <GenerateButton label="Generate the 3D model" models={ws.models} modelIds={models} onRun={() => act({ type: "mesh", models })} busy={busy} />}
               </div>
             }
           />
@@ -123,7 +123,7 @@ function OperatorCompare({ before, after, sku }: { before: AssetView; after: Ass
               <figcaption>
                 <b>{side === "before" ? "Image-to-3D" : "Mesh Cleanup"}</b>
                 <span className="muted">{a.model}</span>
-                <a className="icon-btn bordered" href={a.src} download={`${sku}-${side === "before" ? "3d" : "3d-affinato"}.glb`} aria-label="Scarica GLB">
+                <a className="icon-btn bordered" href={a.src} download={`${sku}-${side === "before" ? "3d" : "3d-refined"}.glb`} aria-label="Download GLB">
                   <Icon name="download" size={13} />
                 </a>
               </figcaption>

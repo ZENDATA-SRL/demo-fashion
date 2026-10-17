@@ -38,9 +38,9 @@ export function StudioStep() {
                       <Icon name="check" size={10} />
                     </span>
                   ) : x.shots.length ? (
-                    `${x.shots.length} da scegliere`
+                    `${x.shots.length} to choose from`
                   ) : (
-                    "Da generare"
+                    "Not generated"
                   )}
                 </span>
               </div>
@@ -54,10 +54,10 @@ export function StudioStep() {
         target={studioKey(look.id)}
         jobKind={["studio", "refine"]}
         assets={cell.shots}
-        toolbar={cell.shots.length > 0 && <GenerateButton label="Nuova versione" models={ws.models} modelIds={models} onRun={generate} busy={busy} quiet />}
+        toolbar={cell.shots.length > 0 && <GenerateButton label="New version" models={ws.models} modelIds={models} onRun={generate} busy={busy} quiet />}
         empty={
           <div className="empty">
-            {needsBack ? <h3>Prima approva il retro</h3> : <GenerateButton label="Genera lo scatto" models={ws.models} modelIds={models} onRun={generate} busy={busy} />}
+            {needsBack ? <h3>Approve the back view first</h3> : <GenerateButton label="Generate the shot" models={ws.models} modelIds={models} onRun={generate} busy={busy} />}
           </div>
         }
       />
