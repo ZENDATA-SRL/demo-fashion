@@ -13,7 +13,13 @@ export default async function Library() {
       <Topbar crumbs={[{ label: "Capi" }]} />
       <main className="page">
         <div className="page-head home-head">
-          <h1 className="page-title">Capi</h1>
+          <div>
+            <h1 className="page-title">Capi</h1>
+            <Link href="/brand" className="home-brand-link">
+              Brand DNA · il catalogo che lo definisce
+              <Icon name="right" size={12} />
+            </Link>
+          </div>
         </div>
         <div className="library">
           <Link href="/new" className="g-new enter">
@@ -26,7 +32,7 @@ export default async function Library() {
             const done = g.steps.filter((s) => s.status === "done").length
             const next = STEPS.find((s) => g.steps.find((x) => x.id === s.id)?.status !== "done")
             return (
-              <Link key={g.id} href={`/g/${g.id}`} className="g-card enter" style={{ "--d": `${(i + 1) * 50}ms` } as React.CSSProperties}>
+              <Link key={g.id} href={`/g/${g.id}?step=input`} className="g-card enter" style={{ "--d": `${(i + 1) * 50}ms` } as React.CSSProperties}>
                 <div className="g-thumb">{g.thumb ? <img src={g.thumb} alt="" /> : <Icon name="image" size={28} />}</div>
                 <div className="g-body">
                   <div className="g-name">{g.name}</div>

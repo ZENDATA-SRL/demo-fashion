@@ -1,8 +1,9 @@
+import type { ArchiveLaunch, Campaign, CampaignPlan, ChannelId, CreativeSpec, Forecast, Impact, MarketId } from "./campaign-types"
 import type { AssetKind, AssetStatus, Box, CastView, DnaField, Operator, Pdp, ShootPlan, Source } from "./types"
 
 /** Serialisable shapes shared by the API and the client. No runtime imports here. */
 
-export type JobType = "prepare" | "dna" | "brand-dna" | "shoot" | "canon" | "canon-all" | "refine" | "onmodel" | "onmodel-all" | "studio" | "ugc-frame" | "ugc-clip" | "ugc-reel" | "ugc-auto" | "pdp" | "focus" | "export" | "qa" | "mesh"
+export type JobType = "prepare" | "dna" | "brand-dna" | "shoot" | "canon" | "canon-all" | "refine" | "onmodel" | "onmodel-all" | "studio" | "ugc-frame" | "ugc-clip" | "ugc-reel" | "ugc-auto" | "pdp" | "focus" | "export" | "qa" | "mesh" | "campaign-analysis"
 
 export type JobView = {
   id: string
@@ -122,6 +123,20 @@ export type Workspace = {
   cost: number
   /** how long each kind of image usually takes, from every generation stored so far */
   pace: Pace
+  market: MarketView
+}
+
+/** The simulated market test: its setup, the last run with the statistical forecast, and the brand archive it is read against. */
+export type MarketView = {
+  plan: CampaignPlan
+  creatives: CreativeSpec[]
+  channels: Array<{ id: ChannelId; label: string }>
+  markets: Array<{ id: MarketId; label: string }>
+  campaign: (Campaign & { forecast: Forecast; impact: Impact }) | null
+  archive: ArchiveLaunch[]
+  economics: { unitCost: number; salvage: number; moq: number; targetSellThrough: number }
+  /** comment theme id → label */
+  themes: Record<string, string>
 }
 
 export type GarmentCard = {

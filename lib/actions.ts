@@ -1,3 +1,4 @@
+import { analyzeCampaign } from "./campaign"
 import { exportPack } from "./export"
 import { computeFocus } from "./focus"
 import {
@@ -64,6 +65,8 @@ export type Action =
   | { type: "qa"; assetId: string }
   /** approved product view → GLB, one asset per open model */
   | { type: "mesh"; models: string[] }
+  /** the text model reads the simulated market test and proposes the next actions */
+  | { type: "campaign-analysis" }
 
 const SEED_MODEL = "qwen-image-2.1-runpod"
 
@@ -372,6 +375,9 @@ export async function startAction(garmentId: string, action: Action): Promise<Jo
         { type: "mesh", target, label: "Mesh 3D", models: action.models, phase: `Genero con ${action.models.length} modelli` },
         () => generateMeshes(id, action.models),
       )
+
+    case "campaign-analysis":
+      return startJob(id, { type: "campaign-analysis", target, label: "Analisi del test", phase: "Leggo numeri, previsione e commenti" }, () => analyzeCampaign(id))
 
     case "export":
       return startJob(id, { type: "export", target, label: "Esportazione", phase: "Imprimo le etichette e scrivo il manifest" }, async () => {

@@ -54,6 +54,11 @@ export async function generateMusic(modelId: string, req: MusicRequest): Promise
 }
 
 export async function askJson<T>(req: TextRequest): Promise<{ data: T; model: string }> {
-  const model = textModel()
+  return askJsonWith<T>(undefined, req)
+}
+
+/** Same as askJson on a named text model; `undefined` is the one set in TEXT_MODEL. */
+export async function askJsonWith<T>(modelId: string | undefined, req: TextRequest): Promise<{ data: T; model: string }> {
+  const model = textModel(modelId)
   return { data: await model.json<T>(req), model: model.id }
 }

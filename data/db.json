@@ -679,6 +679,1412 @@
         ],
         "model": "gemini",
         "at": "2026-10-01T17:19:37.005Z"
+      },
+      "campaign": {
+        "result": {
+          "plan": {
+            "budget": 5000,
+            "days": 10,
+            "channels": [
+              "instagram",
+              "tiktok",
+              "pinterest"
+            ],
+            "markets": [
+              "IT",
+              "FR",
+              "DE",
+              "UK"
+            ],
+            "price": 590
+          },
+          "seed": 2004624445,
+          "ranAt": "2026-10-17T10:37:15.122Z",
+          "totals": {
+            "spend": 5000,
+            "impressions": 725214,
+            "reach": 469478,
+            "likes": 23412,
+            "comments": 1243,
+            "saves": 17077,
+            "shares": 2117,
+            "clicks": 5231,
+            "sessions": 4100,
+            "waitlist": 272,
+            "preorders": 52
+          },
+          "days": [
+            {
+              "spend": 500,
+              "impressions": 72420,
+              "reach": 46971,
+              "likes": 2293,
+              "comments": 127,
+              "saves": 1665,
+              "shares": 216,
+              "clicks": 567,
+              "sessions": 416,
+              "waitlist": 31,
+              "preorders": 2,
+              "day": 1
+            },
+            {
+              "spend": 500,
+              "impressions": 71701,
+              "reach": 46478,
+              "likes": 2252,
+              "comments": 118,
+              "saves": 1695,
+              "shares": 191,
+              "clicks": 599,
+              "sessions": 478,
+              "waitlist": 25,
+              "preorders": 7,
+              "day": 2
+            },
+            {
+              "spend": 500,
+              "impressions": 72448,
+              "reach": 46752,
+              "likes": 2382,
+              "comments": 127,
+              "saves": 1694,
+              "shares": 225,
+              "clicks": 533,
+              "sessions": 386,
+              "waitlist": 33,
+              "preorders": 3,
+              "day": 3
+            },
+            {
+              "spend": 500,
+              "impressions": 72277,
+              "reach": 46778,
+              "likes": 2302,
+              "comments": 117,
+              "saves": 1736,
+              "shares": 212,
+              "clicks": 585,
+              "sessions": 463,
+              "waitlist": 22,
+              "preorders": 1,
+              "day": 4
+            },
+            {
+              "spend": 500,
+              "impressions": 73104,
+              "reach": 47258,
+              "likes": 2419,
+              "comments": 139,
+              "saves": 1713,
+              "shares": 216,
+              "clicks": 556,
+              "sessions": 461,
+              "waitlist": 34,
+              "preorders": 7,
+              "day": 5
+            },
+            {
+              "spend": 500,
+              "impressions": 72885,
+              "reach": 47053,
+              "likes": 2346,
+              "comments": 127,
+              "saves": 1750,
+              "shares": 192,
+              "clicks": 516,
+              "sessions": 370,
+              "waitlist": 27,
+              "preorders": 7,
+              "day": 6
+            },
+            {
+              "spend": 500,
+              "impressions": 72158,
+              "reach": 46669,
+              "likes": 2287,
+              "comments": 107,
+              "saves": 1588,
+              "shares": 201,
+              "clicks": 505,
+              "sessions": 428,
+              "waitlist": 30,
+              "preorders": 7,
+              "day": 7
+            },
+            {
+              "spend": 500,
+              "impressions": 72863,
+              "reach": 47238,
+              "likes": 2374,
+              "comments": 128,
+              "saves": 1755,
+              "shares": 216,
+              "clicks": 497,
+              "sessions": 396,
+              "waitlist": 28,
+              "preorders": 4,
+              "day": 8
+            },
+            {
+              "spend": 500,
+              "impressions": 72856,
+              "reach": 47283,
+              "likes": 2366,
+              "comments": 114,
+              "saves": 1766,
+              "shares": 227,
+              "clicks": 470,
+              "sessions": 387,
+              "waitlist": 30,
+              "preorders": 8,
+              "day": 9
+            },
+            {
+              "spend": 500,
+              "impressions": 72502,
+              "reach": 46998,
+              "likes": 2391,
+              "comments": 139,
+              "saves": 1715,
+              "shares": 221,
+              "clicks": 403,
+              "sessions": 315,
+              "waitlist": 12,
+              "preorders": 6,
+              "day": 10
+            }
+          ],
+          "creatives": [
+            {
+              "id": "cr_a_mupz5d97bubx",
+              "assetId": "a_mupz5d97bubx",
+              "type": "ugc",
+              "label": "Reel UGC · Outfit check in strada",
+              "channels": [
+                "instagram",
+                "tiktok"
+              ],
+              "spend": 964.52,
+              "impressions": 136611,
+              "reach": 77421,
+              "likes": 4932,
+              "comments": 268,
+              "saves": 2244,
+              "shares": 477,
+              "clicks": 1199,
+              "sessions": 937,
+              "waitlist": 60,
+              "preorders": 14
+            },
+            {
+              "id": "cr_a_muptbt9shrem",
+              "assetId": "a_muptbt9shrem",
+              "type": "editorial",
+              "label": "Editorial · Passo high-key",
+              "channels": [
+                "instagram",
+                "pinterest"
+              ],
+              "spend": 835.41,
+              "impressions": 135978,
+              "reach": 92855,
+              "likes": 4957,
+              "comments": 243,
+              "saves": 4001,
+              "shares": 415,
+              "clicks": 895,
+              "sessions": 697,
+              "waitlist": 39,
+              "preorders": 10
+            },
+            {
+              "id": "cr_a_mupyubb0x50w",
+              "assetId": "a_mupyubb0x50w",
+              "type": "editorial",
+              "label": "Editorial · Bianco e vento",
+              "channels": [
+                "instagram",
+                "pinterest"
+              ],
+              "spend": 782.25,
+              "impressions": 127831,
+              "reach": 87287,
+              "likes": 4130,
+              "comments": 228,
+              "saves": 3421,
+              "shares": 372,
+              "clicks": 763,
+              "sessions": 605,
+              "waitlist": 35,
+              "preorders": 4
+            },
+            {
+              "id": "cr_a_mupy95tgtin1",
+              "assetId": "a_mupy95tgtin1",
+              "type": "onmodel",
+              "label": "On-model",
+              "channels": [
+                "instagram"
+              ],
+              "spend": 677.46,
+              "impressions": 78576,
+              "reach": 49117,
+              "likes": 1935,
+              "comments": 113,
+              "saves": 1335,
+              "shares": 205,
+              "clicks": 526,
+              "sessions": 380,
+              "waitlist": 31,
+              "preorders": 2
+            },
+            {
+              "id": "cr_a_muq0ccx7qmmf",
+              "assetId": "a_muq0ccx7qmmf",
+              "type": "lifestyle",
+              "label": "Lifestyle",
+              "channels": [
+                "pinterest",
+                "instagram"
+              ],
+              "spend": 939.06,
+              "impressions": 153843,
+              "reach": 105050,
+              "likes": 5861,
+              "comments": 286,
+              "saves": 4878,
+              "shares": 465,
+              "clicks": 1182,
+              "sessions": 931,
+              "waitlist": 76,
+              "preorders": 14
+            },
+            {
+              "id": "cr_a_muq0ot71p267",
+              "assetId": "a_muq0ot71p267",
+              "type": "packshot",
+              "label": "Packshot carosello",
+              "channels": [
+                "instagram"
+              ],
+              "spend": 801.3,
+              "impressions": 92375,
+              "reach": 57748,
+              "likes": 1597,
+              "comments": 105,
+              "saves": 1198,
+              "shares": 183,
+              "clicks": 666,
+              "sessions": 550,
+              "waitlist": 31,
+              "preorders": 8
+            }
+          ],
+          "markets": [
+            {
+              "id": "IT",
+              "label": "Italia",
+              "spend": 1250,
+              "impressions": 208650,
+              "reach": 135033,
+              "likes": 6762,
+              "comments": 351,
+              "saves": 4885,
+              "shares": 590,
+              "clicks": 1501,
+              "sessions": 1181,
+              "waitlist": 75,
+              "preorders": 19
+            },
+            {
+              "id": "FR",
+              "label": "Francia",
+              "spend": 1250,
+              "impressions": 181059,
+              "reach": 117268,
+              "likes": 5900,
+              "comments": 300,
+              "saves": 4182,
+              "shares": 535,
+              "clicks": 1271,
+              "sessions": 967,
+              "waitlist": 55,
+              "preorders": 9
+            },
+            {
+              "id": "DE",
+              "label": "Germania",
+              "spend": 1250,
+              "impressions": 174500,
+              "reach": 112935,
+              "likes": 5635,
+              "comments": 313,
+              "saves": 4091,
+              "shares": 537,
+              "clicks": 1268,
+              "sessions": 1003,
+              "waitlist": 72,
+              "preorders": 8
+            },
+            {
+              "id": "UK",
+              "label": "Regno Unito",
+              "spend": 1250,
+              "impressions": 161005,
+              "reach": 104242,
+              "likes": 5115,
+              "comments": 279,
+              "saves": 3919,
+              "shares": 455,
+              "clicks": 1191,
+              "sessions": 949,
+              "waitlist": 70,
+              "preorders": 16
+            }
+          ],
+          "ages": [
+            {
+              "id": "18-24",
+              "label": "18-24",
+              "spend": 900,
+              "impressions": 130217,
+              "reach": 84274,
+              "likes": 4177,
+              "comments": 227,
+              "saves": 3073,
+              "shares": 371,
+              "clicks": 1141,
+              "sessions": 911,
+              "waitlist": 66,
+              "preorders": 8
+            },
+            {
+              "id": "25-34",
+              "label": "25-34",
+              "spend": 1900,
+              "impressions": 276249,
+              "reach": 178826,
+              "likes": 8925,
+              "comments": 477,
+              "saves": 6542,
+              "shares": 833,
+              "clicks": 1852,
+              "sessions": 1456,
+              "waitlist": 96,
+              "preorders": 22
+            },
+            {
+              "id": "35-44",
+              "label": "35-44",
+              "spend": 1400,
+              "impressions": 202592,
+              "reach": 131175,
+              "likes": 6607,
+              "comments": 340,
+              "saves": 4736,
+              "shares": 548,
+              "clicks": 1375,
+              "sessions": 1087,
+              "waitlist": 70,
+              "preorders": 12
+            },
+            {
+              "id": "45+",
+              "label": "45+",
+              "spend": 800,
+              "impressions": 116156,
+              "reach": 75203,
+              "likes": 3703,
+              "comments": 199,
+              "saves": 2726,
+              "shares": 365,
+              "clicks": 863,
+              "sessions": 646,
+              "waitlist": 40,
+              "preorders": 10
+            }
+          ],
+          "comments": [
+            {
+              "id": "c47",
+              "creativeId": "cr_a_mupz5d97bubx",
+              "market": "UK",
+              "lang": "en",
+              "theme": "prezzo",
+              "sentiment": "neutral",
+              "text": "Bit pricey for the size",
+              "likes": 139,
+              "day": 9
+            },
+            {
+              "id": "c5",
+              "creativeId": "cr_a_muptbt9shrem",
+              "market": "DE",
+              "lang": "de",
+              "theme": "minimal",
+              "sentiment": "positive",
+              "text": "Endlich ohne Logo",
+              "likes": 132,
+              "day": 5
+            },
+            {
+              "id": "c48",
+              "creativeId": "cr_a_mupy95tgtin1",
+              "market": "IT",
+              "lang": "it",
+              "theme": "capienza",
+              "sentiment": "neutral",
+              "text": "Carina ma un po' piccola per il lavoro, farete una misura più grande?",
+              "likes": 125,
+              "day": 10
+            },
+            {
+              "id": "c41",
+              "creativeId": "cr_a_mupz5d97bubx",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "tracolla",
+              "sentiment": "negative",
+              "text": "Il manque une bandoulière amovible",
+              "likes": 119,
+              "day": 3
+            },
+            {
+              "id": "c31",
+              "creativeId": "cr_a_mupy95tgtin1",
+              "market": "DE",
+              "lang": "de",
+              "theme": "colore",
+              "sentiment": "positive",
+              "text": "Farbe ist ein Traum",
+              "likes": 105,
+              "day": 4
+            },
+            {
+              "id": "c17",
+              "creativeId": "cr_a_mupy95tgtin1",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "colore",
+              "sentiment": "positive",
+              "text": "Cette couleur cognac est sublime",
+              "likes": 97,
+              "day": 3
+            },
+            {
+              "id": "c30",
+              "creativeId": "cr_a_mupz5d97bubx",
+              "market": "DE",
+              "lang": "de",
+              "theme": "prezzo",
+              "sentiment": "neutral",
+              "text": "Etwas teuer",
+              "likes": 96,
+              "day": 2
+            },
+            {
+              "id": "c18",
+              "creativeId": "cr_a_mupyubb0x50w",
+              "market": "DE",
+              "lang": "de",
+              "theme": "colore",
+              "sentiment": "positive",
+              "text": "Die Cognac-Farbe ist wunderschön",
+              "likes": 86,
+              "day": 2
+            },
+            {
+              "id": "c32",
+              "creativeId": "cr_a_muptbt9shrem",
+              "market": "IT",
+              "lang": "it",
+              "theme": "chiusura",
+              "sentiment": "negative",
+              "text": "Mettete almeno una tasca interna con zip",
+              "likes": 85,
+              "day": 6
+            },
+            {
+              "id": "c52",
+              "creativeId": "cr_a_mupyubb0x50w",
+              "market": "IT",
+              "lang": "it",
+              "theme": "minimal",
+              "sentiment": "positive",
+              "text": "Pulitissima, niente loghi: la comprerei solo per questo",
+              "likes": 84,
+              "day": 1
+            },
+            {
+              "id": "c6",
+              "creativeId": "cr_a_muq0ot71p267",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "prezzo",
+              "sentiment": "neutral",
+              "text": "Le prix est correct pour la qualité",
+              "likes": 80,
+              "day": 10
+            },
+            {
+              "id": "c15",
+              "creativeId": "cr_a_mupz5d97bubx",
+              "market": "UK",
+              "lang": "en",
+              "theme": "prezzo",
+              "sentiment": "neutral",
+              "text": "Fair price for this quality",
+              "likes": 80,
+              "day": 9
+            },
+            {
+              "id": "c8",
+              "creativeId": "cr_a_mupy95tgtin1",
+              "market": "UK",
+              "lang": "en",
+              "theme": "pelle",
+              "sentiment": "positive",
+              "text": "Looks like proper full-grain leather",
+              "likes": 74,
+              "day": 4
+            },
+            {
+              "id": "c46",
+              "creativeId": "cr_a_mupz5d97bubx",
+              "market": "DE",
+              "lang": "de",
+              "theme": "minimal",
+              "sentiment": "positive",
+              "text": "Endlich ohne Logo",
+              "likes": 73,
+              "day": 6
+            },
+            {
+              "id": "c16",
+              "creativeId": "cr_a_muq0ccx7qmmf",
+              "market": "UK",
+              "lang": "en",
+              "theme": "minimal",
+              "sentiment": "positive",
+              "text": "Quiet luxury done right",
+              "likes": 71,
+              "day": 6
+            },
+            {
+              "id": "c59",
+              "creativeId": "cr_a_mupz5d97bubx",
+              "market": "IT",
+              "lang": "it",
+              "theme": "pelle",
+              "sentiment": "positive",
+              "text": "Mi piace che sia rigida, le borse morbide si afflosciano",
+              "likes": 66,
+              "day": 1
+            },
+            {
+              "id": "c57",
+              "creativeId": "cr_a_muptbt9shrem",
+              "market": "UK",
+              "lang": "en",
+              "theme": "pelle",
+              "sentiment": "positive",
+              "text": "Love that it stands on its own",
+              "likes": 60,
+              "day": 3
+            },
+            {
+              "id": "c13",
+              "creativeId": "cr_a_muptbt9shrem",
+              "market": "IT",
+              "lang": "it",
+              "theme": "capienza",
+              "sentiment": "neutral",
+              "text": "28 cm: entra una borraccia?",
+              "likes": 46,
+              "day": 3
+            },
+            {
+              "id": "c58",
+              "creativeId": "cr_a_mupyubb0x50w",
+              "market": "UK",
+              "lang": "en",
+              "theme": "prezzo",
+              "sentiment": "neutral",
+              "text": "Fair price for this quality",
+              "likes": 46,
+              "day": 6
+            },
+            {
+              "id": "c7",
+              "creativeId": "cr_a_muq0ccx7qmmf",
+              "market": "UK",
+              "lang": "en",
+              "theme": "colore",
+              "sentiment": "positive",
+              "text": "That cognac shade is everything",
+              "likes": 44,
+              "day": 4
+            },
+            {
+              "id": "c36",
+              "creativeId": "cr_a_mupyubb0x50w",
+              "market": "IT",
+              "lang": "it",
+              "theme": "chiusura",
+              "sentiment": "negative",
+              "text": "Solo il magnete? In metro a Milano mi serve una zip",
+              "likes": 33,
+              "day": 8
+            },
+            {
+              "id": "c35",
+              "creativeId": "cr_a_muptbt9shrem",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "tracolla",
+              "sentiment": "negative",
+              "text": "Il manque une bandoulière amovible",
+              "likes": 31,
+              "day": 10
+            },
+            {
+              "id": "c34",
+              "creativeId": "cr_a_muq0ccx7qmmf",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "minimal",
+              "sentiment": "positive",
+              "text": "Quiet luxury parfait",
+              "likes": 30,
+              "day": 5
+            },
+            {
+              "id": "c10",
+              "creativeId": "cr_a_mupyubb0x50w",
+              "market": "IT",
+              "lang": "it",
+              "theme": "prezzo",
+              "sentiment": "neutral",
+              "text": "Prezzo onesto rispetto ai marchi grandi",
+              "likes": 28,
+              "day": 4
+            },
+            {
+              "id": "c49",
+              "creativeId": "cr_a_muptbt9shrem",
+              "market": "UK",
+              "lang": "en",
+              "theme": "colore",
+              "sentiment": "positive",
+              "text": "That cognac shade is everything",
+              "likes": 28,
+              "day": 8
+            },
+            {
+              "id": "c3",
+              "creativeId": "cr_a_muq0ccx7qmmf",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "chiusura",
+              "sentiment": "negative",
+              "text": "Juste un aimant ? Pas rassurant dans le métro",
+              "likes": 26,
+              "day": 2
+            },
+            {
+              "id": "c19",
+              "creativeId": "cr_a_muptbt9shrem",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "prezzo",
+              "sentiment": "neutral",
+              "text": "Un peu cher pour une petite taille",
+              "likes": 22,
+              "day": 1
+            },
+            {
+              "id": "c56",
+              "creativeId": "cr_a_mupyubb0x50w",
+              "market": "UK",
+              "lang": "en",
+              "theme": "minimal",
+              "sentiment": "positive",
+              "text": "No logo is the whole point, love it",
+              "likes": 20,
+              "day": 1
+            },
+            {
+              "id": "c38",
+              "creativeId": "cr_a_mupyubb0x50w",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "tracolla",
+              "sentiment": "negative",
+              "text": "Il manque une bandoulière amovible",
+              "likes": 19,
+              "day": 8
+            },
+            {
+              "id": "c53",
+              "creativeId": "cr_a_mupy95tgtin1",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "pelle",
+              "sentiment": "positive",
+              "text": "On voit la qualité du cuir",
+              "likes": 18,
+              "day": 2
+            },
+            {
+              "id": "c0",
+              "creativeId": "cr_a_muq0ccx7qmmf",
+              "market": "DE",
+              "lang": "de",
+              "theme": "chiusura",
+              "sentiment": "negative",
+              "text": "Nur Magnetverschluss ist mir zu unsicher",
+              "likes": 17,
+              "day": 9
+            },
+            {
+              "id": "c45",
+              "creativeId": "cr_a_muptbt9shrem",
+              "market": "UK",
+              "lang": "en",
+              "theme": "minimal",
+              "sentiment": "positive",
+              "text": "No logo is the whole point, love it",
+              "likes": 14,
+              "day": 6
+            },
+            {
+              "id": "c28",
+              "creativeId": "cr_a_muq0ccx7qmmf",
+              "market": "IT",
+              "lang": "it",
+              "theme": "chiusura",
+              "sentiment": "negative",
+              "text": "La chiusura magnetica mi preoccupa per la sicurezza",
+              "likes": 13,
+              "day": 3
+            },
+            {
+              "id": "c42",
+              "creativeId": "cr_a_muptbt9shrem",
+              "market": "UK",
+              "lang": "en",
+              "theme": "tracolla",
+              "sentiment": "negative",
+              "text": "Will there be a crossbody strap?",
+              "likes": 12,
+              "day": 8
+            },
+            {
+              "id": "c12",
+              "creativeId": "cr_a_mupz5d97bubx",
+              "market": "IT",
+              "lang": "it",
+              "theme": "disponibilita",
+              "sentiment": "positive",
+              "text": "Quando arriva? Ho già fatto il pre-ordine",
+              "likes": 11,
+              "day": 6
+            },
+            {
+              "id": "c27",
+              "creativeId": "cr_a_mupz5d97bubx",
+              "market": "IT",
+              "lang": "it",
+              "theme": "colore",
+              "sentiment": "positive",
+              "text": "Finalmente un cuoio che non sembra plastica",
+              "likes": 11,
+              "day": 6
+            },
+            {
+              "id": "c37",
+              "creativeId": "cr_a_mupz5d97bubx",
+              "market": "DE",
+              "lang": "de",
+              "theme": "colore",
+              "sentiment": "positive",
+              "text": "Die Cognac-Farbe ist wunderschön",
+              "likes": 11,
+              "day": 3
+            },
+            {
+              "id": "c43",
+              "creativeId": "cr_a_muq0ccx7qmmf",
+              "market": "UK",
+              "lang": "en",
+              "theme": "colore",
+              "sentiment": "positive",
+              "text": "The colour is so rich, need it",
+              "likes": 8,
+              "day": 4
+            },
+            {
+              "id": "c51",
+              "creativeId": "cr_a_mupy95tgtin1",
+              "market": "DE",
+              "lang": "de",
+              "theme": "capienza",
+              "sentiment": "neutral",
+              "text": "Gibt es eine größere Version?",
+              "likes": 7,
+              "day": 7
+            },
+            {
+              "id": "c33",
+              "creativeId": "cr_a_mupyubb0x50w",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "disponibilita",
+              "sentiment": "positive",
+              "text": "Précommandée !",
+              "likes": 5,
+              "day": 8
+            },
+            {
+              "id": "c24",
+              "creativeId": "cr_a_mupyubb0x50w",
+              "market": "DE",
+              "lang": "de",
+              "theme": "disponibilita",
+              "sentiment": "positive",
+              "text": "Vorbestellt!",
+              "likes": 4,
+              "day": 6
+            },
+            {
+              "id": "c21",
+              "creativeId": "cr_a_muq0ot71p267",
+              "market": "DE",
+              "lang": "de",
+              "theme": "tracolla",
+              "sentiment": "negative",
+              "text": "Ohne Riemen leider nicht alltagstauglich",
+              "likes": 3,
+              "day": 2
+            },
+            {
+              "id": "c22",
+              "creativeId": "cr_a_mupyubb0x50w",
+              "market": "DE",
+              "lang": "de",
+              "theme": "colore",
+              "sentiment": "positive",
+              "text": "Farbe ist ein Traum",
+              "likes": 3,
+              "day": 3
+            },
+            {
+              "id": "c26",
+              "creativeId": "cr_a_muq0ccx7qmmf",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "prezzo",
+              "sentiment": "neutral",
+              "text": "Le prix est correct pour la qualité",
+              "likes": 3,
+              "day": 4
+            },
+            {
+              "id": "c1",
+              "creativeId": "cr_a_muptbt9shrem",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "capienza",
+              "sentiment": "neutral",
+              "text": "Est-ce qu'un iPad rentre dedans ?",
+              "likes": 1,
+              "day": 3
+            },
+            {
+              "id": "c2",
+              "creativeId": "cr_a_muptbt9shrem",
+              "market": "UK",
+              "lang": "en",
+              "theme": "minimal",
+              "sentiment": "positive",
+              "text": "No logo is the whole point, love it",
+              "likes": 1,
+              "day": 7
+            },
+            {
+              "id": "c23",
+              "creativeId": "cr_a_mupy95tgtin1",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "pelle",
+              "sentiment": "positive",
+              "text": "La structure rigide est très élégante",
+              "likes": 1,
+              "day": 7
+            },
+            {
+              "id": "c4",
+              "creativeId": "cr_a_mupz5d97bubx",
+              "market": "IT",
+              "lang": "it",
+              "theme": "tracolla",
+              "sentiment": "negative",
+              "text": "Solo a mano? Con la tracolla la prendevo subito",
+              "likes": 0,
+              "day": 4
+            },
+            {
+              "id": "c9",
+              "creativeId": "cr_a_muq0ccx7qmmf",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "tracolla",
+              "sentiment": "negative",
+              "text": "Il manque une bandoulière amovible",
+              "likes": 0,
+              "day": 8
+            },
+            {
+              "id": "c11",
+              "creativeId": "cr_a_muq0ccx7qmmf",
+              "market": "DE",
+              "lang": "de",
+              "theme": "minimal",
+              "sentiment": "positive",
+              "text": "Schlicht und edel",
+              "likes": 0,
+              "day": 1
+            },
+            {
+              "id": "c14",
+              "creativeId": "cr_a_mupyubb0x50w",
+              "market": "UK",
+              "lang": "en",
+              "theme": "tracolla",
+              "sentiment": "negative",
+              "text": "Needs a detachable strap, I can't do hand-carry only",
+              "likes": 0,
+              "day": 1
+            },
+            {
+              "id": "c20",
+              "creativeId": "cr_a_muq0ccx7qmmf",
+              "market": "UK",
+              "lang": "en",
+              "theme": "tracolla",
+              "sentiment": "negative",
+              "text": "Will there be a crossbody strap?",
+              "likes": 0,
+              "day": 3
+            },
+            {
+              "id": "c25",
+              "creativeId": "cr_a_mupyubb0x50w",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "tracolla",
+              "sentiment": "negative",
+              "text": "Dommage, sans bandoulière je ne peux pas la porter au quotidien",
+              "likes": 0,
+              "day": 4
+            },
+            {
+              "id": "c29",
+              "creativeId": "cr_a_muq0ot71p267",
+              "market": "DE",
+              "lang": "de",
+              "theme": "minimal",
+              "sentiment": "positive",
+              "text": "Schlicht und edel",
+              "likes": 0,
+              "day": 7
+            },
+            {
+              "id": "c39",
+              "creativeId": "cr_a_muq0ccx7qmmf",
+              "market": "DE",
+              "lang": "de",
+              "theme": "pelle",
+              "sentiment": "positive",
+              "text": "Die Nähte sind sehr sauber",
+              "likes": 0,
+              "day": 10
+            },
+            {
+              "id": "c40",
+              "creativeId": "cr_a_mupy95tgtin1",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "tracolla",
+              "sentiment": "negative",
+              "text": "Dommage, sans bandoulière je ne peux pas la porter au quotidien",
+              "likes": 0,
+              "day": 10
+            },
+            {
+              "id": "c44",
+              "creativeId": "cr_a_mupz5d97bubx",
+              "market": "IT",
+              "lang": "it",
+              "theme": "tracolla",
+              "sentiment": "negative",
+              "text": "Bellissima ma senza tracolla per me è scomoda tutti i giorni",
+              "likes": 0,
+              "day": 7
+            },
+            {
+              "id": "c50",
+              "creativeId": "cr_a_mupz5d97bubx",
+              "market": "IT",
+              "lang": "it",
+              "theme": "prezzo",
+              "sentiment": "neutral",
+              "text": "590 euro sono tanti ma per una pelle così ci stanno",
+              "likes": 0,
+              "day": 7
+            },
+            {
+              "id": "c54",
+              "creativeId": "cr_a_mupz5d97bubx",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "colore",
+              "sentiment": "positive",
+              "text": "Le ton cognac est exactement ce que je cherchais",
+              "likes": 0,
+              "day": 5
+            },
+            {
+              "id": "c55",
+              "creativeId": "cr_a_mupz5d97bubx",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "pelle",
+              "sentiment": "positive",
+              "text": "On voit la qualité du cuir",
+              "likes": 0,
+              "day": 2
+            }
+          ]
+        },
+        "analyses": {
+          "956183481": {
+            "verdict": "go",
+            "headline": "Si va in produzione: sell-through previsto 74.5% contro un obiettivo del 65%, con il limite basso dell'intervallo (69.5%) ancora sopra l'obiettivo.",
+            "summary": "La previsione statistica dice GO. Il sell-through a 8 settimane è 74.5% (80%: 69.5%–79.6%) e la quantità consigliata è 710 pezzi, contro un MOQ di 200. I commenti non danno motivi forti per fermarsi: colore (15 su 60), pelle e struttura (11) e assenza di logo (6) sono apprezzati. Il problema è la mancanza di tracolla (9 commenti su 60), da risolvere con un accessorio prima del lancio. Il test ha prodotto solo 40 pre-ordini, quindi le differenze tra mercati e pubblici vanno trattate come indicazioni.",
+            "insights": [
+              {
+                "title": "La previsione è solida e supera l'obiettivo",
+                "evidence": "Sell-through 74.5% (80%: 69.5%–79.6%) contro il 65% richiesto. La regressione su 12 lanci ha R² 0.91. Conversione 1.76% al percentile 75 e pre-ordini per €1k 16.0 al percentile 83 reggono il risultato, mentre il save rate 3.60% è al percentile 50."
+              },
+              {
+                "title": "Il Regno Unito converte il doppio degli altri mercati",
+                "evidence": "UK: 15 pre-ordini e conv. 3.11% con €625, cioè 24 pre-ordini per €1k. Francia: 1.21% (7 pre-ordini). Germania: 1.26% (7). Italia: 1.67% (11). Il CTR è identico nei quattro mercati (0.76%–0.78%): la differenza nasce dopo il click. Il campione è piccolo."
+              },
+              {
+                "title": "Lifestyle e Reel UGC rendono, packshot e on-model no",
+                "evidence": "Lifestyle: save 5.10%, conv. 2.06%, 13 pre-ordini a circa €37 l'uno. Reel UGC: CTR 1.05%, 9 pre-ordini a circa €53. Packshot carosello: save 1.91%, 4 pre-ordini a circa €90. On-model: conv. 1.34%, 4 pre-ordini a circa €100. I due editorial costano circa €77 per pre-ordine (5 pre-ordini ciascuno)."
+              },
+              {
+                "title": "Il pubblico 35-44 compra meglio dei giovani",
+                "evidence": "35-44: conv. 2.52% e 16 pre-ordini con €700. 18-24: conv. 1.02% e 5 pre-ordini con €450, pur con il CTR più alto (0.91%). Il 18-24 clicca ma non compra."
+              },
+              {
+                "title": "Le creatività si stancano nei 10 giorni",
+                "evidence": "I pre-ordini scendono da 7 al giorno 1 a 2 al giorno 10, con la spesa fissa a €250 al giorno. Le sessioni passano da 285 a 214. La lista d'attesa (142) è 3.5 volte i pre-ordini (40): c'è domanda non ancora convertita."
+              }
+            ],
+            "themes": [
+              {
+                "theme": "colore",
+                "label": "Colore cognac",
+                "sentiment": "positive",
+                "share": 0.25,
+                "quote": "That cognac shade is everything",
+                "action": "Tenere il cognac #B8652A come colore guida in tutti i contenuti."
+              },
+              {
+                "theme": "pelle",
+                "label": "Pelle e struttura",
+                "sentiment": "positive",
+                "share": 0.183,
+                "quote": "Mi piace che sia rigida, le borse morbide si afflosciano",
+                "action": "Mostrare la borsa in piedi da sola e le cuciture tono su tono nei contenuti scalati."
+              },
+              {
+                "theme": "tracolla",
+                "label": "Manca la tracolla",
+                "sentiment": "negative",
+                "share": 0.15,
+                "quote": "Dommage, sans bandoulière je ne peux pas la porter au quotidien",
+                "action": "Aggiungere una tracolla removibile come accessorio. Avvisare la lista d'attesa quando è confermata."
+              },
+              {
+                "theme": "capienza",
+                "label": "Capienza",
+                "sentiment": "neutral",
+                "share": 0.117,
+                "quote": "Does a 13 inch laptop fit?",
+                "action": "Girare un contenuto con gli oggetti dentro (tablet, borraccia) e dichiarare le misure reali. Valutare una taglia maggiore per dopo."
+              },
+              {
+                "theme": "minimal",
+                "label": "Nessun logo",
+                "sentiment": "positive",
+                "share": 0.1,
+                "quote": "Pulitissima, niente loghi: la comprerei solo per questo",
+                "action": "Mantenere la borsa senza scritte e usare «senza logo» come messaggio nei testi."
+              },
+              {
+                "theme": "chiusura",
+                "label": "Chiusura solo magnetica",
+                "sentiment": "negative",
+                "share": 0.067,
+                "quote": "Juste un aimant ? Pas rassurant dans le métro",
+                "action": "Aggiungere una tasca interna con zip. Non cambiare la chiusura esterna: i commenti sono solo 4 su 60."
+              },
+              {
+                "theme": "disponibilita",
+                "label": "Intenzione d'acquisto",
+                "sentiment": "positive",
+                "share": 0.067,
+                "quote": "Quando arriva? Ho già fatto il pre-ordine",
+                "action": "Comunicare una data di consegna e rispondere alla domanda sulla Svizzera."
+              },
+              {
+                "theme": "prezzo",
+                "label": "Prezzo",
+                "sentiment": "neutral",
+                "share": 0.067,
+                "quote": "Le prix est correct pour la qualité",
+                "action": "Tenere €590. Tre commenti su quattro sono favorevoli e uno dice «Bit pricey for the size»."
+              }
+            ],
+            "actions": [
+              {
+                "area": "design",
+                "action": "Aggiungere una tracolla removibile piatta, venduta come accessorio, e una tasca interna con zip. Lasciare invariati forma, colore e assenza di logo.",
+                "why": "9 commenti su 60 chiedono la tracolla (es. «Mit abnehmbarem Schulterriemen wäre sie perfekt»). 2 chiedono la tasca interna con zip, e 4 temono la chiusura solo magnetica.",
+                "impact": "Un acquirente su sei nel campione dei commenti (9 su 60) citava la tracolla come ostacolo. Obiettivo: portare la conversione da 1.76% verso 2.0%, il livello del contenuto Lifestyle (2.06%)."
+              },
+              {
+                "area": "creative",
+                "action": "Scalare Lifestyle e Reel UGC. Tagliare packshot carosello e on-model. Ridurre i due editorial. Sostituire le creatività dopo 5-6 giorni.",
+                "why": "Costo per pre-ordine: Lifestyle circa €37, UGC circa €53, editorial circa €77, packshot circa €90, on-model circa €100. I pre-ordini calano da 7 (g1) a 2 (g10).",
+                "impact": "Spostando i €1135 di packshot, on-model e editorial su Lifestyle e UGC, il costo medio scende da circa €62 (2500/40) verso circa €40 per pre-ordine."
+              },
+              {
+                "area": "creative",
+                "action": "Produrre un contenuto con gli oggetti dentro la borsa e le misure 28×22×10 cm in sovrimpressione. Rispondere ai commenti su tablet, laptop e borraccia.",
+                "why": "7 commenti su 60 chiedono la capienza («Passt ein Tablet rein?»). Una borsa larga 28 cm probabilmente non contiene un portatile da 13 pollici: va detto chiaramente.",
+                "impact": "Raccogliere parte dei 142 contatti in lista d'attesa. Obiettivo: 10 pre-ordini in più dalla lista, cioè +25% sui 40 attuali."
+              },
+              {
+                "area": "audience",
+                "action": "Concentrare il budget del prossimo ciclo sul Regno Unito (circa 40% invece del 25%) e sul pubblico 35-44. Ridurre il 18-24. Mantenere Italia, Francia e Germania con un budget di controllo.",
+                "why": "UK conv. 3.11% (24 pre-ordini per €1k) contro Francia 1.21% e Germania 1.26%. 35-44 conv. 2.52%, 18-24 conv. 1.02%.",
+                "impact": "Se il Regno Unito mantiene 24 pre-ordini per €1k contro la media di 16.0, €1000 in UK rendono circa 24 pre-ordini invece di 16. Il campione è di soli 15 pre-ordini: verificare nel prossimo ciclo."
+              },
+              {
+                "area": "production",
+                "action": "Ordinare 710 pezzi, come da modello newsvendor. Se il produttore lo consente, dividere in 500 subito e 210 dopo 4 settimane, in base alle vendite. Il MOQ è 200.",
+                "why": "La domanda mediana è 588 pezzi (80%: 437–790). Con 710 pezzi il margine atteso è €192360 e l'invenduto atteso 128 pz. Con l'ordine abituale di 650 pezzi il margine è €190740 e l'invenduto 84 pz: la differenza è piccola.",
+                "impact": "710 pezzi danno +€1620 di margine atteso rispetto a 650, ma 44 pezzi invenduti in più. Dividere l'ordine riduce il rischio sui 210 pezzi finali."
+              },
+              {
+                "area": "pricing",
+                "action": "Mantenere il prezzo di pre-ordine a €590. Non fare sconti sul lancio e valutare il prezzo della tracolla separatamente.",
+                "why": "Il sell-through previsto 74.5% è già sopra l'obiettivo del 65%. Solo 1 commento su 4 sul prezzo è negativo («Bit pricey for the size»). Lo storico mostra ST 78% per Tote Sabbia Grande a €720 e 59% per Tote Strutturata Fumo a €680.",
+                "impact": "Tenendo €590 si protegge il sell-through a prezzo pieno del 74.5%. Ogni ribasso riduce il margine atteso di €192360."
+              }
+            ],
+            "dnaChanges": [
+              {
+                "field": "handles",
+                "to": "dual short wide flat leather handles anchored seamlessly to the front and back top edges, plus an optional detachable flat crossbody strap in matching cognac leather",
+                "why": "9 commenti su 60 chiedono una tracolla, in molti casi removibile («Il manque une bandoulière amovible»)."
+              },
+              {
+                "field": "hardware_finish",
+                "to": "concealed magnetic hardware; small tonal-finished strap clips on inner side tabs, used only when the strap is attached",
+                "why": "La tracolla richiede un attacco. Va tenuto discreto per non perdere l'apprezzamento per l'aspetto pulito e senza logo (6 commenti)."
+              },
+              {
+                "field": "pockets",
+                "to": "none visible on exterior; one interior zip pocket",
+                "why": "2 commenti chiedono la tasca interna con zip («An inner zip pocket would make it perfect»). 4 commenti sulla chiusura temono il solo magnete nella metropolitana."
+              }
+            ],
+            "risks": [
+              "Il test ha solo 40 pre-ordini. Il 3.11% del Regno Unito (15 pre-ordini) e il 2.52% del 35-44 (16 pre-ordini) possono essere in parte casuali.",
+              "La previsione vale per la borsa testata, senza tracolla. Aggiungere tracolla e tasca cambia il prodotto, anche se solo in parte. Venderla come accessorio limita il rischio.",
+              "L'ordine di 710 pezzi è sopra la domanda mediana di 588. Se la domanda finisce al limite basso di 437, l'invenduto supera di molto i 128 pezzi attesi.",
+              "Il save rate 3.60% è al percentile 50. La previsione dipende molto dalla conversione (1.76%, percentile 75), che sul calo giornaliero (da 7 a 2 pre-ordini) può peggiorare.",
+              "I commenti analizzati sono 60 su 625. Le quote dei temi sono approssimative.",
+              "Le domande sulla capienza (7 commenti) possono portare a delusione se la borsa non contiene un portatile da 13 pollici. Serve comunicare le misure con chiarezza."
+            ],
+            "model": "eu.anthropic.claude-sonnet-5-5",
+            "at": "2026-10-17T10:17:06.476Z"
+          },
+          "2004624445": {
+            "verdict": "go",
+            "headline": "Go: sell-through previsto 67% contro un obiettivo del 65%. Ordinare 460 pezzi e aggiungere tracolla staccabile e tasca interna con zip.",
+            "summary": "La previsione statistica dà 67% (80%: 62,1%–71,9%) contro il 65% richiesto, e 460 pezzi sono sopra il MOQ di 200. Il save rate è buono (3,64%, percentile 58). La conversione è debole (1,27%, percentile 33) e pesa sul risultato. Il freno principale nei commenti è l'assenza della tracolla: 12 commenti su 60. Non basta per ribaltare la decisione statistica, ma va corretto nel design prima dell'ordine. Il colore, l'assenza di logo e la pelle sono apprezzati (27 commenti su 60 in totale), quindi il prodotto resta com'è.",
+            "insights": [
+              {
+                "title": "Il go regge, ma l'intervallo tocca il limite",
+                "evidence": "Sell-through 67,0% con intervallo 80% 62,1%–71,9%. Il limite basso è sotto l'obiettivo del 65%, quindi il margine di sicurezza è di soli 2 punti."
+              },
+              {
+                "title": "Interesse buono, conversione debole",
+                "evidence": "Save rate 3,64% (percentile 58), conversione 1,27% (percentile 33), 10,4 pre-ordini per €1k (percentile 33). Nel modello ogni 0,1 punti di conversione valgono 1,6 punti di sell-through (coefficiente 0,157)."
+              },
+              {
+                "title": "La tracolla mancante è il primo ostacolo all'acquisto",
+                "evidence": "12 commenti su 60 (20%) la chiedono. «Solo a mano? Con la tracolla la prendevo subito» (IT) e «Dommage, sans bandoulière je ne peux pas la porter au quotidien» (FR) indicano acquisti persi."
+              },
+              {
+                "title": "Lifestyle e UGC rendono, On-model e Bianco e vento no",
+                "evidence": "Lifestyle: 14 pre-ordini su €939, save 4,64%. Reel UGC: 14 su €965, CTR 0,88%. On-model: 2 su €677 (conv. 0,53%). Bianco e vento: 4 su €782 (conv. 0,66%)."
+              },
+              {
+                "title": "Italia e Regno Unito convertono il doppio di Francia e Germania",
+                "evidence": "IT 1,61% e UK 1,69% (35 pre-ordini su €2500) contro FR 0,93% e DE 0,80% (17 su €2500). La Germania ha però 72 iscritti in lista d'attesa, quasi quanti il Regno Unito (70)."
+              }
+            ],
+            "themes": [
+              {
+                "theme": "tracolla",
+                "label": "Manca la tracolla",
+                "sentiment": "negative",
+                "share": 0.2,
+                "quote": "Il manque une bandoulière amovible",
+                "action": "Aggiungere una tracolla staccabile come accessorio e mostrarla nei contenuti."
+              },
+              {
+                "theme": "minimal",
+                "label": "Nessun logo",
+                "sentiment": "positive",
+                "share": 0.167,
+                "quote": "Pulitissima, niente loghi: la comprerei solo per questo",
+                "action": "Mantenere l'assenza di logo come messaggio centrale in tutti i mercati."
+              },
+              {
+                "theme": "colore",
+                "label": "Colore cognac",
+                "sentiment": "positive",
+                "share": 0.167,
+                "quote": "Cette couleur cognac est sublime",
+                "action": "Non toccare #B8652A. Usare inquadrature da vicino sul colore nei contenuti di punta."
+              },
+              {
+                "theme": "prezzo",
+                "label": "Prezzo",
+                "sentiment": "neutral",
+                "share": 0.15,
+                "quote": "Fair price for this quality",
+                "action": "Tenere €590. I commenti sul prezzo sono 6 favorevoli e 3 contrari («Bit pricey for the size»), e il rilievo riguarda soprattutto la misura."
+              },
+              {
+                "theme": "pelle",
+                "label": "Pelle e struttura",
+                "sentiment": "positive",
+                "share": 0.117,
+                "quote": "Looks like proper full-grain leather",
+                "action": "Mostrare cuciture e rigidità in dettaglio. Il commento «Love that it stands on its own» è un buon spunto per un reel."
+              },
+              {
+                "theme": "chiusura",
+                "label": "Chiusura solo magnetica",
+                "sentiment": "negative",
+                "share": 0.083,
+                "quote": "Solo il magnete? In metro a Milano mi serve una zip",
+                "action": "Aggiungere una tasca interna con zip per i valori. Il magnete resta."
+              },
+              {
+                "theme": "capienza",
+                "label": "Capienza",
+                "sentiment": "negative",
+                "share": 0.067,
+                "quote": "Carina ma un po' piccola per il lavoro, farete una misura più grande?",
+                "action": "Rispondere con i contenuti mostrando cosa entra in 28×22×10 cm. Valutare una misura più grande solo dopo la prossima lettura."
+              },
+              {
+                "theme": "disponibilita",
+                "label": "Intenzione d'acquisto",
+                "sentiment": "positive",
+                "share": 0.05,
+                "quote": "Quando arriva? Ho già fatto il pre-ordine",
+                "action": "Inviare ai pre-ordinanti una data di consegna certa e ai 272 iscritti in lista d'attesa un avviso di apertura."
+              }
+            ],
+            "actions": [
+              {
+                "area": "design",
+                "action": "Aggiungere una tracolla staccabile piatta in pelle cognac e una tasca interna con zip. Non cambiare corpo, colore, misure o assenza di logo.",
+                "why": "Tracolla: 12 commenti su 60. Chiusura e sicurezza: 5 commenti, tra cui «Mettete almeno una tasca interna con zip» (85 like).",
+                "impact": "Se la conversione sale da 1,27% a 1,5%, il sell-through previsto sale di circa 3,6 punti (0,157 × 0,23), a condizione che il modello regga."
+              },
+              {
+                "area": "creative",
+                "action": "Tagliare On-model (€677) e Bianco e vento (€782). Spostare i €1459 su Lifestyle e Reel UGC. Tenere Passo high-key come terzo contenuto, con pochi aggiustamenti.",
+                "why": "Lifestyle e UGC fanno 14 pre-ordini ciascuno con circa €950 di spesa. On-model e Bianco e vento ne fanno 2 e 4 con conversioni di 0,53% e 0,66%.",
+                "impact": "Circa +15 pre-ordini a parità di budget (da 6 a circa 21 sui €1459), se il rendimento di Lifestyle e UGC regge."
+              },
+              {
+                "area": "creative",
+                "action": "Produrre un contenuto breve in cui si vede cosa entra nella borsa (28×22×10 cm) e la tracolla staccabile. Pubblicarlo come risposta ai commenti.",
+                "why": "Capienza: 4 commenti, per esempio «28 cm: entra una borraccia?». Il Packshot carosello è il peggiore per save (2,07%) e non risponde a queste domande.",
+                "impact": "Rispondere alle domande più frequenti punta a portare la conversione da 1,27% verso 1,5% (media dei contenuti migliori)."
+              },
+              {
+                "area": "audience",
+                "action": "Spostare €1000 da Francia e Germania a Italia e Regno Unito. Concentrare il budget su 25-34 e 45+. Ridurre i 18-24 (€900). In Germania usare le campagne sulla lista d'attesa.",
+                "why": "IT+UK: 14,0 pre-ordini per €1k. FR+DE: 6,8 per €1k. 25-34: 22 pre-ordini su €1900. 45+: conv. 1,55%. 18-24: conv. 0,88%.",
+                "impact": "Circa +7 pre-ordini ogni €1000 spostati (14,0 contro 6,8 per €1k)."
+              },
+              {
+                "area": "production",
+                "action": "Ordinare 460 pezzi al produttore, non i 650 abituali. Confermare con il produttore che tracolla e tasca zip rientrano nel lotto senza alzare il MOQ di 200.",
+                "why": "Domanda di stagione mediana 382 pezzi (80%: 284–514). Con 460 pezzi l'invenduto atteso è 82 pz contro 258 con 650.",
+                "impact": "Margine atteso €125031 contro €113934 con l'ordine abituale: circa +€11100. Vendite perse attese: 14 pz."
+              },
+              {
+                "area": "pricing",
+                "action": "Tenere il prezzo di pre-ordine a €590. Non fare sconti. Se serve, spiegare la qualità (pelle full-grain, cuciture) nelle schede prodotto.",
+                "why": "Commenti sul prezzo: 6 favorevoli su 9 («Prezzo onesto rispetto ai marchi grandi»). I 3 critici parlano di misura: «Un peu cher pour une petite taille».",
+                "impact": "Conserva il sell-through previsto del 67% e il margine di €125031 senza ribassi."
+              }
+            ],
+            "dnaChanges": [
+              {
+                "field": "handles",
+                "to": "dual short wide flat leather handles anchored seamlessly to the front and back top edges, plus an optional detachable flat leather shoulder strap in matching cognac leather",
+                "why": "12 commenti su 60 chiedono la tracolla, per esempio «Needs a detachable strap, I can't do hand-carry only»."
+              },
+              {
+                "field": "pockets",
+                "to": "none visible on exterior; one internal zippered pocket on the lining",
+                "why": "«Mettete almeno una tasca interna con zip» (85 like). Il nuovo contenuto non altera l'esterno pulito."
+              },
+              {
+                "field": "hardware_finish",
+                "to": "concealed magnetic hardware with no exterior exposed metal components; strap attachment hardware in a matte tonal cognac finish, unbranded",
+                "why": "La tracolla richiede attacchi. Vanno tenuti tonali e senza marchio per non perdere il pregio di «Pulitissima, niente loghi»."
+              }
+            ],
+            "risks": [
+              "Il limite basso dell'intervallo (62,1%) è sotto l'obiettivo del 65%. Se la conversione resta al percentile 33, il go è meno solido.",
+              "I pre-ordini sono solo 52 e i commenti analizzati 60 su 1243. I tassi per contenuto e per mercato sono stime fragili: 2 pre-ordini su On-model, 4 su Bianco e vento.",
+              "Aggiungere la tracolla cambia il prodotto. Non è stata testata sul mercato e potrebbe costare di più in produzione o ridurre la pulizia del design.",
+              "Le sessioni giornaliere scendono da 416 (g1) a 315 (g10). Il giorno 4 ha avuto 1 solo pre-ordine, quindi l'andamento è irregolare.",
+              "Nessun campione fisico esiste: qualità reale della pelle e della struttura va verificata sul prototipo prima di confermare l'ordine di 460 pezzi."
+            ],
+            "model": "eu.anthropic.claude-sonnet-5-5",
+            "at": "2026-10-17T10:42:53.355Z"
+          }
+        }
       }
     }
   ],
@@ -4192,6 +5598,55 @@
       "label": "blender",
       "createdAt": "2026-10-01T20:59:18.447Z",
       "approvedBy": "direzione creativa"
+    },
+    {
+      "id": "a_mvc893fpsjf8",
+      "garmentId": "g_mul19n4iilgd",
+      "kind": "mesh",
+      "media": {
+        "file": "m_mvc893fmvn20.glb",
+        "mime": "model/gltf-binary"
+      },
+      "status": "draft",
+      "refs": [
+        "a_mul1cjyh66dx",
+        "a_mul3le0k4lw4"
+      ],
+      "label": "operatore",
+      "operator": {
+        "minutes": 9,
+        "tool": "Blender · tools/refine_cabas.py",
+        "changes": [
+          "Dal 3D generato: profondità 77,2 cm invece di 10, corpo alto 77,9 cm invece di 22, manico posteriore spezzato, frammenti all'interno",
+          "Allineato e messo in scala: corpo 28 × 22 × 10 cm, fondo a quota zero",
+          "Corpo ricostruito strutturato: pareti dritte, pelle 2,5 mm, fondo piano, angoli arrotondati 1,2 cm",
+          "Manici rifatti: due nastri piatti da 2,2 cm, luce aperta sotto l'arco, attacchi a linguetta sul fronte e sul retro",
+          "Cucitura centrale come pezzo separato, con le due file di impunture",
+          "Linguetta interna con il magnete di chiusura",
+          "Componenti separati: corpo, interno, manici, cucitura, chiusura",
+          "Materiali: pelle liscia cognac con grana, interno scamosciato, bordi tinti"
+        ],
+        "body": {
+          "w": 28,
+          "h": 22,
+          "d": 10
+        },
+        "with_handles": {
+          "w": 28,
+          "h": 35.1,
+          "d": 10.8
+        },
+        "generated": {
+          "width_cm": 28,
+          "depth_cm": 77.2,
+          "height_with_handles_cm": 95.7,
+          "body_height_cm": 77.9,
+          "vertices": 55288,
+          "objects": 1
+        },
+        "simulated": true
+      },
+      "createdAt": "2026-10-17T10:01:57.925Z"
     }
   ]
 }

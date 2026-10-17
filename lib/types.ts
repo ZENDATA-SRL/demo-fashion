@@ -1,3 +1,5 @@
+import type { Campaign } from "./campaign-types"
+
 /** A file inside data/media. Providers upload it wherever they need it (fal CDN, ComfyUI input dir, base64). */
 export type Media = {
   file: string
@@ -123,6 +125,8 @@ export type Garment = {
   pdp?: Pdp
   signoff?: { by: string; at: string; items: string[] }
   exportedAt?: string
+  /** the simulated market test of the approved content, and its reading */
+  campaign?: Campaign
   createdAt: string
 }
 

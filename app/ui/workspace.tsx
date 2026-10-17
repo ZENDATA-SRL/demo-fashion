@@ -17,6 +17,8 @@ import { TryonStep } from "./steps/tryon"
 import { MeshStep } from "./steps/mesh"
 import { SceneStep } from "./steps/scene"
 import { CompareView } from "./compare"
+import { CampaignStep } from "./steps/campaign"
+import { ValidationStep } from "./steps/validation"
 
 type Patch = {
   field?: { key: string; value?: string; source?: string; critical?: boolean }
@@ -37,6 +39,8 @@ type Ctx = {
   act: (action: Action) => Promise<JobView | undefined>
   setStatus: (assetId: string, status: AssetStatus) => Promise<void>
   patch: (body: Patch) => Promise<void>
+  /** replace the workspace with one an API call already returned */
+  setWs: (ws: Workspace) => void
 }
 
 const WsCtx = createContext<Ctx | null>(null)
@@ -57,6 +61,7 @@ export function stepOfTarget(target: string): StepId {
   if (target.startsWith("ugc:")) return "ugc"
   if (target === "pdp") return "testi"
   if (target === "focus" || target === "export") return "pubblica"
+  if (target === "campaign-analysis") return "validazione"
   if (target === "ghost-front") return "concept"
   return "viste"
 }
@@ -67,7 +72,7 @@ export function WorkspaceApp({ initial, initialStep }: { initial: Workspace; ini
   const states = useMemo(() => stepStates(ws), [ws])
   const [step, setStep] = useState<StepId>(() => {
     const valid = STEPS.find((s) => s.id === initialStep)?.id
-    return valid ?? stepStates(initial).find((s) => s.status === "todo" || s.status === "running")?.id ?? "pubblica"
+    return valid ?? STEPS[0].id
   })
   const [comparing, setComparing] = useState(initialStep === "confronto")
   const [menu, setMenu] = useState(false)
@@ -177,6 +182,7 @@ export function WorkspaceApp({ initial, initialStep }: { initial: Workspace; ini
     act,
     setStatus,
     patch,
+    setWs,
   }
   const g = ws.garment
   const i = STEPS.findIndex((s) => s.id === step)
@@ -272,6 +278,8 @@ export function WorkspaceApp({ initial, initialStep }: { initial: Workspace; ini
               {step === "testi" && <TextsStep />}
               {step === "pubblica" && <PublishStep />}
               {step === "prova" && <TryonStep />}
+              {step === "campagna" && <CampaignStep />}
+              {step === "validazione" && <ValidationStep />}
             </div>
           )}
         </main>

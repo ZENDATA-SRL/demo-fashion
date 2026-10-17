@@ -8,6 +8,8 @@ import { Icon } from "../kit"
 import { StepHead, useWs } from "../workspace"
 
 const MODEL = "decart/lucy2-vton/realtime"
+/** Each session is cut after this long, to cap realtime spend. */
+const MAX_SESSION_S = 60
 
 type LiveConn = { send: (input: Record<string, unknown>) => void; close: () => void }
 
@@ -66,6 +68,7 @@ export function TryonStep() {
   const [busy, setBusy] = useState(false)
   const [on, setOn] = useState(false)
   const [recording, setRecording] = useState(false)
+  const [left, setLeft] = useState(MAX_SESSION_S)
 
   const stageRef = useRef<HTMLDivElement>(null)
   const recRef = useRef<MediaRecorder | null>(null)
@@ -315,6 +318,20 @@ export function TryonStep() {
   }
 
   useEffect(() => {
+    if (!on) return
+    const endsAt = Date.now() + MAX_SESSION_S * 1000
+    setLeft(MAX_SESSION_S)
+    const timer = setInterval(() => {
+      const s = Math.ceil((endsAt - Date.now()) / 1000)
+      if (s > 0) return setLeft(s)
+      note("tempo scaduto")
+      endSession()
+    }, 250)
+    return () => clearInterval(timer)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [on])
+
+  useEffect(() => {
     if (on) apply().catch(() => {})
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [refId])
@@ -338,7 +355,10 @@ export function TryonStep() {
           <video ref={outputRef} playsInline autoPlay muted className="tryon-main" hidden={!live} />
           <video ref={cameraRef} playsInline autoPlay muted className={live ? "tryon-pip tryon-mirror" : "tryon-main tryon-mirror"} />
           <div className="tryon-hud">
-            <span>{recording ? "Rec" : live ? "Live" : status}</span>
+            <span>
+              {recording ? "Rec" : live ? "Live" : status}
+              {on ? ` · ${left}s` : null}
+            </span>
           </div>
           <button className="icon-btn tryon-full" type="button" onClick={() => stageRef.current?.requestFullscreen()} aria-label="Schermo intero">
             <Icon name="arrow" size={13} />

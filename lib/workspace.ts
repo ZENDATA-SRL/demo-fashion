@@ -1,6 +1,7 @@
 import { existsSync } from "node:fs"
 import { readdir } from "node:fs/promises"
 import { join, relative } from "node:path"
+import { CHANNEL_IDS, MARKET_IDS, archive, channelLabel, creativesOf, defaultPlan, economics, forecastFrom, impactOf, marketLabel, themeLabels } from "./campaign"
 import { zoneKey } from "./focus"
 import { castAsset, getGarment } from "./garment"
 import { jobsFor } from "./jobs"
@@ -262,6 +263,23 @@ export async function buildWorkspace(id: string): Promise<Workspace> {
     // the cast is generated once and shared, so it is not part of what this garment cost
     cost: assets.filter((a) => a.garmentId !== CAST_ID).reduce((t, a) => t + (a.gen?.usd ?? 0), 0),
     pace,
+    market: {
+      plan: garment.campaign?.result.plan ?? defaultPlan(garment),
+      creatives: creativesOf(assets),
+      channels: CHANNEL_IDS.map((id) => ({ id, label: channelLabel(id) })),
+      markets: MARKET_IDS.map((id) => ({ id, label: marketLabel(id) })),
+      campaign: garment.campaign
+        ? {
+            result: garment.campaign.result,
+            analysis: garment.campaign.analyses?.[garment.campaign.result.seed],
+            forecast: forecastFrom(garment.campaign.result),
+            impact: impactOf(assets, garment.campaign.result),
+          }
+        : null,
+      archive: archive(),
+      economics: economics(),
+      themes: themeLabels(),
+    },
   }
 }
 

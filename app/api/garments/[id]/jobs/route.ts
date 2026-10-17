@@ -7,13 +7,17 @@ import { UGC_FORMATS, UGC_TRACKS, UGC_VOICES } from "@/lib/prompts/ugc"
 
 type Ctx = { params: Promise<{ id: string }> }
 
-const TYPES: Action["type"][] = ["prepare", "dna", "brand-dna", "shoot", "canon", "canon-all", "refine", "onmodel", "onmodel-all", "studio", "ugc-frame", "ugc-clip", "ugc-reel", "ugc-auto", "pdp", "focus", "export", "qa", "mesh"]
+const TYPES: Action["type"][] = ["prepare", "dna", "brand-dna", "shoot", "canon", "canon-all", "refine", "onmodel", "onmodel-all", "studio", "ugc-frame", "ugc-clip", "ugc-reel", "ugc-auto", "pdp", "focus", "export", "qa", "mesh", "campaign-analysis"]
 
-/** The demo ships with every asset already generated: provider calls only run with DEMO_LIVE=1 and keys in .env. */
+/**
+ * The demo ships with every asset already generated: provider calls only run with DEMO_LIVE=1 and keys in .env.
+ * CAMPAIGN_LLM=1 lets only the reading of the market test reach the text model, for an otherwise offline demo.
+ */
 export async function POST(req: Request, { params }: Ctx) {
-  if (process.env.DEMO_LIVE !== "1") return NextResponse.json({ offline: true })
   const { id } = await params
   const action = (await req.json().catch(() => ({}))) as Action
+  const live = process.env.DEMO_LIVE === "1" || (action.type === "campaign-analysis" && process.env.CAMPAIGN_LLM === "1")
+  if (!live) return NextResponse.json({ offline: true })
   if (!TYPES.includes(action.type)) return NextResponse.json({ error: "azione sconosciuta" }, { status: 400 })
   if ("models" in action && (!Array.isArray(action.models) || !action.models.length)) {
     return NextResponse.json({ error: "Scegli almeno un modello" }, { status: 400 })

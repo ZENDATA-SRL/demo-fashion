@@ -14,6 +14,8 @@ export const STEPS = [
   { id: "testi", phase: "delivery", label: "PDP", title: "Product Detail Page", lede: "La pagina prodotto." },
   { id: "pubblica", phase: "delivery", label: "Sign-off", title: "Sign-off · Asset Delivery", lede: "Controlla, firma, esporta." },
   { id: "prova", phase: "delivery", label: "Virtual Try-On", title: "Virtual Try-On", lede: "Il prodotto addosso a te, dal vivo." },
+  { id: "campagna", phase: "mercato", label: "Market Test", title: "Market Test · Campagna social", lede: "I contenuti approvati in una campagna a pagamento, prima del campione fisico." },
+  { id: "validazione", phase: "mercato", label: "Go / No-Go", title: "Validazione · Decisione di produzione", lede: "Cosa ha detto il mercato, quanto produrre e cosa cambiare." },
 ] as const
 
 export const PHASES = [
@@ -21,6 +23,7 @@ export const PHASES = [
   { id: "tecnico", label: "Sviluppo tecnico" },
   { id: "contenuti", label: "Contenuti commerciali" },
   { id: "delivery", label: "Delivery" },
+  { id: "mercato", label: "Validazione di mercato" },
 ] as const
 
 export type StepId = (typeof STEPS)[number]["id"]
@@ -236,7 +239,24 @@ export function stepStates(ws: Workspace): StepState[] {
     ? { id: "prova", status: "locked", detail: "Serve un'immagine del capo" }
     : { id: "prova", status: "todo", detail: "Webcam · Lucy VTON" }
 
-  return [input, concept, bozza, viste, scena, indossato, studio, ugc, testi, pubblica, prova]
+  const campaign = ws.market.campaign
+  const ads = ws.market.creatives.length
+  const campagna: StepState = !ads
+    ? { id: "campagna", status: "locked", detail: "Servono contenuti approvati" }
+    : campaign
+      ? { id: "campagna", status: "done", detail: `${campaign.result.totals.preorders} pre-ordini in ${campaign.result.plan.days} giorni` }
+      : { id: "campagna", status: "todo", detail: `${ads} contenuti pronti al lancio` }
+
+  const verdict = { go: "GO", iterate: "Iterare", stop: "Stop" } as const
+  const validazione: StepState = !campaign
+    ? { id: "validazione", status: "locked", detail: "Dopo il test di mercato" }
+    : busy("campaign-analysis")
+      ? { id: "validazione", status: "running", detail: "Leggo il test" }
+      : campaign.analysis
+        ? { id: "validazione", status: "done", detail: `${verdict[campaign.forecast.decision]} · ${campaign.forecast.order.quantity} pezzi` }
+        : { id: "validazione", status: "todo", detail: `${verdict[campaign.forecast.decision]} statistico · da analizzare` }
+
+  return [input, concept, bozza, viste, scena, indossato, studio, ugc, testi, pubblica, prova, campagna, validazione]
 }
 
 export function scoreTone(score?: number): "ok" | "warn" | "bad" | undefined {

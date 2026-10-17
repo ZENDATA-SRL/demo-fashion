@@ -8,3 +8,5 @@ data/sheets/
 next-env.d.ts
 *.tsbuildinfo
 .DS_Store
+
+nebius*

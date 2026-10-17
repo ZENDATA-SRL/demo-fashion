@@ -1,3 +1,4 @@
+import { BedrockRuntimeClient, ConverseCommand, type ImageFormat } from "@aws-sdk/client-bedrock-runtime"
 import { readMedia } from "../media"
 import type { TextModel, TextRequest } from "./types"
 
@@ -85,6 +86,46 @@ async function openAiJson<T>(req: TextRequest): Promise<T> {
   return parseJson<T>(text)
 }
 
+const g = globalThis as { __bedrock?: BedrockRuntimeClient }
+
+export const bedrockModelId = () => process.env.BEDROCK_MODEL_ID ?? "eu.anthropic.claude-sonnet-5-5"
+
+/** Amazon Bedrock Converse API. Credentials come from the default AWS chain (AWS_PROFILE, env keys, SSO). */
+async function bedrockJson<T>(req: TextRequest): Promise<T> {
+  g.__bedrock ??= new BedrockRuntimeClient({ region: process.env.AWS_REGION ?? "eu-central-1" })
+  const modelId = bedrockModelId()
+  const images = await Promise.all(
+    (req.images ?? []).map(async (m) => ({
+      image: { format: m.mime.replace("image/", "").replace("jpg", "jpeg") as ImageFormat, source: { bytes: await readMedia(m) } },
+    })),
+  )
+  // a tool call returns the answer as a structured object: no JSON to repair when a quote holds quotation marks.
+  // Newer models refuse a forced tool_choice, so the instruction asks for it and the text reply stays the fallback.
+  const out = await g.__bedrock.send(
+    new ConverseCommand({
+      modelId,
+      system: [{ text: `${req.system}\n\nConsegna la risposta chiamando lo strumento "answer" con l'oggetto come input, senza altro testo.` }],
+      messages: [{ role: "user", content: [...images, { text: req.prompt }] }],
+      inferenceConfig: { maxTokens: 12000 },
+      toolConfig: {
+        tools: [{ toolSpec: { name: "answer", description: "La risposta, nello schema JSON chiesto dal prompt di sistema.", inputSchema: { json: { type: "object" } } } }],
+        toolChoice: { auto: {} },
+      },
+    }),
+  )
+  const content = out.output?.message?.content ?? []
+  const tool = content.find((c) => c.toolUse)?.toolUse?.input
+  if (tool && typeof tool === "object") {
+    // some replies wrap the object once more, as { "input": {...} } or { "answer": {...} }
+    const keys = Object.keys(tool)
+    const inner = keys.length === 1 ? (tool as Record<string, unknown>)[keys[0]] : undefined
+    return (inner && typeof inner === "object" && !Array.isArray(inner) ? inner : tool) as T
+  }
+  const text = content.map((c) => c.text ?? "").join("").trim()
+  if (!text) throw new Error(`Bedrock risposta vuota (${out.stopReason ?? "?"})`)
+  return parseJson<T>(text)
+}
+
 export const TEXT_MODELS: TextModel[] = [
   {
     id: "gemini",
@@ -103,5 +144,14 @@ export const TEXT_MODELS: TextModel[] = [
     hosting: "self-hosted",
     weights: "open",
     json: openAiJson,
+  },
+  {
+    id: "bedrock",
+    label: "Claude su Amazon Bedrock",
+    note: "Converse API, modello da BEDROCK_MODEL_ID",
+    provider: "bedrock",
+    hosting: "managed",
+    weights: "closed",
+    json: bedrockJson,
   },
 ]

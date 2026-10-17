@@ -1,0 +1,200 @@
+{
+  "_note": "Catalogo SIMULATO per la demo: i prodotti passati di Aurenzi Milano che definiscono il DNA del brand. Gli SKU coincidono con l'archivio lanci di data/market.json, da cui arrivano prezzi e vendite. Le foto sono borse d'archivio senza marchio da Wikimedia Commons (Missouri Historical Society, MoMu Anversa), usate come stand-in: i crediti sono in photo.",
+  "brand": "Aurenzi Milano",
+  "loraProfile": "aurenzi-milano",
+  "manifesto": "Pelletteria milanese strutturata: pelle dai toni caldi, chiusure in ottone a vista, fondo piano. Niente loghi stampati.",
+  "products": [
+    {
+      "sku": "SS23-021",
+      "season": "SS23",
+      "silhouette": "bauletto",
+      "material": "Vitello liscio",
+      "colour": { "name": "Notte", "hex": "#2B2A2D" },
+      "hardware": "Occhielli e zip",
+      "codes": [],
+      "note": "Il primo bauletto: forma a cupola, niente ottone in vista, colore freddo. Metà della produzione è finita in saldo.",
+      "photo": {
+        "src": "/catalog/SS23-021.jpg",
+        "credit": "Missouri Historical Society",
+        "license": "Nessuna restrizione",
+        "url": "https://commons.wikimedia.org/wiki/File:Black_Leather_Box_Style_Handbag_-_DPLA_-_2314fad90e1c8e679b34ebfa04d565bc_(page_1).jpg"
+      }
+    },
+    {
+      "sku": "SS23-034",
+      "season": "SS23",
+      "silhouette": "tote",
+      "material": "Vitello stampa cocco",
+      "colour": { "name": "Sabbia", "hex": "#D6C2A4" },
+      "hardware": "Serratura ottone",
+      "codes": ["brass_turnlock", "cabas_flat_bottom"],
+      "note": "Corpo rigido, fondo piano e serratura in ottone al centro: la prima volta dei due codici insieme.",
+      "photo": {
+        "src": "/catalog/SS23-034.jpg",
+        "credit": "Missouri Historical Society",
+        "license": "Nessuna restrizione",
+        "url": "https://commons.wikimedia.org/wiki/File:Olive_Green_Leather_Envelope_Style_Handbag_-_DPLA_-_9d39fe8546461224b65345bd3f0bb1f3_(page_1).jpg"
+      }
+    },
+    {
+      "sku": "AW23-104",
+      "season": "AW23",
+      "silhouette": "secchiello",
+      "material": "Camoscio",
+      "colour": { "name": "Bordeaux", "hex": "#A9302F" },
+      "hardware": "Nessuno",
+      "codes": [],
+      "note": "Camoscio morbido con patta a busta: un esperimento rimasto isolato.",
+      "photo": {
+        "src": "/catalog/AW23-104.jpg",
+        "credit": "Missouri Historical Society",
+        "license": "Nessuna restrizione",
+        "url": "https://commons.wikimedia.org/wiki/File:Red_Suede_Pouch_Style_Handbag_-_DPLA_-_dc67fc3bb81185021418de0a5718fcb1_(page_1).jpg"
+      }
+    },
+    {
+      "sku": "AW23-118",
+      "season": "AW23",
+      "silhouette": "clutch",
+      "material": "Vitello martellato",
+      "colour": { "name": "Cammello", "hex": "#B88352" },
+      "hardware": "Cornice ottone",
+      "codes": ["brass_turnlock", "cognac_warm_hex", "aurenzi_cognac_leather"],
+      "note": "Nasce qui l'ottone a vista sulla chiusura, poi su quasi ogni borsa.",
+      "photo": {
+        "src": "/catalog/AW23-118.jpg",
+        "credit": "Missouri Historical Society",
+        "license": "Nessuna restrizione",
+        "url": "https://commons.wikimedia.org/wiki/File:Tan_Textured_Leather_Clutch_Purse_-_DPLA_-_4012e80a082b0ef6ca5ef76924349a74_(page_1).jpg"
+      }
+    },
+    {
+      "sku": "SS24-007",
+      "season": "SS24",
+      "silhouette": "tote",
+      "material": "Camoscio",
+      "colour": { "name": "Nero", "hex": "#212222" },
+      "hardware": "Nessuno",
+      "codes": ["cabas_flat_bottom"],
+      "note": "La forma del cabas in nero: costruzione giusta, colore e materiale fuori palette.",
+      "photo": {
+        "src": "/catalog/SS24-007.jpg",
+        "credit": "MoMu – Fashion Museum Antwerp",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Handtas_(ST651_6_01)_-_Kostuum_Accessoire_-_MoMu_Antwerp.jpg"
+      }
+    },
+    {
+      "sku": "SS24-019",
+      "season": "SS24",
+      "silhouette": "tracolla",
+      "material": "Cuoio vegetale inciso",
+      "colour": { "name": "Cuoio", "hex": "#8D5F46" },
+      "hardware": "Bottone ottone",
+      "codes": ["flat_handle_stitch", "cognac_warm_hex", "brass_turnlock"],
+      "note": "Tracolla piatta cucita a vista e bottone in ottone: il codice diventa riconoscibile.",
+      "photo": {
+        "src": "/catalog/SS24-019.jpg",
+        "credit": "Missouri Historical Society",
+        "license": "Nessuna restrizione",
+        "url": "https://commons.wikimedia.org/wiki/File:Leather_Envelope_Style_Purse_with_a_Belt_Hook_-_DPLA_-_469707b31778af415c1c31c4490b7c08_(page_1).jpg"
+      }
+    },
+    {
+      "sku": "AW24-052",
+      "season": "AW24",
+      "silhouette": "hobo",
+      "material": "Vitello morbido bottalato",
+      "colour": { "name": "Testa di moro", "hex": "#4A3F3A" },
+      "hardware": "Moschettoni brunito",
+      "codes": ["flat_handle_stitch", "cognac_warm_hex"],
+      "note": "La più venduta della pelle morbida: tono caldo scuro e tracolla piatta.",
+      "photo": {
+        "src": "/catalog/AW24-052.jpg",
+        "credit": "Missouri Historical Society",
+        "license": "Nessuna restrizione",
+        "url": "https://commons.wikimedia.org/wiki/File:Brown_Leather_Purse_with_Shoulder_Strap_-_DPLA_-_14fa5c45613e045aae4fedf45f20d2cd_(page_1).jpg"
+      }
+    },
+    {
+      "sku": "AW24-066",
+      "season": "AW24",
+      "silhouette": "tote",
+      "material": "Vitello liscio",
+      "colour": { "name": "Castagna", "hex": "#753F28" },
+      "hardware": "Attacchi ottone",
+      "codes": ["aurenzi_cognac_leather", "brass_turnlock", "cabas_flat_bottom"],
+      "note": "Shopper piatta entry price: pelle calda e attacchi in ottone tengono il legame con il brand.",
+      "photo": {
+        "src": "/catalog/AW24-066.jpg",
+        "credit": "Missouri Historical Society",
+        "license": "Nessuna restrizione",
+        "url": "https://commons.wikimedia.org/wiki/File:Brown_Leather_Envelope_Handbag_-_DPLA_-_c1d19d430b186b275aa5cb473da6f968_(page_1).jpg"
+      }
+    },
+    {
+      "sku": "SS25-012",
+      "season": "SS25",
+      "silhouette": "baguette",
+      "material": "Vitello liscio",
+      "colour": { "name": "Avorio", "hex": "#E4D8B4" },
+      "hardware": "Nessuno",
+      "codes": ["flat_handle_stitch"],
+      "note": "Avorio estivo a busta: niente ottone, ma la tracolla piatta resta.",
+      "photo": {
+        "src": "/catalog/SS25-012.jpg",
+        "credit": "MoMu – Fashion Museum Antwerp",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Handtas_(ST656_4_01)_-_Kostuum_Accessoire_-_MoMu_Antwerp.jpg"
+      }
+    },
+    {
+      "sku": "SS25-028",
+      "season": "SS25",
+      "silhouette": "tote",
+      "material": "Vitello bottalato",
+      "colour": { "name": "Fumo", "hex": "#5B5C5A" },
+      "hardware": "Cornice metallo canna di fucile",
+      "codes": ["cabas_flat_bottom"],
+      "note": "Strutturata ma grigia, con metallo freddo: venduta sotto la media.",
+      "photo": {
+        "src": "/catalog/SS25-028.jpg",
+        "credit": "Missouri Historical Society",
+        "license": "Nessuna restrizione",
+        "url": "https://commons.wikimedia.org/wiki/File:Dark_Grey_Leather_Handbag_-_DPLA_-_f676934219011ac2ae4eb524dad7cd15_(page_1).jpg"
+      }
+    },
+    {
+      "sku": "AW25-041",
+      "season": "AW25",
+      "silhouette": "bauletto",
+      "material": "Vitello stampa cocco",
+      "colour": { "name": "Cognac", "hex": "#AF5E2A" },
+      "hardware": "Chiusura ottone",
+      "codes": ["aurenzi_cognac_leather", "brass_turnlock", "cognac_warm_hex", "cabas_flat_bottom"],
+      "note": "Il bauletto rifatto nei codici: cognac, ottone, fondo piano.",
+      "photo": {
+        "src": "/catalog/AW25-041.jpg",
+        "credit": "MoMu – Fashion Museum Antwerp",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Handbags_(ST660_5_01)_-_Kostuum_Accessoire_-_MoMu_Antwerp.jpg"
+      }
+    },
+    {
+      "sku": "AW25-077",
+      "season": "AW25",
+      "silhouette": "clutch",
+      "material": "Nappa intrecciata",
+      "colour": { "name": "Sabbia", "hex": "#E3CDA9" },
+      "hardware": "Fibbia ottone",
+      "codes": ["brass_turnlock", "flat_handle_stitch"],
+      "note": "Il sell-through più alto dell'archivio, su un intreccio che il LoRA non conosce ancora: candidato a nuovo codice.",
+      "photo": {
+        "src": "/catalog/AW25-077.jpg",
+        "credit": "Missouri Historical Society",
+        "license": "Nessuna restrizione",
+        "url": "https://commons.wikimedia.org/wiki/File:Tan_Leather_Woven_Shoulder_Bag_-_DPLA_-_061ea92985b779b4b24ba07dcb9213ad_(page_1).jpg"
+      }
+    }
+  ]
+}

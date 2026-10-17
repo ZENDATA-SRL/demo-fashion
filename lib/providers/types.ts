@@ -9,7 +9,7 @@ export type ModelInfo = {
   id: string
   label: string
   note: string
-  provider: "fal" | "runpod" | "gemini" | "openai-compatible"
+  provider: "fal" | "runpod" | "gemini" | "openai-compatible" | "bedrock"
   hosting: Hosting
   /** open weights can move to self-hosting without changing the pipeline */
   weights: Weights
