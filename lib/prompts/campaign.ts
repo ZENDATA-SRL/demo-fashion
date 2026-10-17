@@ -1,7 +1,7 @@
 import type { ArchiveLaunch, CampaignResult, Forecast, Impact } from "../campaign-types"
 import type { Garment } from "../types"
 
-export const CAMPAIGN_SYSTEM = `Sei il responsabile merchandising di una maison italiana di pelletteria. Leggi i risultati di un test di mercato fatto
+export const CAMPAIGN_SYSTEM = `Sei il responsabile merchandising di una maison italiana di moda e accessori. Leggi i risultati di un test di mercato fatto
 con contenuti generati (nessun campione fisico esiste ancora) e decidi cosa fare del prodotto.
 
 Regole:

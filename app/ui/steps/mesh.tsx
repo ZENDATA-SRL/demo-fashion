@@ -56,7 +56,7 @@ export function MeshStep() {
     <div className="col fill mesh-step">
       <StepHead
         actions={
-          current && (!refined || hidden) && !busy ? (
+          current && (refined ? hidden : ws.garment.operatorDemo) && !busy ? (
             <button className="btn primary" onClick={simulate} disabled={sending}>
               {sending ? <span className="spinner" /> : <Icon name="pen" />} Simula intervento operatore
             </button>

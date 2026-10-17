@@ -278,7 +278,1602 @@
         "model": "gemini",
         "at": "2026-09-28T09:17:54.672Z"
       },
-      "dnaConfirmedAt": "2026-09-28T09:18:10.760Z"
+      "dnaConfirmedAt": "2026-09-28T09:18:10.760Z",
+      "pdp": {
+        "title": "Cardigan a coste con zip",
+        "subtitle": "Beige, maglia di lana o misto cashmere",
+        "description": "Il capo riprende fedelmente un modello d'archivio della maison, preservandone la struttura originale. Realizzato a coste inglesi con calature sagomate lungo il raglan, presenta un collo a lupetto e una chiusura frontale a tutta lunghezza con cerniera metallica a vista. La metalleria lucida tonalità argento comprende denti a vista e un tiretto rettangolare allungato. La maglia a costine verticali cade dritta sul busto, per poi raccogliersi leggermente al punto vita tramite il bordo a costine. Le maniche raglan garantiscono comfort naturale sulle spalle. Privo di tasche e sfoderato, il cardigan ha lunghezza ai fianchi e si indossa agevolmente sia a vista sia sotto un cappotto.",
+        "details": [
+          "Maglia a coste inglesi con coste verticali accentuate",
+          "Collo a lupetto lavorato in continuità con il corpo",
+          "Maniche raglan con calature diagonali a vista",
+          "Chiusura frontale con zip metallica a vista e tiretto rettangolare lucido",
+          "Polsini e bordo inferiore lavorati a costina elastica integrata",
+          "Costruzione sfoderata con cuciture rimagliate fully fashioned",
+          "Design lineare privo di tasche, lunghezza ai fianchi"
+        ],
+        "fit": "Silhouette diritta e rilassata lungo il busto, con un leggero affusolamento al bacino dato dal bordo a costine. Il volume morbido su petto e spalle raglan assicura libertà di movimento, assestandosi in modo naturale sulla vita.",
+        "composition": "Lana o misto cashmere (composizione definitiva da confermare al campione)",
+        "care": [
+          "Lavare a secco delicatamente con percloroetilene",
+          "Non trattare con candeggina o cloro",
+          "Stirare a temperatura moderata senza vapore",
+          "Asciugare in piano a ombra, lontano da fonti dirette di calore"
+        ],
+        "preorder": "Il capo viene prodotto esclusivamente su richiesta per garantire precisione artigianale ed evitare eccedenze di magazzino. La spedizione è prevista a partire dal [DATA SPEDIZIONE].",
+        "faq": [
+          {
+            "q": "È possibile rendere o cambiare un articolo acquistato in pre-ordine?",
+            "a": "Sì, i capi in pre-ordine possono essere resi o sostituiti entro [GIORNI RESO] giorni dalla ricezione dell'ordine, a condizione che siano integri, mai indossati e provvisti di cartellino originale."
+          },
+          {
+            "q": "Come selezionare la taglia corretta?",
+            "a": "Consigliamo di ordinare la propria misura abituale per ottenere la vestibilità rilassata concepita dall'archivio. In caso di dubbi tra due misure, il nostro servizio clienti è a disposizione per un consiglio dedicato."
+          },
+          {
+            "q": "In quale momento viene addebitato l'importo dell'ordine?",
+            "a": "L'addebito viene effettuato al momento della conferma dell'ordine per consentire l'allocazione delle filature e l'avvio della tessitura dedicata."
+          },
+          {
+            "q": "Cosa accade qualora la produzione richieda modifiche su un dettaglio?",
+            "a": "Se durante la prototipazione finale si rendesse necessaria una variazione costruttiva rispetto al modello illustrato, il nostro team fornirà tempestiva comunicazione via email offrendo la possibilità di confermare o annullare l'ordine."
+          }
+        ],
+        "claims": [
+          {
+            "text": "Modello fedele a un capo d'archivio della maison",
+            "source": "note",
+            "needsSignOff": false
+          },
+          {
+            "text": "Filato in lana o misto cashmere",
+            "source": "archive",
+            "needsSignOff": true
+          },
+          {
+            "text": "Lavorazione a coste inglesi con coste verticali tridimensionali",
+            "source": "archive",
+            "needsSignOff": false
+          },
+          {
+            "text": "Cuciture rimagliate fully fashioned con calature sagomate a vista sul raglan",
+            "source": "archive",
+            "needsSignOff": false
+          },
+          {
+            "text": "Zip frontale in metallo a vista con denti e tiretto rettangolare finitura argento lucido",
+            "source": "archive",
+            "needsSignOff": false
+          },
+          {
+            "text": "Collo a lupetto a costine lavorato senza soluzione di continuità dal busto",
+            "source": "sketch",
+            "needsSignOff": false
+          },
+          {
+            "text": "Spalle e maniche a costruzione raglan",
+            "source": "sketch",
+            "needsSignOff": false
+          },
+          {
+            "text": "Capo privo di tasche",
+            "source": "sketch",
+            "needsSignOff": false
+          },
+          {
+            "text": "Capo privo di fodera interna (sfoderato)",
+            "source": "invented",
+            "needsSignOff": true
+          },
+          {
+            "text": "Lunghezza ai fianchi",
+            "source": "sketch",
+            "needsSignOff": false
+          },
+          {
+            "text": "Colore beige",
+            "source": "sketch",
+            "needsSignOff": false
+          }
+        ],
+        "model": "gemini",
+        "at": "2026-10-17T10:49:43.923Z"
+      },
+      "campaign": {
+        "result": {
+          "plan": {
+            "budget": 2500,
+            "days": 10,
+            "channels": [
+              "instagram",
+              "tiktok",
+              "pinterest"
+            ],
+            "markets": [
+              "IT",
+              "FR",
+              "DE",
+              "UK"
+            ],
+            "price": 390
+          },
+          "seed": 3051924538,
+          "ranAt": "2026-10-17T10:54:55.670Z",
+          "totals": {
+            "spend": 2500,
+            "impressions": 381831,
+            "reach": 252845,
+            "likes": 10520,
+            "comments": 607,
+            "saves": 7895,
+            "shares": 1058,
+            "clicks": 2348,
+            "sessions": 1875,
+            "waitlist": 106,
+            "preorders": 14
+          },
+          "days": [
+            {
+              "spend": 250,
+              "impressions": 37837,
+              "reach": 25096,
+              "likes": 1045,
+              "comments": 61,
+              "saves": 777,
+              "shares": 106,
+              "clicks": 270,
+              "sessions": 208,
+              "waitlist": 9,
+              "preorders": 3,
+              "day": 1
+            },
+            {
+              "spend": 250,
+              "impressions": 38175,
+              "reach": 25318,
+              "likes": 997,
+              "comments": 45,
+              "saves": 774,
+              "shares": 95,
+              "clicks": 254,
+              "sessions": 215,
+              "waitlist": 17,
+              "preorders": 1,
+              "day": 2
+            },
+            {
+              "spend": 250,
+              "impressions": 38345,
+              "reach": 25547,
+              "likes": 1034,
+              "comments": 62,
+              "saves": 806,
+              "shares": 108,
+              "clicks": 269,
+              "sessions": 238,
+              "waitlist": 12,
+              "preorders": 1,
+              "day": 3
+            },
+            {
+              "spend": 250,
+              "impressions": 38121,
+              "reach": 25268,
+              "likes": 1049,
+              "comments": 68,
+              "saves": 801,
+              "shares": 116,
+              "clicks": 262,
+              "sessions": 206,
+              "waitlist": 9,
+              "preorders": 4,
+              "day": 4
+            },
+            {
+              "spend": 250,
+              "impressions": 38354,
+              "reach": 25358,
+              "likes": 998,
+              "comments": 64,
+              "saves": 813,
+              "shares": 97,
+              "clicks": 235,
+              "sessions": 202,
+              "waitlist": 13,
+              "preorders": 1,
+              "day": 5
+            },
+            {
+              "spend": 250,
+              "impressions": 38224,
+              "reach": 25300,
+              "likes": 1062,
+              "comments": 68,
+              "saves": 768,
+              "shares": 102,
+              "clicks": 212,
+              "sessions": 152,
+              "waitlist": 8,
+              "preorders": 1,
+              "day": 6
+            },
+            {
+              "spend": 250,
+              "impressions": 38095,
+              "reach": 25178,
+              "likes": 1067,
+              "comments": 59,
+              "saves": 822,
+              "shares": 120,
+              "clicks": 221,
+              "sessions": 157,
+              "waitlist": 11,
+              "preorders": 1,
+              "day": 7
+            },
+            {
+              "spend": 250,
+              "impressions": 38091,
+              "reach": 25179,
+              "likes": 1096,
+              "comments": 66,
+              "saves": 804,
+              "shares": 100,
+              "clicks": 213,
+              "sessions": 149,
+              "waitlist": 8,
+              "preorders": 0,
+              "day": 8
+            },
+            {
+              "spend": 250,
+              "impressions": 38188,
+              "reach": 25225,
+              "likes": 1083,
+              "comments": 55,
+              "saves": 757,
+              "shares": 107,
+              "clicks": 211,
+              "sessions": 185,
+              "waitlist": 9,
+              "preorders": 1,
+              "day": 9
+            },
+            {
+              "spend": 250,
+              "impressions": 38401,
+              "reach": 25376,
+              "likes": 1089,
+              "comments": 59,
+              "saves": 773,
+              "shares": 107,
+              "clicks": 201,
+              "sessions": 163,
+              "waitlist": 10,
+              "preorders": 1,
+              "day": 10
+            }
+          ],
+          "creatives": [
+            {
+              "id": "cr_a_mvca3108uyr9",
+              "assetId": "a_mvca3108uyr9",
+              "type": "ugc",
+              "label": "Reel UGC · Outfit of the day",
+              "channels": [
+                "instagram",
+                "tiktok"
+              ],
+              "spend": 302.92,
+              "impressions": 43035,
+              "reach": 24409,
+              "likes": 1243,
+              "comments": 86,
+              "saves": 530,
+              "shares": 146,
+              "clicks": 314,
+              "sessions": 233,
+              "waitlist": 13,
+              "preorders": 4
+            },
+            {
+              "id": "cr_a_mvc9y3chm63k",
+              "assetId": "a_mvc9y3chm63k",
+              "type": "editorial",
+              "label": "Editorial · Bianco e vento",
+              "channels": [
+                "instagram",
+                "pinterest"
+              ],
+              "spend": 212.77,
+              "impressions": 34899,
+              "reach": 23838,
+              "likes": 918,
+              "comments": 60,
+              "saves": 723,
+              "shares": 96,
+              "clicks": 190,
+              "sessions": 143,
+              "waitlist": 9,
+              "preorders": 1
+            },
+            {
+              "id": "cr_a_mvc9y8bxp2cv",
+              "assetId": "a_mvc9y8bxp2cv",
+              "type": "editorial",
+              "label": "Editorial · Flash diretto",
+              "channels": [
+                "instagram",
+                "pinterest"
+              ],
+              "spend": 243.96,
+              "impressions": 39909,
+              "reach": 27265,
+              "likes": 1130,
+              "comments": 75,
+              "saves": 890,
+              "shares": 116,
+              "clicks": 210,
+              "sessions": 169,
+              "waitlist": 8,
+              "preorders": 2
+            },
+            {
+              "id": "cr_a_mvc9yd74ij8f",
+              "assetId": "a_mvc9yd74ij8f",
+              "type": "editorial",
+              "label": "Editorial · Spot e poltrona",
+              "channels": [
+                "instagram",
+                "pinterest"
+              ],
+              "spend": 241.73,
+              "impressions": 39692,
+              "reach": 27114,
+              "likes": 1050,
+              "comments": 54,
+              "saves": 884,
+              "shares": 112,
+              "clicks": 204,
+              "sessions": 169,
+              "waitlist": 11,
+              "preorders": 1
+            },
+            {
+              "id": "cr_a_mvc9ygrc3z3p",
+              "assetId": "a_mvc9ygrc3z3p",
+              "type": "editorial",
+              "label": "Editorial · Passo high-key",
+              "channels": [
+                "instagram",
+                "pinterest"
+              ],
+              "spend": 297.68,
+              "impressions": 48760,
+              "reach": 33294,
+              "likes": 1424,
+              "comments": 76,
+              "saves": 1189,
+              "shares": 122,
+              "clicks": 317,
+              "sessions": 261,
+              "waitlist": 15,
+              "preorders": 2
+            },
+            {
+              "id": "cr_a_mvc9ym29t2cf",
+              "assetId": "a_mvc9ym29t2cf",
+              "type": "editorial",
+              "label": "Editorial · Grigio scolpito",
+              "channels": [
+                "instagram",
+                "pinterest"
+              ],
+              "spend": 260.49,
+              "impressions": 42521,
+              "reach": 29033,
+              "likes": 1159,
+              "comments": 91,
+              "saves": 963,
+              "shares": 118,
+              "clicks": 236,
+              "sessions": 193,
+              "waitlist": 9,
+              "preorders": 1
+            },
+            {
+              "id": "cr_a_mvc9zejey3il",
+              "assetId": "a_mvc9zejey3il",
+              "type": "editorial",
+              "label": "Editorial · Retro, sguardo in spalla",
+              "channels": [
+                "instagram",
+                "pinterest"
+              ],
+              "spend": 275.2,
+              "impressions": 45047,
+              "reach": 30778,
+              "likes": 1127,
+              "comments": 53,
+              "saves": 908,
+              "shares": 138,
+              "clicks": 229,
+              "sessions": 155,
+              "waitlist": 11,
+              "preorders": 2
+            },
+            {
+              "id": "cr_a_mul2w2j3bnk0",
+              "assetId": "a_mul2w2j3bnk0",
+              "type": "onmodel",
+              "label": "On-model",
+              "channels": [
+                "instagram"
+              ],
+              "spend": 217.07,
+              "impressions": 25290,
+              "reach": 15818,
+              "likes": 689,
+              "comments": 29,
+              "saves": 494,
+              "shares": 68,
+              "clicks": 205,
+              "sessions": 171,
+              "waitlist": 7,
+              "preorders": 0
+            },
+            {
+              "id": "cr_a_mvc9zieuv6d2",
+              "assetId": "a_mvc9zieuv6d2",
+              "type": "lifestyle",
+              "label": "Lifestyle",
+              "channels": [
+                "pinterest",
+                "instagram"
+              ],
+              "spend": 223.5,
+              "impressions": 36713,
+              "reach": 25059,
+              "likes": 1284,
+              "comments": 64,
+              "saves": 998,
+              "shares": 99,
+              "clicks": 260,
+              "sessions": 229,
+              "waitlist": 12,
+              "preorders": 0
+            },
+            {
+              "id": "cr_a_mul1cjyh66dx",
+              "assetId": "a_mul1cjyh66dx",
+              "type": "packshot",
+              "label": "Packshot carosello",
+              "channels": [
+                "instagram"
+              ],
+              "spend": 224.69,
+              "impressions": 25965,
+              "reach": 16237,
+              "likes": 496,
+              "comments": 19,
+              "saves": 316,
+              "shares": 43,
+              "clicks": 183,
+              "sessions": 152,
+              "waitlist": 11,
+              "preorders": 1
+            }
+          ],
+          "markets": [
+            {
+              "id": "IT",
+              "label": "Italia",
+              "spend": 625,
+              "impressions": 109769,
+              "reach": 72685,
+              "likes": 3043,
+              "comments": 161,
+              "saves": 2304,
+              "shares": 295,
+              "clicks": 672,
+              "sessions": 547,
+              "waitlist": 31,
+              "preorders": 1
+            },
+            {
+              "id": "FR",
+              "label": "Francia",
+              "spend": 625,
+              "impressions": 95642,
+              "reach": 63339,
+              "likes": 2590,
+              "comments": 158,
+              "saves": 2050,
+              "shares": 287,
+              "clicks": 558,
+              "sessions": 438,
+              "waitlist": 24,
+              "preorders": 3
+            },
+            {
+              "id": "DE",
+              "label": "Germania",
+              "spend": 625,
+              "impressions": 91718,
+              "reach": 60728,
+              "likes": 2559,
+              "comments": 159,
+              "saves": 1804,
+              "shares": 249,
+              "clicks": 583,
+              "sessions": 485,
+              "waitlist": 29,
+              "preorders": 4
+            },
+            {
+              "id": "UK",
+              "label": "Regno Unito",
+              "spend": 625,
+              "impressions": 84702,
+              "reach": 56093,
+              "likes": 2328,
+              "comments": 129,
+              "saves": 1737,
+              "shares": 227,
+              "clicks": 535,
+              "sessions": 405,
+              "waitlist": 22,
+              "preorders": 6
+            }
+          ],
+          "ages": [
+            {
+              "id": "18-24",
+              "label": "18-24",
+              "spend": 450,
+              "impressions": 68477,
+              "reach": 45368,
+              "likes": 1876,
+              "comments": 102,
+              "saves": 1374,
+              "shares": 225,
+              "clicks": 448,
+              "sessions": 373,
+              "waitlist": 19,
+              "preorders": 2
+            },
+            {
+              "id": "25-34",
+              "label": "25-34",
+              "spend": 950,
+              "impressions": 145170,
+              "reach": 96136,
+              "likes": 4011,
+              "comments": 218,
+              "saves": 2997,
+              "shares": 402,
+              "clicks": 872,
+              "sessions": 694,
+              "waitlist": 38,
+              "preorders": 5
+            },
+            {
+              "id": "35-44",
+              "label": "35-44",
+              "spend": 700,
+              "impressions": 107119,
+              "reach": 70894,
+              "likes": 2929,
+              "comments": 181,
+              "saves": 2266,
+              "shares": 262,
+              "clicks": 663,
+              "sessions": 502,
+              "waitlist": 29,
+              "preorders": 5
+            },
+            {
+              "id": "45+",
+              "label": "45+",
+              "spend": 400,
+              "impressions": 61065,
+              "reach": 40447,
+              "likes": 1704,
+              "comments": 106,
+              "saves": 1258,
+              "shares": 169,
+              "clicks": 365,
+              "sessions": 306,
+              "waitlist": 20,
+              "preorders": 2
+            }
+          ],
+          "comments": [
+            {
+              "id": "c8",
+              "creativeId": "cr_a_mvc9yd74ij8f",
+              "market": "DE",
+              "lang": "de",
+              "theme": "prurito",
+              "sentiment": "negative",
+              "text": "Welche Wolle genau? Merino?",
+              "likes": 133,
+              "day": 9
+            },
+            {
+              "id": "c15",
+              "creativeId": "cr_a_mvc9zieuv6d2",
+              "market": "UK",
+              "lang": "en",
+              "theme": "zip",
+              "sentiment": "neutral",
+              "text": "Hope the zip doesn't snag the knit",
+              "likes": 119,
+              "day": 4
+            },
+            {
+              "id": "c22",
+              "creativeId": "cr_a_mvc9ym29t2cf",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "mano",
+              "sentiment": "positive",
+              "text": "Le col montant est top",
+              "likes": 115,
+              "day": 4
+            },
+            {
+              "id": "c32",
+              "creativeId": "cr_a_mvc9ym29t2cf",
+              "market": "DE",
+              "lang": "de",
+              "theme": "taglia",
+              "sentiment": "neutral",
+              "text": "Fällt der normal aus?",
+              "likes": 115,
+              "day": 3
+            },
+            {
+              "id": "c51",
+              "creativeId": "cr_a_mvc9ygrc3z3p",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "disponibilita",
+              "sentiment": "positive",
+              "text": "Livraison en Belgique possible ?",
+              "likes": 106,
+              "day": 8
+            },
+            {
+              "id": "c53",
+              "creativeId": "cr_a_mvc9yd74ij8f",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "zip",
+              "sentiment": "neutral",
+              "text": "Le zip est-il à double curseur ?",
+              "likes": 104,
+              "day": 10
+            },
+            {
+              "id": "c38",
+              "creativeId": "cr_a_mvca3108uyr9",
+              "market": "DE",
+              "lang": "de",
+              "theme": "colore-beige",
+              "sentiment": "positive",
+              "text": "Das Beige ist zeitlos",
+              "likes": 103,
+              "day": 5
+            },
+            {
+              "id": "c14",
+              "creativeId": "cr_a_mvca3108uyr9",
+              "market": "IT",
+              "lang": "it",
+              "theme": "colore-beige",
+              "sentiment": "positive",
+              "text": "Finalmente un beige che non tira al giallo",
+              "likes": 95,
+              "day": 1
+            },
+            {
+              "id": "c25",
+              "creativeId": "cr_a_mvca3108uyr9",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "lavaggio",
+              "sentiment": "neutral",
+              "text": "Lavable en machine ?",
+              "likes": 90,
+              "day": 5
+            },
+            {
+              "id": "c50",
+              "creativeId": "cr_a_mul2w2j3bnk0",
+              "market": "UK",
+              "lang": "en",
+              "theme": "mano",
+              "sentiment": "positive",
+              "text": "That mock neck is spot on",
+              "likes": 89,
+              "day": 9
+            },
+            {
+              "id": "c37",
+              "creativeId": "cr_a_mvc9ygrc3z3p",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "colore-beige",
+              "sentiment": "positive",
+              "text": "Ce beige est parfait",
+              "likes": 80,
+              "day": 8
+            },
+            {
+              "id": "c26",
+              "creativeId": "cr_a_mvca3108uyr9",
+              "market": "IT",
+              "lang": "it",
+              "theme": "taglia",
+              "sentiment": "neutral",
+              "text": "Veste regolare o abbondante? Sono 1,80 per 80 kg",
+              "likes": 78,
+              "day": 10
+            },
+            {
+              "id": "c56",
+              "creativeId": "cr_a_mvc9zieuv6d2",
+              "market": "IT",
+              "lang": "it",
+              "theme": "zip",
+              "sentiment": "neutral",
+              "text": "La zip è a doppio cursore? Seduto in macchina serve",
+              "likes": 57,
+              "day": 6
+            },
+            {
+              "id": "c57",
+              "creativeId": "cr_a_mvc9ym29t2cf",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "mano",
+              "sentiment": "positive",
+              "text": "Le col montant est top",
+              "likes": 51,
+              "day": 5
+            },
+            {
+              "id": "c40",
+              "creativeId": "cr_a_mvc9ym29t2cf",
+              "market": "UK",
+              "lang": "en",
+              "theme": "prezzo-maglia",
+              "sentiment": "neutral",
+              "text": "Fair if it's proper wool",
+              "likes": 47,
+              "day": 4
+            },
+            {
+              "id": "c33",
+              "creativeId": "cr_a_mul2w2j3bnk0",
+              "market": "UK",
+              "lang": "en",
+              "theme": "colore-beige",
+              "sentiment": "positive",
+              "text": "Goes with literally everything",
+              "likes": 46,
+              "day": 5
+            },
+            {
+              "id": "c31",
+              "creativeId": "cr_a_mvc9zejey3il",
+              "market": "UK",
+              "lang": "en",
+              "theme": "colore-beige",
+              "sentiment": "positive",
+              "text": "Goes with literally everything",
+              "likes": 45,
+              "day": 10
+            },
+            {
+              "id": "c5",
+              "creativeId": "cr_a_mvc9yd74ij8f",
+              "market": "DE",
+              "lang": "de",
+              "theme": "mano",
+              "sentiment": "positive",
+              "text": "Der Stehkragen ist perfekt",
+              "likes": 44,
+              "day": 9
+            },
+            {
+              "id": "c12",
+              "creativeId": "cr_a_mvc9y3chm63k",
+              "market": "IT",
+              "lang": "it",
+              "theme": "mano",
+              "sentiment": "positive",
+              "text": "Si vede che è una maglia pesante, bella la costa inglese",
+              "likes": 43,
+              "day": 10
+            },
+            {
+              "id": "c35",
+              "creativeId": "cr_a_mvc9ygrc3z3p",
+              "market": "DE",
+              "lang": "de",
+              "theme": "prezzo-maglia",
+              "sentiment": "neutral",
+              "text": "Für die Qualität okay",
+              "likes": 43,
+              "day": 9
+            },
+            {
+              "id": "c46",
+              "creativeId": "cr_a_mvc9yd74ij8f",
+              "market": "DE",
+              "lang": "de",
+              "theme": "colore-beige",
+              "sentiment": "positive",
+              "text": "Schöne warme Farbe",
+              "likes": 42,
+              "day": 8
+            },
+            {
+              "id": "c30",
+              "creativeId": "cr_a_mvc9y8bxp2cv",
+              "market": "IT",
+              "lang": "it",
+              "theme": "taglia",
+              "sentiment": "neutral",
+              "text": "Che taglia indossa il modello?",
+              "likes": 39,
+              "day": 8
+            },
+            {
+              "id": "c43",
+              "creativeId": "cr_a_mvc9ygrc3z3p",
+              "market": "IT",
+              "lang": "it",
+              "theme": "prurito",
+              "sentiment": "negative",
+              "text": "Che lana è? Se non è merino sul collo alto non lo reggo",
+              "likes": 38,
+              "day": 2
+            },
+            {
+              "id": "c19",
+              "creativeId": "cr_a_mvc9zieuv6d2",
+              "market": "DE",
+              "lang": "de",
+              "theme": "disponibilita",
+              "sentiment": "positive",
+              "text": "Wann wird geliefert?",
+              "likes": 35,
+              "day": 3
+            },
+            {
+              "id": "c59",
+              "creativeId": "cr_a_mvc9y8bxp2cv",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "prezzo-maglia",
+              "sentiment": "neutral",
+              "text": "Prix correct si c'est de la bonne laine",
+              "likes": 31,
+              "day": 5
+            },
+            {
+              "id": "c39",
+              "creativeId": "cr_a_mvc9ygrc3z3p",
+              "market": "IT",
+              "lang": "it",
+              "theme": "mano",
+              "sentiment": "positive",
+              "text": "Si vede che è una maglia pesante, bella la costa inglese",
+              "likes": 25,
+              "day": 1
+            },
+            {
+              "id": "c41",
+              "creativeId": "cr_a_mvc9zieuv6d2",
+              "market": "UK",
+              "lang": "en",
+              "theme": "taglia",
+              "sentiment": "neutral",
+              "text": "True to size or oversized?",
+              "likes": 25,
+              "day": 4
+            },
+            {
+              "id": "c6",
+              "creativeId": "cr_a_mvc9y8bxp2cv",
+              "market": "DE",
+              "lang": "de",
+              "theme": "zip",
+              "sentiment": "neutral",
+              "text": "Ist das ein Zwei-Wege-Reißverschluss?",
+              "likes": 24,
+              "day": 7
+            },
+            {
+              "id": "c42",
+              "creativeId": "cr_a_mul1cjyh66dx",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "prezzo-maglia",
+              "sentiment": "neutral",
+              "text": "Prix correct si c'est de la bonne laine",
+              "likes": 24,
+              "day": 9
+            },
+            {
+              "id": "c4",
+              "creativeId": "cr_a_mvc9ym29t2cf",
+              "market": "UK",
+              "lang": "en",
+              "theme": "prurito",
+              "sentiment": "negative",
+              "text": "Is it itchy? Chunky wool usually is on the neck",
+              "likes": 21,
+              "day": 5
+            },
+            {
+              "id": "c29",
+              "creativeId": "cr_a_mvc9ym29t2cf",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "colore-beige",
+              "sentiment": "positive",
+              "text": "La couleur est très élégante",
+              "likes": 20,
+              "day": 4
+            },
+            {
+              "id": "c3",
+              "creativeId": "cr_a_mvc9ym29t2cf",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "prurito",
+              "sentiment": "negative",
+              "text": "La laine gratte ? Avec le col montant c'est important",
+              "likes": 18,
+              "day": 9
+            },
+            {
+              "id": "c45",
+              "creativeId": "cr_a_mvc9yd74ij8f",
+              "market": "IT",
+              "lang": "it",
+              "theme": "zip",
+              "sentiment": "neutral",
+              "text": "La zip in metallo regge sulla maglia pesante?",
+              "likes": 18,
+              "day": 7
+            },
+            {
+              "id": "c49",
+              "creativeId": "cr_a_mvc9ym29t2cf",
+              "market": "DE",
+              "lang": "de",
+              "theme": "prurito",
+              "sentiment": "negative",
+              "text": "Kratzt die Wolle am Hals?",
+              "likes": 17,
+              "day": 1
+            },
+            {
+              "id": "c47",
+              "creativeId": "cr_a_mvc9y8bxp2cv",
+              "market": "IT",
+              "lang": "it",
+              "theme": "colore-beige",
+              "sentiment": "positive",
+              "text": "Questo beige sta con tutto, dal jeans al grigio",
+              "likes": 16,
+              "day": 4
+            },
+            {
+              "id": "c54",
+              "creativeId": "cr_a_mvc9y8bxp2cv",
+              "market": "DE",
+              "lang": "de",
+              "theme": "taglia",
+              "sentiment": "neutral",
+              "text": "Fällt der normal aus?",
+              "likes": 16,
+              "day": 10
+            },
+            {
+              "id": "c13",
+              "creativeId": "cr_a_mvc9ym29t2cf",
+              "market": "DE",
+              "lang": "de",
+              "theme": "prezzo-maglia",
+              "sentiment": "neutral",
+              "text": "Für die Qualität okay",
+              "likes": 13,
+              "day": 3
+            },
+            {
+              "id": "c44",
+              "creativeId": "cr_a_mvc9ym29t2cf",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "zip",
+              "sentiment": "neutral",
+              "text": "Le zip est-il à double curseur ?",
+              "likes": 11,
+              "day": 10
+            },
+            {
+              "id": "c16",
+              "creativeId": "cr_a_mvc9ygrc3z3p",
+              "market": "DE",
+              "lang": "de",
+              "theme": "disponibilita",
+              "sentiment": "positive",
+              "text": "Vorbestellt!",
+              "likes": 7,
+              "day": 9
+            },
+            {
+              "id": "c27",
+              "creativeId": "cr_a_mul1cjyh66dx",
+              "market": "DE",
+              "lang": "de",
+              "theme": "mano",
+              "sentiment": "positive",
+              "text": "Schöner grober Strick",
+              "likes": 7,
+              "day": 5
+            },
+            {
+              "id": "c0",
+              "creativeId": "cr_a_mul2w2j3bnk0",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "mano",
+              "sentiment": "positive",
+              "text": "Le col montant est top",
+              "likes": 4,
+              "day": 8
+            },
+            {
+              "id": "c2",
+              "creativeId": "cr_a_mvca3108uyr9",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "disponibilita",
+              "sentiment": "positive",
+              "text": "Livraison en Belgique possible ?",
+              "likes": 3,
+              "day": 8
+            },
+            {
+              "id": "c10",
+              "creativeId": "cr_a_mvc9y3chm63k",
+              "market": "DE",
+              "lang": "de",
+              "theme": "mano",
+              "sentiment": "positive",
+              "text": "Schöner grober Strick",
+              "likes": 3,
+              "day": 5
+            },
+            {
+              "id": "c21",
+              "creativeId": "cr_a_mvc9zejey3il",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "disponibilita",
+              "sentiment": "positive",
+              "text": "Précommandée !",
+              "likes": 3,
+              "day": 4
+            },
+            {
+              "id": "c28",
+              "creativeId": "cr_a_mvc9ym29t2cf",
+              "market": "IT",
+              "lang": "it",
+              "theme": "taglia",
+              "sentiment": "neutral",
+              "text": "Arriva alla vita o copre il sedere?",
+              "likes": 3,
+              "day": 3
+            },
+            {
+              "id": "c7",
+              "creativeId": "cr_a_mvc9ygrc3z3p",
+              "market": "IT",
+              "lang": "it",
+              "theme": "mano",
+              "sentiment": "positive",
+              "text": "Il collo alto con la zip è il dettaglio giusto",
+              "likes": 2,
+              "day": 4
+            },
+            {
+              "id": "c1",
+              "creativeId": "cr_a_mvc9yd74ij8f",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "disponibilita",
+              "sentiment": "positive",
+              "text": "Précommandée !",
+              "likes": 1,
+              "day": 7
+            },
+            {
+              "id": "c11",
+              "creativeId": "cr_a_mvc9y3chm63k",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "mano",
+              "sentiment": "positive",
+              "text": "La maille côtelée est superbe",
+              "likes": 1,
+              "day": 3
+            },
+            {
+              "id": "c36",
+              "creativeId": "cr_a_mvca3108uyr9",
+              "market": "IT",
+              "lang": "it",
+              "theme": "taglia",
+              "sentiment": "neutral",
+              "text": "Che taglia indossa il modello?",
+              "likes": 1,
+              "day": 4
+            },
+            {
+              "id": "c52",
+              "creativeId": "cr_a_mvc9ym29t2cf",
+              "market": "UK",
+              "lang": "en",
+              "theme": "colore-beige",
+              "sentiment": "positive",
+              "text": "That oatmeal shade is perfect",
+              "likes": 1,
+              "day": 3
+            },
+            {
+              "id": "c9",
+              "creativeId": "cr_a_mvca3108uyr9",
+              "market": "DE",
+              "lang": "de",
+              "theme": "colore-beige",
+              "sentiment": "positive",
+              "text": "Das Beige ist zeitlos",
+              "likes": 0,
+              "day": 9
+            },
+            {
+              "id": "c17",
+              "creativeId": "cr_a_mvc9y8bxp2cv",
+              "market": "DE",
+              "lang": "de",
+              "theme": "taglia",
+              "sentiment": "neutral",
+              "text": "Welche Größe trägt das Model?",
+              "likes": 0,
+              "day": 9
+            },
+            {
+              "id": "c18",
+              "creativeId": "cr_a_mvc9ym29t2cf",
+              "market": "DE",
+              "lang": "de",
+              "theme": "colore-beige",
+              "sentiment": "positive",
+              "text": "Schöne warme Farbe",
+              "likes": 0,
+              "day": 9
+            },
+            {
+              "id": "c20",
+              "creativeId": "cr_a_mvca3108uyr9",
+              "market": "IT",
+              "lang": "it",
+              "theme": "mano",
+              "sentiment": "positive",
+              "text": "Sembra caldissimo ma non goffo",
+              "likes": 0,
+              "day": 2
+            },
+            {
+              "id": "c23",
+              "creativeId": "cr_a_mvc9zieuv6d2",
+              "market": "UK",
+              "lang": "en",
+              "theme": "taglia",
+              "sentiment": "neutral",
+              "text": "What size is the model wearing?",
+              "likes": 0,
+              "day": 1
+            },
+            {
+              "id": "c24",
+              "creativeId": "cr_a_mvc9y8bxp2cv",
+              "market": "UK",
+              "lang": "en",
+              "theme": "colore-beige",
+              "sentiment": "positive",
+              "text": "That oatmeal shade is perfect",
+              "likes": 0,
+              "day": 4
+            },
+            {
+              "id": "c34",
+              "creativeId": "cr_a_mvc9y8bxp2cv",
+              "market": "FR",
+              "lang": "fr",
+              "theme": "prezzo-maglia",
+              "sentiment": "neutral",
+              "text": "Prix correct si c'est de la bonne laine",
+              "likes": 0,
+              "day": 6
+            },
+            {
+              "id": "c48",
+              "creativeId": "cr_a_mvca3108uyr9",
+              "market": "IT",
+              "lang": "it",
+              "theme": "colore-beige",
+              "sentiment": "positive",
+              "text": "Colore perfetto per l'autunno",
+              "likes": 0,
+              "day": 1
+            },
+            {
+              "id": "c55",
+              "creativeId": "cr_a_mvc9ygrc3z3p",
+              "market": "IT",
+              "lang": "it",
+              "theme": "mano",
+              "sentiment": "positive",
+              "text": "Si vede che è una maglia pesante, bella la costa inglese",
+              "likes": 0,
+              "day": 3
+            },
+            {
+              "id": "c58",
+              "creativeId": "cr_a_mvca3108uyr9",
+              "market": "DE",
+              "lang": "de",
+              "theme": "lavaggio",
+              "sentiment": "neutral",
+              "text": "Ist er waschmaschinenfest?",
+              "likes": 0,
+              "day": 3
+            }
+          ]
+        },
+        "analyses": {
+          "3051924538": {
+            "verdict": "iterate",
+            "headline": "Iterare: il sell-through previsto è 56.8% contro un obiettivo del 65%, e il limite è la conversione (0.83%), non l'interesse.",
+            "summary": "L'intervallo all'80% (51.6%–62.0%) non arriva al 65%, quindi la decisione statistica è iterate e i commenti non danno motivo di cambiarla. L'interesse c'è: save rate 3.14% e 79 iscritti alla lista d'attesa. Ma solo 14 persone hanno pre-ordinato (conversione 0.83%, percentile 17). I commenti spiegano in parte il motivo: 14 su 60 chiedono la taglia, 8 parlano della zip e 5 chiedono quale lana sia e se pizzica. Sono dubbi risolvibili con una modifica di design (zip a doppio cursore) e con informazioni in tutti i contenuti. Non ordinare ora. Se si ordina dopo il secondo test, il tetto è 220 pezzi, non i 650 abituali.",
+            "insights": [
+              {
+                "title": "Il collo di bottiglia è la conversione, non la visibilità",
+                "evidence": "Save rate 3.14% (percentile 33), conversione 0.83% (percentile 17), pre-ordini per €1k 5.6 (percentile 8). Nell'archivio i lanci con conversione ≥1.45% hanno ST tra 52% e 79%; Cabas Mini Nero (1.45%) è il più basso, con save 1.21%."
+              },
+              {
+                "title": "L'interesse non si trasforma in acquisto",
+                "evidence": "79 iscritti alla lista d'attesa contro 14 pre-ordini, cioè 5.6 iscritti per ogni pre-ordine. Le 1692 sessioni hanno prodotto lo 0.83% di conversione."
+              },
+              {
+                "title": "Il budget sui 18-24 rende poco",
+                "evidence": "18-24: €450, 1 pre-ordine, conversione 0.29%, anche se il CTR è il più alto (0.69%). 25-44: €1650, 11 pre-ordini su 14, cioè 6.7 per €1k contro 2.2 per €1k dei 18-24."
+              },
+              {
+                "title": "Le differenze tra contenuti e mercati sono troppo piccole per decidere",
+                "evidence": "Ogni contenuto ha 0–3 pre-ordini. Retro, sguardo in spalla ne ha 3 (conv. 1.66%), Flash diretto e Grigio scolpito 0, ma con circa 170–200 sessioni lo zero è compatibile con il caso. I mercati hanno 3–4 pre-ordini ciascuno (Italia 0.60%, UK 1.07%) a parità di spesa (€625). Il segnale più chiaro è che i formati dove si valuta la vestibilità salvano meno: packshot 2.20%, on-model 2.38%, contro la media di 3.14%."
+              },
+              {
+                "title": "Non c'è calo di rendimento nei 10 giorni, ma le sessioni scendono",
+                "evidence": "Pre-ordini 6 nei giorni 1-5 e 8 nei giorni 6-10, con 3 giorni a zero (g3, g5, g8). Le sessioni passano da 203 e 208 (g1, g2) a 161 (g10) con la stessa spesa di €250 al giorno."
+              }
+            ],
+            "themes": [
+              {
+                "theme": "taglia",
+                "label": "Taglie e vestibilità",
+                "sentiment": "neutral",
+                "share": 0.233,
+                "quote": "True to size or oversized?",
+                "action": "Mettere in ogni contenuto altezza e taglia del modello (M), lunghezza 66 cm e indicazione di vestibilità. Rispondere ai commenti sulla lunghezza (\"Arriva alla vita o copre il sedere?\")."
+              },
+              {
+                "theme": "mano",
+                "label": "Maglia e costa",
+                "sentiment": "positive",
+                "share": 0.183,
+                "quote": "Il collo alto con la zip è il dettaglio giusto",
+                "action": "Mantenere costa inglese, collo a lupetto e peso della maglia come elementi principali. Usare dettagli ravvicinati della costa nei contenuti scalati."
+              },
+              {
+                "theme": "colore-beige",
+                "label": "Colore beige",
+                "sentiment": "positive",
+                "share": 0.15,
+                "quote": "Finalmente un beige che non tira al giallo",
+                "action": "Non toccare il colore (#B7A392). Citare \"beige che non tira al giallo\" nelle didascalie e tenere la luce neutra nei contenuti."
+              },
+              {
+                "theme": "zip",
+                "label": "Zip in metallo",
+                "sentiment": "negative",
+                "share": 0.133,
+                "quote": "La zip è a doppio cursore? Seduto in macchina serve",
+                "action": "Passare a una zip a doppio cursore e aggiungere un riparo interno morbido. Sono le risposte dirette ai 5 commenti sul doppio cursore e ai 2 sull'impigliarsi nella maglia."
+              },
+              {
+                "theme": "disponibilita",
+                "label": "Intenzione d'acquisto",
+                "sentiment": "positive",
+                "share": 0.083,
+                "quote": "Wann wird geliefert?",
+                "action": "Indicare date di consegna e paesi serviti (Belgio e Svizzera sono stati chiesti). Inviare questi dati alla lista d'attesa di 79 iscritti."
+              },
+              {
+                "theme": "prurito",
+                "label": "Lana che pizzica",
+                "sentiment": "negative",
+                "share": 0.083,
+                "quote": "Welche Wolle genau? Merino?",
+                "action": "Dichiarare composizione e fibra in ogni contenuto. Verificare con il produttore una fibra morbida a contatto con il collo, perché questa obiezione (\"Kratzt die Wolle am Hals?\") non si risolve con un'immagine."
+              },
+              {
+                "theme": "prezzo-maglia",
+                "label": "Prezzo",
+                "sentiment": "neutral",
+                "share": 0.067,
+                "quote": "Prix correct si c'est de la bonne laine",
+                "action": "Tenere €390. Il prezzo è accettato se la qualità è dichiarata, quindi mostrare composizione e peso della maglia."
+              },
+              {
+                "theme": "lavaggio",
+                "label": "Lavaggio e cura",
+                "sentiment": "neutral",
+                "share": 0.067,
+                "quote": "Si lava in lavatrice o solo a secco?",
+                "action": "Aggiungere le istruzioni di lavaggio alla scheda e a una slide del carosello. Includere la risposta sul pilling (\"Will it pill after a few washes?\")."
+              }
+            ],
+            "actions": [
+              {
+                "area": "design",
+                "action": "Sostituire la zip con una a doppio cursore e aggiungere un riparo morbido interno sul collo, in cima alla zip. Mantenere finitura argento e tiretto rettangolare.",
+                "why": "5 commenti chiedono il doppio cursore (\"Seduto in macchina serve\", 129 like), 2 temono che la zip si impigli e 5 chiedono se la lana pizzica sul collo.",
+                "impact": "Risponde alle obiezioni del 13% dei commenti (8 su 60 sulla zip) e a parte del 8% sulla lana."
+              },
+              {
+                "area": "creative",
+                "action": "Rigirare i contenuti con didascalia fissa: altezza e taglia del modello (M), lunghezza 66 cm, vestibilità, composizione, istruzioni di lavaggio. Sostituire il packshot carosello con una versione che ha una slide di misure e una di cura.",
+                "why": "Taglie e vestibilità è il tema più grande (14 su 60, 23%). I formati dove si valuta la vestibilità salvano meno: packshot 2.20%, on-model 2.38%.",
+                "impact": "Obiettivo: conversione da 0.83% a 1.35% (ipotesi di lavoro, non una nuova previsione). Con i coefficienti della regressione, +0.52 punti di conversione varrebbero circa +8 punti di ST, cioè 65%."
+              },
+              {
+                "area": "creative",
+                "action": "Scalare Retro, sguardo in spalla (conv. 1.66%) e Lifestyle (save 3.70%, 12 in lista d'attesa). Tagliare Flash diretto (0 pre-ordini, €242). Tenere Grigio scolpito (save 3.61%) solo con l'aggiunta di taglia e composizione.",
+                "why": "I numeri per contenuto sono piccoli (0–3 pre-ordini), quindi si taglia un solo contenuto e si ripete il confronto nel prossimo test.",
+                "impact": "Sposta circa €240 dal contenuto con 0 pre-ordini a quelli con conversione ≥1.5% o save ≥3.7%."
+              },
+              {
+                "area": "audience",
+                "action": "Spostare i €450 dai 18-24 ai 25-34 e 35-44. Non redistribuire tra i mercati: tenere i €625 per paese.",
+                "why": "18-24: conversione 0.29%, 1 pre-ordine. 25-34 e 35-44: 0.99% e 1.08%, con 11 pre-ordini su 14. I mercati si distinguono per 1 pre-ordine (3–4 ciascuno).",
+                "impact": "Circa +2 pre-ordini a parità di spesa (6.7 contro 2.2 per €1k)."
+              },
+              {
+                "area": "audience",
+                "action": "Quando taglia, composizione e consegna sono chiare, scrivere ai 79 iscritti alla lista d'attesa con scheda aggiornata e data di consegna.",
+                "why": "79 iscritti contro 14 pre-ordini; molte domande sono informative (taglia, lana, lavaggio, consegna) e a quel pubblico basta una risposta.",
+                "impact": "Se il 10% degli iscritti pre-ordina, +8 pre-ordini (+57% sui 14 attuali). È un'ipotesi da verificare."
+              },
+              {
+                "area": "production",
+                "action": "Non ordinare finché non c'è il secondo test. Se dopo l'iterazione il ST previsto supera il 65%, ordinare 220 pezzi (MOQ 200). Non usare l'ordine abituale di 650.",
+                "why": "Domanda mediana 206 pezzi (80%: 153–277). A 220 pezzi il margine atteso è €27137 con 24 pezzi invenduti. A 650 pezzi il margine è €-7785 con 439 invenduti.",
+                "impact": "Evita una perdita di €7785 e 439 pezzi invenduti. Il MOQ di 200 lascia solo 20 pezzi di margine sull'ordine ottimale."
+              },
+              {
+                "area": "pricing",
+                "action": "Tenere €390 per il secondo test, senza sconti. Spostare il messaggio dal prezzo alla qualità del filato.",
+                "why": "Il prezzo è il tema più piccolo (4 su 60) e mai negativo: \"Prezzo giusto per il peso della maglia\", \"Für die Qualität okay\". Le riserve sono condizionate alla lana (\"Fair if it's proper wool\").",
+                "impact": "Mantiene il margine pieno. Un ribasso non risolverebbe i dubbi su taglia e lana, che sono le obiezioni più frequenti."
+              }
+            ],
+            "dnaChanges": [
+              {
+                "field": "closure",
+                "to": "exposed full-length front metal two-way zipper (double slider) running from the hem up to the top of the mock neck, with soft inner zip guard to avoid snagging the knit",
+                "why": "5 commenti chiedono il doppio cursore (\"La zip è a doppio cursore? Seduto in macchina serve\") e 2 temono che la zip si impigli (\"Hope the zip doesn't snag the knit\")."
+              },
+              {
+                "field": "fabric",
+                "to": "composizione dichiarata e unica, con percentuali, e fibra morbida a contatto con la pelle (es. merino extrafine). Da confermare con il produttore.",
+                "why": "Il campo oggi dice \"chunky wool or cashmere-blend knit\" e non risponde a \"Welche Wolle genau? Merino?\" (118 like). Altri 4 commenti riguardano il prurito e il pilling."
+              },
+              {
+                "field": "collar",
+                "to": "ribbed mock neck stand collar (collo a lupetto) extending seamlessly from the body, with soft-touch inner chin guard at the top of the zip",
+                "why": "\"Kratzt die Wolle am Hals?\" (75 like). Il collo piace (\"That mock neck is spot on\"), quindi si cambia solo l'interno."
+              }
+            ],
+            "risks": [
+              "Solo 14 pre-ordini: la conversione 0.83% ha un'incertezza alta, e le differenze tra contenuti e mercati (0–3 pre-ordini) non sono affidabili.",
+              "La regressione è calibrata su 12 lanci passati, tutti borse e accessori in pelle o tela. Questo è un capo di maglieria, quindi il modello potrebbe non trasferirsi bene. Il R² di 0.91 vale sull'archivio.",
+              "Nessun campione fisico: i contenuti generati non provano il prurito della lana (5 commenti), il pilling o la tenuta della zip. Queste obiezioni si risolvono solo con composizione dichiarata e un campione reale.",
+              "Il commento è un campione di 60 su 624 e il tema delle taglie (14 su 60) potrebbe pesare di più o di meno sul totale.",
+              "Con MOQ 200 e quantità ottimale 220, un ST sotto il 52% (estremo basso dell'intervallo) lascerebbe invenduto più di quanto previsto (24 pezzi)."
+            ],
+            "model": "eu.anthropic.claude-sonnet-5-5",
+            "at": "2026-10-17T10:54:52.142Z"
+          },
+          "3051924538|a_mvca3108uyr9,a_mvc9y3chm63k,a_mvc9y8bxp2cv,a_mvc9yd74ij8f,a_mvc9ygrc3z3p,a_mvc9ym29t2cf,a_mvc9zejey3il,a_mul2w2j3bnk0,a_mvc9zieuv6d2,a_mul1cjyh66dx": {
+            "verdict": "iterate",
+            "headline": "Iterare: sell-through previsto 55.4% (80%: 50.1%–60.7%) contro il 65% richiesto, perché la conversione è 0.75% (percentile 8).",
+            "summary": "Il prodotto attira interesse ma lo trasforma poco in acquisto: save rate 3.12% (percentile 33) e solo 14 pre-ordini su 1875 sessioni. Nessun valore dell'intervallo raggiunge il 65%. I commenti indicano il freno: la fibra non è dichiarata e il collo alto fa temere il prurito (5 commenti), mentre il prezzo viene giudicato giusto \"se è buona lana\" (6 commenti). Colore e maglia sono apprezzati (13 commenti ciascuno). Non servono tagli drastici: serve chiarire la lana, aggiungere la zip a doppio cursore e rifare il test su UK e 35-44. Ordine al produttore solo dopo il secondo test: 220 pezzi, non i 650 abituali.",
+            "insights": [
+              {
+                "title": "L'interesse c'è, l'acquisto no",
+                "evidence": "Save rate 3.12% (percentile 33) ma conversione 0.75% (percentile 8) e 5.6 pre-ordini per €1k (percentile 8). Nel modello ogni +0.1 punti di conversione vale circa +1.6 punti di sell-through (coefficiente 0.157)."
+              },
+              {
+                "title": "Il Regno Unito converte, l'Italia no",
+                "evidence": "Con €625 a mercato: UK 6 pre-ordini (conv. 1.48%), Germania 4 (0.82%), Francia 3 (0.68%), Italia 1 (0.18%). I numeri sono piccoli, ma il divario IT/UK è netto."
+              },
+              {
+                "title": "L'UGC vende, on-model e lifestyle no",
+                "evidence": "Reel UGC: 4 pre-ordini con €303 (conv. 1.72%). On-model e Lifestyle: 0 pre-ordini con €441 di spesa e 400 sessioni (171 + 229). Il Lifestyle ha però il save più alto (3.98%)."
+              },
+              {
+                "title": "La lana è il dubbio principale",
+                "evidence": "5 commenti su prurito, es. \"Che lana è? Se non è merino sul collo alto non lo reggo\". I 6 commenti sul prezzo sono tutti condizionati: \"Prix correct si c'est de la bonne laine\". Il campo fabric è ancora \"wool or cashmere-blend\"."
+              },
+              {
+                "title": "Quantità: il rischio è ordinare troppo",
+                "evidence": "Domanda mediana 206 pezzi (153–277), consigliati 220 (MOQ 200), invenduto atteso 24 pz. Con l'ordine abituale di 650 pezzi: margine €-7785 e 439 pz invenduti."
+              }
+            ],
+            "themes": [
+              {
+                "theme": "prurito",
+                "label": "Lana che pizzica",
+                "sentiment": "negative",
+                "share": 0.083,
+                "quote": "Welche Wolle genau? Merino?",
+                "action": "Dichiarare la fibra in ogni contenuto e in scheda prodotto. Se possibile passare a merino extrafine o misto cashmere."
+              },
+              {
+                "theme": "zip",
+                "label": "Zip in metallo",
+                "sentiment": "neutral",
+                "share": 0.1,
+                "quote": "Le zip est-il à double curseur ?",
+                "action": "Valutare la zip a doppio cursore e dichiararlo. Verificare con il produttore che il metallo non strappi la maglia pesante."
+              },
+              {
+                "theme": "mano",
+                "label": "Maglia e costa",
+                "sentiment": "positive",
+                "share": 0.217,
+                "quote": "Le col montant est top",
+                "action": "Mantenere costa inglese e collo a lupetto. Inquadrarli in primo piano nei contenuti da scalare."
+              },
+              {
+                "theme": "taglia",
+                "label": "Taglie e vestibilità",
+                "sentiment": "neutral",
+                "share": 0.15,
+                "quote": "Fällt der normal aus?",
+                "action": "Scrivere in didascalia taglia e altezza della modella e la lunghezza di 66 cm. Aggiungere una guida alla vestibilità (regolare, sciolta sul petto)."
+              },
+              {
+                "theme": "disponibilita",
+                "label": "Intenzione d'acquisto",
+                "sentiment": "positive",
+                "share": 0.1,
+                "quote": "Livraison en Belgique possible ?",
+                "action": "Indicare date di consegna e paesi serviti nella pagina di pre-ordine. Contattare la lista d'attesa di 106 persone."
+              },
+              {
+                "theme": "colore-beige",
+                "label": "Colore beige",
+                "sentiment": "positive",
+                "share": 0.217,
+                "quote": "Finalmente un beige che non tira al giallo",
+                "action": "Non toccare il colore #B7A392. Usarlo come messaggio nei titoli (\"va con tutto\")."
+              },
+              {
+                "theme": "lavaggio",
+                "label": "Lavaggio e cura",
+                "sentiment": "neutral",
+                "share": 0.033,
+                "quote": "Lavable en machine ?",
+                "action": "Aggiungere le istruzioni di cura nella scheda prodotto. Tema marginale: solo 2 commenti su 60."
+              },
+              {
+                "theme": "prezzo-maglia",
+                "label": "Prezzo",
+                "sentiment": "neutral",
+                "share": 0.1,
+                "quote": "Prix correct si c'est de la bonne laine",
+                "action": "Tenere €390 e giustificarlo con la composizione della fibra. Nessun commento chiede uno sconto."
+              }
+            ],
+            "actions": [
+              {
+                "area": "design",
+                "action": "Specificare la fibra (merino extrafine o misto merino-cashmere), prevedere una zip a doppio cursore e un interno collo in filato più morbido. Aggiornare il DNA e rigenerare i contenuti.",
+                "why": "Prurito (5 commenti), zip (6) e dubbi sul prezzo \"se è buona lana\" (6) ruotano attorno a lana e collo alto.",
+                "impact": "Punta a portare la conversione da 0.75% verso 1.0%, circa +4 punti di sell-through (0.157 per punto di conversione)."
+              },
+              {
+                "area": "creative",
+                "action": "Scalare il Reel UGC Outfit of the day. Tagliare On-model e Lifestyle. Con i €441 liberati produrre altri 2 UGC con taglia, altezza della modella e fibra in didascalia.",
+                "why": "UGC: conv. 1.72% e 4 pre-ordini con €303. On-model e Lifestyle: 0 pre-ordini. 9 commenti su 60 chiedono la taglia.",
+                "impact": "Con la conversione UGC (1.72%), €441 su UGC darebbero circa 6 pre-ordini invece di 0, a parità di sessioni."
+              },
+              {
+                "area": "audience",
+                "action": "Spostare il budget: UK da €625 a circa €1000 e Germania stabile. Italia ridotta a circa €250. Sull'età, portare il 35-44 da €700 a circa €900 togliendo budget al 25-34 (€950).",
+                "why": "UK conv. 1.48% (6 pre-ordini), Italia 0.18% (1). 35-44 conv. 1.00% contro 0.72% del 25-34 e 0.54% del 18-24.",
+                "impact": "Mira a più di 14 pre-ordini a parità di €2500. Il campione è piccolo, quindi da confermare nel secondo test."
+              },
+              {
+                "area": "production",
+                "action": "Non confermare l'ordine ora. Dopo il secondo test, ordinare 220 pezzi (MOQ 200). Non andare vicino ai 650 abituali.",
+                "why": "Domanda mediana 206 (153–277). L'ordine a 650 pezzi dà margine €-7785 e 439 invenduti.",
+                "impact": "220 pezzi: margine atteso €27137 e 24 invenduti, contro 439 invenduti a 650."
+              },
+              {
+                "area": "pricing",
+                "action": "Mantenere €390 al pre-ordine, senza sconti. Giustificarlo nei contenuti con fibra e peso della maglia (5-gauge, heavyweight).",
+                "why": "Nessun commento dice che costa troppo. I 6 commenti sul prezzo sono condizionati alla qualità della lana.",
+                "impact": "Evita di erodere il margine atteso di €27137 prima di sapere se la fibra risolve il dubbio."
+              },
+              {
+                "area": "audience",
+                "action": "Chiamare la lista d'attesa (106 iscritti) con un messaggio che riporti fibra, taglia e date di consegna, e un pre-ordine a tempo.",
+                "why": "Gli iscritti sono 106 contro 14 pre-ordini. Nei commenti compaiono richieste di consegna (\"Wann wird geliefert?\") e \"Précommandée !\".",
+                "impact": "Se convertisse il 5% della lista, sarebbero circa 5 pre-ordini in più, senza spesa media."
+              }
+            ],
+            "dnaChanges": [
+              {
+                "field": "fabric",
+                "to": "chunky extrafine merino wool or merino-cashmere blend, soft hand-feel, composition declared",
+                "why": "5 commenti su prurito e 6 sul prezzo chiedono quale lana sia (\"Welche Wolle genau? Merino?\")."
+              },
+              {
+                "field": "closure",
+                "to": "exposed full-length two-way metal zipper (double slider) running from the hem up to the top of the mock neck",
+                "why": "Richiesta ripetuta in FR, DE e IT: \"Le zip est-il à double curseur ?\", \"La zip è a doppio cursore? Seduto in macchina serve\"."
+              },
+              {
+                "field": "collar",
+                "to": "ribbed mock neck stand collar (collo a lupetto) extending seamlessly from the body, with softer inner yarn against the skin",
+                "why": "Il collo piace (\"Le col montant est top\") ma si teme il prurito: \"La laine gratte ? Avec le col montant c'est important\"."
+              }
+            ],
+            "risks": [
+              "Base statistica piccola: 14 pre-ordini totali. Le differenze tra mercati (1 contro 6) e tra contenuti (0 contro 4) possono essere in parte casuali.",
+              "L'intervallo 80% del sell-through (50.1%–60.7%) non include il 65%. Cambiare solo la comunicazione potrebbe non bastare.",
+              "Il passaggio a merino o misto cashmere può alzare il costo e ridurre il margine. Va verificato col produttore prima di mantenere €390.",
+              "I pre-ordini si concentrano in due giorni (3 il g1 e 4 il g4 su 14). Dal g5 in poi sono al massimo 1 al giorno, con sessioni in calo da 238 (g3) a 149 (g8): possibile saturazione del pubblico.",
+              "Concentrare il budget sul Regno Unito, dove vengono chiesti consegna e taglie, può peggiorare la conversione se il pubblico si esaurisce."
+            ],
+            "model": "eu.anthropic.claude-sonnet-5-5",
+            "at": "2026-10-17T10:55:39.443Z"
+          }
+        }
+      }
     },
     {
       "sku": "DEMO-CABAS-01",
@@ -1769,7 +3364,164 @@
           ]
         },
         "analyses": {
-          "956183481": {
+          "2004624445|a_mupz5d97bubx,a_muptbt9shrem,a_mupyubb0x50w,a_mupy95tgtin1,a_muq0ccx7qmmf,a_muq0ot71p267": {
+            "verdict": "go",
+            "headline": "Go: sell-through previsto 67% contro un obiettivo del 65%. Ordinare 460 pezzi e aggiungere tracolla staccabile e tasca interna con zip.",
+            "summary": "La previsione statistica dà 67% (80%: 62,1%–71,9%) contro il 65% richiesto, e 460 pezzi sono sopra il MOQ di 200. Il save rate è buono (3,64%, percentile 58). La conversione è debole (1,27%, percentile 33) e pesa sul risultato. Il freno principale nei commenti è l'assenza della tracolla: 12 commenti su 60. Non basta per ribaltare la decisione statistica, ma va corretto nel design prima dell'ordine. Il colore, l'assenza di logo e la pelle sono apprezzati (27 commenti su 60 in totale), quindi il prodotto resta com'è.",
+            "insights": [
+              {
+                "title": "Il go regge, ma l'intervallo tocca il limite",
+                "evidence": "Sell-through 67,0% con intervallo 80% 62,1%–71,9%. Il limite basso è sotto l'obiettivo del 65%, quindi il margine di sicurezza è di soli 2 punti."
+              },
+              {
+                "title": "Interesse buono, conversione debole",
+                "evidence": "Save rate 3,64% (percentile 58), conversione 1,27% (percentile 33), 10,4 pre-ordini per €1k (percentile 33). Nel modello ogni 0,1 punti di conversione valgono 1,6 punti di sell-through (coefficiente 0,157)."
+              },
+              {
+                "title": "La tracolla mancante è il primo ostacolo all'acquisto",
+                "evidence": "12 commenti su 60 (20%) la chiedono. «Solo a mano? Con la tracolla la prendevo subito» (IT) e «Dommage, sans bandoulière je ne peux pas la porter au quotidien» (FR) indicano acquisti persi."
+              },
+              {
+                "title": "Lifestyle e UGC rendono, On-model e Bianco e vento no",
+                "evidence": "Lifestyle: 14 pre-ordini su €939, save 4,64%. Reel UGC: 14 su €965, CTR 0,88%. On-model: 2 su €677 (conv. 0,53%). Bianco e vento: 4 su €782 (conv. 0,66%)."
+              },
+              {
+                "title": "Italia e Regno Unito convertono il doppio di Francia e Germania",
+                "evidence": "IT 1,61% e UK 1,69% (35 pre-ordini su €2500) contro FR 0,93% e DE 0,80% (17 su €2500). La Germania ha però 72 iscritti in lista d'attesa, quasi quanti il Regno Unito (70)."
+              }
+            ],
+            "themes": [
+              {
+                "theme": "tracolla",
+                "label": "Manca la tracolla",
+                "sentiment": "negative",
+                "share": 0.2,
+                "quote": "Il manque une bandoulière amovible",
+                "action": "Aggiungere una tracolla staccabile come accessorio e mostrarla nei contenuti."
+              },
+              {
+                "theme": "minimal",
+                "label": "Nessun logo",
+                "sentiment": "positive",
+                "share": 0.167,
+                "quote": "Pulitissima, niente loghi: la comprerei solo per questo",
+                "action": "Mantenere l'assenza di logo come messaggio centrale in tutti i mercati."
+              },
+              {
+                "theme": "colore",
+                "label": "Colore cognac",
+                "sentiment": "positive",
+                "share": 0.167,
+                "quote": "Cette couleur cognac est sublime",
+                "action": "Non toccare #B8652A. Usare inquadrature da vicino sul colore nei contenuti di punta."
+              },
+              {
+                "theme": "prezzo",
+                "label": "Prezzo",
+                "sentiment": "neutral",
+                "share": 0.15,
+                "quote": "Fair price for this quality",
+                "action": "Tenere €590. I commenti sul prezzo sono 6 favorevoli e 3 contrari («Bit pricey for the size»), e il rilievo riguarda soprattutto la misura."
+              },
+              {
+                "theme": "pelle",
+                "label": "Pelle e struttura",
+                "sentiment": "positive",
+                "share": 0.117,
+                "quote": "Looks like proper full-grain leather",
+                "action": "Mostrare cuciture e rigidità in dettaglio. Il commento «Love that it stands on its own» è un buon spunto per un reel."
+              },
+              {
+                "theme": "chiusura",
+                "label": "Chiusura solo magnetica",
+                "sentiment": "negative",
+                "share": 0.083,
+                "quote": "Solo il magnete? In metro a Milano mi serve una zip",
+                "action": "Aggiungere una tasca interna con zip per i valori. Il magnete resta."
+              },
+              {
+                "theme": "capienza",
+                "label": "Capienza",
+                "sentiment": "negative",
+                "share": 0.067,
+                "quote": "Carina ma un po' piccola per il lavoro, farete una misura più grande?",
+                "action": "Rispondere con i contenuti mostrando cosa entra in 28×22×10 cm. Valutare una misura più grande solo dopo la prossima lettura."
+              },
+              {
+                "theme": "disponibilita",
+                "label": "Intenzione d'acquisto",
+                "sentiment": "positive",
+                "share": 0.05,
+                "quote": "Quando arriva? Ho già fatto il pre-ordine",
+                "action": "Inviare ai pre-ordinanti una data di consegna certa e ai 272 iscritti in lista d'attesa un avviso di apertura."
+              }
+            ],
+            "actions": [
+              {
+                "area": "design",
+                "action": "Aggiungere una tracolla staccabile piatta in pelle cognac e una tasca interna con zip. Non cambiare corpo, colore, misure o assenza di logo.",
+                "why": "Tracolla: 12 commenti su 60. Chiusura e sicurezza: 5 commenti, tra cui «Mettete almeno una tasca interna con zip» (85 like).",
+                "impact": "Se la conversione sale da 1,27% a 1,5%, il sell-through previsto sale di circa 3,6 punti (0,157 × 0,23), a condizione che il modello regga."
+              },
+              {
+                "area": "creative",
+                "action": "Tagliare On-model (€677) e Bianco e vento (€782). Spostare i €1459 su Lifestyle e Reel UGC. Tenere Passo high-key come terzo contenuto, con pochi aggiustamenti.",
+                "why": "Lifestyle e UGC fanno 14 pre-ordini ciascuno con circa €950 di spesa. On-model e Bianco e vento ne fanno 2 e 4 con conversioni di 0,53% e 0,66%.",
+                "impact": "Circa +15 pre-ordini a parità di budget (da 6 a circa 21 sui €1459), se il rendimento di Lifestyle e UGC regge."
+              },
+              {
+                "area": "creative",
+                "action": "Produrre un contenuto breve in cui si vede cosa entra nella borsa (28×22×10 cm) e la tracolla staccabile. Pubblicarlo come risposta ai commenti.",
+                "why": "Capienza: 4 commenti, per esempio «28 cm: entra una borraccia?». Il Packshot carosello è il peggiore per save (2,07%) e non risponde a queste domande.",
+                "impact": "Rispondere alle domande più frequenti punta a portare la conversione da 1,27% verso 1,5% (media dei contenuti migliori)."
+              },
+              {
+                "area": "audience",
+                "action": "Spostare €1000 da Francia e Germania a Italia e Regno Unito. Concentrare il budget su 25-34 e 45+. Ridurre i 18-24 (€900). In Germania usare le campagne sulla lista d'attesa.",
+                "why": "IT+UK: 14,0 pre-ordini per €1k. FR+DE: 6,8 per €1k. 25-34: 22 pre-ordini su €1900. 45+: conv. 1,55%. 18-24: conv. 0,88%.",
+                "impact": "Circa +7 pre-ordini ogni €1000 spostati (14,0 contro 6,8 per €1k)."
+              },
+              {
+                "area": "production",
+                "action": "Ordinare 460 pezzi al produttore, non i 650 abituali. Confermare con il produttore che tracolla e tasca zip rientrano nel lotto senza alzare il MOQ di 200.",
+                "why": "Domanda di stagione mediana 382 pezzi (80%: 284–514). Con 460 pezzi l'invenduto atteso è 82 pz contro 258 con 650.",
+                "impact": "Margine atteso €125031 contro €113934 con l'ordine abituale: circa +€11100. Vendite perse attese: 14 pz."
+              },
+              {
+                "area": "pricing",
+                "action": "Tenere il prezzo di pre-ordine a €590. Non fare sconti. Se serve, spiegare la qualità (pelle full-grain, cuciture) nelle schede prodotto.",
+                "why": "Commenti sul prezzo: 6 favorevoli su 9 («Prezzo onesto rispetto ai marchi grandi»). I 3 critici parlano di misura: «Un peu cher pour une petite taille».",
+                "impact": "Conserva il sell-through previsto del 67% e il margine di €125031 senza ribassi."
+              }
+            ],
+            "dnaChanges": [
+              {
+                "field": "handles",
+                "to": "dual short wide flat leather handles anchored seamlessly to the front and back top edges, plus an optional detachable flat leather shoulder strap in matching cognac leather",
+                "why": "12 commenti su 60 chiedono la tracolla, per esempio «Needs a detachable strap, I can't do hand-carry only»."
+              },
+              {
+                "field": "pockets",
+                "to": "none visible on exterior; one internal zippered pocket on the lining",
+                "why": "«Mettete almeno una tasca interna con zip» (85 like). Il nuovo contenuto non altera l'esterno pulito."
+              },
+              {
+                "field": "hardware_finish",
+                "to": "concealed magnetic hardware with no exterior exposed metal components; strap attachment hardware in a matte tonal cognac finish, unbranded",
+                "why": "La tracolla richiede attacchi. Vanno tenuti tonali e senza marchio per non perdere il pregio di «Pulitissima, niente loghi»."
+              }
+            ],
+            "risks": [
+              "Il limite basso dell'intervallo (62,1%) è sotto l'obiettivo del 65%. Se la conversione resta al percentile 33, il go è meno solido.",
+              "I pre-ordini sono solo 52 e i commenti analizzati 60 su 1243. I tassi per contenuto e per mercato sono stime fragili: 2 pre-ordini su On-model, 4 su Bianco e vento.",
+              "Aggiungere la tracolla cambia il prodotto. Non è stata testata sul mercato e potrebbe costare di più in produzione o ridurre la pulizia del design.",
+              "Le sessioni giornaliere scendono da 416 (g1) a 315 (g10). Il giorno 4 ha avuto 1 solo pre-ordine, quindi l'andamento è irregolare.",
+              "Nessun campione fisico esiste: qualità reale della pelle e della struttura va verificata sul prototipo prima di confermare l'ordine di 460 pezzi."
+            ],
+            "model": "eu.anthropic.claude-sonnet-5-5",
+            "at": "2026-10-17T10:42:53.355Z"
+          },
+          "956183481|a_mupz5d97bubx,a_muptbt9shrem,a_mupyubb0x50w,a_mupy95tgtin1,a_muq0ccx7qmmf,a_muq0ot71p267": {
             "verdict": "go",
             "headline": "Si va in produzione: sell-through previsto 74.5% contro un obiettivo del 65%, con il limite basso dell'intervallo (69.5%) ancora sopra l'obiettivo.",
             "summary": "La previsione statistica dice GO. Il sell-through a 8 settimane è 74.5% (80%: 69.5%–79.6%) e la quantità consigliata è 710 pezzi, contro un MOQ di 200. I commenti non danno motivi forti per fermarsi: colore (15 su 60), pelle e struttura (11) e assenza di logo (6) sono apprezzati. Il problema è la mancanza di tracolla (9 commenti su 60), da risolvere con un accessorio prima del lancio. Il test ha prodotto solo 40 pre-ordini, quindi le differenze tra mercati e pubblici vanno trattate come indicazioni.",
@@ -1926,163 +3678,6 @@
             ],
             "model": "eu.anthropic.claude-sonnet-5-5",
             "at": "2026-10-17T10:17:06.476Z"
-          },
-          "2004624445": {
-            "verdict": "go",
-            "headline": "Go: sell-through previsto 67% contro un obiettivo del 65%. Ordinare 460 pezzi e aggiungere tracolla staccabile e tasca interna con zip.",
-            "summary": "La previsione statistica dà 67% (80%: 62,1%–71,9%) contro il 65% richiesto, e 460 pezzi sono sopra il MOQ di 200. Il save rate è buono (3,64%, percentile 58). La conversione è debole (1,27%, percentile 33) e pesa sul risultato. Il freno principale nei commenti è l'assenza della tracolla: 12 commenti su 60. Non basta per ribaltare la decisione statistica, ma va corretto nel design prima dell'ordine. Il colore, l'assenza di logo e la pelle sono apprezzati (27 commenti su 60 in totale), quindi il prodotto resta com'è.",
-            "insights": [
-              {
-                "title": "Il go regge, ma l'intervallo tocca il limite",
-                "evidence": "Sell-through 67,0% con intervallo 80% 62,1%–71,9%. Il limite basso è sotto l'obiettivo del 65%, quindi il margine di sicurezza è di soli 2 punti."
-              },
-              {
-                "title": "Interesse buono, conversione debole",
-                "evidence": "Save rate 3,64% (percentile 58), conversione 1,27% (percentile 33), 10,4 pre-ordini per €1k (percentile 33). Nel modello ogni 0,1 punti di conversione valgono 1,6 punti di sell-through (coefficiente 0,157)."
-              },
-              {
-                "title": "La tracolla mancante è il primo ostacolo all'acquisto",
-                "evidence": "12 commenti su 60 (20%) la chiedono. «Solo a mano? Con la tracolla la prendevo subito» (IT) e «Dommage, sans bandoulière je ne peux pas la porter au quotidien» (FR) indicano acquisti persi."
-              },
-              {
-                "title": "Lifestyle e UGC rendono, On-model e Bianco e vento no",
-                "evidence": "Lifestyle: 14 pre-ordini su €939, save 4,64%. Reel UGC: 14 su €965, CTR 0,88%. On-model: 2 su €677 (conv. 0,53%). Bianco e vento: 4 su €782 (conv. 0,66%)."
-              },
-              {
-                "title": "Italia e Regno Unito convertono il doppio di Francia e Germania",
-                "evidence": "IT 1,61% e UK 1,69% (35 pre-ordini su €2500) contro FR 0,93% e DE 0,80% (17 su €2500). La Germania ha però 72 iscritti in lista d'attesa, quasi quanti il Regno Unito (70)."
-              }
-            ],
-            "themes": [
-              {
-                "theme": "tracolla",
-                "label": "Manca la tracolla",
-                "sentiment": "negative",
-                "share": 0.2,
-                "quote": "Il manque une bandoulière amovible",
-                "action": "Aggiungere una tracolla staccabile come accessorio e mostrarla nei contenuti."
-              },
-              {
-                "theme": "minimal",
-                "label": "Nessun logo",
-                "sentiment": "positive",
-                "share": 0.167,
-                "quote": "Pulitissima, niente loghi: la comprerei solo per questo",
-                "action": "Mantenere l'assenza di logo come messaggio centrale in tutti i mercati."
-              },
-              {
-                "theme": "colore",
-                "label": "Colore cognac",
-                "sentiment": "positive",
-                "share": 0.167,
-                "quote": "Cette couleur cognac est sublime",
-                "action": "Non toccare #B8652A. Usare inquadrature da vicino sul colore nei contenuti di punta."
-              },
-              {
-                "theme": "prezzo",
-                "label": "Prezzo",
-                "sentiment": "neutral",
-                "share": 0.15,
-                "quote": "Fair price for this quality",
-                "action": "Tenere €590. I commenti sul prezzo sono 6 favorevoli e 3 contrari («Bit pricey for the size»), e il rilievo riguarda soprattutto la misura."
-              },
-              {
-                "theme": "pelle",
-                "label": "Pelle e struttura",
-                "sentiment": "positive",
-                "share": 0.117,
-                "quote": "Looks like proper full-grain leather",
-                "action": "Mostrare cuciture e rigidità in dettaglio. Il commento «Love that it stands on its own» è un buon spunto per un reel."
-              },
-              {
-                "theme": "chiusura",
-                "label": "Chiusura solo magnetica",
-                "sentiment": "negative",
-                "share": 0.083,
-                "quote": "Solo il magnete? In metro a Milano mi serve una zip",
-                "action": "Aggiungere una tasca interna con zip per i valori. Il magnete resta."
-              },
-              {
-                "theme": "capienza",
-                "label": "Capienza",
-                "sentiment": "negative",
-                "share": 0.067,
-                "quote": "Carina ma un po' piccola per il lavoro, farete una misura più grande?",
-                "action": "Rispondere con i contenuti mostrando cosa entra in 28×22×10 cm. Valutare una misura più grande solo dopo la prossima lettura."
-              },
-              {
-                "theme": "disponibilita",
-                "label": "Intenzione d'acquisto",
-                "sentiment": "positive",
-                "share": 0.05,
-                "quote": "Quando arriva? Ho già fatto il pre-ordine",
-                "action": "Inviare ai pre-ordinanti una data di consegna certa e ai 272 iscritti in lista d'attesa un avviso di apertura."
-              }
-            ],
-            "actions": [
-              {
-                "area": "design",
-                "action": "Aggiungere una tracolla staccabile piatta in pelle cognac e una tasca interna con zip. Non cambiare corpo, colore, misure o assenza di logo.",
-                "why": "Tracolla: 12 commenti su 60. Chiusura e sicurezza: 5 commenti, tra cui «Mettete almeno una tasca interna con zip» (85 like).",
-                "impact": "Se la conversione sale da 1,27% a 1,5%, il sell-through previsto sale di circa 3,6 punti (0,157 × 0,23), a condizione che il modello regga."
-              },
-              {
-                "area": "creative",
-                "action": "Tagliare On-model (€677) e Bianco e vento (€782). Spostare i €1459 su Lifestyle e Reel UGC. Tenere Passo high-key come terzo contenuto, con pochi aggiustamenti.",
-                "why": "Lifestyle e UGC fanno 14 pre-ordini ciascuno con circa €950 di spesa. On-model e Bianco e vento ne fanno 2 e 4 con conversioni di 0,53% e 0,66%.",
-                "impact": "Circa +15 pre-ordini a parità di budget (da 6 a circa 21 sui €1459), se il rendimento di Lifestyle e UGC regge."
-              },
-              {
-                "area": "creative",
-                "action": "Produrre un contenuto breve in cui si vede cosa entra nella borsa (28×22×10 cm) e la tracolla staccabile. Pubblicarlo come risposta ai commenti.",
-                "why": "Capienza: 4 commenti, per esempio «28 cm: entra una borraccia?». Il Packshot carosello è il peggiore per save (2,07%) e non risponde a queste domande.",
-                "impact": "Rispondere alle domande più frequenti punta a portare la conversione da 1,27% verso 1,5% (media dei contenuti migliori)."
-              },
-              {
-                "area": "audience",
-                "action": "Spostare €1000 da Francia e Germania a Italia e Regno Unito. Concentrare il budget su 25-34 e 45+. Ridurre i 18-24 (€900). In Germania usare le campagne sulla lista d'attesa.",
-                "why": "IT+UK: 14,0 pre-ordini per €1k. FR+DE: 6,8 per €1k. 25-34: 22 pre-ordini su €1900. 45+: conv. 1,55%. 18-24: conv. 0,88%.",
-                "impact": "Circa +7 pre-ordini ogni €1000 spostati (14,0 contro 6,8 per €1k)."
-              },
-              {
-                "area": "production",
-                "action": "Ordinare 460 pezzi al produttore, non i 650 abituali. Confermare con il produttore che tracolla e tasca zip rientrano nel lotto senza alzare il MOQ di 200.",
-                "why": "Domanda di stagione mediana 382 pezzi (80%: 284–514). Con 460 pezzi l'invenduto atteso è 82 pz contro 258 con 650.",
-                "impact": "Margine atteso €125031 contro €113934 con l'ordine abituale: circa +€11100. Vendite perse attese: 14 pz."
-              },
-              {
-                "area": "pricing",
-                "action": "Tenere il prezzo di pre-ordine a €590. Non fare sconti. Se serve, spiegare la qualità (pelle full-grain, cuciture) nelle schede prodotto.",
-                "why": "Commenti sul prezzo: 6 favorevoli su 9 («Prezzo onesto rispetto ai marchi grandi»). I 3 critici parlano di misura: «Un peu cher pour une petite taille».",
-                "impact": "Conserva il sell-through previsto del 67% e il margine di €125031 senza ribassi."
-              }
-            ],
-            "dnaChanges": [
-              {
-                "field": "handles",
-                "to": "dual short wide flat leather handles anchored seamlessly to the front and back top edges, plus an optional detachable flat leather shoulder strap in matching cognac leather",
-                "why": "12 commenti su 60 chiedono la tracolla, per esempio «Needs a detachable strap, I can't do hand-carry only»."
-              },
-              {
-                "field": "pockets",
-                "to": "none visible on exterior; one internal zippered pocket on the lining",
-                "why": "«Mettete almeno una tasca interna con zip» (85 like). Il nuovo contenuto non altera l'esterno pulito."
-              },
-              {
-                "field": "hardware_finish",
-                "to": "concealed magnetic hardware with no exterior exposed metal components; strap attachment hardware in a matte tonal cognac finish, unbranded",
-                "why": "La tracolla richiede attacchi. Vanno tenuti tonali e senza marchio per non perdere il pregio di «Pulitissima, niente loghi»."
-              }
-            ],
-            "risks": [
-              "Il limite basso dell'intervallo (62,1%) è sotto l'obiettivo del 65%. Se la conversione resta al percentile 33, il go è meno solido.",
-              "I pre-ordini sono solo 52 e i commenti analizzati 60 su 1243. I tassi per contenuto e per mercato sono stime fragili: 2 pre-ordini su On-model, 4 su Bianco e vento.",
-              "Aggiungere la tracolla cambia il prodotto. Non è stata testata sul mercato e potrebbe costare di più in produzione o ridurre la pulizia del design.",
-              "Le sessioni giornaliere scendono da 416 (g1) a 315 (g10). Il giorno 4 ha avuto 1 solo pre-ordine, quindi l'andamento è irregolare.",
-              "Nessun campione fisico esiste: qualità reale della pelle e della struttura va verificata sul prototipo prima di confermare l'ordine di 460 pezzi."
-            ],
-            "model": "eu.anthropic.claude-sonnet-5-5",
-            "at": "2026-10-17T10:42:53.355Z"
           }
         }
       }
@@ -5600,53 +7195,656 @@
       "approvedBy": "direzione creativa"
     },
     {
-      "id": "a_mvc893fpsjf8",
+      "id": "a_mvc9y3chm63k",
       "garmentId": "g_mul19n4iilgd",
-      "kind": "mesh",
+      "kind": "lookbook",
       "media": {
-        "file": "m_mvc893fmvn20.glb",
-        "mime": "model/gltf-binary"
+        "file": "m_mvc9y3cfawg6.jpg",
+        "mime": "image/jpeg"
+      },
+      "status": "approved",
+      "refs": [
+        "a_mul2w2j3bnk0",
+        "a_mul1cjyh66dx",
+        "a_mul2vpci4l0u",
+        "a_mul1cn21qb1e"
+      ],
+      "prompt": "Create a photorealistic high-end studio fashion editorial photograph for the lookbook of a luxury house.\nImage 1 is the approved on-model photograph of the same fictional adult model on a commercial job: preserve his face, his hair and the exact styling he wears there, accessories and legwear included. Take only identity and styling from it; pose, set and light come from this brief, not from Image 1.\nImage 2 is the approved front packshot of this exact cardigan: the truth for colour, fabric surface, trims and finish.\nImage 3 is the approved three-quarter packshot of this exact cardigan: the truth for depth, volume and length.\nImage 4 is a close-up of the silver-tone rectangular zip pull: the truth for its shape and finish.\n\nThe model has a luminous fresh complexion, natural brushed-up brows and glossy nude-rose lips, with lips softly parted and an unhurried direct gaze into the lens.\n\nHe wears the cardigan shown in the other images, fully zipped over his t-shirt; it falls to the hip, anchoring gently at the waist with its ribbed hem, and fits comfortably relaxed through the shoulders and arms. Shoes and legwear stay exactly as in Image 1: the same shoes, and tights or stockings only when Image 1 already shows them. The cardigan is identical to the packshots: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams, with its beige chunky English rib knit, its ribbed mock-neck collar, its exposed silver-tone front zipper with rectangular pull, and its raglan sleeve decrease seams. Keep cut, beige colour, 5-gauge rib stitch, mock neck height, raglan seams, zipper placement, and silver-tone hardware identical; do not redesign the cardigan.\n\nSCALE: On a 186 cm model the hem falls at the hip line and the raglan sleeves end neatly at the wrist bone. The mock-neck collar stands about four fingers high along the neck, and the silver-tone zip pull is roughly the size of a paperclip.\n\nStanding in profile, he twists his shoulders back toward the camera, one hand raised to the crown of his head while the other rests at his waist.\n\nThe setting is a seamless high-key studio with an unbroken warm off-white cyclorama. An unseen breeze sweeps across the set from the left, lifting his hair into loose horizontal strands.\n\nA large soft key light from the upper left illuminates his face and shoulders with smooth gradation. The wind-tousled strands catch bright rim highlights that separate his from the pale backdrop, and a soft shadow falls to the right.\n\nThe image carries an airy, kinetic editorial energy balanced by clean high-key minimalism.\n\n```json\n{\n  \"meta\": {\n    \"quality\": \"Masterwork studio fashion editorial with immaculate optical fidelity, true fabric texture and lifelike natural rendering.\",\n    \"style\": \"Kinetic high-key fashion editorial where movement in the hair contrasts with the still, sculpted garment.\",\n    \"aspect_ratio\": \"Vertical 3:4 editorial composition with generous breathing room around the figure.\"\n  },\n  \"subject_aura\": {\n    \"capture_type\": \"Eye-level three-quarter-length portrait from head to knees, the torso turned back toward the camera.\",\n    \"outfit_vibe\": \"The cardigan as the hero piece: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams.\",\n    \"pose_flow\": \"Profile stance with a twist through the shoulders, one hand lifted into the hair.\"\n  },\n  \"scene_aesthetics\": {\n    \"location_feel\": \"Warm off-white seamless cyclorama with a steady breeze from the left.\",\n    \"lighting_mood\": \"Large soft key from the upper left with bright rim highlights on the moving hair.\",\n    \"color_palette\": \"Warm ivory and cream tones that let the garment's own colour lead.\"\n  },\n  \"technical_illusion\": {\n    \"camera_style\": \"Full-frame capture with crisp detail, fast shutter freezing each strand of hair.\",\n    \"lens_feel\": \"Standard portrait lens with natural perspective and a softly falling-off background.\"\n  }\n}\n```\n\nStyle: opaque fashion styling, original invented adult face, the cardigan as the only fashion item in focus, no text, no logo, no watermark.",
+      "gen": {
+        "modelId": "qwen-image-2.1",
+        "provider": "fal",
+        "hosting": "managed",
+        "weights": "open",
+        "ms": 17893,
+        "usd": 0.035
+      },
+      "label": "bianco-vento",
+      "createdAt": "2026-10-17T10:49:23.825Z",
+      "approvedBy": "direzione creativa"
+    },
+    {
+      "id": "a_mvc9y4ebm2i1",
+      "garmentId": "cast",
+      "kind": "person",
+      "media": {
+        "file": "m_mvc9y4ealg2i.jpg",
+        "mime": "image/jpeg"
+      },
+      "status": "draft",
+      "refs": [
+        "a_mul2vi8d9khv"
+      ],
+      "prompt": "Image 1 is the approved front reference of this same fictional adult model: keep his face, his hair, his lean build and the grey set he wears there identical. Only the angle and the pose change.\nPhotorealistic full-body studio reference photograph of a fictional adult fashion model on a commercial job: mid 20s Southern Italian man, short dark curly hair, dark brown eyes, clean-shaven, lean fashion-model build, wears Italian size 48 clothes, about 182 cm.\nHis build is lean, the proportions of a menswear lookbook.\nHe wears a plain matte mid-grey seamless set: a loose sleeveless top and matching straight shorts ending above the knee, opaque fabric, no print and no logo. Both feet are flat on the studio floor.\nHe stands straight with his back to the camera, head level and facing away, weight even on both feet, arms relaxed and held slightly clear of his sides.\nPlain light grey seamless studio background, soft even frontal light, the whole figure in frame from head to toe with margin.\nOriginal invented face, natural skin texture with visible pores, catalogue photography.\nStyle: neutral studio reference, relaxed upright posture, no props, no text, no logo, no watermark.",
+      "gen": {
+        "modelId": "qwen-image-2.1",
+        "provider": "fal",
+        "hosting": "managed",
+        "weights": "open",
+        "ms": 19167,
+        "usd": 0.035
+      },
+      "label": "model-m2:back",
+      "createdAt": "2026-10-17T10:49:25.187Z"
+    },
+    {
+      "id": "a_mvc9y8bxp2cv",
+      "garmentId": "g_mul19n4iilgd",
+      "kind": "lookbook",
+      "media": {
+        "file": "m_mvc9y8bvdh7m.jpg",
+        "mime": "image/jpeg"
+      },
+      "status": "approved",
+      "refs": [
+        "a_mul2w2j3bnk0",
+        "a_mul1cjyh66dx",
+        "a_mul2vpci4l0u",
+        "a_mul1cn21qb1e"
+      ],
+      "prompt": "Create a photorealistic high-end studio fashion editorial photograph for the lookbook of a luxury house.\nImage 1 is the approved on-model photograph of the same fictional adult model on a commercial job: preserve his face, his hair and the exact styling he wears there, accessories and legwear included. Take only identity and styling from it; pose, set and light come from this brief, not from Image 1.\nImage 2 is the approved front packshot of this exact cardigan: the truth for colour, fabric surface, trims and finish.\nImage 3 is the approved three-quarter packshot of this exact cardigan: the truth for depth, volume and length.\nImage 4 is a close-up of the silver-tone rectangular zip pull: the truth for its shape and finish.\n\nThe model has a fresh satin complexion, softly groomed brows and satin berry lips, with a confident, self-possessed expression looking straight into the lens.\n\nHe wears the cardigan shown in the other images, fully zipped over his t-shirt; it falls to the hip, anchoring gently at the waist with its ribbed hem, and fits comfortably relaxed through the shoulders and arms. Shoes and legwear stay exactly as in Image 1: the same shoes, and tights or stockings only when Image 1 already shows them. The cardigan is identical to the packshots: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams, with its beige chunky English rib knit, its ribbed mock-neck collar, its exposed silver-tone front zipper with rectangular pull, and its raglan sleeve decrease seams. Keep cut, beige colour, 5-gauge rib stitch, mock neck height, raglan seams, zipper placement, and silver-tone hardware identical; do not redesign the cardigan.\n\nSCALE: On a 186 cm model the hem falls at the hip line and the raglan sleeves end neatly at the wrist bone. The mock-neck collar stands about four fingers high along the neck, and the silver-tone zip pull is roughly the size of a paperclip.\n\nHe stands in a wide, confident stance with one foot crossed in front of the other, both hands resting at his waist with elbows angled gently outward.\n\nThe setting is a minimalist white studio with a seamless wall and a smooth pale concrete floor. A crisp, hard-edged shadow of his figure falls across the pristine white backdrop to the right.\n\nA hard frontal key light from the upper left gives a crisp direct-flash character. Light transitions from bright to shadow with clear directionality, rendering fabric texture and hardware with high-impact specular clarity.\n\nThe photograph has the punchy, graphic confidence of a contemporary fashion campaign.\n\n```json\n{\n  \"meta\": {\n    \"quality\": \"Masterwork studio fashion editorial with immaculate optical fidelity, true fabric texture and lifelike natural rendering.\",\n    \"style\": \"Graphic direct-flash campaign aesthetic with bold shadow shapes and saturated colour.\",\n    \"aspect_ratio\": \"Vertical 3:4 editorial composition with generous breathing room around the figure.\"\n  },\n  \"subject_aura\": {\n    \"capture_type\": \"Eye-level full-length portrait with generous white space and his cast shadow as a second figure.\",\n    \"outfit_vibe\": \"The cardigan as the hero piece: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams.\",\n    \"pose_flow\": \"Wide grounded stance, one foot crossed in front, hands at the waist with elbows out.\"\n  },\n  \"scene_aesthetics\": {\n    \"location_feel\": \"Minimal white studio with a seamless wall and pale concrete floor.\",\n    \"lighting_mood\": \"Hard frontal flash from the upper left with a crisp, hard-edged cast shadow.\",\n    \"color_palette\": \"Stark white and pale concrete grey that make the garment's colour punch.\"\n  },\n  \"technical_illusion\": {\n    \"camera_style\": \"Professional flash capture with pin-sharp detail and high micro-contrast.\",\n    \"lens_feel\": \"Standard focal length with flat, graphic perspective and deep focus.\"\n  }\n}\n```\n\nStyle: opaque fashion styling, original invented adult face, the cardigan as the only fashion item in focus, no text, no logo, no watermark.",
+      "gen": {
+        "modelId": "qwen-image-2.1",
+        "provider": "fal",
+        "hosting": "managed",
+        "weights": "open",
+        "ms": 24327,
+        "usd": 0.035
+      },
+      "label": "flash-diretto",
+      "createdAt": "2026-10-17T10:49:30.285Z",
+      "approvedBy": "direzione creativa"
+    },
+    {
+      "id": "a_mvc9yd74ij8f",
+      "garmentId": "g_mul19n4iilgd",
+      "kind": "lookbook",
+      "media": {
+        "file": "m_mvc9yd72fo1u.jpg",
+        "mime": "image/jpeg"
+      },
+      "status": "approved",
+      "refs": [
+        "a_mul2w2j3bnk0",
+        "a_mul1cjyh66dx",
+        "a_mul2vpci4l0u",
+        "a_mul1cn21qb1e"
+      ],
+      "prompt": "Create a photorealistic high-end studio fashion editorial photograph for the lookbook of a luxury house.\nImage 1 is the approved on-model photograph of the same fictional adult model on a commercial job: preserve his face, his hair and the exact styling he wears there, accessories and legwear included. Take only identity and styling from it; pose, set and light come from this brief, not from Image 1.\nImage 2 is the approved front packshot of this exact cardigan: the truth for colour, fabric surface, trims and finish.\nImage 3 is the approved three-quarter packshot of this exact cardigan: the truth for depth, volume and length.\nImage 4 is a close-up of the silver-tone rectangular zip pull: the truth for its shape and finish.\n\nThe model has a velvety matte complexion, defined warm brown brows, soft bronze smoky eyelids and satin brick-red lips, with chin slightly raised and a steady, magnetic gaze toward the camera.\n\nHe wears the cardigan shown in the other images, fully zipped over his t-shirt; it falls to the hip, anchoring gently at the waist with its ribbed hem, and fits comfortably relaxed through the shoulders and arms. Shoes and legwear stay exactly as in Image 1: the same shoes, and tights or stockings only when Image 1 already shows them. The cardigan is identical to the packshots: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams, with its beige chunky English rib knit, its ribbed mock-neck collar, its exposed silver-tone front zipper with rectangular pull, and its raglan sleeve decrease seams. Keep cut, beige colour, 5-gauge rib stitch, mock neck height, raglan seams, zipper placement, and silver-tone hardware identical; do not redesign the cardigan.\n\nSCALE: On a 186 cm model the hem falls at the hip line and the raglan sleeves end neatly at the wrist bone. The mock-neck collar stands about four fingers high along the neck, and the silver-tone zip pull is roughly the size of a paperclip.\n\nPerched side-saddle on the arm of a low leather armchair, he rests one hand flat on its chrome frame and keeps his spine long and composed.\n\nThe graphic studio features a pale grey seamless backdrop holding a large soft-edged circular pool of light behind his. A dark polished floor extends beneath a deep-navy leather cantilever armchair with tubular chrome framing.\n\nAn elevated frontal spotlight acts as the key, carving a crisp pool of light while light transitions from bright to shadow with clear directionality. Polished highlights catch the chrome frame and the garment's hardware.\n\nThe mood is theatrical and self-assured, a sculptural editorial built on circles of light and deep shadow.\n\n```json\n{\n  \"meta\": {\n    \"quality\": \"Masterwork studio fashion editorial with immaculate optical fidelity, true fabric texture and lifelike natural rendering.\",\n    \"style\": \"Theatrical studio editorial combining mid-century design furniture with graphic spotlighting.\",\n    \"aspect_ratio\": \"Vertical 3:4 editorial composition with generous breathing room around the figure.\"\n  },\n  \"subject_aura\": {\n    \"capture_type\": \"Slightly low eye-level full-length portrait, the seated figure centred inside the circle of light.\",\n    \"outfit_vibe\": \"The cardigan as the hero piece: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams.\",\n    \"pose_flow\": \"Side-saddle perch on the armchair arm with one hand planted on the chrome frame.\"\n  },\n  \"scene_aesthetics\": {\n    \"location_feel\": \"Pale grey seamless studio with a projected circular light disk and a dark polished floor.\",\n    \"lighting_mood\": \"Elevated frontal spotlight with crisp pools of light and deep surrounding shadow.\",\n    \"color_palette\": \"Pale grey, deep navy leather and polished chrome around the garment's own colour.\"\n  },\n  \"technical_illusion\": {\n    \"camera_style\": \"Medium-format capture with deep tonal gradations and rich shadow detail.\",\n    \"lens_feel\": \"Portrait telephoto compression with smooth rolloff into the dark floor.\"\n  }\n}\n```\n\nStyle: opaque fashion styling, original invented adult face, the cardigan as the only fashion item in focus, no text, no logo, no watermark.",
+      "gen": {
+        "modelId": "qwen-image-2.1",
+        "provider": "fal",
+        "hosting": "managed",
+        "weights": "open",
+        "ms": 30611,
+        "usd": 0.035
+      },
+      "label": "spot-poltrona",
+      "createdAt": "2026-10-17T10:49:36.592Z",
+      "approvedBy": "direzione creativa"
+    },
+    {
+      "id": "a_mvc9ygrc3z3p",
+      "garmentId": "g_mul19n4iilgd",
+      "kind": "lookbook",
+      "media": {
+        "file": "m_mvc9ygra5oji.jpg",
+        "mime": "image/jpeg"
+      },
+      "status": "approved",
+      "refs": [
+        "a_mul2w2j3bnk0",
+        "a_mul1cjyh66dx",
+        "a_mul2vpci4l0u",
+        "a_mul1cn21qb1e"
+      ],
+      "prompt": "Create a photorealistic high-end studio fashion editorial photograph for the lookbook of a luxury house.\nImage 1 is the approved on-model photograph of the same fictional adult model on a commercial job: preserve his face, his hair and the exact styling he wears there, accessories and legwear included. Take only identity and styling from it; pose, set and light come from this brief, not from Image 1.\nImage 2 is the approved front packshot of this exact cardigan: the truth for colour, fabric surface, trims and finish.\nImage 3 is the approved three-quarter packshot of this exact cardigan: the truth for depth, volume and length.\nImage 4 is a close-up of the silver-tone rectangular zip pull: the truth for its shape and finish.\n\nThe model has a clean luminous complexion, naturally groomed brows and soft rosy-nude lips, with a relaxed, focused expression looking just past the lens.\n\nHe wears the cardigan shown in the other images, fully zipped over his t-shirt; it falls to the hip, anchoring gently at the waist with its ribbed hem, and fits comfortably relaxed through the shoulders and arms. Shoes and legwear stay exactly as in Image 1: the same shoes, and tights or stockings only when Image 1 already shows them. The cardigan is identical to the packshots: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams, with its beige chunky English rib knit, its ribbed mock-neck collar, its exposed silver-tone front zipper with rectangular pull, and its raglan sleeve decrease seams. Keep cut, beige colour, 5-gauge rib stitch, mock neck height, raglan seams, zipper placement, and silver-tone hardware identical; do not redesign the cardigan.\n\nSCALE: On a 186 cm model the hem falls at the hip line and the raglan sleeves end neatly at the wrist bone. The mock-neck collar stands about four fingers high along the neck, and the silver-tone zip pull is roughly the size of a paperclip.\n\nHe steps forward in a fluid mid-stride, his weight shifting onto the planted leg and his arms swinging naturally, the garment moving with the step.\n\nThe setting is an abstract high-key studio defined by an unbroken seamless white backdrop without props. The white environment wraps cleanly around his, with only a soft contact shadow beneath his feet.\n\nLarge soft frontal key lighting slightly above eye level bathes his in luminous, low-contrast illumination with translucent shadows. Gentle fill keeps the whole garment readable from neckline to hem.\n\nThe image reads as a clean, luminous runway moment frozen in the studio.\n\n```json\n{\n  \"meta\": {\n    \"quality\": \"Masterwork studio fashion editorial with immaculate optical fidelity, true fabric texture and lifelike natural rendering.\",\n    \"style\": \"Luminous high-key catalogue editorial with runway energy.\",\n    \"aspect_ratio\": \"Vertical 3:4 editorial composition with generous breathing room around the figure.\"\n  },\n  \"subject_aura\": {\n    \"capture_type\": \"Eye-level full-length shot, head to shoes in frame, caught mid-stride toward the camera.\",\n    \"outfit_vibe\": \"The cardigan as the hero piece: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams.\",\n    \"pose_flow\": \"Fluid forward stride with natural arm swing and the garment in motion.\"\n  },\n  \"scene_aesthetics\": {\n    \"location_feel\": \"Pure white seamless studio with no props.\",\n    \"lighting_mood\": \"Large soft frontal key with translucent, low-contrast shadows.\",\n    \"color_palette\": \"Bright white and soft grey shadow with the garment as the only colour.\"\n  },\n  \"technical_illusion\": {\n    \"camera_style\": \"Full-frame capture with a fast shutter, crisp edges and clean tonal roll-off.\",\n    \"lens_feel\": \"Standard neutral lens preserving true proportions of garment and figure.\"\n  }\n}\n```\n\nStyle: opaque fashion styling, original invented adult face, the cardigan as the only fashion item in focus, no text, no logo, no watermark.",
+      "gen": {
+        "modelId": "qwen-image-2.1",
+        "provider": "fal",
+        "hosting": "managed",
+        "weights": "open",
+        "ms": 35206,
+        "usd": 0.035
+      },
+      "label": "passo-high-key",
+      "createdAt": "2026-10-17T10:49:41.208Z",
+      "approvedBy": "direzione creativa"
+    },
+    {
+      "id": "a_mvc9ym29t2cf",
+      "garmentId": "g_mul19n4iilgd",
+      "kind": "lookbook",
+      "media": {
+        "file": "m_mvc9ym287wu4.jpg",
+        "mime": "image/jpeg"
+      },
+      "status": "approved",
+      "refs": [
+        "a_mul2w2j3bnk0",
+        "a_mul1cjyh66dx",
+        "a_mul2vpci4l0u",
+        "a_mul1cn21qb1e"
+      ],
+      "prompt": "Create a photorealistic high-end studio fashion editorial photograph for the lookbook of a luxury house.\nImage 1 is the approved on-model photograph of the same fictional adult model on a commercial job: preserve his face, his hair and the exact styling he wears there, accessories and legwear included. Take only identity and styling from it; pose, set and light come from this brief, not from Image 1.\nImage 2 is the approved front packshot of this exact cardigan: the truth for colour, fabric surface, trims and finish.\nImage 3 is the approved three-quarter packshot of this exact cardigan: the truth for depth, volume and length.\nImage 4 is a close-up of the silver-tone rectangular zip pull: the truth for its shape and finish.\n\nThe model has a dewy satin complexion, softly defined brows, subtly smoked bronze eyelids and satin rose-brown lips, with a calm, composed expression with his gaze held steadily toward the lens.\n\nHe wears the cardigan shown in the other images, fully zipped over his t-shirt; it falls to the hip, anchoring gently at the waist with its ribbed hem, and fits comfortably relaxed through the shoulders and arms. Shoes and legwear stay exactly as in Image 1: the same shoes, and tights or stockings only when Image 1 already shows them. The cardigan is identical to the packshots: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams, with its beige chunky English rib knit, its ribbed mock-neck collar, its exposed silver-tone front zipper with rectangular pull, and its raglan sleeve decrease seams. Keep cut, beige colour, 5-gauge rib stitch, mock neck height, raglan seams, zipper placement, and silver-tone hardware identical; do not redesign the cardigan.\n\nSCALE: On a 186 cm model the hem falls at the hip line and the raglan sleeves end neatly at the wrist bone. The mock-neck collar stands about four fingers high along the neck, and the silver-tone zip pull is roughly the size of a paperclip.\n\nHe stands in an upright, balanced stance with his weight settled on one leg, one hand resting lightly at his waist while the other arm hangs relaxed along his side.\n\nThe setting is a seamless editorial studio wrapped in uniform neutral grey tones. A smooth curved horizon blends floor and wall into an uncluttered tonal expanse.\n\nA soft directional key light falls from the upper left, sculpting his face and shoulders with subtle gradations into gentle shadow. Restrained fill keeps rich contrast while a faint rim light traces the outer edge of the silhouette.\n\nThe photograph delivers a refined, quietly cinematic presence defined by graphic simplicity and modern elegance.\n\n```json\n{\n  \"meta\": {\n    \"quality\": \"Masterwork studio fashion editorial with immaculate optical fidelity, true fabric texture and lifelike natural rendering.\",\n    \"style\": \"Contemporary minimalist studio portraiture blending classical poise with sleek modern styling.\",\n    \"aspect_ratio\": \"Vertical 3:4 editorial composition with generous breathing room around the figure.\"\n  },\n  \"subject_aura\": {\n    \"capture_type\": \"Eye-level full-length studio portrait, centred with balanced formal symmetry, head to shoes in frame.\",\n    \"outfit_vibe\": \"The cardigan as the hero piece: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams.\",\n    \"pose_flow\": \"Grounded upright stance with a gentle weight shift and one hand poised at the waist.\"\n  },\n  \"scene_aesthetics\": {\n    \"location_feel\": \"Seamless neutral grey studio stripped of extraneous ornamentation.\",\n    \"lighting_mood\": \"Soft wrapping key from the upper left, restrained fill and a faint rim separating the silhouette.\",\n    \"color_palette\": \"Cool ash grey and soft charcoal shadow around the garment's own colour.\"\n  },\n  \"technical_illusion\": {\n    \"camera_style\": \"Professional medium-format capture rendering natural texture clarity and rich tonal gradients.\",\n    \"lens_feel\": \"Portrait telephoto compression creating subtle subject separation and gradual background rolloff.\"\n  }\n}\n```\n\nStyle: opaque fashion styling, original invented adult face, the cardigan as the only fashion item in focus, no text, no logo, no watermark.",
+      "gen": {
+        "modelId": "qwen-image-2.1",
+        "provider": "fal",
+        "hosting": "managed",
+        "weights": "open",
+        "ms": 42180,
+        "usd": 0.035
+      },
+      "label": "grigio-scolpito",
+      "createdAt": "2026-10-17T10:49:48.081Z",
+      "approvedBy": "direzione creativa"
+    },
+    {
+      "id": "a_mvc9yp7yu2sk",
+      "garmentId": "cast",
+      "kind": "person",
+      "media": {
+        "file": "m_mvc9yp7ys59x.jpg",
+        "mime": "image/jpeg"
+      },
+      "status": "draft",
+      "refs": [],
+      "prompt": "Create a photorealistic vertical smartphone photo for a paid-social creator reference.\nFictional adult man on a commercial job: mid 20s Italian man, short dark brown hair, light stubble, brown eyes, lean build, wears Italian size 48 clothes, about 184 cm. Original invented face, striking and photogenic, natural skin texture with visible pores, no beauty filter.\nHis build is lean, the proportions of a menswear lookbook.\nOutfit: charcoal overshirt, straight dark trousers, white leather sneakers, fully covering opaque fabric.\nSetting: small bedroom in a shared Milan flat: warm lamp on the desk, a clothes rail with shirts and jackets, a folded ring light in the corner, sneakers by the door.\nAction: standing, full figure from head to shoes, weight on one leg, facing the camera, a small confident smile, one hand in his pocket.\nDeliverable: authentic phone photo taken by a friend for his Instagram, slightly soft, casual and candid, ordinary phone colours.\nStyle: everyday clothing, original invented adult face, clean frame.",
+      "gen": {
+        "modelId": "qwen-image-2.1",
+        "provider": "fal",
+        "hosting": "managed",
+        "weights": "open",
+        "ms": 40517,
+        "usd": 0.035
+      },
+      "label": "marco",
+      "createdAt": "2026-10-17T10:49:52.174Z"
+    },
+    {
+      "id": "a_mvc9zejey3il",
+      "garmentId": "g_mul19n4iilgd",
+      "kind": "lookbook",
+      "media": {
+        "file": "m_mvc9zejdovaj.jpg",
+        "mime": "image/jpeg"
+      },
+      "status": "approved",
+      "refs": [
+        "a_mul2w2j3bnk0",
+        "a_mvc9y4ebm2i1",
+        "a_mul1cjyh66dx",
+        "a_mul2vrel2kb9",
+        "a_mul2vpci4l0u",
+        "a_mul1cn21qb1e"
+      ],
+      "prompt": "Create a photorealistic high-end studio fashion editorial photograph for the lookbook of a luxury house.\nImage 1 is the approved on-model photograph of the same fictional adult model on a commercial job: preserve his face, his hair and the exact styling he wears there, accessories and legwear included. Take only identity and styling from it; pose, set and light come from this brief, not from Image 1.\nImage 2 is the same model photographed from behind: the truth for his hair and his figure seen from the back.\nImage 3 is the approved front packshot of this exact cardigan: the truth for colour, fabric surface, trims and finish.\nImage 4 is the approved back packshot of this exact cardigan: the truth for the back construction, seams and trims.\nImage 5 is the approved three-quarter packshot of this exact cardigan: the truth for depth, volume and length.\nImage 6 is a close-up of the silver-tone rectangular zip pull: the truth for its shape and finish.\n\nThe model has a dewy satin complexion, softly defined brows and glossy mauve lips, with his face in three-quarter profile, glancing back at the lens with a poised, unhurried look.\n\nHe wears the cardigan shown in the other images, fully zipped over his t-shirt; it falls to the hip, anchoring gently at the waist with its ribbed hem, and fits comfortably relaxed through the shoulders and arms. Shoes and legwear stay exactly as in Image 1: the same shoes, and tights or stockings only when Image 1 already shows them. The cardigan is identical to the packshots: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams, with its beige chunky English rib knit, its ribbed mock-neck collar, its exposed silver-tone front zipper with rectangular pull, and its raglan sleeve decrease seams. Keep cut, beige colour, 5-gauge rib stitch, mock neck height, raglan seams, zipper placement, and silver-tone hardware identical; do not redesign the cardigan. Back view of the cardigan, showing the continuous vertical ribbing across the back panel and the fully fashioned diagonal raglan seams running from underarm to neckline.\n\nSCALE: On a 186 cm model the hem falls at the hip line and the raglan sleeves end neatly at the wrist bone. The mock-neck collar stands about four fingers high along the neck, and the silver-tone zip pull is roughly the size of a paperclip.\n\nHe stands facing away from the camera, rotating his shoulders slightly and glancing back over one shoulder toward the lens, one hand resting lightly at his waist.\n\nThe setting is an empty high-key photography studio defined by a seamless warm off-white cyclorama wall. The background stays clean and uncluttered, giving total focus to the back of the garment.\n\nA large soft key light from the upper left washes across his shoulders and the back of the garment with gradual shadow rolloff. A soft cast shadow extends across the wall to the right.\n\nThe photograph captures a poised over-the-shoulder moment with quiet sophistication.\n\n```json\n{\n  \"meta\": {\n    \"quality\": \"Masterwork studio fashion editorial with immaculate optical fidelity, true fabric texture and lifelike natural rendering.\",\n    \"style\": \"Refined back-view studio editorial that treats the garment's construction as the subject.\",\n    \"aspect_ratio\": \"Vertical 3:4 editorial composition with generous breathing room around the figure.\"\n  },\n  \"subject_aura\": {\n    \"capture_type\": \"Eye-level full-length back view, head to shoes in frame, face turned back over the shoulder.\",\n    \"outfit_vibe\": \"The cardigan as the hero piece: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams.\",\n    \"pose_flow\": \"Standing with his back to the camera, a slight rotation through the shoulders and a glance back.\"\n  },\n  \"scene_aesthetics\": {\n    \"location_feel\": \"Warm off-white seamless cyclorama, clean and uncluttered.\",\n    \"lighting_mood\": \"Large soft key from the upper left with gradual rolloff and a soft cast shadow on the wall.\",\n    \"color_palette\": \"Warm ivory and soft taupe shadow around the garment's own colour.\"\n  },\n  \"technical_illusion\": {\n    \"camera_style\": \"Medium-format capture with precise seam and texture definition.\",\n    \"lens_feel\": \"Portrait telephoto compression with a gently diffused backdrop.\"\n  }\n}\n```\n\nStyle: opaque fashion styling, original invented adult face, the cardigan as the only fashion item in focus, no text, no logo, no watermark.",
+      "gen": {
+        "modelId": "qwen-image-2.1",
+        "provider": "fal",
+        "hosting": "managed",
+        "weights": "open",
+        "ms": 59786,
+        "usd": 0.035
+      },
+      "label": "retro-spalla",
+      "createdAt": "2026-10-17T10:50:24.986Z",
+      "approvedBy": "direzione creativa"
+    },
+    {
+      "id": "a_mvc9zieuv6d2",
+      "garmentId": "g_mul19n4iilgd",
+      "kind": "scene",
+      "media": {
+        "file": "m_mvc9zietfmiq.jpg",
+        "mime": "image/jpeg"
+      },
+      "status": "approved",
+      "refs": [
+        "a_mul1cjyh66dx",
+        "a_mul2vkreznx5"
+      ],
+      "prompt": "Editorial lifestyle still life for a fashion e-commerce product page. The garment hangs on a slim walnut wooden hanger from a black steel wall hook in a bright Milan entrance hall, a leather weekender bag on the herringbone parquet below, morning light from a tall window. No person, no mannequin, no text, no logos.\nImage 1 is the approved packshot of the cardigan; Image 2 is a close-up of its fabric. The cardigan is identical to the packshot: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams, with its beige chunky English rib knit, its ribbed mock-neck collar, its exposed silver-tone front zipper with rectangular pull, and its raglan sleeve decrease seams. Keep cut, beige colour, 5-gauge rib stitch, mock neck height, raglan seams, zipper placement, and silver-tone hardware identical; do not redesign the cardigan.\nNatural window light, soft shadows, true-to-life colour, shot on a 50 mm lens at eye level, photographic realism.",
+      "gen": {
+        "modelId": "qwen-image-2.1",
+        "provider": "fal",
+        "hosting": "managed",
+        "weights": "open",
+        "ms": 38535,
+        "usd": 0.035
+      },
+      "createdAt": "2026-10-17T10:50:30.006Z",
+      "approvedBy": "direzione creativa"
+    },
+    {
+      "id": "a_mvc9zm18l55p",
+      "garmentId": "g_mul19n4iilgd",
+      "kind": "ugc-frame",
+      "media": {
+        "file": "m_mvc9zm17qt7f.jpg",
+        "mime": "image/jpeg"
+      },
+      "status": "approved",
+      "refs": [
+        "a_mvc9yp7yu2sk",
+        "a_mul1cjyh66dx",
+        "a_mul2vpci4l0u",
+        "a_mul1cn21qb1e"
+      ],
+      "prompt": "Create a photorealistic vertical 9:16 smartphone photo for a paid-social creator video.\nImage 1 is the identity reference for a fictional adult creator: preserve his face and hair exactly. He now wears the cardigan shown in the other images, fully zipped, over his own outfit, over his charcoal overshirt, straight dark trousers, white leather sneakers.\nImage 2 is the approved front packshot of this exact cardigan: the truth for colour, fabric surface, trims and finish.\nImage 3 is the approved three-quarter packshot of this exact cardigan: the truth for depth, volume and length.\nImage 4 is a close-up of the silver-tone rectangular zip pull: the truth for its shape and finish.\n\nThe cardigan must be identical to the packshots: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams, with its beige chunky English rib knit, its ribbed mock-neck collar, its exposed silver-tone front zipper with rectangular pull, and its raglan sleeve decrease seams.\nKeep cut, beige colour, 5-gauge rib stitch, mock neck height, raglan seams, zipper placement, and silver-tone hardware identical; do not redesign the cardigan.\n\nSCALE: On a 186 cm model the hem falls at the hip line and the raglan sleeves end neatly at the wrist. The mock-neck collar stands about four fingers high along the neck, and the silver-tone zip pull is roughly the size of a paperclip.\n\nSetting: a bright, airy living room of an elegant old apartment in Milano: white panelled walls with classic mouldings, a herringbone wooden floor, a light grey sofa and a tall potted plant behind his, soft even daylight from a large window out of frame.\nAction: he stands in the middle of the room wearing the cardigan, full figure from head to shoes, the whole cardigan visible from neckline to hem, dark oval sunglasses, a small black quilted shoulder bag with a chain strap on his shoulder, one hand lifting his hair at the side of his head and the other on his hip, chin up, a confident model pose, the product clearly visible.\nDeliverable: pause-frame of an authentic TikTok or Instagram Reel shot on a phone, imperfect framing, real lived-in place, casual.\nStyle: everyday opaque clothing, relaxed candid posture, original invented adult face, the cardigan as the only fashion item in focus, no text, no logo, no watermark.",
+      "gen": {
+        "modelId": "qwen-image-2.1",
+        "provider": "fal",
+        "hosting": "managed",
+        "weights": "open",
+        "ms": 42507,
+        "usd": 0.035
+      },
+      "label": "ootd:look",
+      "createdAt": "2026-10-17T10:50:34.700Z",
+      "approvedBy": "auto"
+    },
+    {
+      "id": "a_mvc9znwaxvvt",
+      "garmentId": "g_mul19n4iilgd",
+      "kind": "scene",
+      "media": {
+        "file": "m_mvc9znw91gc4.jpg",
+        "mime": "image/jpeg"
       },
       "status": "draft",
       "refs": [
         "a_mul1cjyh66dx",
-        "a_mul3le0k4lw4"
+        "a_mul2vkreznx5"
       ],
-      "label": "operatore",
-      "operator": {
-        "minutes": 9,
-        "tool": "Blender · tools/refine_cabas.py",
-        "changes": [
-          "Dal 3D generato: profondità 77,2 cm invece di 10, corpo alto 77,9 cm invece di 22, manico posteriore spezzato, frammenti all'interno",
-          "Allineato e messo in scala: corpo 28 × 22 × 10 cm, fondo a quota zero",
-          "Corpo ricostruito strutturato: pareti dritte, pelle 2,5 mm, fondo piano, angoli arrotondati 1,2 cm",
-          "Manici rifatti: due nastri piatti da 2,2 cm, luce aperta sotto l'arco, attacchi a linguetta sul fronte e sul retro",
-          "Cucitura centrale come pezzo separato, con le due file di impunture",
-          "Linguetta interna con il magnete di chiusura",
-          "Componenti separati: corpo, interno, manici, cucitura, chiusura",
-          "Materiali: pelle liscia cognac con grana, interno scamosciato, bordi tinti"
-        ],
-        "body": {
-          "w": 28,
-          "h": 22,
-          "d": 10
-        },
-        "with_handles": {
-          "w": 28,
-          "h": 35.1,
-          "d": 10.8
-        },
-        "generated": {
-          "width_cm": 28,
-          "depth_cm": 77.2,
-          "height_with_handles_cm": 95.7,
-          "body_height_cm": 77.9,
-          "vertices": 55288,
-          "objects": 1
-        },
-        "simulated": true
+      "prompt": "Editorial lifestyle still life for a fashion e-commerce product page. The garment lies casually folded on the seat of a mid-century oak lounge chair in a quiet Milan apartment, a linen throw and a ceramic cup on a low table beside it, warm plaster wall behind. No person, no mannequin, no text, no logos.\nImage 1 is the approved packshot of the cardigan; Image 2 is a close-up of its fabric. The cardigan is identical to the packshot: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams, with its beige chunky English rib knit, its ribbed mock-neck collar, its exposed silver-tone front zipper with rectangular pull, and its raglan sleeve decrease seams. Keep cut, beige colour, 5-gauge rib stitch, mock neck height, raglan seams, zipper placement, and silver-tone hardware identical; do not redesign the cardigan.\nNatural window light, soft shadows, true-to-life colour, shot on a 50 mm lens at eye level, photographic realism.",
+      "gen": {
+        "modelId": "qwen-image-2.1",
+        "provider": "fal",
+        "hosting": "managed",
+        "weights": "open",
+        "ms": 45644,
+        "usd": 0.035
       },
-      "createdAt": "2026-10-17T10:01:57.925Z"
+      "createdAt": "2026-10-17T10:50:37.114Z"
+    },
+    {
+      "id": "a_mvc9zw3woo5z",
+      "garmentId": "g_mul19n4iilgd",
+      "kind": "ugc-clip",
+      "media": {
+        "file": "m_mvc9zw3t6q3d.mp4",
+        "mime": "video/mp4"
+      },
+      "status": "approved",
+      "refs": [
+        "a_mvc9zm18l55p",
+        "a_mvc9yp7yu2sk",
+        "a_mul1cjyh66dx",
+        "a_mul2vpci4l0u",
+        "a_mul2vrel2kb9"
+      ],
+      "prompt": "Vertical 9:16, 5 seconds, one continuous take, no cuts. The action happens in the first 2 seconds.\n\nImage 1 is the approved front packshot of this exact cardigan: the truth for colour, fabric surface, trims and finish.\nImage 2 is the approved three-quarter packshot of this exact cardigan: the truth for depth, volume and length.\nImage 3 is the approved back packshot of this exact cardigan: the truth for the back construction, seams and trims.\nThese images are the cardigan only, not his face and not the place. The clip opens on the first frame. When he turns, each side of the cardigan that faces the camera is the matching image above. Do not invent another cardigan, a closure, a strap or a different shape.\n\nScene\nCasual creator video shot on a phone, with the spontaneous, slightly imperfect look of a personal social-media recording.\nOrdinary phone-camera dynamic range, gentle exposure breathing, auto white balance, restrained sharpening, natural skin colour with visible pores.\nThe same man from the first frame, same face and hair, wearing this exact cardigan: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams.\nThe cardigan keeps its beige chunky English rib knit, its ribbed mock-neck collar, its exposed silver-tone front zipper with rectangular pull, and its raglan sleeve decrease seams for the whole clip; hardware and trims keep their shape and colour.. Everything else stays as in the first frame for the whole clip: his clothes, his shoes, his accessories, his bag and the props, exactly as generated. Change only what the timeline explicitly changes.\n\nTimeline\n[0-0.7s] He drops the hand from his hair so the hair falls, shifts his weight onto the other leg and gives a small smile, at a normal speed.\n[0.7-1.5s] He turns a quarter to his side in one step, the cardigan moving with his.\n[1.5-end] He stays at that angle, breathing, with a small shift of weight.\n\nPace\nPlay every gesture at ordinary real-time speed, the pace of a person filmed on a phone: a step about half a second, a full turn on the spot about one second, a hand gesture under a second. Do not stretch a gesture to fill its time slot. When the movement is done he stays alive until the next beat: he breathes and shifts his weight.\n\nCamera\nRear phone camera on a small tripod at hip height, about three metres from his, framing his full figure from head to shoes with floor and wall around his; the phone stays fixed for the whole take; the phone stays propped and still, a tiny wobble when he touches the surface, no zoom. Slightly imperfect framing, as held by a real person.\n\nAudio\nQuiet room tone, soft footsteps on the wooden floor. He does not speak. No other voices.\nnon_diegetic_music: N/A\n\nConstraints\nThe place stays exactly as in the first frame for the whole clip: walls, furniture, objects, floor and light keep their positions. Only he moves. Real and unpolished, no studio.\nNo on-screen text, no captions, no subtitles, no logos, no watermark, no extra people talking, no beauty smoothing, no plastic skin.",
+      "gen": {
+        "modelId": "h3-max",
+        "provider": "fal",
+        "hosting": "managed",
+        "weights": "closed",
+        "ms": 13043,
+        "usd": 0.4
+      },
+      "label": "ootd:look",
+      "createdAt": "2026-10-17T10:50:47.756Z",
+      "approvedBy": "auto"
+    },
+    {
+      "id": "a_mvca06uyqbd0",
+      "garmentId": "g_mul19n4iilgd",
+      "kind": "ugc-frame",
+      "media": {
+        "file": "m_mvca06uvm3u7.jpg",
+        "mime": "image/jpeg"
+      },
+      "status": "approved",
+      "refs": [
+        "a_mvc9yp7yu2sk",
+        "a_mul1cjyh66dx",
+        "a_mul2vpci4l0u",
+        "a_mul1cn21qb1e",
+        "a_mvc9zm18l55p"
+      ],
+      "prompt": "Create a photorealistic vertical 9:16 smartphone photo for a paid-social creator video.\nImage 1 is the identity reference for a fictional adult creator: preserve his face and hair exactly. He holds the cardigan shown in the other images. Everything else already in the previous moment stays, unless the action below changes it.\nImage 5 is the previous moment of this reel, and the background plate of the room: the last frame of the previous clip when that clip exists, otherwise that shot's frame. Reproduce that place exactly: the same facade, the same objects, the same ground and the same daylight, in the same positions. Image 1 gives his face and hair only; the place behind his in Image 1 is not used. Continue from that image: the same clothes, the same shoes, the same accessories, the same bag and the same props, exactly as generated. Change only what the action below explicitly changes. Where it gives his a different outfit, puts the product on or away, or adds or removes an accessory, follow the action and leave the rest untouched. Something the action names that is already in that image stays that exact one.\nImage 2 is the approved front packshot of this exact cardigan: the truth for colour, fabric surface, trims and finish.\nImage 3 is the approved three-quarter packshot of this exact cardigan: the truth for depth, volume and length.\nImage 4 is a close-up of the silver-tone rectangular zip pull: the truth for its shape and finish.\n\nThe cardigan must be identical to the packshots: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams, with its beige chunky English rib knit, its ribbed mock-neck collar, its exposed silver-tone front zipper with rectangular pull, and its raglan sleeve decrease seams.\nKeep cut, beige colour, 5-gauge rib stitch, mock neck height, raglan seams, zipper placement, and silver-tone hardware identical; do not redesign the cardigan.\n\nSCALE: On a 186 cm model the hem falls at the hip line and the raglan sleeves end neatly at the wrist. The mock-neck collar stands about four fingers high along the neck, and the silver-tone zip pull is roughly the size of a paperclip.\n\nSetting: the room of the background-plate image, the phone on the same tripod in the same spot.\nAction: he stands in the middle of the room in his own everyday outfit, hair down, no sunglasses, holding the cardigan on a wooden hanger up in front of his at arm's length toward the camera, the whole cardigan visible and hanging naturally, looking into the lens with a playful smile.\nDeliverable: pause-frame of an authentic TikTok or Instagram Reel shot on a phone, imperfect framing, real lived-in place, casual.\nStyle: everyday opaque clothing, relaxed candid posture, original invented adult face, no text, no logo, no watermark.",
+      "gen": {
+        "modelId": "qwen-image-2.1",
+        "provider": "fal",
+        "hosting": "managed",
+        "weights": "open",
+        "ms": 13271,
+        "usd": 0.035
+      },
+      "label": "ootd:hanger",
+      "createdAt": "2026-10-17T10:51:01.690Z",
+      "approvedBy": "auto"
+    },
+    {
+      "id": "a_mvca0hh3j5e2",
+      "garmentId": "g_mul19n4iilgd",
+      "kind": "ugc-clip",
+      "media": {
+        "file": "m_mvca0hgzj7gh.mp4",
+        "mime": "video/mp4"
+      },
+      "status": "approved",
+      "refs": [
+        "a_mvca06uyqbd0",
+        "a_mvc9yp7yu2sk",
+        "a_mul1cjyh66dx",
+        "a_mul2vpci4l0u",
+        "a_mul2vrel2kb9"
+      ],
+      "prompt": "Vertical 9:16, 5 seconds, one continuous take, no cuts. The action happens in the first 3.5 seconds.\n\nImage 1 is the approved front packshot of this exact cardigan: the truth for colour, fabric surface, trims and finish.\nImage 2 is the approved three-quarter packshot of this exact cardigan: the truth for depth, volume and length.\nImage 3 is the approved back packshot of this exact cardigan: the truth for the back construction, seams and trims.\nThese images are the cardigan only, not his face and not the place. The clip opens on the first frame. When he turns, each side of the cardigan that faces the camera is the matching image above. Do not invent another cardigan, a closure, a strap or a different shape.\n\nScene\nCasual creator video shot on a phone, with the spontaneous, slightly imperfect look of a personal social-media recording.\nOrdinary phone-camera dynamic range, gentle exposure breathing, auto white balance, restrained sharpening, natural skin colour with visible pores.\nThe same man from the first frame, same face and hair, with this exact cardigan: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams.\nThe cardigan keeps its beige chunky English rib knit, its ribbed mock-neck collar, its exposed silver-tone front zipper with rectangular pull, and its raglan sleeve decrease seams for the whole clip; hardware and trims keep their shape and colour.. Everything else stays as in the first frame for the whole clip: his clothes, his shoes, his accessories, his bag and the props, exactly as generated. Change only what the timeline explicitly changes.\n\nTimeline\n[0-1.2s] He sways the cardigan on its hanger left and right twice at a normal speed so the fabric swings, looking into the lens.\n[1.2-2.2s] He keeps what he is holding out toward the camera so that the chunky vertical rib knit, the mock-neck collar and the silver-tone zipper pull can be seen, then lowers it to his side.\n[2.2-end] He walks out of the frame to the left at a normal walking pace.\n\nPace\nPlay every gesture at ordinary real-time speed, the pace of a person filmed on a phone: a step about half a second, a full turn on the spot about one second, a hand gesture under a second. Do not stretch a gesture to fill its time slot. When the movement is done he stays alive until the next beat: he breathes and shifts his weight.\n\nCamera\nRear phone camera on a small tripod at hip height, about three metres from his, framing his full figure from head to shoes with floor and wall around his; the phone stays fixed for the whole take; the phone stays propped and still, a tiny wobble when he touches the surface, no zoom. Slightly imperfect framing, as held by a real person.\n\nAudio\nQuiet room tone, a rustle of fabric. He does not speak. No other voices.\nnon_diegetic_music: N/A\n\nConstraints\nThe place stays exactly as in the first frame for the whole clip: walls, furniture, objects, floor and light keep their positions. Only he moves. Real and unpolished, no studio.\nNo on-screen text, no captions, no subtitles, no logos, no watermark, no extra people talking, no beauty smoothing, no plastic skin.",
+      "gen": {
+        "modelId": "h3-max",
+        "provider": "fal",
+        "hosting": "managed",
+        "weights": "closed",
+        "ms": 13735,
+        "usd": 0.4
+      },
+      "label": "ootd:hanger",
+      "createdAt": "2026-10-17T10:51:15.447Z",
+      "approvedBy": "auto"
+    },
+    {
+      "id": "a_mvca1foyj0d2",
+      "garmentId": "g_mul19n4iilgd",
+      "kind": "ugc-frame",
+      "media": {
+        "file": "m_mvca1foxa1ug.jpg",
+        "mime": "image/jpeg"
+      },
+      "status": "approved",
+      "refs": [
+        "a_mvc9yp7yu2sk",
+        "a_mul1cjyh66dx",
+        "a_mul2vrel2kb9",
+        "a_mul2vpci4l0u",
+        "a_mul1cn21qb1e",
+        "a_mvc9zm18l55p",
+        "a_mvca06uyqbd0"
+      ],
+      "prompt": "Create a photorealistic vertical 9:16 smartphone photo for a paid-social creator video.\nImage 1 is the identity reference for a fictional adult creator: preserve his face and hair exactly. He now wears the cardigan shown in the other images, fully zipped, over his own outfit, over the clothes already on his in the previous moment. Everything else already in the previous moment stays, unless the action below changes it.\nImage 6 is the background plate, an earlier frame of this reel in this same place. Reproduce that place exactly: the same facade, the same objects, the same ground and the same daylight, in the same positions. Image 1 gives his face and hair only; the place behind his in Image 1 is not used. His look comes from the previous-moment image, changed only by this shot's action. Do not copy his clothes from the plate. Where he steps closer, whatever shows behind his still belongs to that place.\nImage 7 is the previous moment of this reel: the last frame of the previous clip when that clip exists, otherwise that shot's frame. Continue from that image: the same clothes, the same shoes, the same accessories, the same bag and the same props, exactly as generated. Change only what the action below explicitly changes. Where it gives his a different outfit, puts the product on or away, or adds or removes an accessory, follow the action and leave the rest untouched. Something the action names that is already in that image stays that exact one.\nImage 2 is the approved front packshot of this exact cardigan: the truth for colour, fabric surface, trims and finish.\nImage 3 is the approved back packshot of this exact cardigan: the truth for the back construction, seams and trims.\nImage 4 is the approved three-quarter packshot of this exact cardigan: the truth for depth, volume and length.\nImage 5 is a close-up of the silver-tone rectangular zip pull: the truth for its shape and finish.\n\nThe cardigan must be identical to the packshots: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams, with its beige chunky English rib knit, its ribbed mock-neck collar, its exposed silver-tone front zipper with rectangular pull, and its raglan sleeve decrease seams.\nKeep cut, beige colour, 5-gauge rib stitch, mock neck height, raglan seams, zipper placement, and silver-tone hardware identical; do not redesign the cardigan.\nThe back packshot is the construction of the back, for when he turns. This frame keeps the pose in the action below: do not turn his to match it, and do not copy its white background.\n\nSCALE: On a 186 cm model the hem falls at the hip line and the raglan sleeves end neatly at the wrist. The mock-neck collar stands about four fingers high along the neck, and the silver-tone zip pull is roughly the size of a paperclip.\n\nSetting: the room of the background-plate image, the phone on the same tripod in the same spot.\nAction: he stands in the middle of the room wearing the cardigan, hair down, no sunglasses, both hands at the collar near the top of the zipper adjusting it with a satisfied look, full figure from head to shoes, the whole cardigan visible.\nDeliverable: pause-frame of an authentic TikTok or Instagram Reel shot on a phone, imperfect framing, real lived-in place, casual.\nStyle: everyday opaque clothing, relaxed candid posture, original invented adult face, no text, no logo, no watermark.",
+      "gen": {
+        "modelId": "qwen-image-2.1",
+        "provider": "fal",
+        "hosting": "managed",
+        "weights": "open",
+        "ms": 43695,
+        "usd": 0.035
+      },
+      "label": "ootd:on",
+      "createdAt": "2026-10-17T10:51:59.794Z",
+      "approvedBy": "auto"
+    },
+    {
+      "id": "a_mvca1rapeg6m",
+      "garmentId": "g_mul19n4iilgd",
+      "kind": "ugc-clip",
+      "media": {
+        "file": "m_mvca1ranfo8i.mp4",
+        "mime": "video/mp4"
+      },
+      "status": "approved",
+      "refs": [
+        "a_mvca1foyj0d2",
+        "a_mvc9yp7yu2sk",
+        "a_mul1cjyh66dx",
+        "a_mul2vpci4l0u",
+        "a_mul2vrel2kb9"
+      ],
+      "prompt": "Vertical 9:16, 7 seconds, one continuous take, no cuts. The action happens in the first 6.5 seconds.\n\nImage 1 is the approved front packshot of this exact cardigan: the truth for colour, fabric surface, trims and finish.\nImage 2 is the approved three-quarter packshot of this exact cardigan: the truth for depth, volume and length.\nImage 3 is the approved back packshot of this exact cardigan: the truth for the back construction, seams and trims.\nThese images are the cardigan only, not his face and not the place. The clip opens on the first frame. When he turns, each side of the cardigan that faces the camera is the matching image above. Do not invent another cardigan, a closure, a strap or a different shape.\n\nScene\nCasual creator video shot on a phone, with the spontaneous, slightly imperfect look of a personal social-media recording.\nOrdinary phone-camera dynamic range, gentle exposure breathing, auto white balance, restrained sharpening, natural skin colour with visible pores.\nThe same man from the first frame, same face and hair, wearing this exact cardigan: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams.\nThe cardigan keeps its beige chunky English rib knit, its ribbed mock-neck collar, its exposed silver-tone front zipper with rectangular pull, and its raglan sleeve decrease seams for the whole clip; hardware and trims keep their shape and colour.. Everything else stays as in the first frame for the whole clip: his clothes, his shoes, his accessories, his bag and the props, exactly as generated. Change only what the timeline explicitly changes. When he turns and the back of the cardigan faces the camera, that back is exactly Image 3 and nothing else. Do not add a closure, buttons, a belt, an opening or a second piece.\n\nTimeline\n[0-1.4s] He smooths and adjusts the collar near the top of the zipper with quick hands, then looks up at the camera and smiles.\n[1.4-2.2s] He drops his hands and shifts his weight.\n[2.6-3.8s] He turns once on the spot at a normal speed, a full turn in about a second, showing the back of the cardigan, and lands facing the camera.\n[3.8-end] He puts his hands on his hips, pleased, and shifts his weight once.\n\nPace\nPlay every gesture at ordinary real-time speed, the pace of a person filmed on a phone: a step about half a second, a full turn on the spot about one second, a hand gesture under a second. Do not stretch a gesture to fill its time slot. When the movement is done he stays alive until the next beat: he breathes and shifts his weight.\n\nCamera\nRear phone camera on a small tripod at hip height, about three metres from his, framing his full figure from head to shoes with floor and wall around his; the phone stays fixed for the whole take; the phone stays propped and still, a tiny wobble when he touches the surface, no zoom. Slightly imperfect framing, as held by a real person.\n\nAudio\nQuiet room tone, a swish of fabric as he turns. He does not speak. No other voices.\nnon_diegetic_music: N/A\n\nConstraints\nThe place stays exactly as in the first frame for the whole clip: walls, furniture, objects, floor and light keep their positions. Only he moves. Real and unpolished, no studio.\nNo on-screen text, no captions, no subtitles, no logos, no watermark, no extra people talking, no beauty smoothing, no plastic skin.",
+      "gen": {
+        "modelId": "h3-max",
+        "provider": "fal",
+        "hosting": "managed",
+        "weights": "closed",
+        "ms": 15028,
+        "usd": 0.56
+      },
+      "label": "ootd:on",
+      "createdAt": "2026-10-17T10:52:14.833Z",
+      "approvedBy": "auto"
+    },
+    {
+      "id": "a_mvca22ck6n6c",
+      "garmentId": "g_mul19n4iilgd",
+      "kind": "ugc-frame",
+      "media": {
+        "file": "m_mvca22cjnkpi.jpg",
+        "mime": "image/jpeg"
+      },
+      "status": "approved",
+      "refs": [
+        "a_mvc9yp7yu2sk",
+        "a_mul1cjyh66dx",
+        "a_mul2vpci4l0u",
+        "a_mul1cn21qb1e",
+        "a_mvc9zm18l55p",
+        "a_mvca1rapeg6m"
+      ],
+      "prompt": "Create a photorealistic vertical 9:16 smartphone photo for a paid-social creator video.\nImage 1 is the identity reference for a fictional adult creator: preserve his face and hair exactly. He now wears the cardigan shown in the other images, fully zipped, over his own outfit, over the clothes already on his in the previous moment. Everything else already in the previous moment stays, unless the action below changes it.\nImage 5 is the background plate, an earlier frame of this reel in this same place. Reproduce that place exactly: the same facade, the same objects, the same ground and the same daylight, in the same positions. Image 1 gives his face and hair only; the place behind his in Image 1 is not used. His look comes from the previous-moment image, changed only by this shot's action. Do not copy his clothes from the plate. Where he steps closer, whatever shows behind his still belongs to that place.\nImage 6 is the previous moment of this reel: the last frame of the previous clip when that clip exists, otherwise that shot's frame. Continue from that image: the same clothes, the same shoes, the same accessories, the same bag and the same props, exactly as generated. Change only what the action below explicitly changes. Where it gives his a different outfit, puts the product on or away, or adds or removes an accessory, follow the action and leave the rest untouched. Something the action names that is already in that image stays that exact one.\nImage 2 is the approved front packshot of this exact cardigan: the truth for colour, fabric surface, trims and finish.\nImage 3 is the approved three-quarter packshot of this exact cardigan: the truth for depth, volume and length.\nImage 4 is a close-up of the silver-tone rectangular zip pull: the truth for its shape and finish.\n\nThe cardigan must be identical to the packshots: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams, with its beige chunky English rib knit, its ribbed mock-neck collar, its exposed silver-tone front zipper with rectangular pull, and its raglan sleeve decrease seams.\nKeep cut, beige colour, 5-gauge rib stitch, mock neck height, raglan seams, zipper placement, and silver-tone hardware identical; do not redesign the cardigan.\n\nSCALE: On a 186 cm model the hem falls at the hip line and the raglan sleeves end neatly at the wrist. The mock-neck collar stands about four fingers high along the neck, and the silver-tone zip pull is roughly the size of a paperclip.\n\nSetting: the room of the background-plate image, he has stepped closer to the phone so that room sits soft behind his.\nAction: his face is large in the frame and the top of the cardigan is visible below it, one hand raised beside his face fastening a small gold earring, looking into the lens with a relaxed, confident expression.\nDeliverable: pause-frame of an authentic TikTok or Instagram Reel shot on a phone, imperfect framing, real lived-in place, casual.\nStyle: everyday opaque clothing, relaxed candid posture, original invented adult face, no text, no logo, no watermark.",
+      "gen": {
+        "modelId": "qwen-image-2.1",
+        "provider": "fal",
+        "hosting": "managed",
+        "weights": "open",
+        "ms": 14167,
+        "usd": 0.035
+      },
+      "label": "ootd:close",
+      "createdAt": "2026-10-17T10:52:29.156Z",
+      "approvedBy": "auto"
+    },
+    {
+      "id": "a_mvca2ckwg44p",
+      "garmentId": "g_mul19n4iilgd",
+      "kind": "ugc-clip",
+      "media": {
+        "file": "m_mvca2cks8ksw.mp4",
+        "mime": "video/mp4"
+      },
+      "status": "approved",
+      "refs": [
+        "a_mvca22ck6n6c",
+        "a_mvc9yp7yu2sk",
+        "a_mul1cjyh66dx",
+        "a_mul2vpci4l0u",
+        "a_mul2vrel2kb9"
+      ],
+      "prompt": "Vertical 9:16, 5 seconds, one continuous take, no cuts. The action happens in the first 2.5 seconds.\n\nImage 1 is the approved front packshot of this exact cardigan: the truth for colour, fabric surface, trims and finish.\nImage 2 is the approved three-quarter packshot of this exact cardigan: the truth for depth, volume and length.\nImage 3 is the approved back packshot of this exact cardigan: the truth for the back construction, seams and trims.\nThese images are the cardigan only, not his face and not the place. The clip opens on the first frame. When he turns, each side of the cardigan that faces the camera is the matching image above. Do not invent another cardigan, a closure, a strap or a different shape.\n\nScene\nCasual creator video shot on a phone, with the spontaneous, slightly imperfect look of a personal social-media recording.\nOrdinary phone-camera dynamic range, gentle exposure breathing, auto white balance, restrained sharpening, natural skin colour with visible pores.\nThe same man from the first frame, same face and hair, wearing this exact cardigan: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams.\nThe cardigan keeps its beige chunky English rib knit, its ribbed mock-neck collar, its exposed silver-tone front zipper with rectangular pull, and its raglan sleeve decrease seams for the whole clip; hardware and trims keep their shape and colour.. Everything else stays as in the first frame for the whole clip: his clothes, his shoes, his accessories, his bag and the props, exactly as generated. Change only what the timeline explicitly changes.\n\nTimeline\n[0-1.2s] He fastens the earring, tilts his head and looks into the lens.\n[1.2-2.2s] He runs his fingers through his hair in one pass.\n[2.2-end] He steps back from the phone at a normal pace.\n\nPace\nPlay every gesture at ordinary real-time speed, the pace of a person filmed on a phone: a step about half a second, a full turn on the spot about one second, a hand gesture under a second. Do not stretch a gesture to fill its time slot. When the movement is done he stays alive until the next beat: he breathes and shifts his weight.\n\nCamera\nThe same phone on its tripod, he has stepped a little closer: his face large in the frame, the phone stays at eye level; the phone stays propped and still, a tiny wobble when he touches the surface, no zoom. Slightly imperfect framing, as held by a real person.\n\nAudio\nQuiet room tone. He does not speak. No other voices.\nnon_diegetic_music: N/A\n\nConstraints\nThe place stays exactly as in the first frame for the whole clip: walls, furniture, objects, floor and light keep their positions. Only he moves. Real and unpolished, no studio.\nNo on-screen text, no captions, no subtitles, no logos, no watermark, no extra people talking, no beauty smoothing, no plastic skin.",
+      "gen": {
+        "modelId": "h3-max",
+        "provider": "fal",
+        "hosting": "managed",
+        "weights": "closed",
+        "ms": 13247,
+        "usd": 0.4
+      },
+      "label": "ootd:close",
+      "createdAt": "2026-10-17T10:52:42.416Z",
+      "approvedBy": "auto"
+    },
+    {
+      "id": "a_mvca2n62m4ze",
+      "garmentId": "g_mul19n4iilgd",
+      "kind": "ugc-frame",
+      "media": {
+        "file": "m_mvca2n61dlik.jpg",
+        "mime": "image/jpeg"
+      },
+      "status": "approved",
+      "refs": [
+        "a_mvc9yp7yu2sk",
+        "a_mul1cjyh66dx",
+        "a_mul2vpci4l0u",
+        "a_mul1cn21qb1e",
+        "a_mvc9zm18l55p",
+        "a_mvca22ck6n6c"
+      ],
+      "prompt": "Create a photorealistic vertical 9:16 smartphone photo for a paid-social creator video.\nImage 1 is the identity reference for a fictional adult creator: preserve his face and hair exactly. He now wears the cardigan shown in the other images, fully zipped, over his own outfit, over the clothes already on his in the previous moment. Everything else already in the previous moment stays, unless the action below changes it.\nImage 5 is the background plate, an earlier frame of this reel in this same place. Reproduce that place exactly: the same facade, the same objects, the same ground and the same daylight, in the same positions. Image 1 gives his face and hair only; the place behind his in Image 1 is not used. His look comes from the previous-moment image, changed only by this shot's action. Do not copy his clothes from the plate. Where he steps closer, whatever shows behind his still belongs to that place.\nImage 6 is the previous moment of this reel: the last frame of the previous clip when that clip exists, otherwise that shot's frame. Continue from that image: the same clothes, the same shoes, the same accessories, the same bag and the same props, exactly as generated. Change only what the action below explicitly changes. Where it gives his a different outfit, puts the product on or away, or adds or removes an accessory, follow the action and leave the rest untouched. Something the action names that is already in that image stays that exact one.\nImage 2 is the approved front packshot of this exact cardigan: the truth for colour, fabric surface, trims and finish.\nImage 3 is the approved three-quarter packshot of this exact cardigan: the truth for depth, volume and length.\nImage 4 is a close-up of the silver-tone rectangular zip pull: the truth for its shape and finish.\n\nThe cardigan must be identical to the packshots: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams, with its beige chunky English rib knit, its ribbed mock-neck collar, its exposed silver-tone front zipper with rectangular pull, and its raglan sleeve decrease seams.\nKeep cut, beige colour, 5-gauge rib stitch, mock neck height, raglan seams, zipper placement, and silver-tone hardware identical; do not redesign the cardigan.\n\nSCALE: On a 186 cm model the hem falls at the hip line and the raglan sleeves end neatly at the wrist. The mock-neck collar stands about four fingers high along the neck, and the silver-tone zip pull is roughly the size of a paperclip.\n\nSetting: the room of the background-plate image, the phone on the same tripod in the same spot.\nAction: he stands in the middle of the room wearing the cardigan, full figure from head to shoes, putting on dark oval sunglasses with both hands, dark oval sunglasses, a small black quilted shoulder bag with a chain strap on his shoulder, the whole cardigan visible.\nDeliverable: pause-frame of an authentic TikTok or Instagram Reel shot on a phone, imperfect framing, real lived-in place, casual.\nStyle: everyday opaque clothing, relaxed candid posture, original invented adult face, no text, no logo, no watermark.",
+      "gen": {
+        "modelId": "qwen-image-2.1",
+        "provider": "fal",
+        "hosting": "managed",
+        "weights": "open",
+        "ms": 13034,
+        "usd": 0.035
+      },
+      "label": "ootd:style",
+      "createdAt": "2026-10-17T10:52:56.138Z",
+      "approvedBy": "auto"
+    },
+    {
+      "id": "a_mvca2yvhcg42",
+      "garmentId": "g_mul19n4iilgd",
+      "kind": "ugc-clip",
+      "media": {
+        "file": "m_mvca2yvcfmlr.mp4",
+        "mime": "video/mp4"
+      },
+      "status": "approved",
+      "refs": [
+        "a_mvca2n62m4ze",
+        "a_mvc9yp7yu2sk",
+        "a_mul1cjyh66dx",
+        "a_mul2vpci4l0u",
+        "a_mul2vrel2kb9"
+      ],
+      "prompt": "Vertical 9:16, 8 seconds, one continuous take, no cuts. The action happens in the first 8 seconds.\n\nImage 1 is the approved front packshot of this exact cardigan: the truth for colour, fabric surface, trims and finish.\nImage 2 is the approved three-quarter packshot of this exact cardigan: the truth for depth, volume and length.\nImage 3 is the approved back packshot of this exact cardigan: the truth for the back construction, seams and trims.\nThese images are the cardigan only, not his face and not the place. The clip opens on the first frame. When he turns, each side of the cardigan that faces the camera is the matching image above. Do not invent another cardigan, a closure, a strap or a different shape.\n\nScene\nCasual creator video shot on a phone, with the spontaneous, slightly imperfect look of a personal social-media recording.\nOrdinary phone-camera dynamic range, gentle exposure breathing, auto white balance, restrained sharpening, natural skin colour with visible pores.\nThe same man from the first frame, same face and hair, wearing this exact cardigan: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams.\nThe cardigan keeps its beige chunky English rib knit, its ribbed mock-neck collar, its exposed silver-tone front zipper with rectangular pull, and its raglan sleeve decrease seams for the whole clip; hardware and trims keep their shape and colour.. Everything else stays as in the first frame for the whole clip: his clothes, his shoes, his accessories, his bag and the props, exactly as generated. Change only what the timeline explicitly changes.\n\nTimeline\n[0-1.2s] He slides the sunglasses on and slings the bag onto his shoulder.\n[1.2-2.4s] He flips his hair back and puts one hand on his hip.\n[2.4-3.6s] He turns to his side in one step to show the cardigan in profile, then turns his face back to the camera.\n[3.6-4.6s] He faces forward again.\n[4.6-6.6s] He walks straight toward the camera at a normal walking pace, a step about every half second, the cardigan moving as he walks.\n[6.6-end] Close to the phone, he raises his palm and covers the lens; the frame goes dark.\n\nPace\nPlay every gesture at ordinary real-time speed, the pace of a person filmed on a phone: a step about half a second, a full turn on the spot about one second, a hand gesture under a second. Do not stretch a gesture to fill its time slot. When the movement is done he stays alive until the next beat: he breathes and shifts his weight.\n\nCamera\nRear phone camera on a small tripod at hip height, about three metres from his, framing his full figure from head to shoes with floor and wall around his; the phone stays fixed for the whole take; the phone stays propped and still, a tiny wobble when he touches the surface, no zoom. Slightly imperfect framing, as held by a real person.\n\nAudio\nQuiet room tone, his footsteps on the wooden floor. He does not speak. No other voices.\nnon_diegetic_music: N/A\n\nConstraints\nThe place stays exactly as in the first frame for the whole clip: walls, furniture, objects, floor and light keep their positions. Only he moves. Real and unpolished, no studio.\nNo on-screen text, no captions, no subtitles, no logos, no watermark, no extra people talking, no beauty smoothing, no plastic skin.",
+      "gen": {
+        "modelId": "h3-max",
+        "provider": "fal",
+        "hosting": "managed",
+        "weights": "closed",
+        "ms": 15150,
+        "usd": 0.64
+      },
+      "label": "ootd:style",
+      "createdAt": "2026-10-17T10:53:11.309Z",
+      "approvedBy": "auto"
+    },
+    {
+      "id": "a_mvca3108uyr9",
+      "garmentId": "g_mul19n4iilgd",
+      "kind": "ugc-video",
+      "media": {
+        "file": "m_mvca3103njee.mp4",
+        "mime": "video/mp4"
+      },
+      "status": "approved",
+      "refs": [
+        "a_mvc9zw3woo5z",
+        "a_mvca0hh3j5e2",
+        "a_mvca1rapeg6m",
+        "a_mvca2ckwg44p",
+        "a_mvca2yvhcg42",
+        "a_mvc9yp7yu2sk"
+      ],
+      "label": "ootd",
+      "createdAt": "2026-10-17T10:53:14.072Z",
+      "approvedBy": "direzione creativa"
+    },
+    {
+      "id": "a_mvcbsvp6hxyd",
+      "garmentId": "g_mul19n4iilgd",
+      "kind": "mesh",
+      "media": {
+        "file": "m_mvcbsvp3y650.glb",
+        "mime": "model/gltf-binary"
+      },
+      "status": "draft",
+      "refs": [
+        "a_mul1cjyh66dx"
+      ],
+      "prompt": "cardigan",
+      "gen": {
+        "modelId": "trellis-2",
+        "provider": "fal",
+        "hosting": "managed",
+        "weights": "open",
+        "ms": 66193,
+        "usd": 0.3
+      },
+      "createdAt": "2026-10-17T11:41:19.866Z"
+    },
+    {
+      "id": "a_mvcbwnzexkt2",
+      "garmentId": "cast",
+      "kind": "person",
+      "media": {
+        "file": "m_mvcbwnzcmx5j.jpg",
+        "mime": "image/jpeg"
+      },
+      "status": "draft",
+      "refs": [],
+      "prompt": "Create a photorealistic vertical smartphone photo for a paid-social creator reference.\nFictional adult man on a commercial job: mid 20s Southern Italian man, short black hair, dark brown eyes, clean-shaven, lean build, wears Italian size 48 clothes, about 182 cm. Original invented face, striking and photogenic, natural skin texture with visible pores, no beauty filter.\nHis build is lean, the proportions of a menswear lookbook.\nOutfit: white oxford shirt with the sleeves rolled, light-wash straight jeans, brown suede loafers, fully covering opaque fabric.\nSetting: living room of a Roman flat: beige linen sofa, a tall monstera, a round wall mirror, warm afternoon sun in stripes through half-closed wooden shutters, keys on the side table.\nAction: standing, full figure from head to shoes, weight on one leg, facing the camera, a small confident smile, one hand in his pocket.\nDeliverable: authentic phone photo taken by a friend for his Instagram, slightly soft, casual and candid, ordinary phone colours.\nStyle: everyday clothing, original invented adult face, clean frame.",
+      "gen": {
+        "modelId": "qwen-image-2.1",
+        "provider": "fal",
+        "hosting": "managed",
+        "weights": "open",
+        "ms": 7095,
+        "usd": 0.035
+      },
+      "label": "leo",
+      "createdAt": "2026-10-17T11:44:16.490Z"
+    },
+    {
+      "id": "a_mvcbx2lvy9xd",
+      "garmentId": "g_mul19n4iilgd",
+      "kind": "ugc-frame",
+      "media": {
+        "file": "m_mvcbx2ltsoze.jpg",
+        "mime": "image/jpeg"
+      },
+      "status": "draft",
+      "refs": [
+        "a_mvcbwnzexkt2",
+        "a_mul1cjyh66dx",
+        "a_mul2vrel2kb9",
+        "a_mul2vpci4l0u",
+        "a_mul1cn21qb1e"
+      ],
+      "prompt": "Create a photorealistic vertical 9:16 smartphone photo for a paid-social creator video.\nImage 1 is the identity reference for a fictional adult creator: preserve his face and hair exactly. He now wears the cardigan shown in the other images, fully zipped, over his own outfit, over his white oxford shirt with the sleeves rolled, light-wash straight jeans, brown suede loafers.\nImage 2 is the approved front packshot of this exact cardigan: the truth for colour, fabric surface, trims and finish.\nImage 3 is the approved back packshot of this exact cardigan: the truth for the back construction, seams and trims.\nImage 4 is the approved three-quarter packshot of this exact cardigan: the truth for depth, volume and length.\nImage 5 is a close-up of the silver-tone rectangular zip pull: the truth for its shape and finish.\n\nThe cardigan must be identical to the packshots: beige heavyweight 5-gauge ribbed-knit zip-up cardigan with a ribbed mock-neck collar, full-length front silver-tone metal zipper, raglan sleeves and fully fashioned linked knit seams, with its beige chunky English rib knit, its ribbed mock-neck collar, its exposed silver-tone front zipper with rectangular pull, and its raglan sleeve decrease seams.\nKeep cut, beige colour, 5-gauge rib stitch, mock neck height, raglan seams, zipper placement, and silver-tone hardware identical; do not redesign the cardigan.\nThe back packshot is the construction of the back, for when he turns. This frame keeps the pose in the action below: do not turn his to match it, and do not copy its white background.\n\nSCALE: On a 186 cm model the hem falls at the hip line and the raglan sleeves end neatly at the wrist. The mock-neck collar stands about four fingers high along the neck, and the silver-tone zip pull is roughly the size of a paperclip.\n\nSetting: a sunny sidewalk in the historic centre of Roma: a white stone facade with dark wooden windows and flower boxes full of trailing green plants, a grey stone base with wrought-iron window grilles, warm late-morning sun, stone paving.\nAction: full figure from head to shoes, he stands on the sidewalk facing the camera, wearing the cardigan, dark oval sunglasses and a small bright-coloured leather bucket bag on his shoulder, the whole cardigan visible from neckline to hem, weight on one leg, a big natural smile.\nDeliverable: pause-frame of an authentic TikTok or Instagram Reel shot on a phone, imperfect framing, real lived-in place, casual.\nStyle: everyday opaque clothing, relaxed candid posture, original invented adult face, the cardigan as the only fashion item in focus, no text, no logo, no watermark.",
+      "gen": {
+        "modelId": "qwen-image-2.1",
+        "provider": "fal",
+        "hosting": "managed",
+        "weights": "open",
+        "ms": 18933,
+        "usd": 0.035
+      },
+      "label": "street-check:wide",
+      "createdAt": "2026-10-17T11:44:35.443Z"
     }
   ]
 }

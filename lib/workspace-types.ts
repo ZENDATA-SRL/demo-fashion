@@ -101,6 +101,8 @@ export type Workspace = {
     pdp: Pdp | null
     signoff: { by: string; at: string; items: string[] } | null
     exportedAt: string | null
+    /** an operator pass was prepared for this garment, so the 3D step can simulate it */
+    operatorDemo: boolean
   }
   assets: AssetView[]
   jobs: JobView[]

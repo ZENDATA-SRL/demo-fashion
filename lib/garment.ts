@@ -625,6 +625,36 @@ export async function addOperatorMesh(garmentId: string, media: Media, label: "o
  * The operator's pass prepared before the demo: the refined GLB and its operator.json (minutes, changes, tool)
  * enter as if the operator had just sent them back.
  */
+/**
+ * A lifestyle scene from the approved packshots, for garments without a scene from the external layout → 3D → Qwen
+ * pipeline: the product alone in a real interior, the same piece as the front and the fabric close-up.
+ */
+export async function generateScene(garmentId: string, modelIds: string[], setting: string): Promise<Candidate[]> {
+  const { garment, assets } = await getGarment(garmentId)
+  const plan = await ensureShootPlan(garmentId)
+  const front = approved(assets, "ghost-front")
+  if (!front) throw new Error("serve il fronte approvato")
+  const refs = [front, approved(assets, "detail-fabric")].filter((a): a is Asset => !!a)
+  const prompt = `Editorial lifestyle still life for a fashion e-commerce product page. ${setting} No person, no mannequin, no text, no logos.
+Image 1 is the approved packshot of the ${plan.noun}${refs.length > 1 ? "; Image 2 is a close-up of its fabric" : ""}. The ${plan.noun} is identical to the packshot: ${plan.description}, with ${plan.identity}. Keep ${plan.lock} identical; do not redesign the ${plan.noun}.
+Natural window light, soft shadows, true-to-life colour, shot on a 50 mm lens at eye level, photographic realism.`
+  return candidates(modelIds, async (modelId) => {
+    const generated = await generateImage(modelId, { prompt, refs: refs.map((r) => r.media), aspect: "4:3" })
+    return addGenerated(garment.id, "scene", generated, prompt, refs.map((r) => r.id))
+  })
+}
+
+/**
+ * The operator pass prepared for a garment before the demo: DEMO_OPERATOR_GLB when set, else
+ * demo/operator/<sku>/model.glb, else the Cabas pass in demo/operator/cabas.glb for the Cabas only.
+ * Each GLB has its operator.json next to it. Undefined when this garment has none.
+ */
+export function operatorGlbFor(sku: string): string | undefined {
+  const dir = join(process.cwd(), "demo", "operator")
+  const candidates = [process.env.DEMO_OPERATOR_GLB, join(dir, sku, "model.glb"), sku === "DEMO-CABAS-01" ? join(dir, "cabas.glb") : undefined]
+  return candidates.find((p): p is string => !!p && existsSync(p) && existsSync(join(dirname(p), "operator.json")))
+}
+
 export async function simulateOperator(garmentId: string, glb: string): Promise<Asset> {
   const notes = JSON.parse(await readFile(join(dirname(glb), "operator.json"), "utf8")) as Omit<Operator, "simulated">
   const media = await saveBuffer(await readFile(glb), ".glb")

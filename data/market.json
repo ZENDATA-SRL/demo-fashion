@@ -2,134 +2,769 @@
   "_note": "Dati SIMULATI per la demo: archivio dei lanci passati del brand, benchmark di canale e pool di commenti. Nessun dato reale.",
   "brand": "Aurenzi Milano",
   "currency": "EUR",
-  "economics": { "defaultPrice": 590, "unitCost": 240, "salvage": 150, "moq": 200, "targetSellThrough": 0.65 },
-  "traditional": { "sampleRounds": 3, "sampleCost": 450, "sampleWeeks": 3, "shootCost": 6500, "shootWeeks": 2, "signalWeeks": 26 },
+  "economics": {
+    "defaultPrice": 590,
+    "unitCost": 240,
+    "salvage": 150,
+    "moq": 200,
+    "targetSellThrough": 0.65
+  },
+  "traditional": {
+    "sampleRounds": 3,
+    "sampleCost": 450,
+    "sampleWeeks": 3,
+    "shootCost": 6500,
+    "shootWeeks": 2,
+    "signalWeeks": 26
+  },
   "channels": {
-    "instagram": { "label": "Instagram", "cpm": 7.5, "frequency": 1.6 },
-    "tiktok": { "label": "TikTok", "cpm": 5.2, "frequency": 1.9 },
-    "pinterest": { "label": "Pinterest", "cpm": 4.1, "frequency": 1.4 }
+    "instagram": {
+      "label": "Instagram",
+      "cpm": 7.5,
+      "frequency": 1.6
+    },
+    "tiktok": {
+      "label": "TikTok",
+      "cpm": 5.2,
+      "frequency": 1.9
+    },
+    "pinterest": {
+      "label": "Pinterest",
+      "cpm": 4.1,
+      "frequency": 1.4
+    }
   },
   "markets": {
-    "IT": { "label": "Italia", "lang": "it", "cpm": 1.0, "intent": 1.1 },
-    "FR": { "label": "Francia", "lang": "fr", "cpm": 1.15, "intent": 1.0 },
-    "DE": { "label": "Germania", "lang": "de", "cpm": 1.2, "intent": 0.9 },
-    "UK": { "label": "Regno Unito", "lang": "en", "cpm": 1.3, "intent": 0.95 }
+    "IT": {
+      "label": "Italia",
+      "lang": "it",
+      "cpm": 1.0,
+      "intent": 1.1
+    },
+    "FR": {
+      "label": "Francia",
+      "lang": "fr",
+      "cpm": 1.15,
+      "intent": 1.0
+    },
+    "DE": {
+      "label": "Germania",
+      "lang": "de",
+      "cpm": 1.2,
+      "intent": 0.9
+    },
+    "UK": {
+      "label": "Regno Unito",
+      "lang": "en",
+      "cpm": 1.3,
+      "intent": 0.95
+    }
   },
   "ages": [
-    { "id": "18-24", "share": 0.18, "intent": 0.55 },
-    { "id": "25-34", "share": 0.38, "intent": 1.05 },
-    { "id": "35-44", "share": 0.28, "intent": 1.3 },
-    { "id": "45+", "share": 0.16, "intent": 1.1 }
+    {
+      "id": "18-24",
+      "share": 0.18,
+      "intent": 0.55
+    },
+    {
+      "id": "25-34",
+      "share": 0.38,
+      "intent": 1.05
+    },
+    {
+      "id": "35-44",
+      "share": 0.28,
+      "intent": 1.3
+    },
+    {
+      "id": "45+",
+      "share": 0.16,
+      "intent": 1.1
+    }
   ],
   "creativeTypes": {
-    "ugc": { "label": "Reel UGC", "channels": ["instagram", "tiktok"], "ctr": 1.15, "save": 0.95, "er": 1.35, "conv": 0.95 },
-    "editorial": { "label": "Editorial", "channels": ["instagram", "pinterest"], "ctr": 0.8, "save": 1.3, "er": 1.0, "conv": 0.9 },
-    "onmodel": { "label": "On-model", "channels": ["instagram"], "ctr": 0.95, "save": 1.0, "er": 0.9, "conv": 1.1 },
-    "lifestyle": { "label": "Lifestyle", "channels": ["pinterest", "instagram"], "ctr": 0.85, "save": 1.25, "er": 0.95, "conv": 0.95 },
-    "packshot": { "label": "Packshot carosello", "channels": ["instagram"], "ctr": 0.9, "save": 0.7, "er": 0.6, "conv": 1.3 }
+    "ugc": {
+      "label": "Reel UGC",
+      "channels": [
+        "instagram",
+        "tiktok"
+      ],
+      "ctr": 1.15,
+      "save": 0.95,
+      "er": 1.35,
+      "conv": 0.95
+    },
+    "editorial": {
+      "label": "Editorial",
+      "channels": [
+        "instagram",
+        "pinterest"
+      ],
+      "ctr": 0.8,
+      "save": 1.3,
+      "er": 1.0,
+      "conv": 0.9
+    },
+    "onmodel": {
+      "label": "On-model",
+      "channels": [
+        "instagram"
+      ],
+      "ctr": 0.95,
+      "save": 1.0,
+      "er": 0.9,
+      "conv": 1.1
+    },
+    "lifestyle": {
+      "label": "Lifestyle",
+      "channels": [
+        "pinterest",
+        "instagram"
+      ],
+      "ctr": 0.85,
+      "save": 1.25,
+      "er": 0.95,
+      "conv": 0.95
+    },
+    "packshot": {
+      "label": "Packshot carosello",
+      "channels": [
+        "instagram"
+      ],
+      "ctr": 0.9,
+      "save": 0.7,
+      "er": 0.6,
+      "conv": 1.3
+    }
   },
   "products": {
     "DEMO-CABAS-01": {
       "price": 590,
       "appeal": 1.12,
-      "themes": { "colore": 0.2, "pelle": 0.14, "minimal": 0.08, "tracolla": 0.16, "chiusura": 0.12, "capienza": 0.12, "prezzo": 0.1, "disponibilita": 0.08 }
+      "themes": {
+        "colore": 0.2,
+        "pelle": 0.14,
+        "minimal": 0.08,
+        "tracolla": 0.16,
+        "chiusura": 0.12,
+        "capienza": 0.12,
+        "prezzo": 0.1,
+        "disponibilita": 0.08
+      }
+    },
+    "FW26-015": {
+      "price": 390,
+      "appeal": 1.04,
+      "themes": {
+        "colore-beige": 0.17,
+        "mano": 0.16,
+        "zip": 0.1,
+        "taglia": 0.17,
+        "prurito": 0.13,
+        "lavaggio": 0.07,
+        "prezzo-maglia": 0.1,
+        "disponibilita": 0.1
+      }
     }
   },
-  "defaultThemes": { "colore": 0.18, "pelle": 0.14, "minimal": 0.08, "tracolla": 0.1, "chiusura": 0.1, "capienza": 0.14, "prezzo": 0.14, "disponibilita": 0.12 },
+  "defaultThemes": {
+    "colore": 0.18,
+    "pelle": 0.14,
+    "minimal": 0.08,
+    "tracolla": 0.1,
+    "chiusura": 0.1,
+    "capienza": 0.14,
+    "prezzo": 0.14,
+    "disponibilita": 0.12
+  },
   "comments": {
     "colore": {
       "sentiment": "positive",
       "label": "Colore cognac",
       "text": {
-        "it": ["Questo cognac è perfetto, caldo ma non arancione", "Il colore dal vivo deve essere stupendo 😍", "Finalmente un cuoio che non sembra plastica", "Cognac e bianco, abbinamento da rubare"],
-        "fr": ["Cette couleur cognac est sublime", "Le ton cognac est exactement ce que je cherchais"],
-        "de": ["Die Cognac-Farbe ist wunderschön", "Farbe ist ein Traum"],
-        "en": ["That cognac shade is everything", "The colour is so rich, need it"]
+        "it": [
+          "Questo cognac è perfetto, caldo ma non arancione",
+          "Il colore dal vivo deve essere stupendo 😍",
+          "Finalmente un cuoio che non sembra plastica",
+          "Cognac e bianco, abbinamento da rubare"
+        ],
+        "fr": [
+          "Cette couleur cognac est sublime",
+          "Le ton cognac est exactement ce que je cherchais"
+        ],
+        "de": [
+          "Die Cognac-Farbe ist wunderschön",
+          "Farbe ist ein Traum"
+        ],
+        "en": [
+          "That cognac shade is everything",
+          "The colour is so rich, need it"
+        ]
       }
     },
     "pelle": {
       "sentiment": "positive",
       "label": "Pelle e struttura",
       "text": {
-        "it": ["Si vede che è pelle seria, sta in piedi da sola", "Mi piace che sia rigida, le borse morbide si afflosciano", "Le cuciture tono su tono sono un dettaglio da sartoria"],
-        "fr": ["La structure rigide est très élégante", "On voit la qualité du cuir"],
-        "de": ["Sieht hochwertig aus, schön steif", "Die Nähte sind sehr sauber"],
-        "en": ["Love that it stands on its own", "Looks like proper full-grain leather"]
+        "it": [
+          "Si vede che è pelle seria, sta in piedi da sola",
+          "Mi piace che sia rigida, le borse morbide si afflosciano",
+          "Le cuciture tono su tono sono un dettaglio da sartoria"
+        ],
+        "fr": [
+          "La structure rigide est très élégante",
+          "On voit la qualité du cuir"
+        ],
+        "de": [
+          "Sieht hochwertig aus, schön steif",
+          "Die Nähte sind sehr sauber"
+        ],
+        "en": [
+          "Love that it stands on its own",
+          "Looks like proper full-grain leather"
+        ]
       }
     },
     "minimal": {
       "sentiment": "positive",
       "label": "Nessun logo",
       "text": {
-        "it": ["Senza logo, finalmente. Lusso silenzioso", "Pulitissima, niente loghi: la comprerei solo per questo"],
-        "fr": ["Pas de logo, j'adore", "Quiet luxury parfait"],
-        "de": ["Endlich ohne Logo", "Schlicht und edel"],
-        "en": ["No logo is the whole point, love it", "Quiet luxury done right"]
+        "it": [
+          "Senza logo, finalmente. Lusso silenzioso",
+          "Pulitissima, niente loghi: la comprerei solo per questo"
+        ],
+        "fr": [
+          "Pas de logo, j'adore",
+          "Quiet luxury parfait"
+        ],
+        "de": [
+          "Endlich ohne Logo",
+          "Schlicht und edel"
+        ],
+        "en": [
+          "No logo is the whole point, love it",
+          "Quiet luxury done right"
+        ]
       }
     },
     "tracolla": {
       "sentiment": "negative",
       "label": "Manca la tracolla",
       "text": {
-        "it": ["Bellissima ma senza tracolla per me è scomoda tutti i giorni", "Farete una versione con tracolla removibile?", "Solo a mano? Con la tracolla la prendevo subito", "Se aggiungete una tracolla staccabile è mia"],
-        "fr": ["Il manque une bandoulière amovible", "Dommage, sans bandoulière je ne peux pas la porter au quotidien"],
-        "de": ["Mit abnehmbarem Schulterriemen wäre sie perfekt", "Ohne Riemen leider nicht alltagstauglich"],
-        "en": ["Needs a detachable strap, I can't do hand-carry only", "Will there be a crossbody strap?"]
+        "it": [
+          "Bellissima ma senza tracolla per me è scomoda tutti i giorni",
+          "Farete una versione con tracolla removibile?",
+          "Solo a mano? Con la tracolla la prendevo subito",
+          "Se aggiungete una tracolla staccabile è mia"
+        ],
+        "fr": [
+          "Il manque une bandoulière amovible",
+          "Dommage, sans bandoulière je ne peux pas la porter au quotidien"
+        ],
+        "de": [
+          "Mit abnehmbarem Schulterriemen wäre sie perfekt",
+          "Ohne Riemen leider nicht alltagstauglich"
+        ],
+        "en": [
+          "Needs a detachable strap, I can't do hand-carry only",
+          "Will there be a crossbody strap?"
+        ]
       }
     },
     "chiusura": {
       "sentiment": "negative",
       "label": "Chiusura solo magnetica",
       "text": {
-        "it": ["Solo il magnete? In metro a Milano mi serve una zip", "La chiusura magnetica mi preoccupa per la sicurezza", "Mettete almeno una tasca interna con zip"],
-        "fr": ["Juste un aimant ? Pas rassurant dans le métro", "Une poche zippée intérieure serait bien"],
-        "de": ["Nur Magnetverschluss ist mir zu unsicher"],
-        "en": ["Magnetic only? Not great for the tube", "An inner zip pocket would make it perfect"]
+        "it": [
+          "Solo il magnete? In metro a Milano mi serve una zip",
+          "La chiusura magnetica mi preoccupa per la sicurezza",
+          "Mettete almeno una tasca interna con zip"
+        ],
+        "fr": [
+          "Juste un aimant ? Pas rassurant dans le métro",
+          "Une poche zippée intérieure serait bien"
+        ],
+        "de": [
+          "Nur Magnetverschluss ist mir zu unsicher"
+        ],
+        "en": [
+          "Magnetic only? Not great for the tube",
+          "An inner zip pocket would make it perfect"
+        ]
       }
     },
     "capienza": {
       "sentiment": "neutral",
       "label": "Capienza",
       "text": {
-        "it": ["Ci sta un iPad mini?", "28 cm: entra una borraccia?", "Carina ma un po' piccola per il lavoro, farete una misura più grande?"],
-        "fr": ["Est-ce qu'un iPad rentre dedans ?", "Une taille plus grande est prévue ?"],
-        "de": ["Passt ein Tablet rein?", "Gibt es eine größere Version?"],
-        "en": ["Does a 13 inch laptop fit?", "Would love a larger size for work"]
+        "it": [
+          "Ci sta un iPad mini?",
+          "28 cm: entra una borraccia?",
+          "Carina ma un po' piccola per il lavoro, farete una misura più grande?"
+        ],
+        "fr": [
+          "Est-ce qu'un iPad rentre dedans ?",
+          "Une taille plus grande est prévue ?"
+        ],
+        "de": [
+          "Passt ein Tablet rein?",
+          "Gibt es eine größere Version?"
+        ],
+        "en": [
+          "Does a 13 inch laptop fit?",
+          "Would love a larger size for work"
+        ]
       }
     },
     "prezzo": {
       "sentiment": "neutral",
       "label": "Prezzo",
       "text": {
-        "it": ["590 euro sono tanti ma per una pelle così ci stanno", "Prezzo onesto rispetto ai marchi grandi", "Un po' cara, aspetto i saldi"],
-        "fr": ["Le prix est correct pour la qualité", "Un peu cher pour une petite taille"],
-        "de": ["Preis ist okay für echtes Leder", "Etwas teuer"],
-        "en": ["Fair price for this quality", "Bit pricey for the size"]
+        "it": [
+          "590 euro sono tanti ma per una pelle così ci stanno",
+          "Prezzo onesto rispetto ai marchi grandi",
+          "Un po' cara, aspetto i saldi"
+        ],
+        "fr": [
+          "Le prix est correct pour la qualité",
+          "Un peu cher pour une petite taille"
+        ],
+        "de": [
+          "Preis ist okay für echtes Leder",
+          "Etwas teuer"
+        ],
+        "en": [
+          "Fair price for this quality",
+          "Bit pricey for the size"
+        ]
       }
     },
     "disponibilita": {
       "sentiment": "positive",
       "label": "Intenzione d'acquisto",
       "text": {
-        "it": ["Quando arriva? Ho già fatto il pre-ordine", "Messa in lista d'attesa ✨", "Spedite anche in Svizzera?"],
-        "fr": ["Précommandée !", "Livraison en Belgique possible ?"],
-        "de": ["Vorbestellt!", "Wann wird geliefert?"],
-        "en": ["Just pre-ordered 🙌", "Do you ship to Ireland?"]
+        "it": [
+          "Quando arriva? Ho già fatto il pre-ordine",
+          "Messa in lista d'attesa ✨",
+          "Spedite anche in Svizzera?"
+        ],
+        "fr": [
+          "Précommandée !",
+          "Livraison en Belgique possible ?"
+        ],
+        "de": [
+          "Vorbestellt!",
+          "Wann wird geliefert?"
+        ],
+        "en": [
+          "Just pre-ordered 🙌",
+          "Do you ship to Ireland?"
+        ]
+      }
+    },
+    "colore-beige": {
+      "sentiment": "positive",
+      "label": "Colore beige",
+      "text": {
+        "it": [
+          "Questo beige sta con tutto, dal jeans al grigio",
+          "Colore perfetto per l'autunno",
+          "Finalmente un beige che non tira al giallo"
+        ],
+        "fr": [
+          "Ce beige est parfait",
+          "La couleur est très élégante"
+        ],
+        "de": [
+          "Das Beige ist zeitlos",
+          "Schöne warme Farbe"
+        ],
+        "en": [
+          "That oatmeal shade is perfect",
+          "Goes with literally everything"
+        ]
+      }
+    },
+    "mano": {
+      "sentiment": "positive",
+      "label": "Maglia e costa",
+      "text": {
+        "it": [
+          "Si vede che è una maglia pesante, bella la costa inglese",
+          "Sembra caldissimo ma non goffo",
+          "Il collo alto con la zip è il dettaglio giusto"
+        ],
+        "fr": [
+          "La maille côtelée est superbe",
+          "Le col montant est top"
+        ],
+        "de": [
+          "Schöner grober Strick",
+          "Der Stehkragen ist perfekt"
+        ],
+        "en": [
+          "Love a proper chunky rib",
+          "That mock neck is spot on"
+        ]
+      }
+    },
+    "zip": {
+      "sentiment": "neutral",
+      "label": "Zip in metallo",
+      "text": {
+        "it": [
+          "La zip è a doppio cursore? Seduto in macchina serve",
+          "La zip in metallo regge sulla maglia pesante?"
+        ],
+        "fr": [
+          "Le zip est-il à double curseur ?"
+        ],
+        "de": [
+          "Ist das ein Zwei-Wege-Reißverschluss?"
+        ],
+        "en": [
+          "Is it a two-way zip?",
+          "Hope the zip doesn't snag the knit"
+        ]
+      }
+    },
+    "taglia": {
+      "sentiment": "neutral",
+      "label": "Taglie e vestibilità",
+      "text": {
+        "it": [
+          "Veste regolare o abbondante? Sono 1,80 per 80 kg",
+          "Che taglia indossa il modello?",
+          "Arriva alla vita o copre il sedere?"
+        ],
+        "fr": [
+          "Ça taille grand ou normal ?",
+          "Quelle taille porte le mannequin ?"
+        ],
+        "de": [
+          "Fällt der normal aus?",
+          "Welche Größe trägt das Model?"
+        ],
+        "en": [
+          "True to size or oversized?",
+          "What size is the model wearing?"
+        ]
+      }
+    },
+    "prurito": {
+      "sentiment": "negative",
+      "label": "Lana che pizzica",
+      "text": {
+        "it": [
+          "Bello, ma la lana grossa a me pizzica sul collo",
+          "Che lana è? Se non è merino sul collo alto non lo reggo",
+          "Spero non faccia i pallini dopo due lavaggi"
+        ],
+        "fr": [
+          "La laine gratte ? Avec le col montant c'est important",
+          "Est-ce que ça bouloche ?"
+        ],
+        "de": [
+          "Kratzt die Wolle am Hals?",
+          "Welche Wolle genau? Merino?"
+        ],
+        "en": [
+          "Is it itchy? Chunky wool usually is on the neck",
+          "Will it pill after a few washes?"
+        ]
+      }
+    },
+    "lavaggio": {
+      "sentiment": "neutral",
+      "label": "Lavaggio e cura",
+      "text": {
+        "it": [
+          "Si lava in lavatrice o solo a secco?"
+        ],
+        "fr": [
+          "Lavable en machine ?"
+        ],
+        "de": [
+          "Ist er waschmaschinenfest?"
+        ],
+        "en": [
+          "Machine washable or dry clean only?"
+        ]
+      }
+    },
+    "prezzo-maglia": {
+      "sentiment": "neutral",
+      "label": "Prezzo",
+      "text": {
+        "it": [
+          "390 per un cardigan sono tanti, ma se è lana buona ci stanno",
+          "Prezzo giusto per il peso della maglia"
+        ],
+        "fr": [
+          "Prix correct si c'est de la bonne laine"
+        ],
+        "de": [
+          "Für die Qualität okay"
+        ],
+        "en": [
+          "Fair if it's proper wool",
+          "Pricey but it'll last years"
+        ]
       }
     }
   },
   "archive": [
-    {"sku":"SS23-021","name":"Bauletto Notte","category":"bauletto","price":640,"test":{"budget":3000,"days":10,"saveRate":1.89,"ctr":0.61,"conversion":1.09,"preorders":25,"preordersPer1k":8.37},"outcome":{"produced":640,"soldFullPrice":320,"sellThrough":0.5,"markdownUnits":320}},
-    {"sku":"SS23-034","name":"Tote Sabbia Grande","category":"tote","price":720,"test":{"budget":3000,"days":10,"saveRate":3.3,"ctr":1.19,"conversion":1.95,"preorders":56,"preordersPer1k":18.79},"outcome":{"produced":970,"soldFullPrice":757,"sellThrough":0.78,"markdownUnits":213}},
-    {"sku":"AW23-104","name":"Secchiello Bordeaux","category":"secchiello","price":560,"test":{"budget":3000,"days":10,"saveRate":1.24,"ctr":1.02,"conversion":1.27,"preorders":34,"preordersPer1k":11.42},"outcome":{"produced":630,"soldFullPrice":355,"sellThrough":0.563,"markdownUnits":275}},
-    {"sku":"AW23-118","name":"Clutch Ottone","category":"clutch","price":420,"test":{"budget":2500,"days":10,"saveRate":3.28,"ctr":0.87,"conversion":1.68,"preorders":39,"preordersPer1k":15.57},"outcome":{"produced":730,"soldFullPrice":503,"sellThrough":0.689,"markdownUnits":227}},
-    {"sku":"SS24-007","name":"Cabas Mini Nero","category":"tote","price":520,"test":{"budget":2000,"days":10,"saveRate":1.21,"ctr":0.74,"conversion":1.45,"preorders":23,"preordersPer1k":11.46},"outcome":{"produced":850,"soldFullPrice":445,"sellThrough":0.524,"markdownUnits":405}},
-    {"sku":"SS24-019","name":"Tracolla Cuoio","category":"tracolla","price":480,"test":{"budget":2000,"days":10,"saveRate":3.01,"ctr":1.12,"conversion":1.54,"preorders":26,"preordersPer1k":13.05},"outcome":{"produced":550,"soldFullPrice":361,"sellThrough":0.656,"markdownUnits":189}},
-    {"sku":"AW24-052","name":"Hobo Testa di Moro","category":"hobo","price":610,"test":{"budget":2500,"days":10,"saveRate":4.14,"ctr":1.15,"conversion":1.61,"preorders":26,"preordersPer1k":10.5},"outcome":{"produced":600,"soldFullPrice":473,"sellThrough":0.788,"markdownUnits":127}},
-    {"sku":"AW24-066","name":"Shopper Tela e Pelle","category":"tote","price":390,"test":{"budget":2000,"days":10,"saveRate":4.4,"ctr":0.68,"conversion":0.62,"preorders":8,"preordersPer1k":4.21},"outcome":{"produced":240,"soldFullPrice":155,"sellThrough":0.646,"markdownUnits":85}},
-    {"sku":"SS25-012","name":"Baguette Avorio","category":"baguette","price":450,"test":{"budget":2500,"days":10,"saveRate":3.62,"ctr":1.11,"conversion":1.87,"preorders":44,"preordersPer1k":17.48},"outcome":{"produced":1070,"soldFullPrice":769,"sellThrough":0.719,"markdownUnits":301}},
-    {"sku":"SS25-028","name":"Tote Strutturata Fumo","category":"tote","price":680,"test":{"budget":2500,"days":10,"saveRate":3.69,"ctr":0.81,"conversion":0.93,"preorders":17,"preordersPer1k":6.61},"outcome":{"produced":330,"soldFullPrice":195,"sellThrough":0.591,"markdownUnits":135}},
-    {"sku":"AW25-041","name":"Bauletto Cognac","category":"bauletto","price":650,"test":{"budget":3000,"days":10,"saveRate":4.44,"ctr":0.87,"conversion":0.82,"preorders":24,"preordersPer1k":8.01},"outcome":{"produced":730,"soldFullPrice":471,"sellThrough":0.645,"markdownUnits":259}},
-    {"sku":"AW25-077","name":"Pochette Intrecciata","category":"clutch","price":360,"test":{"budget":3000,"days":10,"saveRate":3.83,"ctr":0.73,"conversion":1.8,"preorders":41,"preordersPer1k":13.77},"outcome":{"produced":500,"soldFullPrice":397,"sellThrough":0.794,"markdownUnits":103}}
+    {
+      "sku": "SS23-021",
+      "name": "Bauletto Notte",
+      "category": "bauletto",
+      "price": 640,
+      "test": {
+        "budget": 3000,
+        "days": 10,
+        "saveRate": 1.89,
+        "ctr": 0.61,
+        "conversion": 1.09,
+        "preorders": 25,
+        "preordersPer1k": 8.37
+      },
+      "outcome": {
+        "produced": 640,
+        "soldFullPrice": 320,
+        "sellThrough": 0.5,
+        "markdownUnits": 320
+      }
+    },
+    {
+      "sku": "SS23-034",
+      "name": "Tote Sabbia Grande",
+      "category": "tote",
+      "price": 720,
+      "test": {
+        "budget": 3000,
+        "days": 10,
+        "saveRate": 3.3,
+        "ctr": 1.19,
+        "conversion": 1.95,
+        "preorders": 56,
+        "preordersPer1k": 18.79
+      },
+      "outcome": {
+        "produced": 970,
+        "soldFullPrice": 757,
+        "sellThrough": 0.78,
+        "markdownUnits": 213
+      }
+    },
+    {
+      "sku": "AW23-104",
+      "name": "Secchiello Bordeaux",
+      "category": "secchiello",
+      "price": 560,
+      "test": {
+        "budget": 3000,
+        "days": 10,
+        "saveRate": 1.24,
+        "ctr": 1.02,
+        "conversion": 1.27,
+        "preorders": 34,
+        "preordersPer1k": 11.42
+      },
+      "outcome": {
+        "produced": 630,
+        "soldFullPrice": 355,
+        "sellThrough": 0.563,
+        "markdownUnits": 275
+      }
+    },
+    {
+      "sku": "AW23-118",
+      "name": "Clutch Ottone",
+      "category": "clutch",
+      "price": 420,
+      "test": {
+        "budget": 2500,
+        "days": 10,
+        "saveRate": 3.28,
+        "ctr": 0.87,
+        "conversion": 1.68,
+        "preorders": 39,
+        "preordersPer1k": 15.57
+      },
+      "outcome": {
+        "produced": 730,
+        "soldFullPrice": 503,
+        "sellThrough": 0.689,
+        "markdownUnits": 227
+      }
+    },
+    {
+      "sku": "SS24-007",
+      "name": "Cabas Mini Nero",
+      "category": "tote",
+      "price": 520,
+      "test": {
+        "budget": 2000,
+        "days": 10,
+        "saveRate": 1.21,
+        "ctr": 0.74,
+        "conversion": 1.45,
+        "preorders": 23,
+        "preordersPer1k": 11.46
+      },
+      "outcome": {
+        "produced": 850,
+        "soldFullPrice": 445,
+        "sellThrough": 0.524,
+        "markdownUnits": 405
+      }
+    },
+    {
+      "sku": "SS24-019",
+      "name": "Tracolla Cuoio",
+      "category": "tracolla",
+      "price": 480,
+      "test": {
+        "budget": 2000,
+        "days": 10,
+        "saveRate": 3.01,
+        "ctr": 1.12,
+        "conversion": 1.54,
+        "preorders": 26,
+        "preordersPer1k": 13.05
+      },
+      "outcome": {
+        "produced": 550,
+        "soldFullPrice": 361,
+        "sellThrough": 0.656,
+        "markdownUnits": 189
+      }
+    },
+    {
+      "sku": "AW24-052",
+      "name": "Hobo Testa di Moro",
+      "category": "hobo",
+      "price": 610,
+      "test": {
+        "budget": 2500,
+        "days": 10,
+        "saveRate": 4.14,
+        "ctr": 1.15,
+        "conversion": 1.61,
+        "preorders": 26,
+        "preordersPer1k": 10.5
+      },
+      "outcome": {
+        "produced": 600,
+        "soldFullPrice": 473,
+        "sellThrough": 0.788,
+        "markdownUnits": 127
+      }
+    },
+    {
+      "sku": "AW24-066",
+      "name": "Shopper Tela e Pelle",
+      "category": "tote",
+      "price": 390,
+      "test": {
+        "budget": 2000,
+        "days": 10,
+        "saveRate": 4.4,
+        "ctr": 0.68,
+        "conversion": 0.62,
+        "preorders": 8,
+        "preordersPer1k": 4.21
+      },
+      "outcome": {
+        "produced": 240,
+        "soldFullPrice": 155,
+        "sellThrough": 0.646,
+        "markdownUnits": 85
+      }
+    },
+    {
+      "sku": "SS25-012",
+      "name": "Baguette Avorio",
+      "category": "baguette",
+      "price": 450,
+      "test": {
+        "budget": 2500,
+        "days": 10,
+        "saveRate": 3.62,
+        "ctr": 1.11,
+        "conversion": 1.87,
+        "preorders": 44,
+        "preordersPer1k": 17.48
+      },
+      "outcome": {
+        "produced": 1070,
+        "soldFullPrice": 769,
+        "sellThrough": 0.719,
+        "markdownUnits": 301
+      }
+    },
+    {
+      "sku": "SS25-028",
+      "name": "Tote Strutturata Fumo",
+      "category": "tote",
+      "price": 680,
+      "test": {
+        "budget": 2500,
+        "days": 10,
+        "saveRate": 3.69,
+        "ctr": 0.81,
+        "conversion": 0.93,
+        "preorders": 17,
+        "preordersPer1k": 6.61
+      },
+      "outcome": {
+        "produced": 330,
+        "soldFullPrice": 195,
+        "sellThrough": 0.591,
+        "markdownUnits": 135
+      }
+    },
+    {
+      "sku": "AW25-041",
+      "name": "Bauletto Cognac",
+      "category": "bauletto",
+      "price": 650,
+      "test": {
+        "budget": 3000,
+        "days": 10,
+        "saveRate": 4.44,
+        "ctr": 0.87,
+        "conversion": 0.82,
+        "preorders": 24,
+        "preordersPer1k": 8.01
+      },
+      "outcome": {
+        "produced": 730,
+        "soldFullPrice": 471,
+        "sellThrough": 0.645,
+        "markdownUnits": 259
+      }
+    },
+    {
+      "sku": "AW25-077",
+      "name": "Pochette Intrecciata",
+      "category": "clutch",
+      "price": 360,
+      "test": {
+        "budget": 3000,
+        "days": 10,
+        "saveRate": 3.83,
+        "ctr": 0.73,
+        "conversion": 1.8,
+        "preorders": 41,
+        "preordersPer1k": 13.77
+      },
+      "outcome": {
+        "produced": 500,
+        "soldFullPrice": 397,
+        "sellThrough": 0.794,
+        "markdownUnits": 103
+      }
+    }
   ]
 }

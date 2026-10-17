@@ -1,9 +1,9 @@
 import { existsSync } from "node:fs"
 import { readdir } from "node:fs/promises"
 import { join, relative } from "node:path"
-import { CHANNEL_IDS, MARKET_IDS, archive, channelLabel, creativesOf, defaultPlan, economics, forecastFrom, impactOf, marketLabel, themeLabels } from "./campaign"
+import { CHANNEL_IDS, MARKET_IDS, analysisKey, archive, channelLabel, creativesOf, defaultPlan, economics, forecastFrom, impactOf, marketLabel, themeLabels } from "./campaign"
 import { zoneKey } from "./focus"
-import { castAsset, getGarment } from "./garment"
+import { castAsset, getGarment, operatorGlbFor } from "./garment"
 import { jobsFor } from "./jobs"
 import { lineOf } from "./line"
 import { CAST_VIEWS, VIEW_LABEL, allCast, castFor, castParts } from "./prompts/cast"
@@ -227,6 +227,7 @@ export async function buildWorkspace(id: string): Promise<Workspace> {
       pdp: garment.pdp ?? null,
       signoff: garment.signoff ?? null,
       exportedAt: garment.exportedAt ?? null,
+      operatorDemo: !!operatorGlbFor(garment.sku),
     },
     assets: assets
       .filter((a) => !retired(a, assets) && (a.status === "approved" || !(a.gen?.modelId && a.gen.modelId in RETIRED_LABEL)))
@@ -271,7 +272,7 @@ export async function buildWorkspace(id: string): Promise<Workspace> {
       campaign: garment.campaign
         ? {
             result: garment.campaign.result,
-            analysis: garment.campaign.analyses?.[garment.campaign.result.seed],
+            analysis: garment.campaign.analyses?.[analysisKey(garment.campaign.result)],
             forecast: forecastFrom(garment.campaign.result),
             impact: impactOf(assets, garment.campaign.result),
           }

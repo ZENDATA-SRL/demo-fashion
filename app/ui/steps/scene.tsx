@@ -68,7 +68,6 @@ function Thread({ scene }: { scene: AssetView }) {
 
   return (
     <section className="thread" aria-label="Filo del progetto">
-      <h3 className="caps">Filo del progetto</h3>
       <ol>
         {cells.map((c) => (
           <li key={c.label}>

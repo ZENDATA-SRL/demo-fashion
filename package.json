@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Pre-sample content agent: sketch + archive → site pack + UGC pack, same garment identity, provider-agnostic",
+  "description": "Pre-sample content agent: sketch + archive \u2192 site pack + UGC pack, same garment identity, provider-agnostic",
   "scripts": {
     "dev": "next dev --port 8788",
     "build": "next build",
@@ -26,7 +26,8 @@
     "ugc": "tsx --env-file=.env scripts/ugc.ts",
     "pdp": "tsx --env-file=.env scripts/pdp.ts",
     "export": "tsx --env-file=.env scripts/export.ts",
-    "import-handoff": "tsx scripts/import-handoff.ts"
+    "import-handoff": "tsx scripts/import-handoff.ts",
+    "scene": "tsx --env-file=.env scripts/scene.ts"
   },
   "devDependencies": {
     "@types/node": "^24.13.2",

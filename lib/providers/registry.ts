@@ -249,7 +249,13 @@ function find<T extends { id: string }>(list: T[], id: string, kind: string): T 
   return model
 }
 
-export const imageModel = (id: string) => find(IMAGE_MODELS, id, "immagine")
+/** The pod is configured when COMFY_BASE names a real host, not the `<pod-id>` placeholder of .env.example. */
+export const comfyReady = () => !!process.env.COMFY_BASE && !process.env.COMFY_BASE.includes("<")
+
+/** Same open model on fal while the RunPod pod is not configured, so the defaults keep working. */
+const RUNPOD_FALLBACK: Record<string, string> = { "qwen-image-2.1-runpod": "qwen-image-2.1" }
+
+export const imageModel = (id: string) => find(IMAGE_MODELS, !comfyReady() && RUNPOD_FALLBACK[id] ? RUNPOD_FALLBACK[id] : id, "immagine")
 export const videoModel = (id: string) => find(VIDEO_MODELS, id, "video")
 export const musicModel = (id: string) => find(MUSIC_MODELS, id, "musica")
 export const meshModel = (id: string) => find(MESH_MODELS, id, "3d")

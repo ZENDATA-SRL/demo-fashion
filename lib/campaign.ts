@@ -403,6 +403,9 @@ export const economics = () => ECON
 
 // ---------------------------------------------------------------- persistence and analysis
 
+/** An analysis holds for the same plan on the same ads: the seed alone stays the same when new content is approved. */
+export const analysisKey = (result: CampaignResult) => `${result.seed}|${result.creatives.map((c) => c.assetId).join(",")}`
+
 export async function runCampaign(garmentId: string, plan: CampaignPlan): Promise<Campaign> {
   const { garment, assets } = await getGarment(garmentId)
   const result = simulateCampaign(garment, assets, plan)
@@ -412,7 +415,7 @@ export async function runCampaign(garmentId: string, plan: CampaignPlan): Promis
     // the same plan gives the same numbers, so its analysis still holds
     const analyses = g.campaign?.analyses ?? {}
     g.campaign = { result, analyses }
-    return { ...g.campaign, analysis: analyses[result.seed] }
+    return { ...g.campaign, analysis: analyses[analysisKey(result)] }
   })
 }
 
@@ -436,7 +439,7 @@ export async function analyzeCampaign(garmentId: string): Promise<CampaignAnalys
   const analysis: CampaignAnalysis = { ...data, model: model === "bedrock" ? bedrockModelId() : model, at: new Date().toISOString() }
   await updateDb((db) => {
     const g = db.garments.find((x) => x.id === garmentId)
-    if (g?.campaign) g.campaign.analyses = { ...g.campaign.analyses, [campaign.result.seed]: analysis }
+    if (g?.campaign) g.campaign.analyses = { ...g.campaign.analyses, [analysisKey(campaign.result)]: analysis }
   })
   return analysis
 }
