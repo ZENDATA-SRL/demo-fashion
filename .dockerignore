@@ -1,0 +1,12 @@
+.git
+.next
+node_modules
+.env
+nebius*
+pitch
+*.tsbuildinfo
+.DS_Store
+data/db.json.tmp
+data/fal-urls.json
+data/export
+data/sheets
