@@ -1,0 +1,55 @@
+{
+  "brand": "Aurenzi Milano",
+  "manifesto": "We create quiet, architectural leather goods designed to be carried for decades. Rooted in Milanese restraint, our pieces communicate through proportion, construction, and material rather than visible logos. Guided by craft before trend, every object is shaped by one strong, controlled line and built for a lifetime.",
+  "values": [
+    "Craft before trend",
+    "Longevity",
+    "Restraint",
+    "Traceability"
+  ],
+  "tone": "Calm, precise, and Milanese, using measured and factual descriptions without exaggerated language, superlatives, or exclamation marks.",
+  "palette": [
+    {
+      "name": "Cognac",
+      "hex": "#9A5B2E"
+    },
+    {
+      "name": "Ebano",
+      "hex": "#2B1D14"
+    },
+    {
+      "name": "Avorio",
+      "hex": "#EFE7DA"
+    },
+    {
+      "name": "Salvia",
+      "hex": "#8A9A82"
+    }
+  ],
+  "materials": [
+    "Smooth, semi-rigid, vegetable-tanned calfskin",
+    "Ebano suede linings",
+    "Hand-painted edges",
+    "Brushed brass hardware"
+  ],
+  "signatures": [
+    "Flat and rolled handles rising in a single arch",
+    "Central vertical seam on the front panel",
+    "Concealed internal magnetic closure",
+    "Flat, structured base without feet",
+    "Avorio stitching"
+  ],
+  "avoid": [
+    "Visible external logos or monograms",
+    "Polished gold and chrome hardware",
+    "Quilting, studs, and chains",
+    "Synthetic leather",
+    "Exclamation marks and superlatives",
+    "Seasonal decoration and conspicuous branding"
+  ],
+  "source": {
+    "file": "aurenzi-brand-book.pdf",
+    "at": "2026-10-17T13:25:36.563Z",
+    "model": "Evolus summarize · gemini"
+  }
+}

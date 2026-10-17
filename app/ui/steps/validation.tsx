@@ -77,12 +77,14 @@ export function ValidationStep() {
 
         <ImpactCard />
 
+        {a?.brief && <BriefCard brief={a.brief} />}
+
         {a ? (
           <AnalysisCard a={a} />
         ) : (
           <div className="empty">
             <h3>{busy ? "Reading numbers, forecast and comments…" : "Reading the test"}</h3>
-            <p>An LLM on Amazon Bedrock reads the numbers, the forecast and the comments in four languages, and proposes what to change in the design, the content and the order.</p>
+            <p>Gemma 4 on AMD Token Factory reads the numbers, the forecast and the comments in four languages, and proposes what to change in the design, the content and the order.</p>
           </div>
         )}
       </div>
@@ -312,6 +314,29 @@ function ImpactCard() {
           </div>
         </div>
       </div>
+    </section>
+  )
+}
+
+/** The whole reading in a few bullets, by Evolus: what to take away from the test. */
+function BriefCard({ brief }: { brief: NonNullable<CampaignAnalysis["brief"]> }) {
+  const lines = brief.text
+    .split("\n")
+    .map((l) => l.replace(/^\s*(?:[-*•]|\d+[.)])\s*/, "").replace(/\*\*/g, "").trim())
+    .filter(Boolean)
+  return (
+    <section className="card mk-card mk-brief">
+      <header>
+        <h3>
+          Summary
+          <span className="badge outline">{brief.by}</span>
+        </h3>
+      </header>
+      <ul>
+        {lines.map((l) => (
+          <li key={l}>{l}</li>
+        ))}
+      </ul>
     </section>
   )
 }

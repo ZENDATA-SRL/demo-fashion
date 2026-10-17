@@ -25,6 +25,7 @@ export function brandDnaPrompt(
   dna: GarmentDna,
   brand: BrandLoraProfile,
   note?: string,
+  identity?: string,
 ): string {
   const tagBlock = brand.tags
     .map(
@@ -43,7 +44,10 @@ Weights: ${brand.lora.file} @ ${brand.lora.strength} on ${brand.lora.base}
 TRIGGER TAGS (use in field values where relevant):
 ${tagBlock}
 
-${note ? `OPERATOR NOTE (follow it; @token names a trigger tag the operator chose, use it without the @):
+${identity ? `${identity}
+Keep the rewrite inside this identity: its materials, palette and signatures, never what it rules out.
+
+` : ""}${note ? `OPERATOR NOTE (follow it; @token names a trigger tag the operator chose, use it without the @):
 "${note}"
 
 ` : ""}CURRENT DNA summary: ${dna.summary}

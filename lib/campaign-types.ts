@@ -72,6 +72,8 @@ export type CampaignAnalysis = {
   actions: Array<{ area: "design" | "creative" | "audience" | "production" | "pricing"; action: string; why: string; impact: string }>
   dnaChanges: Array<{ field: string; to: string; why: string }>
   risks: string[]
+  /** the whole reading in a few bullets, by Evolus summarize, for the end of the flow */
+  brief?: { text: string; by: string }
   model: string
   at: string
 }

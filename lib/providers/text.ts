@@ -101,7 +101,7 @@ export const amdModelId = () => process.env.AMD_MODEL ?? "Qwen3.8-27B"
 function amdJson<T>(req: TextRequest): Promise<T> {
   if (!amdReady()) throw new Error("AMD_API_KEY missing in .env")
   return chatJson<T>(
-    { label: "AMD Token Factory", base: process.env.AMD_BASE_URL ?? "https://developer.amd.com.cn/radeon/api/v1", model: amdModelId(), key: process.env.AMD_API_KEY },
+    { label: "AMD Token Factory", base: process.env.AMD_BASE_URL ?? "https://developer.amd.com.cn/radeon/api/v1", model: req.amdModel ?? amdModelId(), key: process.env.AMD_API_KEY },
     req,
   )
 }

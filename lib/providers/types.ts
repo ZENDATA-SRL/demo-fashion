@@ -49,5 +49,12 @@ export type MusicModel = ModelInfo & { run: (req: MusicRequest) => Promise<Outpu
 export type MeshRequest = { image: Media; prompt?: string }
 export type MeshModel = ModelInfo & { run: (req: MeshRequest) => Promise<Output> }
 
-export type TextRequest = { system: string; prompt: string; images?: Media[]; temperature?: number }
+export type TextRequest = {
+  system: string
+  prompt: string
+  images?: Media[]
+  temperature?: number
+  /** AMD Token Factory model for this call, in place of AMD_MODEL */
+  amdModel?: string
+}
 export type TextModel = ModelInfo & { json: <T>(req: TextRequest) => Promise<T> }

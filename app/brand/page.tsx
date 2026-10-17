@@ -1,6 +1,8 @@
 import { brandCatalog } from "@/lib/brand-catalog"
+import { readIdentity } from "@/lib/brand-identity"
 import { Topbar } from "../ui/kit"
 import { CatalogView } from "./catalog-view"
+import { IdentityView } from "./identity-view"
 
 export const dynamic = "force-dynamic"
 
@@ -9,6 +11,7 @@ const pct = (n: number) => `${Math.round(n * 100)}%`
 /** The brand's past catalogue and the codes it adds up to: what every new product is generated against. */
 export default function BrandPage() {
   const b = brandCatalog()
+  const identity = readIdentity()
   const seasons = new Set(b.products.map((p) => p.season))
   const palette = [...new Map(b.products.map((p) => [p.colour.name, p.colour])).values()]
 
@@ -20,7 +23,7 @@ export default function BrandPage() {
           <div>
             <span className="caps">Brand DNA · archive catalogue</span>
             <h1 className="page-title">{b.brand}</h1>
-            <p className="brand-lede">{b.manifesto}</p>
+            <p className="brand-lede">{identity?.manifesto || b.manifesto}</p>
           </div>
           <dl className="brand-stats">
             <div>
@@ -37,6 +40,8 @@ export default function BrandPage() {
             </div>
           </dl>
         </div>
+
+        <IdentityView identity={identity} />
 
         <CatalogView b={b} />
 

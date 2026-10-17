@@ -6214,6 +6214,40 @@ kbd {
   color: var(--ink-2);
 }
 
+.identity-upload {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 16px;
+  margin-top: 18px;
+  font-size: var(--t-sm);
+}
+
+.identity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 22px 32px;
+  margin-top: 22px;
+}
+
+.identity-field {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  min-width: 0;
+}
+
+.identity-field ul:not(.brand-palette) {
+  margin: 0;
+  padding-left: 16px;
+  font-size: var(--t-sm);
+  color: var(--ink-2);
+}
+
+.identity-field .brand-palette {
+  margin-top: 0;
+}
+
 .catalog-filter {
   display: flex;
   flex-wrap: wrap;
@@ -6433,4 +6467,13 @@ kbd {
 
 .dna-family .dna-codes {
   margin-top: 10px;
+}
+
+.mk-brief ul {
+  display: grid;
+  gap: 8px;
+  margin: 4px 0 0;
+  padding-left: 18px;
+  font-size: var(--t-md);
+  line-height: 1.5;
 }

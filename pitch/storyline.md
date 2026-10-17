@@ -30,6 +30,12 @@ Sartoria li crea partendo da un semplice bozzetto.
 
 Seguiamo un solo prodotto dall'inizio alla fine: la **Cabas Cognac**, una tote in pelle di un brand milanese.
 
+### Tappa 0 · Il brand si presenta
+
+Il brand carica il suo **documento di identità aziendale** (brand book, linee guida, manifesto), anche in PDF o scansione. **Evolus AI** lo legge e lo riassume, e Sartoria ne ricava le caratteristiche del brand: manifesto, valori, tono di voce, palette con i codici colore, materiali, codici di design e cose che il brand non fa mai.
+
+Da lì in poi ogni prodotto viene scritto dentro questi confini: niente loghi esterni se il brand non li usa, solo i suoi materiali e i suoi colori.
+
 ### Tappa 1 · Il bozzetto diventa un prodotto del brand
 
 Il designer carica un bozzetto e scrive due righe di brief. Il sistema legge i vincoli (misure, colore, chiusura, manici) e li fissa nella "carta d'identità" del prodotto: il suo **DNA**.
@@ -76,9 +82,11 @@ Verdetto: **GO**.
 
 ### Tappa 6 · Il cliente riscrive il prodotto
 
-Un modello linguistico legge i commenti in quattro lingue e li trasforma in azioni.
+**Gemma 4**, il modello open di Google, legge i numeri del test, la previsione e i commenti in quattro lingue, e li trasforma in azioni su prodotto, contenuti e ordine. Gira su GPU AMD tramite **AMD Token Factory**.
 
 Il 15% dei commenti chiede una tracolla, altri una tasca con la zip. Con un clic la modifica entra nel DNA del prodotto, e il giro successivo parte già corretto.
+
+Alla fine **Evolus AI** riassume tutto (verdetto, previsione, commenti, azioni e rischi) in tre punti che il management legge in un minuto.
 
 ---
 
@@ -102,7 +110,7 @@ Tre motivi, detti semplici:
 2. **I dati restano in casa.** I modelli girano sui nostri server: bozzetti e collezioni non ancora presentate non vanno a terzi.
 3. **Costano poco e non dipendono da un fornitore.** Se domani esce un modello 3D migliore, lo sostituiamo senza cambiare il resto.
 
-**Prossimo passo:** **Gemma 4**, il modello open di Google che vede le immagini, come "occhio critico" del 3D. Guarda il modello da più angoli, lo confronta con il bozzetto e dice quale versione è più fedele, o cosa rifare.
+**Prossimo passo:** Gemma 4 oggi legge il test di mercato. Siccome vede anche le immagini, lo useremo come "occhio critico" del 3D: guarda il modello da più angoli, lo confronta con il bozzetto e dice quale versione è più fedele, o cosa rifare.
 
 ---
 
@@ -121,4 +129,10 @@ Tre motivi, detti semplici:
 | TRELLIS.2 | Microsoft | Ricostruisce il 3D dalla foto (scelta di default) |
 | Hunyuan3D 2.1 | Tencent | Ricostruzione 3D alternativa, spesso con texture migliori |
 | SAM 3D | Meta | Ricostruzione 3D alternativa da una sola foto |
-| Gemma 4 *(prossimo passo)* | Google | Controlla il 3D e sceglie la versione più fedele |
+| Gemma 4 (su AMD Token Factory) | Google | Legge il test di mercato e i commenti, propone le modifiche. *Prossimo passo:* controlla il 3D e sceglie la versione più fedele |
+
+### Servizi
+
+| Servizio | Cosa fa in Sartoria |
+|---|---|
+| Evolus AI | Legge il documento di identità aziendale (anche PDF e scansioni) per ricavare le caratteristiche del brand, e riassume l'analisi di mercato alla fine |

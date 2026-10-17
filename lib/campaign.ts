@@ -20,7 +20,8 @@ import type {
 } from "./campaign-types"
 import { askJsonWith } from "./generate"
 import { getGarment } from "./garment"
-import { amdModelId, bedrockModelId } from "./providers/text"
+import { evolusReady, evolusText } from "./providers/evolus"
+import { bedrockModelId } from "./providers/text"
 import { CAMPAIGN_SYSTEM, campaignPrompt } from "./prompts/campaign"
 import { STUDIO_LOOKS } from "./prompts/studio"
 import { UGC_FORMATS } from "./prompts/ugc"
@@ -443,15 +444,44 @@ export async function analyzeCampaign(garmentId: string): Promise<CampaignAnalys
   if (!campaign) throw new Error("Launch the market test first")
   const family = familyOf(garment.sku)
   const forecast = forecastFrom(campaign.result, family)
-  const { data, model } = await askJsonWith<Omit<CampaignAnalysis, "model" | "at">>(process.env.CAMPAIGN_TEXT_MODEL ?? "bedrock", {
+  // Gemma 4 on AMD Token Factory reads the test; the fallback is CAMPAIGN_TEXT_MODEL, else TEXT_MODEL
+  const amdModel = process.env.CAMPAIGN_AMD_MODEL ?? "Gemma-4-31B-IT"
+  const { data, model } = await askJsonWith<Omit<CampaignAnalysis, "model" | "at">>(process.env.CAMPAIGN_TEXT_MODEL, {
     system: CAMPAIGN_SYSTEM,
     prompt: campaignPrompt({ garment, result: campaign.result, forecast, impact: impactOf(assets, campaign.result), archive: archiveFor(family), themeLabel }),
     temperature: 0.3,
+    amdModel,
   })
-  const analysis: CampaignAnalysis = { ...data, model: model === "bedrock" ? bedrockModelId() : model === "amd" ? amdModelId() : model, at: new Date().toISOString() }
+  const analysis: CampaignAnalysis = { ...data, model: model === "bedrock" ? bedrockModelId() : model === "amd" ? amdModel : model, at: new Date().toISOString() }
+  const brief = await briefOf(analysis, forecast)
+  if (brief) analysis.brief = brief
   await updateDb((db) => {
     const g = db.garments.find((x) => x.id === garmentId)
     if (g?.campaign) g.campaign.analyses = { ...g.campaign.analyses, [analysisKey(campaign.result)]: analysis }
   })
   return analysis
+}
+
+/** The analysis and the forecast as one text, summarised by Evolus; without Evolus the analysis keeps its own summary. */
+async function briefOf(a: CampaignAnalysis, f: Forecast): Promise<CampaignAnalysis["brief"]> {
+  if (!evolusReady()) return undefined
+  const pct = (v: number) => `${(v * 100).toFixed(1)}%`
+  const text = [
+    `Decision: ${f.decision.toUpperCase()}. Forecast full-price sell-through ${pct(f.sellThrough.predicted)} (80% interval ${pct(f.sellThrough.low)}-${pct(f.sellThrough.high)}, target ${pct(f.sellThrough.target)}). Units to order: ${f.order.quantity}.`,
+    ...f.reasons,
+    `${a.headline}. ${a.summary}`,
+    ...a.insights.map((x) => `${x.title}: ${x.evidence}`),
+    ...a.themes.map((t) => `Customers (${Math.round(t.share * 100)}%, ${t.sentiment}) on ${t.label}: "${t.quote}". Action: ${t.action}`),
+    ...a.actions.map((x) => `Action on ${x.area}: ${x.action}. ${x.why} Impact: ${x.impact}`),
+    ...a.risks.map((r) => `Risk: ${r}`),
+  ].join("\n")
+  try {
+    const out = await evolusText("summarize", text, { length: "short", style: "bullets" })
+    // summarize answers in the workspace's language (Italian), the app is in English
+    const en = await evolusText("translate", out.output, { target: "en" })
+    return { text: en.output.trim(), by: "Evolus summarize" }
+  } catch (err) {
+    console.warn(`Evolus summary skipped: ${(err as Error).message}`)
+    return undefined
+  }
 }

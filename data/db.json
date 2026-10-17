@@ -1720,160 +1720,143 @@
           },
           "3051924538|a_mvca3108uyr9,a_mvc9y3chm63k,a_mvc9y8bxp2cv,a_mvc9yd74ij8f,a_mvc9ygrc3z3p,a_mvc9ym29t2cf,a_mvc9zejey3il,a_mul2w2j3bnk0,a_mvc9zieuv6d2,a_mul1cjyh66dx": {
             "verdict": "iterate",
-            "headline": "Iterate: forecast sell-through is 57.6% against a 65% target, the look is liked, but conversion (0.75%) is held back by open questions on wool, zip and size.",
-            "summary": "The statistical decision is ITERATE and the comments support it. Save rate is 3.12% (percentile 50), but conversion is 0.75% (percentile 17) and pre-orders per €1k are 5.6 (percentile 0). Beige and the rib-knit mock neck are praised (26 of 60 comments), while 22 of 60 comments are questions on wool, zip, size and care that block the purchase. The 80% interval (40.8%–74.3%) contains the target, so this is not a stop. The base is thin: 14 pre-orders and a regression on 6 launches.",
+            "headline": "Iterate design to add a two-way zip and clarify wool softness before committing to production.",
+            "summary": "The test indicates solid engagement with a 3.12% save rate, but conversion is soft at 0.75%, resulting in a predicted 8-week sell-through of 57.6% versus our 65% target. Customers universally praise the aesthetic and beige hue, yet express sharp friction regarding neck itchiness and the lack of a functional two-way zipper. A quick iteration addressing yarn specification and closure hardware will protect margins and unlock pre-orders.",
             "insights": [
               {
-                "title": "Forecast is below target but the target is inside the interval",
-                "evidence": "Sell-through 57.6% (80%: 40.8%–74.3%) vs 65% target. Regression on 6 launches, R² 0.89, with only 14 pre-orders behind it."
+                "title": "Conversion lags historical baseline",
+                "evidence": "Conversion rate reached 0.75% (17th percentile) generating only 14 pre-orders, compared to family top performers at 1.30%-1.55%."
               },
               {
-                "title": "Conversion is the gap, not interest",
-                "evidence": "Save rate 3.12% is percentile 50, conversion 0.75% is percentile 17. With save rate unchanged, conversion of about 1.17% would give 65% (each +0.1pp adds about 1.75 points of ST). The closest past launch, Tobacco Mohair Zip Cardigan, had 1.05% and 64% ST."
+                "title": "UK and Germany drive intent",
+                "evidence": "UK delivered 6 pre-orders at 1.48% conversion and Germany yielded 4 pre-orders at 0.82%, outperforming Italy's 0.18%."
               },
               {
-                "title": "Comments show what blocks the purchase",
-                "evidence": "Of 60 comments: 22 are questions on wool/itch (5), zip (6), size (9) and care (2). 6 more say the price is fair only 'if it's proper wool'. Colour and knit are positive in 26 of 60 (13 + 13)."
+                "title": "UGC format substantially outperforms editorial",
+                "evidence": "The UGC reel generated 4 pre-orders with a 1.72% conversion rate, more than double the overall test average of 0.75%."
               },
               {
-                "title": "UGC, the UK and 35-44 convert best; Italy converts worst",
-                "evidence": "UGC reel: 1.72% conv, 4 pre-orders on €303. UK: 1.48% (6 pre-orders, 9.6 per €1k). Italy: 0.18% (1 pre-order, 1.6 per €1k) despite the most sessions (547). 35-44: 1.00% vs 0.54% for 18-24."
-              },
-              {
-                "title": "Pre-orders came early and traffic faded",
-                "evidence": "Days 1-5: 10 pre-orders, about 214 sessions a day. Days 6-10: 4 pre-orders, about 161 sessions a day. Day 8 had 0."
+                "title": "Aesthetic validation is high",
+                "evidence": "Beige colour and knit ribbing gathered 26 of 60 sampled comments, supporting a median save rate of 3.12%."
               }
             ],
             "themes": [
               {
-                "theme": "prurito",
-                "label": "Itchy wool",
-                "sentiment": "negative",
-                "share": 0.083,
-                "quote": "Che lana è? Se non è merino sul collo alto non lo reggo",
-                "action": "State the fibre and add soft-touch handling at the neck. Answer in the next creative and in the product page."
-              },
-              {
-                "theme": "zip",
-                "label": "Metal zip",
-                "sentiment": "neutral",
-                "share": 0.1,
-                "quote": "Le zip est-il à double curseur ?",
-                "action": "Decide on a two-way zip. Show the zip close-up and show it working on the chunky knit (no snagging)."
-              },
-              {
-                "theme": "mano",
-                "label": "Knit and rib",
+                "theme": "Beige colour",
+                "label": "Shade and versatility",
                 "sentiment": "positive",
-                "share": 0.217,
-                "quote": "Le col montant est top",
-                "action": "Keep the mock neck, the English rib and the raglan unchanged. Use them as the lead in the creative."
+                "share": 0.22,
+                "quote": "Finalmente un beige che non tira al giallo",
+                "action": "Maintain exact hex shade #B7A392 across all production lots."
               },
               {
-                "theme": "taglia",
-                "label": "Sizing and fit",
+                "theme": "Knit and rib",
+                "label": "Stitch and mock neck style",
+                "sentiment": "positive",
+                "share": 0.22,
+                "quote": "Le col montant est top",
+                "action": "Keep the 5-gauge English rib construction and collar proportion unchanged."
+              },
+              {
+                "theme": "Sizing and fit",
+                "label": "Fit guidance and model metrics",
                 "sentiment": "neutral",
                 "share": 0.15,
                 "quote": "Veste regolare o abbondante? Sono 1,80 per 80 kg",
-                "action": "Show model height and size on every asset. State 66 cm length and relaxed fit. Add a fit note on the page."
+                "action": "Add model height, weight, and wearing size explicitly on future product cards."
               },
               {
-                "theme": "disponibilita",
-                "label": "Purchase intent",
+                "theme": "Metal zip",
+                "label": "Two-way functionality and durability",
+                "sentiment": "negative",
+                "share": 0.1,
+                "quote": "La zip è a doppio cursore? Seduto in macchina serve",
+                "action": "Update hardware specification to a polished two-way zipper."
+              },
+              {
+                "theme": "Itchy wool",
+                "label": "Collar prickle and fiber clarity",
+                "sentiment": "negative",
+                "share": 0.08,
+                "quote": "Che lana è? Se non è merino sul collo alto non lo reggo",
+                "action": "Specify extra-fine Merino wool or cashmere blend on customer-facing copy."
+              },
+              {
+                "theme": "Price",
+                "label": "Price-to-quality perception",
+                "sentiment": "neutral",
+                "share": 0.1,
+                "quote": "Fair if it's proper wool",
+                "action": "Maintain €390 price point while highlighting fiber grade to justify cost."
+              },
+              {
+                "theme": "Purchase intent",
+                "label": "Availability and delivery timeline",
                 "sentiment": "positive",
                 "share": 0.1,
-                "quote": "Livraison en Belgique possible ?",
-                "action": "Answer delivery date and Belgium shipping in the replies. Confirm the pre-order delivery window on the page."
+                "quote": "Vorbestellt!",
+                "action": "Publish expected delivery shipping windows on pre-order checkout."
               },
               {
-                "theme": "colore-beige",
-                "label": "Beige colour",
-                "sentiment": "positive",
-                "share": 0.217,
-                "quote": "Finalmente un beige che non tira al giallo",
-                "action": "Keep #B7A392. Use 'goes with everything' styling (jeans, grey) in the next content."
-              },
-              {
-                "theme": "lavaggio",
-                "label": "Washing and care",
+                "theme": "Washing and care",
+                "label": "Garment care instructions",
                 "sentiment": "neutral",
-                "share": 0.033,
+                "share": 0.03,
                 "quote": "Lavable en machine ?",
-                "action": "Publish the care instruction once the fibre is fixed. Low volume, low priority."
-              },
-              {
-                "theme": "prezzo-maglia",
-                "label": "Price",
-                "sentiment": "neutral",
-                "share": 0.1,
-                "quote": "Prix correct si c'est de la bonne laine",
-                "action": "Hold €390. Price is accepted if the wool quality is shown, so prove the quality instead of cutting."
+                "action": "Specify hand wash or dry clean protocols in copy."
               }
             ],
             "actions": [
               {
                 "area": "design",
-                "action": "Specify the yarn (extra-fine merino or merino-cashmere blend) and a soft neck feel. Decide whether to add a two-way zip, then regenerate the product and rerun the test.",
-                "why": "Itch (5), zip (6) and price-if-good-wool (6) comments all point to fibre and zip. The DNA says only 'wool or cashmere-blend'.",
-                "impact": "Target conversion of about 1.17% from 0.75%, which takes forecast sell-through from 57.6% to about 65%."
+                "action": "Upgrade front fastening to a two-way metal zipper with dual rectangular pulls.",
+                "why": "Multiple high-engagement comments specifically requested a two-way zip for seating comfort.",
+                "impact": "Expected conversion increase from 0.75% to over 1.00%."
               },
               {
                 "area": "creative",
-                "action": "Scale the UGC reel (Outfit of the day). Cut Sculpted grey (0.52% conv), Spotlight and armchair (0.59%) and On-model (0 pre-orders on 171 sessions). Keep Lifestyle only for saves (3.98%). Add neck close-up, zip-in-use and model height/size clips.",
-                "why": "UGC converts at 1.72% vs 0.52%–1.29% for the other editorials. Lifestyle and On-model had 400 sessions and 0 pre-orders together.",
-                "impact": "Moving spend to UGC-style content, 13.2 pre-orders per €1k vs 5.6 average, should lift the blended conversion."
+                "action": "Reallocate budget into UGC video formats showing close-up collar softness and zipper operation.",
+                "why": "The UGC reel generated 4 of 14 pre-orders with a standout 1.72% conversion rate.",
+                "impact": "Lift overall paid ad CTR above 0.75% and drive pre-orders per €1k toward 8.0."
               },
               {
                 "area": "audience",
-                "action": "Move budget from Italy to the UK and Germany, and weight 35-44 and 25-34. Cut Italy from €625 to about €300. Keep 18-24 minimal.",
-                "why": "UK 9.6 and DE 6.4 pre-orders per €1k vs Italy 1.6. 35-44 has 7.1 per €1k vs 4.4 for 18-24. Counts are small (1 to 6 pre-orders per market).",
-                "impact": "Blended pre-orders per €1k should move from 5.6 towards 7 or more. Verify in the retest before treating it as fact."
-              },
-              {
-                "area": "production",
-                "action": "Do not place the usual 630-unit order. Hold until the retest reaches at least 65% forecast. Then order 270 units (the newsvendor figure). If the forecast does not improve, order the 200-unit MOQ at most.",
-                "why": "Recommended 270 units: expected margin €33,232, 30 unsold. The usual 630: margin €4,168, 376 unsold. Demand median 248 (192–322).",
-                "impact": "About €29,000 more expected margin and 346 fewer unsold units than the 630 order."
+                "action": "Shift 65% of test spend into the UK and Germany targeting ages 25-44.",
+                "why": "UK and DE accounted for 10 of 14 pre-orders; ages 25-44 generated 10 pre-orders.",
+                "impact": "Reduce acquisition cost per session and double market-level order density."
               },
               {
                 "area": "pricing",
-                "action": "Keep the pre-order price at €390 for the retest. Show the fibre and care on the page.",
-                "why": "€390 sits between Ecru Rib Mock Neck (€340, ST 70%) and Camel Shawl Cardigan (€420, ST 66%). Price comments are conditional on wool quality, not on the figure.",
-                "impact": "Avoids margin loss. The 6 price comments depend on the wool answer, so conversion should move with the fibre answer."
+                "action": "Hold price at €390 while clarifying yarn premium in headline text.",
+                "why": "6 comments indicate €390 is acceptable provided yarn quality is verified as non-scratch.",
+                "impact": "Preserve €33,232 projected margin without margin dilution."
               },
               {
-                "area": "creative",
-                "action": "Refresh the creative every 4-5 days and run the retest for 10 days with a daily cap on the strongest assets.",
-                "why": "Sessions fell from about 214 a day (days 1-5) to about 161 (days 6-10). Pre-orders fell from 10 to 4.",
-                "impact": "Aim to keep sessions at 200 or more a day, as in days 1-5, instead of 150."
+                "area": "production",
+                "action": "Cap initial factory commitment to the recommended 270 units instead of standard 630.",
+                "why": "Statistical newsvendor forecast suggests 270 units, avoiding 376 units of overstock.",
+                "impact": "Mitigates unsold stock risk, cutting potential excess inventory from 376 to 30 units."
               }
             ],
             "dnaChanges": [
               {
-                "field": "fabric",
-                "to": "chunky extra-fine merino or merino-cashmere blend knit, soft against the neck",
-                "why": "5 itch comments about the mock neck (e.g. 'Kratzt die Wolle am Hals?') and 6 price comments conditional on good wool. 'Wool or cashmere-blend' leaves it open."
-              },
-              {
                 "field": "closure",
-                "to": "exposed full-length two-way metal zipper (double slider) from hem to top of mock neck",
-                "why": "Double slider asked 4 times in 3 languages (FR 104 and 11 likes, IT 57, DE 24), and the IT comment notes it is needed when seated. Check cost with the manufacturer before fixing."
+                "to": "exposed full-length front two-way metal zipper running from the hem up to the top of the mock neck",
+                "why": "Direct user demand across IT, FR, and DE comments requesting two-way zip functionality."
               },
               {
-                "field": "fit_notes",
-                "to": "relaxed through chest, hip length 66 cm covering the seat, model height and size M stated",
-                "why": "9 sizing comments, e.g. 'Arriva alla vita o copre il sedere?' and 'Che taglia indossa il modello?'. This is mostly a content fix, with the DNA note kept consistent."
+                "field": "fabric",
+                "to": "chunky extra-fine merino wool or cashmere-blend knit",
+                "why": "Address friction regarding high-neck itchiness raised by prospective buyers."
               }
             ],
             "risks": [
-              "Only 14 pre-orders. The market split (1 to 6 per market) is mostly noise, so the Italy cut and the UK push must be confirmed in the retest.",
-              "The forecast rests on 6 past launches. The interval is wide (40.8%–74.3%) and the target of 65% sits inside it.",
-              "A better yarn or a two-way zip adds unit cost. Margin figures (€33,232 at 270 units) do not include it and must be recomputed.",
-              "Comments are a sample of 60 out of 607. Theme shares are indicative.",
-              "Pre-orders were front-loaded (10 in the first 5 days). Part of the early result may be a novelty effect that does not repeat."
+              "Predicted sell-through of 57.6% falls 7.4 points short of the 65% house hurdle.",
+              "Uncertainty interval is wide (40.8% to 74.3%), leaving room for markdown exposure if yarn hand-feel disappoints.",
+              "Italian domestic market exhibited low pre-order volume (1 order from 547 sessions, 0.18% conversion)."
             ],
-            "model": "eu.anthropic.claude-sonnet-5-5",
-            "at": "2026-10-17T12:05:41.765Z"
+            "model": "gemini",
+            "at": "2026-10-17T12:34:31.373Z"
           }
         }
       }
@@ -3372,160 +3355,150 @@
         "analyses": {
           "2004624445|a_mupz5d97bubx,a_muptbt9shrem,a_mupyubb0x50w,a_mupy95tgtin1,a_muq0ccx7qmmf,a_muq0ot71p267": {
             "verdict": "go",
-            "headline": "Go: forecast sell-through 67% against a 65% target. Order 460 units and add a detachable strap and an inner zip pocket.",
-            "summary": "The statistical forecast gives 67% (80%: 62.1%–71.9%) against the required 65%, and 460 units are above the 200 MOQ. The save rate is good (3.64%, 58th percentile). Conversion is weak (1.27%, 33rd percentile) and weighs on the result. The main blocker in the comments is the missing strap: 12 comments of 60. It isn't enough to overturn the statistical decision, but it should be fixed in the design before the order. Colour, absence of logo and leather are liked (27 comments of 60 in total), so the product stays as it is.",
+            "headline": "Proceed with production of 460 units due to strong sell-through forecast and high aesthetic approval.",
+            "summary": "The product exceeds the 65% sell-through target with a predicted 67%. While conversion is modest (1.27%), the 'quiet luxury' aesthetic and cognac color are highly praised. A significant portion of users request a shoulder strap and more secure closure, which will be addressed in the final design iteration.",
             "insights": [
               {
-                "title": "The go holds, but the interval touches the limit",
-                "evidence": "Sell-through 67.0% with an 80% interval of 62.1%–71.9%. The low bound is below the 65% target, so the safety margin is only 2 points."
+                "title": "Strong Market Demand",
+                "evidence": "Predicted sell-through of 67.0% (80% interval: 62.1%–71.9%)"
               },
               {
-                "title": "Good interest, weak conversion",
-                "evidence": "Save rate 3.64% (58th percentile), conversion 1.27% (33rd percentile), 10.4 pre-orders per €1k (33rd percentile). In the model every 0.1 conversion points are worth 1.6 sell-through points (coefficient 0.157)."
+                "title": "High Aesthetic Appeal",
+                "evidence": "Save rate of 3.64% (58th percentile in archive)"
               },
               {
-                "title": "The missing strap is the first barrier to purchase",
-                "evidence": "12 comments out of 60 (20%) ask for it. «Solo a mano? Con la tracolla la prendevo subito» (IT) and «Dommage, sans bandoulière je ne peux pas la porter au quotidien» (FR) point to lost purchases."
+                "title": "Geographic Strength",
+                "evidence": "UK (1.69%) and Italy (1.61%) show the highest conversion rates"
               },
               {
-                "title": "Lifestyle and UGC perform, On-model and White and wind don't",
-                "evidence": "Lifestyle: 14 pre-orders on €939, save 4.64%. UGC reel: 14 on €965, CTR 0.88%. On-model: 2 on €677 (conv. 0.53%). White and wind: 4 on €782 (conv. 0.66%)."
+                "title": "Content Performance",
+                "evidence": "Lifestyle content drove the highest conversion (1.50%) and save rate (4.64%)"
               },
               {
-                "title": "Italy and the UK convert at twice the rate of France and Germany",
-                "evidence": "IT 1.61% and UK 1.69% (35 pre-orders on €2500) vs FR 0.93% and DE 0.80% (17 on €2500). Germany, however, has 72 waitlist sign-ups, almost as many as the UK (70)."
+                "title": "Age Demographic Fit",
+                "evidence": "25-34 age group delivered the highest volume of pre-orders (22)"
               }
             ],
             "themes": [
               {
-                "theme": "tracolla",
-                "label": "Missing strap",
+                "theme": "strap",
+                "label": "Missing shoulder strap",
                 "sentiment": "negative",
                 "share": 0.2,
                 "quote": "Il manque une bandoulière amovible",
-                "action": "Add a detachable strap as an accessory and show it in the content."
+                "action": "Add a detachable crossbody strap to the DNA"
               },
               {
                 "theme": "minimal",
                 "label": "No logo",
                 "sentiment": "positive",
-                "share": 0.167,
-                "quote": "Pulitissima, niente loghi: la comprerei solo per questo",
-                "action": "Keep the absence of logo as the core message in all markets."
+                "share": 0.17,
+                "quote": "Endlich ohne Logo",
+                "action": "Maintain unbranded exterior"
               },
               {
                 "theme": "colore",
                 "label": "Cognac colour",
                 "sentiment": "positive",
-                "share": 0.167,
-                "quote": "Cette couleur cognac est sublime",
-                "action": "Don't touch #B8652A. Use colour close-ups in the lead content."
+                "share": 0.17,
+                "quote": "Farbe ist ein Traum",
+                "action": "Keep current color hex #B8652A"
               },
               {
                 "theme": "prezzo",
                 "label": "Price",
                 "sentiment": "neutral",
                 "share": 0.15,
-                "quote": "Fair price for this quality",
-                "action": "Keep €590. The price comments are 6 favourable and 3 against («Bit pricey for the size»), and the objection is mostly about size."
+                "quote": "Bit pricey for the size",
+                "action": "Maintain price but emphasize leather quality in creative"
               },
               {
                 "theme": "pelle",
                 "label": "Leather and structure",
                 "sentiment": "positive",
-                "share": 0.117,
-                "quote": "Looks like proper full-grain leather",
-                "action": "Show stitching and rigidity in detail. The comment «Love that it stands on its own» is a good starting point for a reel."
+                "share": 0.12,
+                "quote": "Love that it stands on its own",
+                "action": "Keep semi-rigid construction"
               },
               {
                 "theme": "chiusura",
-                "label": "Magnet-only closure",
+                "label": "Magnetic-only closure",
                 "sentiment": "negative",
-                "share": 0.083,
+                "share": 0.08,
                 "quote": "Solo il magnete? In metro a Milano mi serve una zip",
-                "action": "Add an inner zip pocket for valuables. The magnet stays."
+                "action": "Add an internal zipped pocket"
               },
               {
                 "theme": "capienza",
                 "label": "Capacity",
-                "sentiment": "negative",
-                "share": 0.067,
+                "sentiment": "neutral",
+                "share": 0.07,
                 "quote": "Carina ma un po' piccola per il lavoro, farete una misura più grande?",
-                "action": "Answer with content showing what fits in 28×22×10 cm. Consider a larger size only after the next reading."
+                "action": "Evaluate 'Large' version for next season"
               },
               {
-                "theme": "disponibilita",
+                "theme": "intent",
                 "label": "Purchase intent",
                 "sentiment": "positive",
                 "share": 0.05,
-                "quote": "Quando arriva? Ho già fatto il pre-ordine",
-                "action": "Send pre-order customers a firm delivery date and the 272 waitlist sign-ups an opening notice."
+                "quote": "Précommandée !",
+                "action": "Convert waitlist to sales"
               }
             ],
             "actions": [
               {
                 "area": "design",
-                "action": "Add a flat detachable strap in cognac leather and an inner zip pocket. Don't change body, colour, measurements or the absence of logo.",
-                "why": "Strap: 12 comments out of 60. Closure and security: 5 comments, including «Mettete almeno una tasca interna con zip» (85 likes).",
-                "impact": "If conversion rises from 1.27% to 1.5%, forecast sell-through rises by about 3.6 points (0.157 × 0.23), provided the model holds."
-              },
-              {
-                "area": "creative",
-                "action": "Cut On-model (€677) and White and wind (€782). Move the €1459 to Lifestyle and UGC reel. Keep High-key stride as the third piece of content, with small tweaks.",
-                "why": "Lifestyle and UGC make 14 pre-orders each with about €950 of spend. On-model and White and wind make 2 and 4, with conversion of 0.53% and 0.66%.",
-                "impact": "About +15 pre-orders on the same budget (from 6 to about 21 on the €1459), if Lifestyle and UGC performance holds."
-              },
-              {
-                "area": "creative",
-                "action": "Produce a short piece of content showing what fits in the bag (28×22×10 cm) and the detachable strap. Post it as a reply to the comments.",
-                "why": "Capacity: 4 comments, for example «28 cm: entra una borraccia?». The packshot carousel is the worst for saves (2.07%) and doesn't answer these questions.",
-                "impact": "Answering the most frequent questions aims to lift conversion from 1.27% towards 1.5% (the average of the best content)."
-              },
-              {
-                "area": "audience",
-                "action": "Move €1000 from France and Germany to Italy and the UK. Focus the budget on 25-34 and 45+. Reduce 18-24 (€900). In Germany use waitlist campaigns.",
-                "why": "IT+UK: 14.0 pre-orders per €1k. FR+DE: 6.8 per €1k. 25-34: 22 pre-orders on €1900. 45+: conv. 1.55%. 18-24: conv. 0.88%.",
-                "impact": "About +7 pre-orders for every €1000 moved (14.0 vs 6.8 per €1k)."
+                "action": "Add a detachable leather shoulder strap and one internal zipped pocket.",
+                "why": "Most frequent negative feedback regarding daily usability and security.",
+                "impact": "Increase conversion rate from 1.27% to ~1.5% by removing purchase barriers."
               },
               {
                 "area": "production",
-                "action": "Order 460 units from the manufacturer, not the usual 650. Confirm with the manufacturer that strap and zip pocket fit in the batch without raising the 200 MOQ.",
-                "why": "Median season demand 382 units (80%: 284–514). With 460 units the expected unsold is 82 units vs 258 with 650.",
-                "impact": "Expected margin €125031 vs €113934 with the usual order: about +€11100. Expected lost sales: 14 units."
+                "action": "Order 460 units.",
+                "why": "Matches newsvendor optimal quantity for 80% critical ratio.",
+                "impact": "Expected margin of €125,031."
+              },
+              {
+                "area": "creative",
+                "action": "Scale 'Lifestyle' and 'UGC' content formats; cut 'On-model' spend.",
+                "why": "Lifestyle (1.50%) and UGC (1.49%) outperformed On-model (0.53%) in conversion.",
+                "impact": "Lower CPA and higher session quality."
+              },
+              {
+                "area": "audience",
+                "action": "Shift budget focus toward UK and Italy markets, specifically the 25-44 age bracket.",
+                "why": "Highest conversion rates (UK 1.69%, IT 1.61%) and strongest age-group demand.",
+                "impact": "Higher overall conversion rate."
               },
               {
                 "area": "pricing",
-                "action": "Keep the pre-order price at €590. No discounts. If needed, explain the quality (full-grain leather, stitching) in the product sheets.",
-                "why": "Price comments: 6 of 9 favourable («Prezzo onesto rispetto ai marchi grandi»). The 3 critical ones are about size: «Un peu cher pour une petite taille».",
-                "impact": "Keeps the forecast 67% sell-through and the €125031 margin without markdowns."
+                "action": "Maintain pre-order price at €590.",
+                "why": "Sentiment is mixed but generally accepts price for the perceived quality ('Fair price for this quality').",
+                "impact": "Stable margins."
               }
             ],
             "dnaChanges": [
               {
-                "field": "handles",
-                "to": "dual short wide flat leather handles anchored seamlessly to the front and back top edges, plus an optional detachable flat leather shoulder strap in matching cognac leather",
-                "why": "12 comments out of 60 ask for the strap, for example «Needs a detachable strap, I can't do hand-carry only»."
-              },
-              {
                 "field": "pockets",
-                "to": "none visible on exterior; one internal zippered pocket on the lining",
-                "why": "«Mettete almeno una tasca interna con zip» (85 likes). The new content doesn't alter the clean exterior."
+                "to": "one internal zipped security pocket",
+                "why": "Users expressed safety concerns with only a magnetic closure."
               },
               {
-                "field": "hardware_finish",
-                "to": "concealed magnetic hardware with no exterior exposed metal components; strap attachment hardware in a matte tonal cognac finish, unbranded",
-                "why": "The strap needs attachments. They should stay tonal and unbranded so as not to lose the appeal of «Pulitissima, niente loghi»."
+                "field": "handles",
+                "to": "dual short wide flat leather handles plus one detachable adjustable crossbody strap",
+                "why": "High demand for versatility and daily usability."
               }
             ],
             "risks": [
-              "The low end of the interval (62.1%) is below the 65% target. If conversion stays at the 33rd percentile, the go is less solid.",
-              "There are only 52 pre-orders and 60 of 1243 comments were analysed. Rates per piece of content and per market are fragile estimates: 2 pre-orders on On-model, 4 on White and wind.",
-              "Adding the strap changes the product. It hasn't been tested on the market and could cost more to produce or reduce the cleanness of the design.",
-              "Daily sessions fall from 416 (d1) to 315 (d10). Day 4 had just 1 pre-order, so the trend is irregular.",
-              "No physical sample exists: the real quality of the leather and structure must be checked on the prototype before confirming the 460-unit order."
+              "Conversion rate is in the 33rd percentile of the archive, suggesting the product is a 'slow burn' rather than a viral hit.",
+              "Magnetic closure may remain a deterrent for urban commuters despite internal pocket addition."
             ],
-            "model": "eu.anthropic.claude-sonnet-5-5",
-            "at": "2026-10-17T10:42:53.355Z"
+            "model": "Gemma-4-31B-IT",
+            "at": "2026-10-17T13:36:50.063Z",
+            "brief": {
+              "text": "- Decision: GO; order 460 units, exceeding the 200-unit minimum. Forecast full-price sell-through is 67.0% (80% interval: 62.1%–71.9%) versus a 65.0% target, with expected margin of €125,031.\n- Final design actions: add a detachable leather shoulder strap and internal zipped pocket, retain the unbranded exterior, cognac color (#B8652A), semi-rigid construction, and €590 pre-order price; evaluate a larger version next season.\n- Prioritize Lifestyle and UGC content, reduce On-model spend, and focus budget on the UK and Italy and ages 25–44. Conversion is modest at 1.27% and may indicate a slow-burn product; magnetic-closure concerns remain a risk.",
+              "by": "Evolus summarize"
+            }
           },
           "956183481|a_mupz5d97bubx,a_muptbt9shrem,a_mupyubb0x50w,a_mupy95tgtin1,a_muq0ccx7qmmf,a_muq0ot71p267": {
             "verdict": "go",

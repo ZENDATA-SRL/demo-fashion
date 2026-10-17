@@ -30,6 +30,7 @@ import { QA_KINDS, VIEW_SLOTS, renderSlots, slotLabel } from "./steps"
 import { CAST, CAST_VIEWS, castLabel, castModel, castParts, castPrompt, castRefinePrompt, type CastView } from "./prompts/cast"
 import { brandProfile } from "./brand-lora"
 import { BRAND_DNA_SYSTEM, brandDnaPrompt } from "./prompts/brand-dna"
+import { identityBlock, readIdentity } from "./brand-identity"
 import { DNA_SYSTEM, dnaPrompt } from "./prompts/dna"
 import { QA_SYSTEM, qaPrompt, qaScore } from "./prompts/qa"
 import { ARCHIVE_PROMPT, DESIGN_SPEC_SYSTEM, designSpecPrompt, flatFromSpecPrompt, productFromNotePrompt, refineFlatPrompt, sketchPrompt, type DesignSpec } from "./prompts/seed"
@@ -250,13 +251,14 @@ export async function enrichDnaFromBrand(garmentId: string, brandId: string, not
   const { garment } = await getGarment(garmentId)
   if (!garment.dna) throw new Error("DNA missing: extract the constraints from the sketch first")
   const dna = garment.dna
+  const identity = readIdentity()
   const { data, model } = await askJson<{
     summary: string
     fields: Array<{ key: string; value: string; source?: DnaField["source"] }>
     appliedTags?: string[]
   }>({
     system: BRAND_DNA_SYSTEM,
-    prompt: brandDnaPrompt(garment, dna, brand, note),
+    prompt: brandDnaPrompt(garment, dna, brand, note, identity && identityBlock(identity)),
     temperature: 0.25,
   })
   const byKey = new Map(data.fields.map((f) => [f.key, f]))
